@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Simon.Views.DealDetailPage"
+             BackgroundColor="{StaticResource WhiteColor}"
+             xmlns:Controls="clr-namespace:Simon.Controls;assembly=Simon"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:simonVm="clr-namespace:Simon.ViewModel"
+             ios:Page.UseSafeArea="True"
+             ControlTemplate="{StaticResource Simon_HeaderView_Template}">
+    <ContentPage.BindingContext>
+        <simonVm:DealDetailViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout x:Name="MainStackLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="10">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15,10,15,10" Spacing="20">
+                <StackLayout Orientation="Horizontal" Padding="0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Spacing="10">
+                    <ImageButton Source="photo.png" BackgroundColor="White" HeightRequest="100" WidthRequest="100" Command="{Binding uploadImageCommand}"></ImageButton>
+                    <ImageButton Source="upload.png" BackgroundColor="White" HeightRequest="100" WidthRequest="100" Command="{Binding uploadDocumentCommand}"></ImageButton>
+                </StackLayout>
+                <Image Source="{Binding imageUrl}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="200" WidthRequest="400"></Image>
+                <Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource DarkGrayShadeColor}" Padding="5" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="10">
+                        <Image Source="file.png" BackgroundColor="Transparent" HeightRequest="50" WidthRequest="50" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Image>
+                        <Label Text="{Binding FileName}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Vertical" Padding="0,30,0,20" Spacing="0">
+                    <Button Text="Convert Into Byte" Style="{StaticResource DoneButtonStyle}" Command="{Binding ByteConverterCommand}" HeightRequest="{StaticResource HeightWidth50}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
