@@ -11,15 +11,6 @@ namespace Simon.Views.SubViews
         public FooterView()
         {
             InitializeComponent();
-            var version = DeviceInfo.VersionString;
-
-            //if (Device.RuntimePlatform == Device.iOS)
-            //{
-            //    if (version >= "11")
-            //    {
-
-            //    }
-            //}
         }
     }
 }

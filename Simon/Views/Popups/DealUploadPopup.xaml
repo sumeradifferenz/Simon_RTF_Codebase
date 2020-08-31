@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  xmlns:simonVm="clr-namespace:Simon.ViewModel"
+                  xmlns:Controls="clr-namespace:Simon.Controls"
+                  x:Class="Simon.Views.Popups.DealUploadPopup">
+    <pages:PopupPage.HasSystemPadding>
+        <OnPlatform x:TypeArguments="x:Boolean">
+            <OnPlatform.iOS>false</OnPlatform.iOS>
+            <OnPlatform.Android>true</OnPlatform.Android>
+        </OnPlatform>
+    </pages:PopupPage.HasSystemPadding>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" ScaleIn="1.2" ScaleOut="0.8" DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="True" />
+    </pages:PopupPage.Animation>
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.BindingContext>
+        <simonVm:DealViewModel/>
+    </pages:PopupPage.BindingContext>
+    <StackLayout x:Name="SortPopupStackVw" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="30" Margin="0" Spacing="0">
+        <Grid BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
+            <Frame Grid.Row="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="false" Margin="0" Padding="15" CornerRadius="15">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="0" BackgroundColor="White" Padding="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" Padding="15,20,15,0">
+                        <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" Text="Upload Document"/>
+                    </StackLayout>
+                    <StackLayout HeightRequest="150" Orientation="Horizontal" Grid.Row="1" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadOptionStackVisible}">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="10" BackgroundColor="White" Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Row="0" Padding="0,20,0,20" Grid.Column="0" CornerRadius="10" BackgroundColor="White" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                                <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="15" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Image Source="attach_document.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="50" WidthRequest="50"></Image>
+                                    <Label Text="Attach a Document" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding uploadDocumentCommand}"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame Grid.Row="0" Padding="0,20,0,20" Grid.Column="1" CornerRadius="10" BackgroundColor="White" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                                <StackLayout Orientation="Vertical" Padding="0" Spacing="15" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Image Source="take_picture.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="50" WidthRequest="50"></Image>
+                                    <Label Text="Take a Photo" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding uploadImageCommand}"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout HeightRequest="150" Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="10,20,10,10" VerticalOptions="Fill" Spacing="0" IsVisible="{Binding UploadStackVisible}">
+                        <Controls:CustomFlowListView x:Name="UploadDocumentListView" FlowColumnCount="1" SeparatorVisibility="None" HasUnevenRows="true" FlowItemsSource="{Binding UploadDocumentList}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BackgroundColor="White" HideScorllbar="true">
+                            <Controls:CustomFlowListView.FlowColumnTemplate>
+                                <DataTemplate>
+                                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0" Padding="0">
+                                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="10" Padding="15">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" >
+                                                <Label Text="{Binding Filename}" Style="{StaticResource LatoRegularDarkGrayLableStyle}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="{StaticResource FontSize15}"/>
+                                                <ImageButton Margin="10,0,0,0" Aspect="AspectFit" BackgroundColor="Transparent" Command="{Binding Source={x:Reference UploadDocumentListView}, Path=BindingContext.removeFileCommand}" CommandParameter="{Binding .}" HorizontalOptions="End" Source="close_popup.png" HeightRequest="{StaticResource HeightWidth15}" WidthRequest="{StaticResource HeightWidth15}"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </Controls:CustomFlowListView.FlowColumnTemplate>
+                        </Controls:CustomFlowListView>
+                        <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0" Spacing="0">
+                            <Button Text="Upload" Style="{StaticResource DoneButtonStyle}" x:Name="Applybtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding UploadCommand}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout HeightRequest="150" BackgroundColor="White" Orientation="Vertical" Spacing="30" Grid.Row="0" Grid.RowSpan="2" Padding="30,40,30,40" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadSuccessVisible}">
+                        <Image Source="upload_success.png" HeightRequest="100" WidthRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                        <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" HorizontalTextAlignment="Center" Text="Uploaded Successfully"/>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+            <Frame Grid.Row="0" Padding="0" IsClippedToBounds="True" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="End" HasShadow="False" Margin="0,0,0,-18">
+                <StackLayout HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="close_popup.png" Aspect="AspectFit"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ClosePopup_Command}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

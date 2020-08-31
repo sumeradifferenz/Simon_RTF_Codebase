@@ -18,6 +18,8 @@ using System.IO;
 using Plugin.CurrentActivity;
 using Simon.Interfaces;
 using Com.Theartofdev.Edmodo.Cropper;
+using LabelHtml.Forms.Plugin.Droid;
+using Plugin.FirebasePushNotification;
 
 namespace Simon.Droid
 {
@@ -47,6 +49,7 @@ namespace Simon.Droid
 
             Xamarin.Essentials.Platform.Init(this, bundle);
 
+            HtmlLabelRenderer.Initialize();
             FlowListView.Init();
 
             Rg.Plugins.Popup.Popup.Init(this, bundle);
@@ -77,22 +80,22 @@ namespace Simon.Droid
 
                 if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
                 {
-                    PushNotificationManager.DefaultNotificationChannelId = "DefaultChannel";
-                    PushNotificationManager.DefaultNotificationChannelName = "General";
+                    FirebasePushNotificationManager.DefaultNotificationChannelId = "DefaultChannel";
+                    FirebasePushNotificationManager.DefaultNotificationChannelName = "General";
                 }
-                PushNotificationManager.DefaultNotificationChannelImportance = NotificationImportance.High;
+                FirebasePushNotificationManager.DefaultNotificationChannelImportance = NotificationImportance.High;
 
 #if DEBUG
-                PushNotificationManager.Initialize(this, false);
+                FirebasePushNotificationManager.Initialize(this, false);
 #else
-            PushNotificationManager.Initialize(this,false);
+            FirebasePushNotificationManager.Initialize(this,false);
 #endif
 
                 LoadApplication(new App());
 
-                PushNotificationManager.ProcessIntent(this, Intent);
-                PushNotificationManager.IconResource = Resource.Drawable.ic_stat_appstore;
-                PushNotificationManager.Color = Color.FromHex("#000000").ToAndroid();
+                FirebasePushNotificationManager.ProcessIntent(this, Intent);
+                FirebasePushNotificationManager.IconResource = Resource.Drawable.ic_stat_appstore;
+                FirebasePushNotificationManager.Color = Color.FromHex("#000000").ToAndroid();
                 //LoadApplication(new App(refreshedToken));
             }
         }
@@ -100,9 +103,9 @@ namespace Simon.Droid
         protected override void OnNewIntent(Intent intent)
         {
             base.OnNewIntent(intent);
-            PushNotificationManager.ProcessIntent(this, intent);
-            PushNotificationManager.IconResource = Resource.Drawable.ic_stat_appstore;
-            PushNotificationManager.Color = Color.FromHex("#000000").ToAndroid();
+            FirebasePushNotificationManager.ProcessIntent(this, intent);
+            FirebasePushNotificationManager.IconResource = Resource.Drawable.ic_stat_appstore;
+            FirebasePushNotificationManager.Color = Color.FromHex("#000000").ToAndroid();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

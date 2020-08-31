@@ -60,7 +60,7 @@ namespace Simon.Views
             App.ReadUnread = "null";
             App.OrderByText = Constants.LastPostDateText;
             App.SelectedTitle = string.Empty;
-            App.selectedName = string.Empty;
+            App.SelectedName = string.Empty;
             if (Xamarin.Forms.Application.Current.Properties.ContainsKey("USERID"))
             {
                 userId = Convert.ToString(Xamarin.Forms.Application.Current.Properties["USERID"]);
@@ -74,6 +74,12 @@ namespace Simon.Views
             ViewModel = new ApprovalViewModel();
             this.BindingContext = ViewModel;
 
+            if (App.IsFirstTime)
+            {
+                App.IsFirstTime = false;
+                ViewModel.FooterNavigation(SessionService.BaseFooterItems[3]);
+            }
+
             if (NetworkCheck.IsInternet())
             {
                 await ViewModel.GetApprovalData();
@@ -84,7 +90,10 @@ namespace Simon.Views
             }
         }
 
-        protected override void OnDisappearing() { }
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+        }
 
         protected override bool OnBackButtonPressed()
         {

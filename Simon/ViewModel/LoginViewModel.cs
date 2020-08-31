@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -325,7 +326,36 @@ namespace Simon.ViewModel
                     }
                     else
                     {
-                        SaveLoginUserData();
+                        if (string.IsNullOrEmpty(Settings.DeviceToken))
+                        {
+                            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                            File.AppendAllText(App.tempFile, "\n\nLogin without Device token....");
+                            Debug.WriteLine("File Name====" + App.tempFile);
+
+                            UserData user = new UserData();
+                            user.id = App.SelectedUserData.id;
+                            user.name = App.SelectedUserData.name;
+                            user.role = App.SelectedUserData.role;
+                            user.primaryRole = App.SelectedUserData.primaryRole;
+
+                            Settings.LoggedInUser = user;
+
+                            Application.Current.Properties["NAME"] = App.SelectedUserData.firstName;
+                            Application.Current.Properties["USERID"] = App.SelectedUserData.id;
+                            Application.Current.Properties["PRIMARYROLE"] = App.SelectedUserData.primaryRole;
+                            await Application.Current.SavePropertiesAsync();
+
+                            await ClosePopup();
+                            FooterNavigation(SessionService.BaseFooterItems[0]);
+                        }
+                        else
+                        {
+                            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                            File.AppendAllText(App.tempFile, "\n\nLogin with Device token....");
+                            Debug.WriteLine("File Name====" + App.tempFile);
+
+                            SaveLoginUserData();
+                        }
                     }
                 }
             }
@@ -338,48 +368,26 @@ namespace Simon.ViewModel
 
         public async void SaveLoginUserData()
         {
-            if(!string.IsNullOrEmpty(Settings.DeviceToken))
+            LoginModel modelData = new LoginModel
             {
-                LoginModel modelData = new LoginModel
+                token = Settings.DeviceToken,
+                userId = App.SelectedUserData.id,
+                deviceType = Device.RuntimePlatform,
+            };
+
+            _httpClient = new HttpClient();
+            var content = new StringContent(JsonConvert.SerializeObject(modelData), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync(Config.SAVE_LOGIN_USER_API, content);
+            var content1 = await response.Content.ReadAsStringAsync();
+            var obj = JsonConvert.DeserializeObject<LoginModelResponse>(content1);
+
+            if (response.StatusCode != System.Net.HttpStatusCode.OK || response.Content == null)
+            {
+                await ClosePopup();
+                Device.BeginInvokeOnMainThread(async () =>
                 {
-                    token = Settings.DeviceToken,
-                    userId = App.SelectedUserData.id,
-                    deviceType = Device.RuntimePlatform,
-                };
-
-                _httpClient = new HttpClient();
-                var content = new StringContent(JsonConvert.SerializeObject(modelData), Encoding.UTF8, "application/json");
-                var response = await _httpClient.PostAsync(Config.SAVE_LOGIN_USER_API, content);
-                var content1 = await response.Content.ReadAsStringAsync();
-                var obj = JsonConvert.DeserializeObject<LoginModelResponse>(content1);
-
-                if (response.StatusCode != System.Net.HttpStatusCode.OK || response.Content == null)
-                {
-                    await ClosePopup();
-                    Device.BeginInvokeOnMainThread(async () =>
-                    {
-                        await ShowAlert("Data Not Sent!!", string.Format("Response contained status code: {0}", response.StatusCode));
-                    });
-                }
-                else
-                {
-                    UserData user = new UserData();
-                    user.id = App.SelectedUserData.id;
-                    user.name = App.SelectedUserData.name;
-                    user.role = App.SelectedUserData.role;
-                    user.primaryRole = App.SelectedUserData.primaryRole;
-
-                    Settings.LoggedInUser = user;
-                    Settings.SessionToken = obj.sesionId;
-
-                    Application.Current.Properties["NAME"] = App.SelectedUserData.firstName;
-                    Application.Current.Properties["USERID"] = App.SelectedUserData.id;
-                    Application.Current.Properties["PRIMARYROLE"] = App.SelectedUserData.primaryRole;
-                    await Application.Current.SavePropertiesAsync();
-
-                    await ClosePopup();
-                    FooterNavigation(SessionService.BaseFooterItems[0]);
-                }
+                    await ShowAlert("Data Not Sent!!", string.Format("Response contained status code: {0}", response.StatusCode));
+                });
             }
             else
             {
@@ -390,6 +398,7 @@ namespace Simon.ViewModel
                 user.primaryRole = App.SelectedUserData.primaryRole;
 
                 Settings.LoggedInUser = user;
+                Settings.SessionToken = obj.sesionId;
 
                 Application.Current.Properties["NAME"] = App.SelectedUserData.firstName;
                 Application.Current.Properties["USERID"] = App.SelectedUserData.id;

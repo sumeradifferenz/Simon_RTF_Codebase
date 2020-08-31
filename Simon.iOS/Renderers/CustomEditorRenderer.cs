@@ -204,7 +204,7 @@ namespace Simon.iOS.Renderers
         {
             var doneButton = new UIBarButtonItem(UIBarButtonSystemItem.Done, (o, a) =>
             {
-                App.isFromKeyboardDoneButton = true;
+                App.IsFromKeyboardDoneButton = true;
                 Control.ResignFirstResponder();
             });
 

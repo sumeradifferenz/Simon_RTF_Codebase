@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
@@ -9,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
+using Plugin.Media.Abstractions;
 using Simon.Helpers;
 using Simon.Models;
-using Simon.Views;
 using Simon.Views.Popups;
 using Xamarin.Forms;
 
@@ -20,8 +19,8 @@ namespace Simon.ViewModel
     public class DealViewModel : BaseViewModel
     {
         string userId, selectedName;
-        private ObservableCollection<DealsMainModel> _dealList = new ObservableCollection<DealsMainModel>();
-        private ObservableCollection<DealsMainModel> AllDealListItems = new ObservableCollection<DealsMainModel>();
+        public ObservableCollection<DealsMainModel> _dealList = new ObservableCollection<DealsMainModel>();
+        public ObservableCollection<DealsMainModel> AllDealListItems = new ObservableCollection<DealsMainModel>();
         private ObservableCollection<DealsMainModel> FilteredList = new ObservableCollection<DealsMainModel>();
         public List<Stage> StagesList = new List<Stage>();
 
@@ -31,7 +30,7 @@ namespace Simon.ViewModel
         private bool _isLoadingInfiniteEnabled = false;
         private int _CurrentPage = 1;
         private int _LastPage = 0;
-        private bool _isTeamLoading = false;
+        public bool _isTeamLoading = false;
         bool isSortApplied = false;
 
         public ICommand FilterCommand { get; set; }
@@ -57,7 +56,6 @@ namespace Simon.ViewModel
 
         //Deal SortBy Popup
         private ObservableCollection<DealsSortByModel> _DealsSortByItems = new ObservableCollection<DealsSortByModel>();
-
         public ObservableCollection<DealsSortByModel> DealsSortByItems
         {
             get { return _DealsSortByItems; }
@@ -136,6 +134,32 @@ namespace Simon.ViewModel
             set { SetProperty(ref _isLoadingInfiniteEnabled, value); }
         }
 
+        private MediaFile _imageUrlMediaFile;
+        public MediaFile imageUrlMediaFile
+        {
+            get { return _imageUrlMediaFile; }
+            set
+            {
+                if (value != null)
+                {
+                    SetProperty(ref _imageUrlMediaFile, value);
+                }
+            }
+        }
+
+        public string _imageUrlfile;
+        public string imageUrlfile
+        {
+            get { return _imageUrlfile; }
+            set { SetProperty(ref _imageUrlfile, value); }
+        }
+
+        private ImageSource _imageUrl = "image_placeholder.png";
+        public ImageSource imageUrl
+        {
+            get { return _imageUrl; }
+            set { SetProperty(ref _imageUrl, value); }
+        }
 
         public DealViewModel()
         {
@@ -150,7 +174,7 @@ namespace Simon.ViewModel
 
             SearchCommand = new Command(() => SearchCommandExecuteAsync());
 
-            SortingCommand = new Command(async () =>await SortingCommandExecuteAsync());
+            SortingCommand = new Command(async () => await SortingCommandExecuteAsync());
             SortAmountUpCommand = new Command(() => SortAmtUpCommandExecute());
             SortAmountDownCommand = new Command(() => SortAmtDownCommandExecute());
             SortBorrowerUpCommand = new Command(() => SortBorrowerUpCommandExecute());
@@ -756,14 +780,14 @@ namespace Simon.ViewModel
             try
             {
                 DealList = new ObservableCollection<DealsMainModel>();
-                IsBusy = true;
                 _CurrentPage = 1;
+                IsBusy = true;
                 await GetFilterData();
                 await LoadData(_CurrentPage);
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Exception:>" + ex);
+                Debug.WriteLine("Exception:>" + ex);
             }
             finally
             {
@@ -810,7 +834,7 @@ namespace Simon.ViewModel
                         SearchDeal(SearchText);
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Debug.WriteLine(ex.Message);
                 }
@@ -1014,27 +1038,165 @@ namespace Simon.ViewModel
             MessagingCenter.Send<object, DealsMainModel>(this, "DealsSortClosingDown", dealClosingDown);
         }
 
-        //public ICommand DealListItemTapCommand { get { return new Command<DealsMainModel>(DealListItemTapCommandExecute); } }
-        //private async void DealListItemTapCommandExecute(DealsMainModel deals)
-        //{
-        //    try
-        //    {
-        //        if (App.buttonClick == 0)
-        //        {
-        //            App.buttonClick++;
-        //            await Application.Current.MainPage.Navigation.PushAsync(new DealDetailPage(deals));
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ShowExceptionAlert(ex);
-        //    }
-        //}
+        public ICommand DealListItemTapCommand { get { return new Command<DealsMainModel>(DealListItemTapCommandExecute); } }
+        private async void DealListItemTapCommandExecute(DealsMainModel deals)
+        {
+            try
+            {
+                //     Redirect on Detail Demo
+                //await App.Current.MainPage.Navigation.PushAsync(new DealDetailPage(deals), false);
+
+                //     Display Popup
+                await ClosePopup();
+                DealUploadPopup DealUploadPopupview = new DealUploadPopup();
+                DealUploadPopupview.BindingContext = this;
+                UploadOptionStackVisible = true;
+                UploadStackVisible = false;
+                await ShowPopup(DealUploadPopupview);
+            }
+            catch (Exception ex)
+            {
+                ShowExceptionAlert(ex);
+            }
+        }
+
+        public ICommand uploadImageCommand { get { return new Command(uploadImageCommandExecute); } }
+        private async void uploadImageCommandExecute()
+        {
+            try
+            {
+                ImagePicker((string file, MediaFile mediafile) =>
+                {
+                    if (string.IsNullOrEmpty(file))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        imageUrlMediaFile = mediafile;
+                        imageUrlfile = file;
+                        imageUrl = ImageSource.FromFile(file);
+                        string name = System.IO.Path.GetFileName(mediafile.Path);
+                        AddDocument(name);
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                await ClosePopup();
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+        public ICommand uploadDocumentCommand { get { return new Command(uploadDocumentCommandExecute); } }
+        private void uploadDocumentCommandExecute()
+        {
+            try
+            {
+                DocumentPicker(((string name, string FileBase64String, string FileType, string FileName) obj) =>
+                {
+                    if (obj.name != null && obj.FileName != null && obj.FileBase64String != null && obj.FileType != null)
+                    {
+                        if (obj.FileName != null)
+                        {
+                            AddDocument(obj.FileName);
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception: { ex.Message}");
+            }
+        }
+
+        private ObservableCollection<UploadFileModel> _UploadDocumentList = new ObservableCollection<UploadFileModel>();
+        public ObservableCollection<UploadFileModel> UploadDocumentList
+        {
+            get { return _UploadDocumentList; }
+            set
+            {
+                _UploadDocumentList = value;
+                OnPropertyChanged(nameof(UploadDocumentList));
+            }
+        }
+
+        private bool _UploadOptionStackVisible { get; set; } = false;
+        public bool UploadOptionStackVisible
+        {
+            get { return _UploadOptionStackVisible; }
+            set
+            {
+                _UploadOptionStackVisible = value;
+                OnPropertyChanged(nameof(UploadOptionStackVisible));
+            }
+        }
+
+        private bool _UploadStackVisible { get; set; } = false;
+        public bool UploadStackVisible
+        {
+            get { return _UploadStackVisible; }
+            set
+            {
+                _UploadStackVisible = value;
+                OnPropertyChanged(nameof(UploadStackVisible));
+            }
+        }
+
+        private bool _UploadSuccessVisible { get; set; } = false;
+        public bool UploadSuccessVisible
+        {
+            get { return _UploadSuccessVisible; }
+            set
+            {
+                _UploadSuccessVisible = value;
+                OnPropertyChanged(nameof(UploadSuccessVisible));
+            }
+        }
+
+        public async void AddDocument(string fileName)
+        {
+            await ClosePopup();
+            DealUploadPopup DealUploadPopupview = new DealUploadPopup();
+            DealUploadPopupview.BindingContext = this;
+            UploadOptionStackVisible = false;
+            UploadStackVisible = true;
+            UploadSuccessVisible = false;
+            await ShowPopup(DealUploadPopupview);
+            UploadDocumentList.Add(new UploadFileModel { Filename = fileName.ToUpper() });
+        }
+
+        public ICommand removeFileCommand { get { return new Command<UploadFileModel>(removeFile_click); } }
+        private void removeFile_click(UploadFileModel uploadFile)
+        {
+            UploadDocumentList.Remove(uploadFile);
+            if (UploadDocumentList.Count == 0)
+            {
+                UploadOptionStackVisible = true;
+                UploadStackVisible = false;
+                UploadSuccessVisible = false;
+            }
+        }
+
+        public ICommand UploadCommand { get { return new Command(UploadCommandExecute); } }
+        private void UploadCommandExecute()
+        {
+            UploadSuccessVisible = true;
+            UploadOptionStackVisible = false;
+            UploadStackVisible = false;
+        }
 
         public ICommand ClosePopup_Command { get { return new Command(ClosePopup_click); } }
         private async void ClosePopup_click()
         {
             await ClosePopup();
+            UploadSuccessVisible = false;
+            UploadOptionStackVisible = true;
+            UploadStackVisible = false;
         }
     }
 }

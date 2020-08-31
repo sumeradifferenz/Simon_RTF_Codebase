@@ -11,5 +11,11 @@ namespace Simon.Views
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            App.buttonClick = 0;
+        }
     }
 }

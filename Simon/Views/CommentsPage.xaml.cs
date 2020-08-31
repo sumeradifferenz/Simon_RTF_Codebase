@@ -57,6 +57,7 @@ namespace Simon.Views
         {
             base.OnAppearing();
 
+            App.selectedPageId = 4;
             vm = new CommentsPageViewModel();
             this.BindingContext = vm;
             if (NetworkCheck.IsInternet())
@@ -243,11 +244,7 @@ namespace Simon.Views
                 vm.ProcessUserListVisible = false;
             }
         }
-        protected override bool OnBackButtonPressed()
-        {
-            this.vm.Back();
-            return true;
-        }
+        
         public async void GetProcessStageUserList()
         {
             if (NetworkCheck.IsInternet())
@@ -326,15 +323,17 @@ namespace Simon.Views
         {
             userListPicker.Focus();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            this.vm.Back();
+            return true;
+        }
+
+        protected override void OnDisappearing()
+        {
+            App.IsFirstTime = true;
+            base.OnDisappearing();
+        }
     }
 }
-
-
-//{
-//	"status": "sApproved2ndLO",
-//    "functionId":"fsDealApproval",
-//    "processStageFunctionId" : "1561",
-//    "actionType" : null,
-//    "lastModBy": "tjohns71",
-//    "lastModByDate" : "6/12/2020 4:03:09 PM"
-//}

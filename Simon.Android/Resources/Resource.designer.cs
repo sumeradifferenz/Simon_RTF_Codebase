@@ -26,6 +26,2850 @@ namespace Simon.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_fade_in = global::Simon.Droid.Resource.Animation.abc_fade_in;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_fade_out = global::Simon.Droid.Resource.Animation.abc_fade_out;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_grow_fade_in_from_bottom = global::Simon.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_popup_enter = global::Simon.Droid.Resource.Animation.abc_popup_enter;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_popup_exit = global::Simon.Droid.Resource.Animation.abc_popup_exit;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Simon.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_slide_in_bottom = global::Simon.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_slide_in_top = global::Simon.Droid.Resource.Animation.abc_slide_in_top;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_slide_out_bottom = global::Simon.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_slide_out_top = global::Simon.Droid.Resource.Animation.abc_slide_out_top;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_tooltip_enter = global::Simon.Droid.Resource.Animation.abc_tooltip_enter;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.abc_tooltip_exit = global::Simon.Droid.Resource.Animation.abc_tooltip_exit;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.design_bottom_sheet_slide_in = global::Simon.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.design_bottom_sheet_slide_out = global::Simon.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.design_snackbar_in = global::Simon.Droid.Resource.Animation.design_snackbar_in;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.design_snackbar_out = global::Simon.Droid.Resource.Animation.design_snackbar_out;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.EnterFromLeft = global::Simon.Droid.Resource.Animation.EnterFromLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.EnterFromRight = global::Simon.Droid.Resource.Animation.EnterFromRight;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.ExitToLeft = global::Simon.Droid.Resource.Animation.ExitToLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Animation.ExitToRight = global::Simon.Droid.Resource.Animation.ExitToRight;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.design_appbar_state_list_animator = global::Simon.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.design_fab_hide_motion_spec = global::Simon.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.design_fab_show_motion_spec = global::Simon.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_btn_state_list_anim = global::Simon.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::Simon.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_chip_state_list_anim = global::Simon.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_fab_hide_motion_spec = global::Simon.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_fab_show_motion_spec = global::Simon.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::Simon.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::Simon.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarDivider = global::Simon.Droid.Resource.Attribute.actionBarDivider;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarItemBackground = global::Simon.Droid.Resource.Attribute.actionBarItemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarPopupTheme = global::Simon.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarSize = global::Simon.Droid.Resource.Attribute.actionBarSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarSplitStyle = global::Simon.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarStyle = global::Simon.Droid.Resource.Attribute.actionBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarTabBarStyle = global::Simon.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarTabStyle = global::Simon.Droid.Resource.Attribute.actionBarTabStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarTabTextStyle = global::Simon.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarTheme = global::Simon.Droid.Resource.Attribute.actionBarTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionBarWidgetTheme = global::Simon.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionButtonStyle = global::Simon.Droid.Resource.Attribute.actionButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionDropDownStyle = global::Simon.Droid.Resource.Attribute.actionDropDownStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionLayout = global::Simon.Droid.Resource.Attribute.actionLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionMenuTextAppearance = global::Simon.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionMenuTextColor = global::Simon.Droid.Resource.Attribute.actionMenuTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeBackground = global::Simon.Droid.Resource.Attribute.actionModeBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeCloseButtonStyle = global::Simon.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeCloseDrawable = global::Simon.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeCopyDrawable = global::Simon.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeCutDrawable = global::Simon.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeFindDrawable = global::Simon.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModePasteDrawable = global::Simon.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModePopupWindowStyle = global::Simon.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeSelectAllDrawable = global::Simon.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeShareDrawable = global::Simon.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeSplitBackground = global::Simon.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeStyle = global::Simon.Droid.Resource.Attribute.actionModeStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionModeWebSearchDrawable = global::Simon.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionOverflowButtonStyle = global::Simon.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionOverflowMenuStyle = global::Simon.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionProviderClass = global::Simon.Droid.Resource.Attribute.actionProviderClass;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.actionViewClass = global::Simon.Droid.Resource.Attribute.actionViewClass;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.activityChooserViewStyle = global::Simon.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alertDialogButtonGroupStyle = global::Simon.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alertDialogCenterButtons = global::Simon.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alertDialogStyle = global::Simon.Droid.Resource.Attribute.alertDialogStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alertDialogTheme = global::Simon.Droid.Resource.Attribute.alertDialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.allowStacking = global::Simon.Droid.Resource.Attribute.allowStacking;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alpha = global::Simon.Droid.Resource.Attribute.alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.alphabeticModifiers = global::Simon.Droid.Resource.Attribute.alphabeticModifiers;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.arrowHeadLength = global::Simon.Droid.Resource.Attribute.arrowHeadLength;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.arrowShaftLength = global::Simon.Droid.Resource.Attribute.arrowShaftLength;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoCompleteTextViewStyle = global::Simon.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoSizeMaxTextSize = global::Simon.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoSizeMinTextSize = global::Simon.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoSizePresetSizes = global::Simon.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoSizeStepGranularity = global::Simon.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.autoSizeTextType = global::Simon.Droid.Resource.Attribute.autoSizeTextType;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.background = global::Simon.Droid.Resource.Attribute.background;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.backgroundSplit = global::Simon.Droid.Resource.Attribute.backgroundSplit;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.backgroundStacked = global::Simon.Droid.Resource.Attribute.backgroundStacked;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.backgroundTint = global::Simon.Droid.Resource.Attribute.backgroundTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.backgroundTintMode = global::Simon.Droid.Resource.Attribute.backgroundTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.barLength = global::Simon.Droid.Resource.Attribute.barLength;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_autoHide = global::Simon.Droid.Resource.Attribute.behavior_autoHide;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_fitToContents = global::Simon.Droid.Resource.Attribute.behavior_fitToContents;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_hideable = global::Simon.Droid.Resource.Attribute.behavior_hideable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_overlapTop = global::Simon.Droid.Resource.Attribute.behavior_overlapTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_peekHeight = global::Simon.Droid.Resource.Attribute.behavior_peekHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.behavior_skipCollapsed = global::Simon.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.borderlessButtonStyle = global::Simon.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.borderWidth = global::Simon.Droid.Resource.Attribute.borderWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.bottomAppBarStyle = global::Simon.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.bottomNavigationStyle = global::Simon.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.bottomSheetDialogTheme = global::Simon.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.bottomSheetStyle = global::Simon.Droid.Resource.Attribute.bottomSheetStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxBackgroundColor = global::Simon.Droid.Resource.Attribute.boxBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxBackgroundMode = global::Simon.Droid.Resource.Attribute.boxBackgroundMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxCollapsedPaddingTop = global::Simon.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxCornerRadiusBottomEnd = global::Simon.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxCornerRadiusBottomStart = global::Simon.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxCornerRadiusTopEnd = global::Simon.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxCornerRadiusTopStart = global::Simon.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxStrokeColor = global::Simon.Droid.Resource.Attribute.boxStrokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.boxStrokeWidth = global::Simon.Droid.Resource.Attribute.boxStrokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonBarButtonStyle = global::Simon.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonBarNegativeButtonStyle = global::Simon.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonBarNeutralButtonStyle = global::Simon.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonBarPositiveButtonStyle = global::Simon.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonBarStyle = global::Simon.Droid.Resource.Attribute.buttonBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonGravity = global::Simon.Droid.Resource.Attribute.buttonGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonIconDimen = global::Simon.Droid.Resource.Attribute.buttonIconDimen;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonPanelSideLayout = global::Simon.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonStyle = global::Simon.Droid.Resource.Attribute.buttonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonStyleSmall = global::Simon.Droid.Resource.Attribute.buttonStyleSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonTint = global::Simon.Droid.Resource.Attribute.buttonTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.buttonTintMode = global::Simon.Droid.Resource.Attribute.buttonTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardBackgroundColor = global::Simon.Droid.Resource.Attribute.cardBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardCornerRadius = global::Simon.Droid.Resource.Attribute.cardCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardElevation = global::Simon.Droid.Resource.Attribute.cardElevation;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardMaxElevation = global::Simon.Droid.Resource.Attribute.cardMaxElevation;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardPreventCornerOverlap = global::Simon.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardUseCompatPadding = global::Simon.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cardViewStyle = global::Simon.Droid.Resource.Attribute.cardViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkboxStyle = global::Simon.Droid.Resource.Attribute.checkboxStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkedChip = global::Simon.Droid.Resource.Attribute.checkedChip;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkedIcon = global::Simon.Droid.Resource.Attribute.checkedIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkedIconEnabled = global::Simon.Droid.Resource.Attribute.checkedIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkedIconVisible = global::Simon.Droid.Resource.Attribute.checkedIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.checkedTextViewStyle = global::Simon.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipBackgroundColor = global::Simon.Droid.Resource.Attribute.chipBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipCornerRadius = global::Simon.Droid.Resource.Attribute.chipCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipEndPadding = global::Simon.Droid.Resource.Attribute.chipEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipGroupStyle = global::Simon.Droid.Resource.Attribute.chipGroupStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipIcon = global::Simon.Droid.Resource.Attribute.chipIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipIconEnabled = global::Simon.Droid.Resource.Attribute.chipIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipIconSize = global::Simon.Droid.Resource.Attribute.chipIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipIconTint = global::Simon.Droid.Resource.Attribute.chipIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipIconVisible = global::Simon.Droid.Resource.Attribute.chipIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipMinHeight = global::Simon.Droid.Resource.Attribute.chipMinHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipSpacing = global::Simon.Droid.Resource.Attribute.chipSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipSpacingHorizontal = global::Simon.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipSpacingVertical = global::Simon.Droid.Resource.Attribute.chipSpacingVertical;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipStandaloneStyle = global::Simon.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipStartPadding = global::Simon.Droid.Resource.Attribute.chipStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipStrokeColor = global::Simon.Droid.Resource.Attribute.chipStrokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipStrokeWidth = global::Simon.Droid.Resource.Attribute.chipStrokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.chipStyle = global::Simon.Droid.Resource.Attribute.chipStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIcon = global::Simon.Droid.Resource.Attribute.closeIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconEnabled = global::Simon.Droid.Resource.Attribute.closeIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconEndPadding = global::Simon.Droid.Resource.Attribute.closeIconEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconSize = global::Simon.Droid.Resource.Attribute.closeIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconStartPadding = global::Simon.Droid.Resource.Attribute.closeIconStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconTint = global::Simon.Droid.Resource.Attribute.closeIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeIconVisible = global::Simon.Droid.Resource.Attribute.closeIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.closeItemLayout = global::Simon.Droid.Resource.Attribute.closeItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.collapseContentDescription = global::Simon.Droid.Resource.Attribute.collapseContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.collapsedTitleGravity = global::Simon.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.collapsedTitleTextAppearance = global::Simon.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.collapseIcon = global::Simon.Droid.Resource.Attribute.collapseIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.color = global::Simon.Droid.Resource.Attribute.color;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorAccent = global::Simon.Droid.Resource.Attribute.colorAccent;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorBackgroundFloating = global::Simon.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorButtonNormal = global::Simon.Droid.Resource.Attribute.colorButtonNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorControlActivated = global::Simon.Droid.Resource.Attribute.colorControlActivated;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorControlHighlight = global::Simon.Droid.Resource.Attribute.colorControlHighlight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorControlNormal = global::Simon.Droid.Resource.Attribute.colorControlNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorError = global::Simon.Droid.Resource.Attribute.colorError;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorPrimary = global::Simon.Droid.Resource.Attribute.colorPrimary;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorPrimaryDark = global::Simon.Droid.Resource.Attribute.colorPrimaryDark;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorSecondary = global::Simon.Droid.Resource.Attribute.colorSecondary;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.colorSwitchThumbNormal = global::Simon.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.commitIcon = global::Simon.Droid.Resource.Attribute.commitIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentDescription = global::Simon.Droid.Resource.Attribute.contentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetEnd = global::Simon.Droid.Resource.Attribute.contentInsetEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetEndWithActions = global::Simon.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetLeft = global::Simon.Droid.Resource.Attribute.contentInsetLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetRight = global::Simon.Droid.Resource.Attribute.contentInsetRight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetStart = global::Simon.Droid.Resource.Attribute.contentInsetStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentInsetStartWithNavigation = global::Simon.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentPadding = global::Simon.Droid.Resource.Attribute.contentPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentPaddingBottom = global::Simon.Droid.Resource.Attribute.contentPaddingBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentPaddingLeft = global::Simon.Droid.Resource.Attribute.contentPaddingLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentPaddingRight = global::Simon.Droid.Resource.Attribute.contentPaddingRight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentPaddingTop = global::Simon.Droid.Resource.Attribute.contentPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.contentScrim = global::Simon.Droid.Resource.Attribute.contentScrim;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.controlBackground = global::Simon.Droid.Resource.Attribute.controlBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.coordinatorLayoutStyle = global::Simon.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.cornerRadius = global::Simon.Droid.Resource.Attribute.cornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.counterEnabled = global::Simon.Droid.Resource.Attribute.counterEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.counterMaxLength = global::Simon.Droid.Resource.Attribute.counterMaxLength;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.counterOverflowTextAppearance = global::Simon.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.counterTextAppearance = global::Simon.Droid.Resource.Attribute.counterTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.customNavigationLayout = global::Simon.Droid.Resource.Attribute.customNavigationLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.defaultQueryHint = global::Simon.Droid.Resource.Attribute.defaultQueryHint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dialogCornerRadius = global::Simon.Droid.Resource.Attribute.dialogCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dialogPreferredPadding = global::Simon.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dialogTheme = global::Simon.Droid.Resource.Attribute.dialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.displayOptions = global::Simon.Droid.Resource.Attribute.displayOptions;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.divider = global::Simon.Droid.Resource.Attribute.divider;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dividerHorizontal = global::Simon.Droid.Resource.Attribute.dividerHorizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dividerPadding = global::Simon.Droid.Resource.Attribute.dividerPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dividerVertical = global::Simon.Droid.Resource.Attribute.dividerVertical;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.drawableSize = global::Simon.Droid.Resource.Attribute.drawableSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.drawerArrowStyle = global::Simon.Droid.Resource.Attribute.drawerArrowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dropdownListPreferredItemHeight = global::Simon.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.dropDownListViewStyle = global::Simon.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.editTextBackground = global::Simon.Droid.Resource.Attribute.editTextBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.editTextColor = global::Simon.Droid.Resource.Attribute.editTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.editTextStyle = global::Simon.Droid.Resource.Attribute.editTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.elevation = global::Simon.Droid.Resource.Attribute.elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.enforceMaterialTheme = global::Simon.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.enforceTextAppearance = global::Simon.Droid.Resource.Attribute.enforceTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.errorEnabled = global::Simon.Droid.Resource.Attribute.errorEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.errorTextAppearance = global::Simon.Droid.Resource.Attribute.errorTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Simon.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expanded = global::Simon.Droid.Resource.Attribute.expanded;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleGravity = global::Simon.Droid.Resource.Attribute.expandedTitleGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleMargin = global::Simon.Droid.Resource.Attribute.expandedTitleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleMarginBottom = global::Simon.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleMarginEnd = global::Simon.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleMarginStart = global::Simon.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleMarginTop = global::Simon.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.expandedTitleTextAppearance = global::Simon.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabAlignmentMode = global::Simon.Droid.Resource.Attribute.fabAlignmentMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabCradleMargin = global::Simon.Droid.Resource.Attribute.fabCradleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabCradleRoundedCornerRadius = global::Simon.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabCradleVerticalOffset = global::Simon.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabCustomSize = global::Simon.Droid.Resource.Attribute.fabCustomSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fabSize = global::Simon.Droid.Resource.Attribute.fabSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fastScrollEnabled = global::Simon.Droid.Resource.Attribute.fastScrollEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Simon.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Simon.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Simon.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Simon.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.firstBaselineToTopHeight = global::Simon.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.floatingActionButtonStyle = global::Simon.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.font = global::Simon.Droid.Resource.Attribute.font;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontFamily = global::Simon.Droid.Resource.Attribute.fontFamily;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderAuthority = global::Simon.Droid.Resource.Attribute.fontProviderAuthority;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderCerts = global::Simon.Droid.Resource.Attribute.fontProviderCerts;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderFetchStrategy = global::Simon.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderFetchTimeout = global::Simon.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderPackage = global::Simon.Droid.Resource.Attribute.fontProviderPackage;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontProviderQuery = global::Simon.Droid.Resource.Attribute.fontProviderQuery;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontStyle = global::Simon.Droid.Resource.Attribute.fontStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontVariationSettings = global::Simon.Droid.Resource.Attribute.fontVariationSettings;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.fontWeight = global::Simon.Droid.Resource.Attribute.fontWeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.foregroundInsidePadding = global::Simon.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.gapBetweenBars = global::Simon.Droid.Resource.Attribute.gapBetweenBars;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.goIcon = global::Simon.Droid.Resource.Attribute.goIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.headerLayout = global::Simon.Droid.Resource.Attribute.headerLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.height = global::Simon.Droid.Resource.Attribute.height;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.helperText = global::Simon.Droid.Resource.Attribute.helperText;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.helperTextEnabled = global::Simon.Droid.Resource.Attribute.helperTextEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.helperTextTextAppearance = global::Simon.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hideMotionSpec = global::Simon.Droid.Resource.Attribute.hideMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hideOnContentScroll = global::Simon.Droid.Resource.Attribute.hideOnContentScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hideOnScroll = global::Simon.Droid.Resource.Attribute.hideOnScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hintAnimationEnabled = global::Simon.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hintEnabled = global::Simon.Droid.Resource.Attribute.hintEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hintTextAppearance = global::Simon.Droid.Resource.Attribute.hintTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.homeAsUpIndicator = global::Simon.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.homeLayout = global::Simon.Droid.Resource.Attribute.homeLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.hoveredFocusedTranslationZ = global::Simon.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.icon = global::Simon.Droid.Resource.Attribute.icon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconEndPadding = global::Simon.Droid.Resource.Attribute.iconEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconGravity = global::Simon.Droid.Resource.Attribute.iconGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconifiedByDefault = global::Simon.Droid.Resource.Attribute.iconifiedByDefault;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconPadding = global::Simon.Droid.Resource.Attribute.iconPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconSize = global::Simon.Droid.Resource.Attribute.iconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconStartPadding = global::Simon.Droid.Resource.Attribute.iconStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconTint = global::Simon.Droid.Resource.Attribute.iconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.iconTintMode = global::Simon.Droid.Resource.Attribute.iconTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.imageButtonStyle = global::Simon.Droid.Resource.Attribute.imageButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.indeterminateProgressStyle = global::Simon.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.initialActivityCount = global::Simon.Droid.Resource.Attribute.initialActivityCount;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.insetForeground = global::Simon.Droid.Resource.Attribute.insetForeground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.isLightTheme = global::Simon.Droid.Resource.Attribute.isLightTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemBackground = global::Simon.Droid.Resource.Attribute.itemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemHorizontalPadding = global::Simon.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemHorizontalTranslationEnabled = global::Simon.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemIconPadding = global::Simon.Droid.Resource.Attribute.itemIconPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemIconSize = global::Simon.Droid.Resource.Attribute.itemIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemIconTint = global::Simon.Droid.Resource.Attribute.itemIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemPadding = global::Simon.Droid.Resource.Attribute.itemPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemSpacing = global::Simon.Droid.Resource.Attribute.itemSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemTextAppearance = global::Simon.Droid.Resource.Attribute.itemTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemTextAppearanceActive = global::Simon.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemTextAppearanceInactive = global::Simon.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.itemTextColor = global::Simon.Droid.Resource.Attribute.itemTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.keylines = global::Simon.Droid.Resource.Attribute.keylines;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.labelVisibilityMode = global::Simon.Droid.Resource.Attribute.labelVisibilityMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.lastBaselineToBottomHeight = global::Simon.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout = global::Simon.Droid.Resource.Attribute.layout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layoutManager = global::Simon.Droid.Resource.Attribute.layoutManager;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_anchor = global::Simon.Droid.Resource.Attribute.layout_anchor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_anchorGravity = global::Simon.Droid.Resource.Attribute.layout_anchorGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_behavior = global::Simon.Droid.Resource.Attribute.layout_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_collapseMode = global::Simon.Droid.Resource.Attribute.layout_collapseMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_collapseParallaxMultiplier = global::Simon.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_dodgeInsetEdges = global::Simon.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_insetEdge = global::Simon.Droid.Resource.Attribute.layout_insetEdge;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_keyline = global::Simon.Droid.Resource.Attribute.layout_keyline;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_scrollFlags = global::Simon.Droid.Resource.Attribute.layout_scrollFlags;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.layout_scrollInterpolator = global::Simon.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.liftOnScroll = global::Simon.Droid.Resource.Attribute.liftOnScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.lineHeight = global::Simon.Droid.Resource.Attribute.lineHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.lineSpacing = global::Simon.Droid.Resource.Attribute.lineSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listChoiceBackgroundIndicator = global::Simon.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listDividerAlertDialog = global::Simon.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listItemLayout = global::Simon.Droid.Resource.Attribute.listItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listLayout = global::Simon.Droid.Resource.Attribute.listLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listMenuViewStyle = global::Simon.Droid.Resource.Attribute.listMenuViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPopupWindowStyle = global::Simon.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPreferredItemHeight = global::Simon.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPreferredItemHeightLarge = global::Simon.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPreferredItemHeightSmall = global::Simon.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPreferredItemPaddingLeft = global::Simon.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.listPreferredItemPaddingRight = global::Simon.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.logo = global::Simon.Droid.Resource.Attribute.logo;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.logoDescription = global::Simon.Droid.Resource.Attribute.logoDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.materialButtonStyle = global::Simon.Droid.Resource.Attribute.materialButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.materialCardViewStyle = global::Simon.Droid.Resource.Attribute.materialCardViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.maxActionInlineWidth = global::Simon.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.maxButtonHeight = global::Simon.Droid.Resource.Attribute.maxButtonHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.maxImageSize = global::Simon.Droid.Resource.Attribute.maxImageSize;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.measureWithLargestChild = global::Simon.Droid.Resource.Attribute.measureWithLargestChild;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.menu = global::Simon.Droid.Resource.Attribute.menu;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.multiChoiceItemLayout = global::Simon.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.navigationContentDescription = global::Simon.Droid.Resource.Attribute.navigationContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.navigationIcon = global::Simon.Droid.Resource.Attribute.navigationIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.navigationMode = global::Simon.Droid.Resource.Attribute.navigationMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.navigationViewStyle = global::Simon.Droid.Resource.Attribute.navigationViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.numericModifiers = global::Simon.Droid.Resource.Attribute.numericModifiers;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.overlapAnchor = global::Simon.Droid.Resource.Attribute.overlapAnchor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.paddingBottomNoButtons = global::Simon.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.paddingEnd = global::Simon.Droid.Resource.Attribute.paddingEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.paddingStart = global::Simon.Droid.Resource.Attribute.paddingStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.paddingTopNoTitle = global::Simon.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.panelBackground = global::Simon.Droid.Resource.Attribute.panelBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.panelMenuListTheme = global::Simon.Droid.Resource.Attribute.panelMenuListTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.panelMenuListWidth = global::Simon.Droid.Resource.Attribute.panelMenuListWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.passwordToggleContentDescription = global::Simon.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.passwordToggleDrawable = global::Simon.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.passwordToggleEnabled = global::Simon.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.passwordToggleTint = global::Simon.Droid.Resource.Attribute.passwordToggleTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.passwordToggleTintMode = global::Simon.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.popupMenuStyle = global::Simon.Droid.Resource.Attribute.popupMenuStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.popupTheme = global::Simon.Droid.Resource.Attribute.popupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.popupWindowStyle = global::Simon.Droid.Resource.Attribute.popupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.preserveIconSpacing = global::Simon.Droid.Resource.Attribute.preserveIconSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.pressedTranslationZ = global::Simon.Droid.Resource.Attribute.pressedTranslationZ;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.progressBarPadding = global::Simon.Droid.Resource.Attribute.progressBarPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.progressBarStyle = global::Simon.Droid.Resource.Attribute.progressBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.queryBackground = global::Simon.Droid.Resource.Attribute.queryBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.queryHint = global::Simon.Droid.Resource.Attribute.queryHint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.radioButtonStyle = global::Simon.Droid.Resource.Attribute.radioButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.ratingBarStyle = global::Simon.Droid.Resource.Attribute.ratingBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.ratingBarStyleIndicator = global::Simon.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.ratingBarStyleSmall = global::Simon.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.reverseLayout = global::Simon.Droid.Resource.Attribute.reverseLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.rippleColor = global::Simon.Droid.Resource.Attribute.rippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.scrimAnimationDuration = global::Simon.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.scrimBackground = global::Simon.Droid.Resource.Attribute.scrimBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.scrimVisibleHeightTrigger = global::Simon.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.searchHintIcon = global::Simon.Droid.Resource.Attribute.searchHintIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.searchIcon = global::Simon.Droid.Resource.Attribute.searchIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.searchViewStyle = global::Simon.Droid.Resource.Attribute.searchViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.seekBarStyle = global::Simon.Droid.Resource.Attribute.seekBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.selectableItemBackground = global::Simon.Droid.Resource.Attribute.selectableItemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.selectableItemBackgroundBorderless = global::Simon.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.showAsAction = global::Simon.Droid.Resource.Attribute.showAsAction;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.showDividers = global::Simon.Droid.Resource.Attribute.showDividers;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.showMotionSpec = global::Simon.Droid.Resource.Attribute.showMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.showText = global::Simon.Droid.Resource.Attribute.showText;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.showTitle = global::Simon.Droid.Resource.Attribute.showTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.singleChoiceItemLayout = global::Simon.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.singleLine = global::Simon.Droid.Resource.Attribute.singleLine;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.singleSelection = global::Simon.Droid.Resource.Attribute.singleSelection;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.snackbarButtonStyle = global::Simon.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.snackbarStyle = global::Simon.Droid.Resource.Attribute.snackbarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.spanCount = global::Simon.Droid.Resource.Attribute.spanCount;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.spinBars = global::Simon.Droid.Resource.Attribute.spinBars;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.spinnerDropDownItemStyle = global::Simon.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.spinnerStyle = global::Simon.Droid.Resource.Attribute.spinnerStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.splitTrack = global::Simon.Droid.Resource.Attribute.splitTrack;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.srcCompat = global::Simon.Droid.Resource.Attribute.srcCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.stackFromEnd = global::Simon.Droid.Resource.Attribute.stackFromEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.state_above_anchor = global::Simon.Droid.Resource.Attribute.state_above_anchor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.state_collapsed = global::Simon.Droid.Resource.Attribute.state_collapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.state_collapsible = global::Simon.Droid.Resource.Attribute.state_collapsible;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.state_liftable = global::Simon.Droid.Resource.Attribute.state_liftable;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.state_lifted = global::Simon.Droid.Resource.Attribute.state_lifted;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.statusBarBackground = global::Simon.Droid.Resource.Attribute.statusBarBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.statusBarScrim = global::Simon.Droid.Resource.Attribute.statusBarScrim;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.strokeColor = global::Simon.Droid.Resource.Attribute.strokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.strokeWidth = global::Simon.Droid.Resource.Attribute.strokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.subMenuArrow = global::Simon.Droid.Resource.Attribute.subMenuArrow;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.submitBackground = global::Simon.Droid.Resource.Attribute.submitBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.subtitle = global::Simon.Droid.Resource.Attribute.subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.subtitleTextAppearance = global::Simon.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.subtitleTextColor = global::Simon.Droid.Resource.Attribute.subtitleTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.subtitleTextStyle = global::Simon.Droid.Resource.Attribute.subtitleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.suggestionRowLayout = global::Simon.Droid.Resource.Attribute.suggestionRowLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.switchMinWidth = global::Simon.Droid.Resource.Attribute.switchMinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.switchPadding = global::Simon.Droid.Resource.Attribute.switchPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.switchStyle = global::Simon.Droid.Resource.Attribute.switchStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.switchTextAppearance = global::Simon.Droid.Resource.Attribute.switchTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabBackground = global::Simon.Droid.Resource.Attribute.tabBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabContentStart = global::Simon.Droid.Resource.Attribute.tabContentStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabGravity = global::Simon.Droid.Resource.Attribute.tabGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIconTint = global::Simon.Droid.Resource.Attribute.tabIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIconTintMode = global::Simon.Droid.Resource.Attribute.tabIconTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicator = global::Simon.Droid.Resource.Attribute.tabIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicatorAnimationDuration = global::Simon.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicatorColor = global::Simon.Droid.Resource.Attribute.tabIndicatorColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicatorFullWidth = global::Simon.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicatorGravity = global::Simon.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabIndicatorHeight = global::Simon.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabInlineLabel = global::Simon.Droid.Resource.Attribute.tabInlineLabel;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabMaxWidth = global::Simon.Droid.Resource.Attribute.tabMaxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabMinWidth = global::Simon.Droid.Resource.Attribute.tabMinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabMode = global::Simon.Droid.Resource.Attribute.tabMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabPadding = global::Simon.Droid.Resource.Attribute.tabPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabPaddingBottom = global::Simon.Droid.Resource.Attribute.tabPaddingBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabPaddingEnd = global::Simon.Droid.Resource.Attribute.tabPaddingEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabPaddingStart = global::Simon.Droid.Resource.Attribute.tabPaddingStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabPaddingTop = global::Simon.Droid.Resource.Attribute.tabPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabRippleColor = global::Simon.Droid.Resource.Attribute.tabRippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabSelectedTextColor = global::Simon.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabStyle = global::Simon.Droid.Resource.Attribute.tabStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabTextAppearance = global::Simon.Droid.Resource.Attribute.tabTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabTextColor = global::Simon.Droid.Resource.Attribute.tabTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tabUnboundedRipple = global::Simon.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAllCaps = global::Simon.Droid.Resource.Attribute.textAllCaps;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceBody1 = global::Simon.Droid.Resource.Attribute.textAppearanceBody1;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceBody2 = global::Simon.Droid.Resource.Attribute.textAppearanceBody2;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceButton = global::Simon.Droid.Resource.Attribute.textAppearanceButton;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceCaption = global::Simon.Droid.Resource.Attribute.textAppearanceCaption;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline1 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline2 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline3 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline4 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline5 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceHeadline6 = global::Simon.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceLargePopupMenu = global::Simon.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceListItem = global::Simon.Droid.Resource.Attribute.textAppearanceListItem;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceListItemSecondary = global::Simon.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceListItemSmall = global::Simon.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceOverline = global::Simon.Droid.Resource.Attribute.textAppearanceOverline;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearancePopupMenuHeader = global::Simon.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Simon.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceSearchResultTitle = global::Simon.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceSmallPopupMenu = global::Simon.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceSubtitle1 = global::Simon.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textAppearanceSubtitle2 = global::Simon.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textColorAlertDialogListItem = global::Simon.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textColorSearchUrl = global::Simon.Droid.Resource.Attribute.textColorSearchUrl;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textEndPadding = global::Simon.Droid.Resource.Attribute.textEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textInputStyle = global::Simon.Droid.Resource.Attribute.textInputStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.textStartPadding = global::Simon.Droid.Resource.Attribute.textStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.theme = global::Simon.Droid.Resource.Attribute.theme;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.thickness = global::Simon.Droid.Resource.Attribute.thickness;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.thumbTextPadding = global::Simon.Droid.Resource.Attribute.thumbTextPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.thumbTint = global::Simon.Droid.Resource.Attribute.thumbTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.thumbTintMode = global::Simon.Droid.Resource.Attribute.thumbTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tickMark = global::Simon.Droid.Resource.Attribute.tickMark;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tickMarkTint = global::Simon.Droid.Resource.Attribute.tickMarkTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tickMarkTintMode = global::Simon.Droid.Resource.Attribute.tickMarkTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tint = global::Simon.Droid.Resource.Attribute.tint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tintMode = global::Simon.Droid.Resource.Attribute.tintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.title = global::Simon.Droid.Resource.Attribute.title;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleEnabled = global::Simon.Droid.Resource.Attribute.titleEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMargin = global::Simon.Droid.Resource.Attribute.titleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMarginBottom = global::Simon.Droid.Resource.Attribute.titleMarginBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMarginEnd = global::Simon.Droid.Resource.Attribute.titleMarginEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMargins = global::Simon.Droid.Resource.Attribute.titleMargins;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMarginStart = global::Simon.Droid.Resource.Attribute.titleMarginStart;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleMarginTop = global::Simon.Droid.Resource.Attribute.titleMarginTop;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleTextAppearance = global::Simon.Droid.Resource.Attribute.titleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleTextColor = global::Simon.Droid.Resource.Attribute.titleTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.titleTextStyle = global::Simon.Droid.Resource.Attribute.titleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.toolbarId = global::Simon.Droid.Resource.Attribute.toolbarId;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.toolbarNavigationButtonStyle = global::Simon.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.toolbarStyle = global::Simon.Droid.Resource.Attribute.toolbarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tooltipForegroundColor = global::Simon.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tooltipFrameBackground = global::Simon.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.tooltipText = global::Simon.Droid.Resource.Attribute.tooltipText;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.track = global::Simon.Droid.Resource.Attribute.track;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.trackTint = global::Simon.Droid.Resource.Attribute.trackTint;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.trackTintMode = global::Simon.Droid.Resource.Attribute.trackTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.ttcIndex = global::Simon.Droid.Resource.Attribute.ttcIndex;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.useCompatPadding = global::Simon.Droid.Resource.Attribute.useCompatPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.viewInflaterClass = global::Simon.Droid.Resource.Attribute.viewInflaterClass;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.voiceIcon = global::Simon.Droid.Resource.Attribute.voiceIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowActionBar = global::Simon.Droid.Resource.Attribute.windowActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowActionBarOverlay = global::Simon.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowActionModeOverlay = global::Simon.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowFixedHeightMajor = global::Simon.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowFixedHeightMinor = global::Simon.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowFixedWidthMajor = global::Simon.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowFixedWidthMinor = global::Simon.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowMinWidthMajor = global::Simon.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowMinWidthMinor = global::Simon.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Attribute.windowNoTitle = global::Simon.Droid.Resource.Attribute.windowNoTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Boolean.abc_action_bar_embed_tabs = global::Simon.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::LabelHtml.Forms.Plugin.Resource.Boolean.abc_allow_stacked_button_bar = global::Simon.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Simon.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::LabelHtml.Forms.Plugin.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::Simon.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Simon.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_background_cache_hint_selector_material_light = global::Simon.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_btn_colored_borderless_text_material = global::Simon.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_btn_colored_text_material = global::Simon.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_color_highlight_material = global::Simon.Droid.Resource.Color.abc_color_highlight_material;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_hint_foreground_material_dark = global::Simon.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_hint_foreground_material_light = global::Simon.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_input_method_navigation_guard = global::Simon.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_primary_text_disable_only_material_dark = global::Simon.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_primary_text_disable_only_material_light = global::Simon.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_primary_text_material_dark = global::Simon.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_primary_text_material_light = global::Simon.Droid.Resource.Color.abc_primary_text_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_search_url_text = global::Simon.Droid.Resource.Color.abc_search_url_text;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_search_url_text_normal = global::Simon.Droid.Resource.Color.abc_search_url_text_normal;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_search_url_text_pressed = global::Simon.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_search_url_text_selected = global::Simon.Droid.Resource.Color.abc_search_url_text_selected;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_secondary_text_material_dark = global::Simon.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_secondary_text_material_light = global::Simon.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_btn_checkable = global::Simon.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_default = global::Simon.Droid.Resource.Color.abc_tint_default;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_edittext = global::Simon.Droid.Resource.Color.abc_tint_edittext;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_seek_thumb = global::Simon.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_spinner = global::Simon.Droid.Resource.Color.abc_tint_spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Color.abc_tint_switch_track = global::Simon.Droid.Resource.Color.abc_tint_switch_track;
+			global::LabelHtml.Forms.Plugin.Resource.Color.accent_material_dark = global::Simon.Droid.Resource.Color.accent_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.accent_material_light = global::Simon.Droid.Resource.Color.accent_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.background_floating_material_dark = global::Simon.Droid.Resource.Color.background_floating_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.background_floating_material_light = global::Simon.Droid.Resource.Color.background_floating_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.background_material_dark = global::Simon.Droid.Resource.Color.background_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.background_material_light = global::Simon.Droid.Resource.Color.background_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_disabled_material_dark = global::Simon.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_disabled_material_light = global::Simon.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_inverse_material_dark = global::Simon.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_inverse_material_light = global::Simon.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_material_dark = global::Simon.Droid.Resource.Color.bright_foreground_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.bright_foreground_material_light = global::Simon.Droid.Resource.Color.bright_foreground_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.browser_actions_bg_grey = global::Simon.Droid.Resource.Color.browser_actions_bg_grey;
+			global::LabelHtml.Forms.Plugin.Resource.Color.browser_actions_divider_color = global::Simon.Droid.Resource.Color.browser_actions_divider_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.browser_actions_text_color = global::Simon.Droid.Resource.Color.browser_actions_text_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.browser_actions_title_color = global::Simon.Droid.Resource.Color.browser_actions_title_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.button_material_dark = global::Simon.Droid.Resource.Color.button_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.button_material_light = global::Simon.Droid.Resource.Color.button_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.cardview_dark_background = global::Simon.Droid.Resource.Color.cardview_dark_background;
+			global::LabelHtml.Forms.Plugin.Resource.Color.cardview_light_background = global::Simon.Droid.Resource.Color.cardview_light_background;
+			global::LabelHtml.Forms.Plugin.Resource.Color.cardview_shadow_end_color = global::Simon.Droid.Resource.Color.cardview_shadow_end_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.cardview_shadow_start_color = global::Simon.Droid.Resource.Color.cardview_shadow_start_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_bottom_navigation_shadow_color = global::Simon.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_default_color_primary = global::Simon.Droid.Resource.Color.design_default_color_primary;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_default_color_primary_dark = global::Simon.Droid.Resource.Color.design_default_color_primary_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_error = global::Simon.Droid.Resource.Color.design_error;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_shadow_end_color = global::Simon.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_shadow_mid_color = global::Simon.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_shadow_start_color = global::Simon.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_stroke_end_inner_color = global::Simon.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_stroke_end_outer_color = global::Simon.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_stroke_top_inner_color = global::Simon.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_fab_stroke_top_outer_color = global::Simon.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_snackbar_background_color = global::Simon.Droid.Resource.Color.design_snackbar_background_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.design_tint_password_toggle = global::Simon.Droid.Resource.Color.design_tint_password_toggle;
+			global::LabelHtml.Forms.Plugin.Resource.Color.dim_foreground_disabled_material_dark = global::Simon.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.dim_foreground_disabled_material_light = global::Simon.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.dim_foreground_material_dark = global::Simon.Droid.Resource.Color.dim_foreground_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.dim_foreground_material_light = global::Simon.Droid.Resource.Color.dim_foreground_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.error_color_material_dark = global::Simon.Droid.Resource.Color.error_color_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.error_color_material_light = global::Simon.Droid.Resource.Color.error_color_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.foreground_material_dark = global::Simon.Droid.Resource.Color.foreground_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.foreground_material_light = global::Simon.Droid.Resource.Color.foreground_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.highlighted_text_material_dark = global::Simon.Droid.Resource.Color.highlighted_text_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.highlighted_text_material_light = global::Simon.Droid.Resource.Color.highlighted_text_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_blue_grey_800 = global::Simon.Droid.Resource.Color.material_blue_grey_800;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_blue_grey_900 = global::Simon.Droid.Resource.Color.material_blue_grey_900;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_blue_grey_950 = global::Simon.Droid.Resource.Color.material_blue_grey_950;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_deep_teal_200 = global::Simon.Droid.Resource.Color.material_deep_teal_200;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_deep_teal_500 = global::Simon.Droid.Resource.Color.material_deep_teal_500;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_100 = global::Simon.Droid.Resource.Color.material_grey_100;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_300 = global::Simon.Droid.Resource.Color.material_grey_300;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_50 = global::Simon.Droid.Resource.Color.material_grey_50;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_600 = global::Simon.Droid.Resource.Color.material_grey_600;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_800 = global::Simon.Droid.Resource.Color.material_grey_800;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_850 = global::Simon.Droid.Resource.Color.material_grey_850;
+			global::LabelHtml.Forms.Plugin.Resource.Color.material_grey_900 = global::Simon.Droid.Resource.Color.material_grey_900;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::Simon.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_bottom_nav_item_tint = global::Simon.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_bg_color_disabled = global::Simon.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_bg_color_selector = global::Simon.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_ripple_color = global::Simon.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_stroke_color_selector = global::Simon.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_text_btn_ripple_color = global::Simon.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_text_color_disabled = global::Simon.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_text_color_selector = global::Simon.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_btn_transparent_bg_color = global::Simon.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_chip_background_color = global::Simon.Droid.Resource.Color.mtrl_chip_background_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_chip_close_icon_tint = global::Simon.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_chip_ripple_color = global::Simon.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_chip_text_color = global::Simon.Droid.Resource.Color.mtrl_chip_text_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_fab_ripple_color = global::Simon.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_scrim_color = global::Simon.Droid.Resource.Color.mtrl_scrim_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_tabs_colored_ripple_color = global::Simon.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_tabs_icon_color_selector = global::Simon.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::Simon.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::Simon.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_tabs_ripple_color = global::Simon.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_textinput_default_box_stroke_color = global::Simon.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_textinput_disabled_color = global::Simon.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::Simon.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::Simon.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.mtrl_text_btn_text_color_selector = global::Simon.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::LabelHtml.Forms.Plugin.Resource.Color.notification_action_color_filter = global::Simon.Droid.Resource.Color.notification_action_color_filter;
+			global::LabelHtml.Forms.Plugin.Resource.Color.notification_icon_bg_color = global::Simon.Droid.Resource.Color.notification_icon_bg_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.notification_material_background_media_default_color = global::Simon.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_dark_material_dark = global::Simon.Droid.Resource.Color.primary_dark_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_dark_material_light = global::Simon.Droid.Resource.Color.primary_dark_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_material_dark = global::Simon.Droid.Resource.Color.primary_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_material_light = global::Simon.Droid.Resource.Color.primary_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_text_default_material_dark = global::Simon.Droid.Resource.Color.primary_text_default_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_text_default_material_light = global::Simon.Droid.Resource.Color.primary_text_default_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_text_disabled_material_dark = global::Simon.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.primary_text_disabled_material_light = global::Simon.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.ripple_material_dark = global::Simon.Droid.Resource.Color.ripple_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.ripple_material_light = global::Simon.Droid.Resource.Color.ripple_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.secondary_text_default_material_dark = global::Simon.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.secondary_text_default_material_light = global::Simon.Droid.Resource.Color.secondary_text_default_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.secondary_text_disabled_material_dark = global::Simon.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.secondary_text_disabled_material_light = global::Simon.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_disabled_material_dark = global::Simon.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_disabled_material_light = global::Simon.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_material_dark = global::Simon.Droid.Resource.Color.switch_thumb_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_material_light = global::Simon.Droid.Resource.Color.switch_thumb_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_normal_material_dark = global::Simon.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.switch_thumb_normal_material_light = global::Simon.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Color.tooltip_background_dark = global::Simon.Droid.Resource.Color.tooltip_background_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Color.tooltip_background_light = global::Simon.Droid.Resource.Color.tooltip_background_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_content_inset_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::Simon.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_default_height_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_elevation_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_stacked_max_height = global::Simon.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Simon.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Simon.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_button_min_height_material = global::Simon.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_button_min_width_material = global::Simon.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Simon.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Simon.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_alert_dialog_button_dimen = global::Simon.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_button_inset_horizontal_material = global::Simon.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_button_inset_vertical_material = global::Simon.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_button_padding_horizontal_material = global::Simon.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_button_padding_vertical_material = global::Simon.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::Simon.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_config_prefDialogWidth = global::Simon.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_control_corner_material = global::Simon.Droid.Resource.Dimension.abc_control_corner_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_control_inset_material = global::Simon.Droid.Resource.Dimension.abc_control_inset_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_control_padding_material = global::Simon.Droid.Resource.Dimension.abc_control_padding_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_corner_radius_material = global::Simon.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_fixed_height_major = global::Simon.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_fixed_height_minor = global::Simon.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_fixed_width_major = global::Simon.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_fixed_width_minor = global::Simon.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::Simon.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::Simon.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_min_width_major = global::Simon.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_min_width_minor = global::Simon.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_padding_material = global::Simon.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_padding_top_material = global::Simon.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dialog_title_divider_material = global::Simon.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_disabled_alpha_material_dark = global::Simon.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_disabled_alpha_material_light = global::Simon.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dropdownitem_icon_width = global::Simon.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Simon.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Simon.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Simon.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Simon.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_edit_text_inset_top_material = global::Simon.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_floating_window_z = global::Simon.Droid.Resource.Dimension.abc_floating_window_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Simon.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_panel_menu_list_width = global::Simon.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_progress_bar_height_material = global::Simon.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_search_view_preferred_height = global::Simon.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_search_view_preferred_width = global::Simon.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_seekbar_track_background_height_material = global::Simon.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Simon.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_select_dialog_padding_start_material = global::Simon.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_switch_padding = global::Simon.Droid.Resource.Dimension.abc_switch_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_body_1_material = global::Simon.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_body_2_material = global::Simon.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_button_material = global::Simon.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_caption_material = global::Simon.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_display_1_material = global::Simon.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_display_2_material = global::Simon.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_display_3_material = global::Simon.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_display_4_material = global::Simon.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_headline_material = global::Simon.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_large_material = global::Simon.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_medium_material = global::Simon.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_menu_header_material = global::Simon.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_menu_material = global::Simon.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_small_material = global::Simon.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_subhead_material = global::Simon.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Simon.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_title_material = global::Simon.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.abc_text_size_title_material_toolbar = global::Simon.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.browser_actions_context_menu_max_width = global::Simon.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.browser_actions_context_menu_min_padding = global::Simon.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.cardview_compat_inset_shadow = global::Simon.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.cardview_default_elevation = global::Simon.Droid.Resource.Dimension.cardview_default_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.cardview_default_radius = global::Simon.Droid.Resource.Dimension.cardview_default_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_button_inset_horizontal_material = global::Simon.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_button_inset_vertical_material = global::Simon.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_button_padding_horizontal_material = global::Simon.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_button_padding_vertical_material = global::Simon.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_control_corner_material = global::Simon.Droid.Resource.Dimension.compat_control_corner_material;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_notification_large_icon_max_height = global::Simon.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.compat_notification_large_icon_max_width = global::Simon.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_appbar_elevation = global::Simon.Droid.Resource.Dimension.design_appbar_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_active_text_size = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_elevation = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_height = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_icon_size = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_item_max_width = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_item_min_width = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_margin = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_shadow_height = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_navigation_text_size = global::Simon.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Simon.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_bottom_sheet_peek_height_min = global::Simon.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_border_width = global::Simon.Droid.Resource.Dimension.design_fab_border_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_elevation = global::Simon.Droid.Resource.Dimension.design_fab_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_image_size = global::Simon.Droid.Resource.Dimension.design_fab_image_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_size_mini = global::Simon.Droid.Resource.Dimension.design_fab_size_mini;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_size_normal = global::Simon.Droid.Resource.Dimension.design_fab_size_normal;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_translation_z_hovered_focused = global::Simon.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_fab_translation_z_pressed = global::Simon.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_elevation = global::Simon.Droid.Resource.Dimension.design_navigation_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_icon_padding = global::Simon.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_icon_size = global::Simon.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_item_horizontal_padding = global::Simon.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_item_icon_padding = global::Simon.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_max_width = global::Simon.Droid.Resource.Dimension.design_navigation_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_padding_bottom = global::Simon.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_navigation_separator_vertical_padding = global::Simon.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_action_inline_max_width = global::Simon.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_background_corner_radius = global::Simon.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_elevation = global::Simon.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Simon.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_max_width = global::Simon.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_min_width = global::Simon.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_padding_horizontal = global::Simon.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_padding_vertical = global::Simon.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Simon.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_snackbar_text_size = global::Simon.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_tab_max_width = global::Simon.Droid.Resource.Dimension.design_tab_max_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_tab_scrollable_min_width = global::Simon.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_tab_text_size = global::Simon.Droid.Resource.Dimension.design_tab_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_tab_text_size_2line = global::Simon.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.design_textinput_caption_translate_y = global::Simon.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.disabled_alpha_material_dark = global::Simon.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.disabled_alpha_material_light = global::Simon.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.fastscroll_default_thickness = global::Simon.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.fastscroll_margin = global::Simon.Droid.Resource.Dimension.fastscroll_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.fastscroll_minimum_range = global::Simon.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.highlight_alpha_material_colored = global::Simon.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.highlight_alpha_material_dark = global::Simon.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.highlight_alpha_material_light = global::Simon.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.hint_alpha_material_dark = global::Simon.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.hint_alpha_material_light = global::Simon.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.hint_pressed_alpha_material_dark = global::Simon.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.hint_pressed_alpha_material_light = global::Simon.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Simon.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Simon.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Simon.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::Simon.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::Simon.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::Simon.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::Simon.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_bottomappbar_height = global::Simon.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_corner_radius = global::Simon.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::Simon.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_disabled_elevation = global::Simon.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_disabled_z = global::Simon.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_elevation = global::Simon.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_focused_z = global::Simon.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_hovered_z = global::Simon.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::Simon.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_icon_padding = global::Simon.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_inset = global::Simon.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_letter_spacing = global::Simon.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_padding_bottom = global::Simon.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_padding_left = global::Simon.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_padding_right = global::Simon.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_padding_top = global::Simon.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_pressed_z = global::Simon.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_stroke_size = global::Simon.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::Simon.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::Simon.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::Simon.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_text_size = global::Simon.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_btn_z = global::Simon.Droid.Resource.Dimension.mtrl_btn_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_card_elevation = global::Simon.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_card_spacing = global::Simon.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_chip_pressed_translation_z = global::Simon.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_chip_text_size = global::Simon.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_fab_elevation = global::Simon.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::Simon.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_fab_translation_z_pressed = global::Simon.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_navigation_elevation = global::Simon.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::Simon.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_navigation_item_icon_padding = global::Simon.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::Simon.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_snackbar_margin = global::Simon.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_padding_end = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::Simon.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::Simon.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.mtrl_toolbar_default_height = global::Simon.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_action_icon_size = global::Simon.Droid.Resource.Dimension.notification_action_icon_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_action_text_size = global::Simon.Droid.Resource.Dimension.notification_action_text_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_big_circle_margin = global::Simon.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_content_margin_start = global::Simon.Droid.Resource.Dimension.notification_content_margin_start;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_large_icon_height = global::Simon.Droid.Resource.Dimension.notification_large_icon_height;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_large_icon_width = global::Simon.Droid.Resource.Dimension.notification_large_icon_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_main_column_padding_top = global::Simon.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_media_narrow_margin = global::Simon.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_right_icon_size = global::Simon.Droid.Resource.Dimension.notification_right_icon_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_right_side_padding_top = global::Simon.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_small_icon_background_padding = global::Simon.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_small_icon_size_as_large = global::Simon.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_subtext_size = global::Simon.Droid.Resource.Dimension.notification_subtext_size;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_top_pad = global::Simon.Droid.Resource.Dimension.notification_top_pad;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.notification_top_pad_large_text = global::Simon.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.subtitle_corner_radius = global::Simon.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.subtitle_outline_width = global::Simon.Droid.Resource.Dimension.subtitle_outline_width;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.subtitle_shadow_offset = global::Simon.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.subtitle_shadow_radius = global::Simon.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_corner_radius = global::Simon.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_horizontal_padding = global::Simon.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_margin = global::Simon.Droid.Resource.Dimension.tooltip_margin;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::Simon.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_precise_anchor_threshold = global::Simon.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_vertical_padding = global::Simon.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_y_offset_non_touch = global::Simon.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::LabelHtml.Forms.Plugin.Resource.Dimension.tooltip_y_offset_touch = global::Simon.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_action_bar_item_background_material = global::Simon.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_borderless_material = global::Simon.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_check_material = global::Simon.Droid.Resource.Drawable.abc_btn_check_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Simon.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Simon.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_colored_material = global::Simon.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_default_mtrl_shape = global::Simon.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_radio_material = global::Simon.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Simon.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Simon.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Simon.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Simon.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_cab_background_internal_bg = global::Simon.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_cab_background_top_material = global::Simon.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_control_background_material = global::Simon.Droid.Resource.Drawable.abc_control_background_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_dialog_material_background = global::Simon.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_edit_text_material = global::Simon.Droid.Resource.Drawable.abc_edit_text_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_ab_back_material = global::Simon.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::Simon.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_clear_material = global::Simon.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_go_search_api_material = global::Simon.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_overflow_material = global::Simon.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_search_api_material = global::Simon.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_black_16dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_black_36dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_black_48dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_half_black_16dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_half_black_36dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_star_half_black_48dp = global::Simon.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ic_voice_search_api_material = global::Simon.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_item_background_holo_dark = global::Simon.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_item_background_holo_light = global::Simon.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_divider_material = global::Simon.Droid.Resource.Drawable.abc_list_divider_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_focused_holo = global::Simon.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_longpressed_holo = global::Simon.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_pressed_holo_dark = global::Simon.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_pressed_holo_light = global::Simon.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Simon.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Simon.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Simon.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Simon.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_holo_dark = global::Simon.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_list_selector_holo_light = global::Simon.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Simon.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_popup_background_mtrl_mult = global::Simon.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ratingbar_indicator_material = global::Simon.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ratingbar_material = global::Simon.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_ratingbar_small_material = global::Simon.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Simon.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Simon.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_seekbar_thumb_material = global::Simon.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_seekbar_tick_mark_material = global::Simon.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_seekbar_track_material = global::Simon.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Simon.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_spinner_textfield_background_material = global::Simon.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_switch_thumb_material = global::Simon.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_tab_indicator_material = global::Simon.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Simon.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_textfield_search_material = global::Simon.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_cursor_material = global::Simon.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::Simon.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.abc_vector_test = global::Simon.Droid.Resource.Drawable.abc_vector_test;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.avd_hide_password = global::Simon.Droid.Resource.Drawable.avd_hide_password;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.avd_show_password = global::Simon.Droid.Resource.Drawable.avd_show_password;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_bottom_navigation_item_background = global::Simon.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_fab_background = global::Simon.Droid.Resource.Drawable.design_fab_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_ic_visibility = global::Simon.Droid.Resource.Drawable.design_ic_visibility;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_ic_visibility_off = global::Simon.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_password_eye = global::Simon.Droid.Resource.Drawable.design_password_eye;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.design_snackbar_background = global::Simon.Droid.Resource.Drawable.design_snackbar_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.ic_mtrl_chip_checked_black = global::Simon.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.ic_mtrl_chip_checked_circle = global::Simon.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.ic_mtrl_chip_close_circle = global::Simon.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.mtrl_snackbar_background = global::Simon.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.mtrl_tabs_default_indicator = global::Simon.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.navigation_empty_icon = global::Simon.Droid.Resource.Drawable.navigation_empty_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_action_background = global::Simon.Droid.Resource.Drawable.notification_action_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg = global::Simon.Droid.Resource.Drawable.notification_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg_low = global::Simon.Droid.Resource.Drawable.notification_bg_low;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg_low_normal = global::Simon.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg_low_pressed = global::Simon.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg_normal = global::Simon.Droid.Resource.Drawable.notification_bg_normal;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_bg_normal_pressed = global::Simon.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_icon_background = global::Simon.Droid.Resource.Drawable.notification_icon_background;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_template_icon_bg = global::Simon.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_template_icon_low_bg = global::Simon.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notification_tile_bg = global::Simon.Droid.Resource.Drawable.notification_tile_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.notify_panel_notification_icon_bg = global::Simon.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.tooltip_frame_dark = global::Simon.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::LabelHtml.Forms.Plugin.Resource.Drawable.tooltip_frame_light = global::Simon.Droid.Resource.Drawable.tooltip_frame_light;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action0 = global::Simon.Droid.Resource.Id.action0;
+			global::LabelHtml.Forms.Plugin.Resource.Id.actions = global::Simon.Droid.Resource.Id.actions;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar = global::Simon.Droid.Resource.Id.action_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_activity_content = global::Simon.Droid.Resource.Id.action_bar_activity_content;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_container = global::Simon.Droid.Resource.Id.action_bar_container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_root = global::Simon.Droid.Resource.Id.action_bar_root;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_spinner = global::Simon.Droid.Resource.Id.action_bar_spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_subtitle = global::Simon.Droid.Resource.Id.action_bar_subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_bar_title = global::Simon.Droid.Resource.Id.action_bar_title;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_container = global::Simon.Droid.Resource.Id.action_container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_context_bar = global::Simon.Droid.Resource.Id.action_context_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_divider = global::Simon.Droid.Resource.Id.action_divider;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_image = global::Simon.Droid.Resource.Id.action_image;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_menu_divider = global::Simon.Droid.Resource.Id.action_menu_divider;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_menu_presenter = global::Simon.Droid.Resource.Id.action_menu_presenter;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_mode_bar = global::Simon.Droid.Resource.Id.action_mode_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_mode_bar_stub = global::Simon.Droid.Resource.Id.action_mode_bar_stub;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_mode_close_button = global::Simon.Droid.Resource.Id.action_mode_close_button;
+			global::LabelHtml.Forms.Plugin.Resource.Id.action_text = global::Simon.Droid.Resource.Id.action_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.activity_chooser_view_content = global::Simon.Droid.Resource.Id.activity_chooser_view_content;
+			global::LabelHtml.Forms.Plugin.Resource.Id.add = global::Simon.Droid.Resource.Id.add;
+			global::LabelHtml.Forms.Plugin.Resource.Id.alertTitle = global::Simon.Droid.Resource.Id.alertTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.all = global::Simon.Droid.Resource.Id.all;
+			global::LabelHtml.Forms.Plugin.Resource.Id.ALT = global::Simon.Droid.Resource.Id.ALT;
+			global::LabelHtml.Forms.Plugin.Resource.Id.always = global::Simon.Droid.Resource.Id.always;
+			global::LabelHtml.Forms.Plugin.Resource.Id.async = global::Simon.Droid.Resource.Id.async;
+			global::LabelHtml.Forms.Plugin.Resource.Id.auto = global::Simon.Droid.Resource.Id.auto;
+			global::LabelHtml.Forms.Plugin.Resource.Id.beginning = global::Simon.Droid.Resource.Id.beginning;
+			global::LabelHtml.Forms.Plugin.Resource.Id.blocking = global::Simon.Droid.Resource.Id.blocking;
+			global::LabelHtml.Forms.Plugin.Resource.Id.bottom = global::Simon.Droid.Resource.Id.bottom;
+			global::LabelHtml.Forms.Plugin.Resource.Id.bottomtab_navarea = global::Simon.Droid.Resource.Id.bottomtab_navarea;
+			global::LabelHtml.Forms.Plugin.Resource.Id.bottomtab_tabbar = global::Simon.Droid.Resource.Id.bottomtab_tabbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.browser_actions_header_text = global::Simon.Droid.Resource.Id.browser_actions_header_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.browser_actions_menu_items = global::Simon.Droid.Resource.Id.browser_actions_menu_items;
+			global::LabelHtml.Forms.Plugin.Resource.Id.browser_actions_menu_item_icon = global::Simon.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Id.browser_actions_menu_item_text = global::Simon.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.browser_actions_menu_view = global::Simon.Droid.Resource.Id.browser_actions_menu_view;
+			global::LabelHtml.Forms.Plugin.Resource.Id.buttonPanel = global::Simon.Droid.Resource.Id.buttonPanel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.cancel_action = global::Simon.Droid.Resource.Id.cancel_action;
+			global::LabelHtml.Forms.Plugin.Resource.Id.center = global::Simon.Droid.Resource.Id.center;
+			global::LabelHtml.Forms.Plugin.Resource.Id.center_horizontal = global::Simon.Droid.Resource.Id.center_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Id.center_vertical = global::Simon.Droid.Resource.Id.center_vertical;
+			global::LabelHtml.Forms.Plugin.Resource.Id.checkbox = global::Simon.Droid.Resource.Id.checkbox;
+			global::LabelHtml.Forms.Plugin.Resource.Id.chronometer = global::Simon.Droid.Resource.Id.chronometer;
+			global::LabelHtml.Forms.Plugin.Resource.Id.clip_horizontal = global::Simon.Droid.Resource.Id.clip_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Id.clip_vertical = global::Simon.Droid.Resource.Id.clip_vertical;
+			global::LabelHtml.Forms.Plugin.Resource.Id.collapseActionView = global::Simon.Droid.Resource.Id.collapseActionView;
+			global::LabelHtml.Forms.Plugin.Resource.Id.container = global::Simon.Droid.Resource.Id.container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.content = global::Simon.Droid.Resource.Id.content;
+			global::LabelHtml.Forms.Plugin.Resource.Id.contentPanel = global::Simon.Droid.Resource.Id.contentPanel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.coordinator = global::Simon.Droid.Resource.Id.coordinator;
+			global::LabelHtml.Forms.Plugin.Resource.Id.CTRL = global::Simon.Droid.Resource.Id.CTRL;
+			global::LabelHtml.Forms.Plugin.Resource.Id.custom = global::Simon.Droid.Resource.Id.custom;
+			global::LabelHtml.Forms.Plugin.Resource.Id.customPanel = global::Simon.Droid.Resource.Id.customPanel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.decor_content_parent = global::Simon.Droid.Resource.Id.decor_content_parent;
+			global::LabelHtml.Forms.Plugin.Resource.Id.default_activity_button = global::Simon.Droid.Resource.Id.default_activity_button;
+			global::LabelHtml.Forms.Plugin.Resource.Id.design_bottom_sheet = global::Simon.Droid.Resource.Id.design_bottom_sheet;
+			global::LabelHtml.Forms.Plugin.Resource.Id.design_menu_item_action_area = global::Simon.Droid.Resource.Id.design_menu_item_action_area;
+			global::LabelHtml.Forms.Plugin.Resource.Id.design_menu_item_action_area_stub = global::Simon.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::LabelHtml.Forms.Plugin.Resource.Id.design_menu_item_text = global::Simon.Droid.Resource.Id.design_menu_item_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.design_navigation_view = global::Simon.Droid.Resource.Id.design_navigation_view;
+			global::LabelHtml.Forms.Plugin.Resource.Id.disableHome = global::Simon.Droid.Resource.Id.disableHome;
+			global::LabelHtml.Forms.Plugin.Resource.Id.edit_query = global::Simon.Droid.Resource.Id.edit_query;
+			global::LabelHtml.Forms.Plugin.Resource.Id.end = global::Simon.Droid.Resource.Id.end;
+			global::LabelHtml.Forms.Plugin.Resource.Id.end_padder = global::Simon.Droid.Resource.Id.end_padder;
+			global::LabelHtml.Forms.Plugin.Resource.Id.enterAlways = global::Simon.Droid.Resource.Id.enterAlways;
+			global::LabelHtml.Forms.Plugin.Resource.Id.enterAlwaysCollapsed = global::Simon.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Id.exitUntilCollapsed = global::Simon.Droid.Resource.Id.exitUntilCollapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Id.expanded_menu = global::Simon.Droid.Resource.Id.expanded_menu;
+			global::LabelHtml.Forms.Plugin.Resource.Id.expand_activities_button = global::Simon.Droid.Resource.Id.expand_activities_button;
+			global::LabelHtml.Forms.Plugin.Resource.Id.fill = global::Simon.Droid.Resource.Id.fill;
+			global::LabelHtml.Forms.Plugin.Resource.Id.filled = global::Simon.Droid.Resource.Id.filled;
+			global::LabelHtml.Forms.Plugin.Resource.Id.fill_horizontal = global::Simon.Droid.Resource.Id.fill_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Id.fill_vertical = global::Simon.Droid.Resource.Id.fill_vertical;
+			global::LabelHtml.Forms.Plugin.Resource.Id.@fixed = global::Simon.Droid.Resource.Id.@fixed;
+			global::LabelHtml.Forms.Plugin.Resource.Id.flyoutcontent_appbar = global::Simon.Droid.Resource.Id.flyoutcontent_appbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.flyoutcontent_recycler = global::Simon.Droid.Resource.Id.flyoutcontent_recycler;
+			global::LabelHtml.Forms.Plugin.Resource.Id.forever = global::Simon.Droid.Resource.Id.forever;
+			global::LabelHtml.Forms.Plugin.Resource.Id.FUNCTION = global::Simon.Droid.Resource.Id.FUNCTION;
+			global::LabelHtml.Forms.Plugin.Resource.Id.ghost_view = global::Simon.Droid.Resource.Id.ghost_view;
+			global::LabelHtml.Forms.Plugin.Resource.Id.group_divider = global::Simon.Droid.Resource.Id.group_divider;
+			global::LabelHtml.Forms.Plugin.Resource.Id.home = global::Simon.Droid.Resource.Id.home;
+			global::LabelHtml.Forms.Plugin.Resource.Id.homeAsUp = global::Simon.Droid.Resource.Id.homeAsUp;
+			global::LabelHtml.Forms.Plugin.Resource.Id.icon = global::Simon.Droid.Resource.Id.icon;
+			global::LabelHtml.Forms.Plugin.Resource.Id.icon_group = global::Simon.Droid.Resource.Id.icon_group;
+			global::LabelHtml.Forms.Plugin.Resource.Id.ifRoom = global::Simon.Droid.Resource.Id.ifRoom;
+			global::LabelHtml.Forms.Plugin.Resource.Id.image = global::Simon.Droid.Resource.Id.image;
+			global::LabelHtml.Forms.Plugin.Resource.Id.info = global::Simon.Droid.Resource.Id.info;
+			global::LabelHtml.Forms.Plugin.Resource.Id.italic = global::Simon.Droid.Resource.Id.italic;
+			global::LabelHtml.Forms.Plugin.Resource.Id.item_touch_helper_previous_elevation = global::Simon.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Id.labeled = global::Simon.Droid.Resource.Id.labeled;
+			global::LabelHtml.Forms.Plugin.Resource.Id.largeLabel = global::Simon.Droid.Resource.Id.largeLabel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.left = global::Simon.Droid.Resource.Id.left;
+			global::LabelHtml.Forms.Plugin.Resource.Id.line1 = global::Simon.Droid.Resource.Id.line1;
+			global::LabelHtml.Forms.Plugin.Resource.Id.line3 = global::Simon.Droid.Resource.Id.line3;
+			global::LabelHtml.Forms.Plugin.Resource.Id.listMode = global::Simon.Droid.Resource.Id.listMode;
+			global::LabelHtml.Forms.Plugin.Resource.Id.list_item = global::Simon.Droid.Resource.Id.list_item;
+			global::LabelHtml.Forms.Plugin.Resource.Id.main_appbar = global::Simon.Droid.Resource.Id.main_appbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.main_tablayout = global::Simon.Droid.Resource.Id.main_tablayout;
+			global::LabelHtml.Forms.Plugin.Resource.Id.main_toolbar = global::Simon.Droid.Resource.Id.main_toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.main_viewpager = global::Simon.Droid.Resource.Id.main_viewpager;
+			global::LabelHtml.Forms.Plugin.Resource.Id.masked = global::Simon.Droid.Resource.Id.masked;
+			global::LabelHtml.Forms.Plugin.Resource.Id.media_actions = global::Simon.Droid.Resource.Id.media_actions;
+			global::LabelHtml.Forms.Plugin.Resource.Id.message = global::Simon.Droid.Resource.Id.message;
+			global::LabelHtml.Forms.Plugin.Resource.Id.META = global::Simon.Droid.Resource.Id.META;
+			global::LabelHtml.Forms.Plugin.Resource.Id.middle = global::Simon.Droid.Resource.Id.middle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.mini = global::Simon.Droid.Resource.Id.mini;
+			global::LabelHtml.Forms.Plugin.Resource.Id.mtrl_child_content_container = global::Simon.Droid.Resource.Id.mtrl_child_content_container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.mtrl_internal_children_alpha_tag = global::Simon.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::LabelHtml.Forms.Plugin.Resource.Id.multiply = global::Simon.Droid.Resource.Id.multiply;
+			global::LabelHtml.Forms.Plugin.Resource.Id.navigation_header_container = global::Simon.Droid.Resource.Id.navigation_header_container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.never = global::Simon.Droid.Resource.Id.never;
+			global::LabelHtml.Forms.Plugin.Resource.Id.none = global::Simon.Droid.Resource.Id.none;
+			global::LabelHtml.Forms.Plugin.Resource.Id.normal = global::Simon.Droid.Resource.Id.normal;
+			global::LabelHtml.Forms.Plugin.Resource.Id.notification_background = global::Simon.Droid.Resource.Id.notification_background;
+			global::LabelHtml.Forms.Plugin.Resource.Id.notification_main_column = global::Simon.Droid.Resource.Id.notification_main_column;
+			global::LabelHtml.Forms.Plugin.Resource.Id.notification_main_column_container = global::Simon.Droid.Resource.Id.notification_main_column_container;
+			global::LabelHtml.Forms.Plugin.Resource.Id.outline = global::Simon.Droid.Resource.Id.outline;
+			global::LabelHtml.Forms.Plugin.Resource.Id.parallax = global::Simon.Droid.Resource.Id.parallax;
+			global::LabelHtml.Forms.Plugin.Resource.Id.parentPanel = global::Simon.Droid.Resource.Id.parentPanel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.parent_matrix = global::Simon.Droid.Resource.Id.parent_matrix;
+			global::LabelHtml.Forms.Plugin.Resource.Id.pin = global::Simon.Droid.Resource.Id.pin;
+			global::LabelHtml.Forms.Plugin.Resource.Id.progress_circular = global::Simon.Droid.Resource.Id.progress_circular;
+			global::LabelHtml.Forms.Plugin.Resource.Id.progress_horizontal = global::Simon.Droid.Resource.Id.progress_horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Id.radio = global::Simon.Droid.Resource.Id.radio;
+			global::LabelHtml.Forms.Plugin.Resource.Id.right = global::Simon.Droid.Resource.Id.right;
+			global::LabelHtml.Forms.Plugin.Resource.Id.right_icon = global::Simon.Droid.Resource.Id.right_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Id.right_side = global::Simon.Droid.Resource.Id.right_side;
+			global::LabelHtml.Forms.Plugin.Resource.Id.save_image_matrix = global::Simon.Droid.Resource.Id.save_image_matrix;
+			global::LabelHtml.Forms.Plugin.Resource.Id.save_non_transition_alpha = global::Simon.Droid.Resource.Id.save_non_transition_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Id.save_scale_type = global::Simon.Droid.Resource.Id.save_scale_type;
+			global::LabelHtml.Forms.Plugin.Resource.Id.screen = global::Simon.Droid.Resource.Id.screen;
+			global::LabelHtml.Forms.Plugin.Resource.Id.scroll = global::Simon.Droid.Resource.Id.scroll;
+			global::LabelHtml.Forms.Plugin.Resource.Id.scrollable = global::Simon.Droid.Resource.Id.scrollable;
+			global::LabelHtml.Forms.Plugin.Resource.Id.scrollIndicatorDown = global::Simon.Droid.Resource.Id.scrollIndicatorDown;
+			global::LabelHtml.Forms.Plugin.Resource.Id.scrollIndicatorUp = global::Simon.Droid.Resource.Id.scrollIndicatorUp;
+			global::LabelHtml.Forms.Plugin.Resource.Id.scrollView = global::Simon.Droid.Resource.Id.scrollView;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_badge = global::Simon.Droid.Resource.Id.search_badge;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_bar = global::Simon.Droid.Resource.Id.search_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_button = global::Simon.Droid.Resource.Id.search_button;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_close_btn = global::Simon.Droid.Resource.Id.search_close_btn;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_edit_frame = global::Simon.Droid.Resource.Id.search_edit_frame;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_go_btn = global::Simon.Droid.Resource.Id.search_go_btn;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_mag_icon = global::Simon.Droid.Resource.Id.search_mag_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_plate = global::Simon.Droid.Resource.Id.search_plate;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_src_text = global::Simon.Droid.Resource.Id.search_src_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.search_voice_btn = global::Simon.Droid.Resource.Id.search_voice_btn;
+			global::LabelHtml.Forms.Plugin.Resource.Id.selected = global::Simon.Droid.Resource.Id.selected;
+			global::LabelHtml.Forms.Plugin.Resource.Id.select_dialog_listview = global::Simon.Droid.Resource.Id.select_dialog_listview;
+			global::LabelHtml.Forms.Plugin.Resource.Id.shellcontent_appbar = global::Simon.Droid.Resource.Id.shellcontent_appbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.shellcontent_toolbar = global::Simon.Droid.Resource.Id.shellcontent_toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.SHIFT = global::Simon.Droid.Resource.Id.SHIFT;
+			global::LabelHtml.Forms.Plugin.Resource.Id.shortcut = global::Simon.Droid.Resource.Id.shortcut;
+			global::LabelHtml.Forms.Plugin.Resource.Id.showCustom = global::Simon.Droid.Resource.Id.showCustom;
+			global::LabelHtml.Forms.Plugin.Resource.Id.showHome = global::Simon.Droid.Resource.Id.showHome;
+			global::LabelHtml.Forms.Plugin.Resource.Id.showTitle = global::Simon.Droid.Resource.Id.showTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.smallLabel = global::Simon.Droid.Resource.Id.smallLabel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.snackbar_action = global::Simon.Droid.Resource.Id.snackbar_action;
+			global::LabelHtml.Forms.Plugin.Resource.Id.snackbar_text = global::Simon.Droid.Resource.Id.snackbar_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.snap = global::Simon.Droid.Resource.Id.snap;
+			global::LabelHtml.Forms.Plugin.Resource.Id.snapMargins = global::Simon.Droid.Resource.Id.snapMargins;
+			global::LabelHtml.Forms.Plugin.Resource.Id.spacer = global::Simon.Droid.Resource.Id.spacer;
+			global::LabelHtml.Forms.Plugin.Resource.Id.split_action_bar = global::Simon.Droid.Resource.Id.split_action_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Id.src_atop = global::Simon.Droid.Resource.Id.src_atop;
+			global::LabelHtml.Forms.Plugin.Resource.Id.src_in = global::Simon.Droid.Resource.Id.src_in;
+			global::LabelHtml.Forms.Plugin.Resource.Id.src_over = global::Simon.Droid.Resource.Id.src_over;
+			global::LabelHtml.Forms.Plugin.Resource.Id.start = global::Simon.Droid.Resource.Id.start;
+			global::LabelHtml.Forms.Plugin.Resource.Id.status_bar_latest_event_content = global::Simon.Droid.Resource.Id.status_bar_latest_event_content;
+			global::LabelHtml.Forms.Plugin.Resource.Id.stretch = global::Simon.Droid.Resource.Id.stretch;
+			global::LabelHtml.Forms.Plugin.Resource.Id.submenuarrow = global::Simon.Droid.Resource.Id.submenuarrow;
+			global::LabelHtml.Forms.Plugin.Resource.Id.submit_area = global::Simon.Droid.Resource.Id.submit_area;
+			global::LabelHtml.Forms.Plugin.Resource.Id.SYM = global::Simon.Droid.Resource.Id.SYM;
+			global::LabelHtml.Forms.Plugin.Resource.Id.tabMode = global::Simon.Droid.Resource.Id.tabMode;
+			global::LabelHtml.Forms.Plugin.Resource.Id.tag_transition_group = global::Simon.Droid.Resource.Id.tag_transition_group;
+			global::LabelHtml.Forms.Plugin.Resource.Id.tag_unhandled_key_event_manager = global::Simon.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::LabelHtml.Forms.Plugin.Resource.Id.tag_unhandled_key_listeners = global::Simon.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::LabelHtml.Forms.Plugin.Resource.Id.text = global::Simon.Droid.Resource.Id.text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.text2 = global::Simon.Droid.Resource.Id.text2;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textinput_counter = global::Simon.Droid.Resource.Id.textinput_counter;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textinput_error = global::Simon.Droid.Resource.Id.textinput_error;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textinput_helper_text = global::Simon.Droid.Resource.Id.textinput_helper_text;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textSpacerNoButtons = global::Simon.Droid.Resource.Id.textSpacerNoButtons;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textSpacerNoTitle = global::Simon.Droid.Resource.Id.textSpacerNoTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.textStart = global::Simon.Droid.Resource.Id.textStart;
+			global::LabelHtml.Forms.Plugin.Resource.Id.text_input_password_toggle = global::Simon.Droid.Resource.Id.text_input_password_toggle;
+			global::LabelHtml.Forms.Plugin.Resource.Id.time = global::Simon.Droid.Resource.Id.time;
+			global::LabelHtml.Forms.Plugin.Resource.Id.title = global::Simon.Droid.Resource.Id.title;
+			global::LabelHtml.Forms.Plugin.Resource.Id.titleDividerNoCustom = global::Simon.Droid.Resource.Id.titleDividerNoCustom;
+			global::LabelHtml.Forms.Plugin.Resource.Id.title_template = global::Simon.Droid.Resource.Id.title_template;
+			global::LabelHtml.Forms.Plugin.Resource.Id.top = global::Simon.Droid.Resource.Id.top;
+			global::LabelHtml.Forms.Plugin.Resource.Id.topPanel = global::Simon.Droid.Resource.Id.topPanel;
+			global::LabelHtml.Forms.Plugin.Resource.Id.touch_outside = global::Simon.Droid.Resource.Id.touch_outside;
+			global::LabelHtml.Forms.Plugin.Resource.Id.transition_current_scene = global::Simon.Droid.Resource.Id.transition_current_scene;
+			global::LabelHtml.Forms.Plugin.Resource.Id.transition_layout_save = global::Simon.Droid.Resource.Id.transition_layout_save;
+			global::LabelHtml.Forms.Plugin.Resource.Id.transition_position = global::Simon.Droid.Resource.Id.transition_position;
+			global::LabelHtml.Forms.Plugin.Resource.Id.transition_scene_layoutid_cache = global::Simon.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::LabelHtml.Forms.Plugin.Resource.Id.transition_transform = global::Simon.Droid.Resource.Id.transition_transform;
+			global::LabelHtml.Forms.Plugin.Resource.Id.uniform = global::Simon.Droid.Resource.Id.uniform;
+			global::LabelHtml.Forms.Plugin.Resource.Id.unlabeled = global::Simon.Droid.Resource.Id.unlabeled;
+			global::LabelHtml.Forms.Plugin.Resource.Id.up = global::Simon.Droid.Resource.Id.up;
+			global::LabelHtml.Forms.Plugin.Resource.Id.useLogo = global::Simon.Droid.Resource.Id.useLogo;
+			global::LabelHtml.Forms.Plugin.Resource.Id.view_offset_helper = global::Simon.Droid.Resource.Id.view_offset_helper;
+			global::LabelHtml.Forms.Plugin.Resource.Id.visible = global::Simon.Droid.Resource.Id.visible;
+			global::LabelHtml.Forms.Plugin.Resource.Id.withText = global::Simon.Droid.Resource.Id.withText;
+			global::LabelHtml.Forms.Plugin.Resource.Id.wrap_content = global::Simon.Droid.Resource.Id.wrap_content;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.abc_config_activityDefaultDur = global::Simon.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.abc_config_activityShortDur = global::Simon.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.app_bar_elevation_anim_duration = global::Simon.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.bottom_sheet_slide_duration = global::Simon.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.cancel_button_image_alpha = global::Simon.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.config_tooltipAnimTime = global::Simon.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.design_snackbar_text_max_lines = global::Simon.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.design_tab_indicator_anim_duration_ms = global::Simon.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.hide_password_duration = global::Simon.Droid.Resource.Integer.hide_password_duration;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.mtrl_btn_anim_delay_ms = global::Simon.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.mtrl_btn_anim_duration_ms = global::Simon.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.mtrl_chip_anim_duration = global::Simon.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::Simon.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.show_password_duration = global::Simon.Droid.Resource.Integer.show_password_duration;
+			global::LabelHtml.Forms.Plugin.Resource.Integer.status_bar_notification_info_maxnum = global::Simon.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::LabelHtml.Forms.Plugin.Resource.Interpolator.mtrl_fast_out_linear_in = global::Simon.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::LabelHtml.Forms.Plugin.Resource.Interpolator.mtrl_fast_out_slow_in = global::Simon.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::LabelHtml.Forms.Plugin.Resource.Interpolator.mtrl_linear = global::Simon.Droid.Resource.Interpolator.mtrl_linear;
+			global::LabelHtml.Forms.Plugin.Resource.Interpolator.mtrl_linear_out_slow_in = global::Simon.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_bar_title_item = global::Simon.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_bar_up_container = global::Simon.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_menu_item_layout = global::Simon.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_menu_layout = global::Simon.Droid.Resource.Layout.abc_action_menu_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_mode_bar = global::Simon.Droid.Resource.Layout.abc_action_mode_bar;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_action_mode_close_item_material = global::Simon.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_activity_chooser_view = global::Simon.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_activity_chooser_view_list_item = global::Simon.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_alert_dialog_button_bar_material = global::Simon.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_alert_dialog_material = global::Simon.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_alert_dialog_title_material = global::Simon.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_cascading_menu_item_layout = global::Simon.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_dialog_title_material = global::Simon.Droid.Resource.Layout.abc_dialog_title_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_expanded_menu_layout = global::Simon.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_list_menu_item_checkbox = global::Simon.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_list_menu_item_icon = global::Simon.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_list_menu_item_layout = global::Simon.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_list_menu_item_radio = global::Simon.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_popup_menu_header_item_layout = global::Simon.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_popup_menu_item_layout = global::Simon.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_screen_content_include = global::Simon.Droid.Resource.Layout.abc_screen_content_include;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_screen_simple = global::Simon.Droid.Resource.Layout.abc_screen_simple;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Simon.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_screen_toolbar = global::Simon.Droid.Resource.Layout.abc_screen_toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Simon.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_search_view = global::Simon.Droid.Resource.Layout.abc_search_view;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_select_dialog_material = global::Simon.Droid.Resource.Layout.abc_select_dialog_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.abc_tooltip = global::Simon.Droid.Resource.Layout.abc_tooltip;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.BottomTabLayout = global::Simon.Droid.Resource.Layout.BottomTabLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.browser_actions_context_menu_page = global::Simon.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.browser_actions_context_menu_row = global::Simon.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_bottom_navigation_item = global::Simon.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_bottom_sheet_dialog = global::Simon.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_layout_snackbar = global::Simon.Droid.Resource.Layout.design_layout_snackbar;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_layout_snackbar_include = global::Simon.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_layout_tab_icon = global::Simon.Droid.Resource.Layout.design_layout_tab_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_layout_tab_text = global::Simon.Droid.Resource.Layout.design_layout_tab_text;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_menu_item_action_area = global::Simon.Droid.Resource.Layout.design_menu_item_action_area;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_item = global::Simon.Droid.Resource.Layout.design_navigation_item;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_item_header = global::Simon.Droid.Resource.Layout.design_navigation_item_header;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_item_separator = global::Simon.Droid.Resource.Layout.design_navigation_item_separator;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_item_subheader = global::Simon.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_menu = global::Simon.Droid.Resource.Layout.design_navigation_menu;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_navigation_menu_item = global::Simon.Droid.Resource.Layout.design_navigation_menu_item;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.design_text_input_password_icon = global::Simon.Droid.Resource.Layout.design_text_input_password_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.FlyoutContent = global::Simon.Droid.Resource.Layout.FlyoutContent;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.mtrl_layout_snackbar = global::Simon.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.mtrl_layout_snackbar_include = global::Simon.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_action = global::Simon.Droid.Resource.Layout.notification_action;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_action_tombstone = global::Simon.Droid.Resource.Layout.notification_action_tombstone;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_media_action = global::Simon.Droid.Resource.Layout.notification_media_action;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_media_cancel_action = global::Simon.Droid.Resource.Layout.notification_media_cancel_action;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_big_media = global::Simon.Droid.Resource.Layout.notification_template_big_media;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_big_media_custom = global::Simon.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_big_media_narrow = global::Simon.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_big_media_narrow_custom = global::Simon.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_custom_big = global::Simon.Droid.Resource.Layout.notification_template_custom_big;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_icon_group = global::Simon.Droid.Resource.Layout.notification_template_icon_group;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_lines_media = global::Simon.Droid.Resource.Layout.notification_template_lines_media;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_media = global::Simon.Droid.Resource.Layout.notification_template_media;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_media_custom = global::Simon.Droid.Resource.Layout.notification_template_media_custom;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_part_chronometer = global::Simon.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.notification_template_part_time = global::Simon.Droid.Resource.Layout.notification_template_part_time;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.RootLayout = global::Simon.Droid.Resource.Layout.RootLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.select_dialog_item_material = global::Simon.Droid.Resource.Layout.select_dialog_item_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.select_dialog_multichoice_material = global::Simon.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.select_dialog_singlechoice_material = global::Simon.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.ShellContent = global::Simon.Droid.Resource.Layout.ShellContent;
+			global::LabelHtml.Forms.Plugin.Resource.Layout.support_simple_spinner_dropdown_item = global::Simon.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_action_bar_home_description = global::Simon.Droid.Resource.String.abc_action_bar_home_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_action_bar_up_description = global::Simon.Droid.Resource.String.abc_action_bar_up_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_action_menu_overflow_description = global::Simon.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_action_mode_done = global::Simon.Droid.Resource.String.abc_action_mode_done;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_activitychooserview_choose_application = global::Simon.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_activity_chooser_view_see_all = global::Simon.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_capital_off = global::Simon.Droid.Resource.String.abc_capital_off;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_capital_on = global::Simon.Droid.Resource.String.abc_capital_on;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_body_1_material = global::Simon.Droid.Resource.String.abc_font_family_body_1_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_body_2_material = global::Simon.Droid.Resource.String.abc_font_family_body_2_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_button_material = global::Simon.Droid.Resource.String.abc_font_family_button_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_caption_material = global::Simon.Droid.Resource.String.abc_font_family_caption_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_display_1_material = global::Simon.Droid.Resource.String.abc_font_family_display_1_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_display_2_material = global::Simon.Droid.Resource.String.abc_font_family_display_2_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_display_3_material = global::Simon.Droid.Resource.String.abc_font_family_display_3_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_display_4_material = global::Simon.Droid.Resource.String.abc_font_family_display_4_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_headline_material = global::Simon.Droid.Resource.String.abc_font_family_headline_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_menu_material = global::Simon.Droid.Resource.String.abc_font_family_menu_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_subhead_material = global::Simon.Droid.Resource.String.abc_font_family_subhead_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_font_family_title_material = global::Simon.Droid.Resource.String.abc_font_family_title_material;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_alt_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_ctrl_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_delete_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_enter_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_function_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_meta_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_shift_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_space_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_menu_sym_shortcut_label = global::Simon.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_prepend_shortcut_label = global::Simon.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_searchview_description_clear = global::Simon.Droid.Resource.String.abc_searchview_description_clear;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_searchview_description_query = global::Simon.Droid.Resource.String.abc_searchview_description_query;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_searchview_description_search = global::Simon.Droid.Resource.String.abc_searchview_description_search;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_searchview_description_submit = global::Simon.Droid.Resource.String.abc_searchview_description_submit;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_searchview_description_voice = global::Simon.Droid.Resource.String.abc_searchview_description_voice;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_search_hint = global::Simon.Droid.Resource.String.abc_search_hint;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_shareactionprovider_share_with = global::Simon.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_shareactionprovider_share_with_application = global::Simon.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::LabelHtml.Forms.Plugin.Resource.String.abc_toolbar_collapse_description = global::Simon.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.appbar_scrolling_view_behavior = global::Simon.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.String.bottom_sheet_behavior = global::Simon.Droid.Resource.String.bottom_sheet_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.String.character_counter_content_description = global::Simon.Droid.Resource.String.character_counter_content_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.character_counter_pattern = global::Simon.Droid.Resource.String.character_counter_pattern;
+			global::LabelHtml.Forms.Plugin.Resource.String.fab_transformation_scrim_behavior = global::Simon.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.String.fab_transformation_sheet_behavior = global::Simon.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.String.hide_bottom_view_on_scroll_behavior = global::Simon.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.String.mtrl_chip_close_icon_content_description = global::Simon.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.password_toggle_content_description = global::Simon.Droid.Resource.String.password_toggle_content_description;
+			global::LabelHtml.Forms.Plugin.Resource.String.path_password_eye = global::Simon.Droid.Resource.String.path_password_eye;
+			global::LabelHtml.Forms.Plugin.Resource.String.path_password_eye_mask_strike_through = global::Simon.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::LabelHtml.Forms.Plugin.Resource.String.path_password_eye_mask_visible = global::Simon.Droid.Resource.String.path_password_eye_mask_visible;
+			global::LabelHtml.Forms.Plugin.Resource.String.path_password_strike_through = global::Simon.Droid.Resource.String.path_password_strike_through;
+			global::LabelHtml.Forms.Plugin.Resource.String.search_menu_title = global::Simon.Droid.Resource.String.search_menu_title;
+			global::LabelHtml.Forms.Plugin.Resource.String.status_bar_notification_info_overflow = global::Simon.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.AlertDialog_AppCompat = global::Simon.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.AlertDialog_AppCompat_Light = global::Simon.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Animation_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Animation_AppCompat_DropDownUp = global::Simon.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Animation_AppCompat_Tooltip = global::Simon.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Animation_Design_BottomSheetDialog = global::Simon.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_AlertDialog_AppCompat = global::Simon.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Animation_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Simon.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Simon.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_CardView = global::Simon.Droid.Resource.Style.Base_CardView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Simon.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Simon.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Simon.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Simon.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Simon.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Simon.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::Simon.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::Simon.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V21_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Simon.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V22_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V23_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V26_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Simon.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V28_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V28_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Theme_AppCompat = global::Simon.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Simon.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Simon.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Simon.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::Simon.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_EditText = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ListView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_SearchView = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Spinner = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Simon.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_Design_TabLayout = global::Simon.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_MaterialComponents_Chip = global::Simon.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::Simon.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::Simon.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.CardView = global::Simon.Droid.Resource.Style.CardView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.CardView_Dark = global::Simon.Droid.Resource.Style.CardView_Dark;
+			global::LabelHtml.Forms.Plugin.Resource.Style.CardView_Light = global::Simon.Droid.Resource.Style.CardView_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_AppCompat = global::Simon.Droid.Resource.Style.Platform_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_AppCompat_Light = global::Simon.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_MaterialComponents = global::Simon.Droid.Resource.Style.Platform_MaterialComponents;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_MaterialComponents_Light = global::Simon.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::Simon.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Simon.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Simon.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Simon.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_V21_AppCompat = global::Simon.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_V21_AppCompat_Light = global::Simon.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_V25_AppCompat = global::Simon.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_V25_AppCompat_Light = global::Simon.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Simon.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Simon.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Simon.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Simon.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Simon.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Body1 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Body2 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Button = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Caption = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Display1 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Display2 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Display3 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Display4 = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Headline = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Large = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Medium = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Menu = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Small = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Subhead = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Title = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Tooltip = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Simon.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Info = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Time = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Title = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Simon.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Counter = global::Simon.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Simon.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Error = global::Simon.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_HelperText = global::Simon.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Hint = global::Simon.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Simon.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Design_Tab = global::Simon.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Button = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Caption = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Chip = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Overline = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_MaterialComponents_Tab = global::Simon.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Simon.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Simon.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Simon.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_AppCompat_Light = global::Simon.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Simon.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat = global::Simon.Droid.Resource.Style.Theme_AppCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_CompactMenu = global::Simon.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Simon.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Dialog = global::Simon.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Simon.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Simon.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_Dialog = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Simon.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_AppCompat_NoActionBar = global::Simon.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design = global::Simon.Droid.Resource.Style.Theme_Design;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design_BottomSheetDialog = global::Simon.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design_Light = global::Simon.Droid.Resource.Style.Theme_Design_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Simon.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design_Light_NoActionBar = global::Simon.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_Design_NoActionBar = global::Simon.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents = global::Simon.Droid.Resource.Style.Theme_MaterialComponents;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Bridge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_CompactMenu = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Dialog = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_NoActionBar = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::Simon.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionButton = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActionMode = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Simon.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Simon.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ButtonBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Simon.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button_Borderless = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button_Colored = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Button_Small = global::Simon.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Simon.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Simon.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Simon.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Simon.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Simon.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_EditText = global::Simon.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ImageButton = global::Simon.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_SearchView = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ListMenuView = global::Simon.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Simon.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ListView = global::Simon.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Simon.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ListView_Menu = global::Simon.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_PopupMenu = global::Simon.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Simon.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_PopupWindow = global::Simon.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ProgressBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Simon.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_RatingBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Simon.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Simon.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_SearchView = global::Simon.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_SeekBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::Simon.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Spinner = global::Simon.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Simon.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Simon.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Simon.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Simon.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Toolbar = global::Simon.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Simon.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Compat_NotificationActionContainer = global::Simon.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Compat_NotificationActionText = global::Simon.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_AppBarLayout = global::Simon.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_BottomNavigationView = global::Simon.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_BottomSheet_Modal = global::Simon.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_CollapsingToolbar = global::Simon.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_FloatingActionButton = global::Simon.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_NavigationView = global::Simon.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Simon.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_Snackbar = global::Simon.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_TabLayout = global::Simon.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Design_TextInputLayout = global::Simon.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_Icon = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_CardView = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_ChipGroup = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Chip_Action = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_NavigationView = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Snackbar = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TabLayout = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_MaterialComponents_Toolbar = global::Simon.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Style.Widget_Support_CoordinatorLayout = global::Simon.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar = global::Simon.Droid.Resource.Styleable.ActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBarLayout = global::Simon.Droid.Resource.Styleable.ActionBarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Simon.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_background = global::Simon.Droid.Resource.Styleable.ActionBar_background;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_backgroundSplit = global::Simon.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_backgroundStacked = global::Simon.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetEnd = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetLeft = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetRight = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetStart = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::Simon.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_customNavigationLayout = global::Simon.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_displayOptions = global::Simon.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_divider = global::Simon.Droid.Resource.Styleable.ActionBar_divider;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_elevation = global::Simon.Droid.Resource.Styleable.ActionBar_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_height = global::Simon.Droid.Resource.Styleable.ActionBar_height;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_hideOnContentScroll = global::Simon.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Simon.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_homeLayout = global::Simon.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_icon = global::Simon.Droid.Resource.Styleable.ActionBar_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Simon.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_itemPadding = global::Simon.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_logo = global::Simon.Droid.Resource.Styleable.ActionBar_logo;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_navigationMode = global::Simon.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_popupTheme = global::Simon.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_progressBarPadding = global::Simon.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_progressBarStyle = global::Simon.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_subtitle = global::Simon.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_subtitleTextStyle = global::Simon.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_title = global::Simon.Droid.Resource.Styleable.ActionBar_title;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionBar_titleTextStyle = global::Simon.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMenuItemView = global::Simon.Droid.Resource.Styleable.ActionMenuItemView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Simon.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMenuView = global::Simon.Droid.Resource.Styleable.ActionMenuView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode = global::Simon.Droid.Resource.Styleable.ActionMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_background = global::Simon.Droid.Resource.Styleable.ActionMode_background;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_backgroundSplit = global::Simon.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_closeItemLayout = global::Simon.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_height = global::Simon.Droid.Resource.Styleable.ActionMode_height;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_subtitleTextStyle = global::Simon.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActionMode_titleTextStyle = global::Simon.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActivityChooserView = global::Simon.Droid.Resource.Styleable.ActivityChooserView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Simon.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Simon.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog = global::Simon.Droid.Resource.Styleable.AlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_android_layout = global::Simon.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_buttonIconDimen = global::Simon.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Simon.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_listItemLayout = global::Simon.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_listLayout = global::Simon.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Simon.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_showTitle = global::Simon.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Simon.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableItem = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableTransition = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::Simon.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout = global::Simon.Droid.Resource.Styleable.AppBarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayoutStates = global::Simon.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::Simon.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::Simon.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayoutStates_state_liftable = global::Simon.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayoutStates_state_lifted = global::Simon.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_android_background = global::Simon.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Simon.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Simon.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_elevation = global::Simon.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_expanded = global::Simon.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_Layout = global::Simon.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::Simon.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::Simon.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppBarLayout_liftOnScroll = global::Simon.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatImageView = global::Simon.Droid.Resource.Styleable.AppCompatImageView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatImageView_android_src = global::Simon.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatImageView_srcCompat = global::Simon.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatImageView_tint = global::Simon.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatImageView_tintMode = global::Simon.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatSeekBar = global::Simon.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatSeekBar_android_thumb = global::Simon.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatSeekBar_tickMark = global::Simon.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::Simon.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::Simon.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Simon.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView = global::Simon.Droid.Resource.Styleable.AppCompatTextView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Simon.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::Simon.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::Simon.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Simon.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Simon.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Simon.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::Simon.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_fontFamily = global::Simon.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::Simon.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_lineHeight = global::Simon.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTextView_textAllCaps = global::Simon.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarSize = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Simon.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Simon.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Simon.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorAccent = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorError = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorPrimary = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Simon.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_controlBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dialogTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dividerVertical = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_editTextBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_editTextColor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_editTextStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Simon.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Simon.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_panelBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Simon.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Simon.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Simon.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Simon.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Simon.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_switchStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Simon.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Simon.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::Simon.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowActionBar = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Simon.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar = global::Simon.Droid.Resource.Styleable.BottomAppBar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_backgroundTint = global::Simon.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::Simon.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_fabCradleMargin = global::Simon.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::Simon.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::Simon.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomAppBar_hideOnScroll = global::Simon.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView = global::Simon.Droid.Resource.Styleable.BottomNavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_elevation = global::Simon.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemBackground = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemIconSize = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemIconTint = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_itemTextColor = global::Simon.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::Simon.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomNavigationView_menu = global::Simon.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomSheetBehavior_Layout = global::Simon.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::Simon.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::Simon.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::Simon.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::Simon.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ButtonBarLayout = global::Simon.Droid.Resource.Styleable.ButtonBarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ButtonBarLayout_allowStacking = global::Simon.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView = global::Simon.Droid.Resource.Styleable.CardView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_android_minHeight = global::Simon.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_android_minWidth = global::Simon.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardBackgroundColor = global::Simon.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardCornerRadius = global::Simon.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardElevation = global::Simon.Droid.Resource.Styleable.CardView_cardElevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardMaxElevation = global::Simon.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Simon.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_cardUseCompatPadding = global::Simon.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_contentPadding = global::Simon.Droid.Resource.Styleable.CardView_contentPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_contentPaddingBottom = global::Simon.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_contentPaddingLeft = global::Simon.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_contentPaddingRight = global::Simon.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CardView_contentPaddingTop = global::Simon.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip = global::Simon.Droid.Resource.Styleable.Chip;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup = global::Simon.Droid.Resource.Styleable.ChipGroup;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_checkedChip = global::Simon.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_chipSpacing = global::Simon.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::Simon.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_chipSpacingVertical = global::Simon.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_singleLine = global::Simon.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ChipGroup_singleSelection = global::Simon.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_android_checkable = global::Simon.Droid.Resource.Styleable.Chip_android_checkable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_android_ellipsize = global::Simon.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_android_maxWidth = global::Simon.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_android_text = global::Simon.Droid.Resource.Styleable.Chip_android_text;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_android_textAppearance = global::Simon.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_checkedIcon = global::Simon.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_checkedIconEnabled = global::Simon.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_checkedIconVisible = global::Simon.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipBackgroundColor = global::Simon.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipCornerRadius = global::Simon.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipEndPadding = global::Simon.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipIcon = global::Simon.Droid.Resource.Styleable.Chip_chipIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipIconEnabled = global::Simon.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipIconSize = global::Simon.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipIconTint = global::Simon.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipIconVisible = global::Simon.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipMinHeight = global::Simon.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipStartPadding = global::Simon.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipStrokeColor = global::Simon.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_chipStrokeWidth = global::Simon.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIcon = global::Simon.Droid.Resource.Styleable.Chip_closeIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconEnabled = global::Simon.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconEndPadding = global::Simon.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconSize = global::Simon.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconStartPadding = global::Simon.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconTint = global::Simon.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_closeIconVisible = global::Simon.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_hideMotionSpec = global::Simon.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_iconEndPadding = global::Simon.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_iconStartPadding = global::Simon.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_rippleColor = global::Simon.Droid.Resource.Styleable.Chip_rippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_showMotionSpec = global::Simon.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_textEndPadding = global::Simon.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Chip_textStartPadding = global::Simon.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_Layout = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_title = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Simon.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ColorStateListItem = global::Simon.Droid.Resource.Styleable.ColorStateListItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ColorStateListItem_alpha = global::Simon.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ColorStateListItem_android_alpha = global::Simon.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ColorStateListItem_android_color = global::Simon.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CompoundButton = global::Simon.Droid.Resource.Styleable.CompoundButton;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CompoundButton_android_button = global::Simon.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CompoundButton_buttonTint = global::Simon.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CompoundButton_buttonTintMode = global::Simon.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout = global::Simon.Droid.Resource.Styleable.CoordinatorLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_keylines = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DesignTheme = global::Simon.Droid.Resource.Styleable.DesignTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Simon.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Simon.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_barLength = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_color = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_spinBars = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.DrawerArrowToggle_thickness = global::Simon.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton = global::Simon.Droid.Resource.Styleable.FloatingActionButton;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_backgroundTint = global::Simon.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Simon.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Simon.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Simon.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_borderWidth = global::Simon.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_elevation = global::Simon.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_fabCustomSize = global::Simon.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_fabSize = global::Simon.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::Simon.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::Simon.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_maxImageSize = global::Simon.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Simon.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_rippleColor = global::Simon.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_showMotionSpec = global::Simon.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Simon.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FlowLayout = global::Simon.Droid.Resource.Styleable.FlowLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FlowLayout_itemSpacing = global::Simon.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FlowLayout_lineSpacing = global::Simon.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily = global::Simon.Droid.Resource.Styleable.FontFamily;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont = global::Simon.Droid.Resource.Styleable.FontFamilyFont;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_android_font = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_font = global::Simon.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_fontStyle = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_fontWeight = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamilyFont_ttcIndex = global::Simon.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderAuthority = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderCerts = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderPackage = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.FontFamily_fontProviderQuery = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ForegroundLinearLayout = global::Simon.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Simon.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Simon.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Simon.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor = global::Simon.Droid.Resource.Styleable.GradientColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColorItem = global::Simon.Droid.Resource.Styleable.GradientColorItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColorItem_android_color = global::Simon.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColorItem_android_offset = global::Simon.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_centerColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_centerX = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_centerY = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_endColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_endX = global::Simon.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_endY = global::Simon.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_gradientRadius = global::Simon.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_startColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_startX = global::Simon.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_startY = global::Simon.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_tileMode = global::Simon.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.GradientColor_android_type = global::Simon.Droid.Resource.Styleable.GradientColor_android_type;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_divider = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_Layout = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.LinearLayoutCompat_showDividers = global::Simon.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ListPopupWindow = global::Simon.Droid.Resource.Styleable.ListPopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Simon.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Simon.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton = global::Simon.Droid.Resource.Styleable.MaterialButton;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_android_insetBottom = global::Simon.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_android_insetLeft = global::Simon.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_android_insetRight = global::Simon.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_android_insetTop = global::Simon.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_backgroundTint = global::Simon.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_backgroundTintMode = global::Simon.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_cornerRadius = global::Simon.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_icon = global::Simon.Droid.Resource.Styleable.MaterialButton_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_iconGravity = global::Simon.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_iconPadding = global::Simon.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_iconSize = global::Simon.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_iconTint = global::Simon.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_iconTintMode = global::Simon.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_rippleColor = global::Simon.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_strokeColor = global::Simon.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialButton_strokeWidth = global::Simon.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialCardView = global::Simon.Droid.Resource.Styleable.MaterialCardView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialCardView_strokeColor = global::Simon.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialCardView_strokeWidth = global::Simon.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::Simon.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup = global::Simon.Droid.Resource.Styleable.MenuGroup;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Simon.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_enabled = global::Simon.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_id = global::Simon.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_menuCategory = global::Simon.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_orderInCategory = global::Simon.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuGroup_android_visible = global::Simon.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem = global::Simon.Droid.Resource.Styleable.MenuItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_actionLayout = global::Simon.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_actionProviderClass = global::Simon.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_actionViewClass = global::Simon.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_alphabeticModifiers = global::Simon.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Simon.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_checkable = global::Simon.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_checked = global::Simon.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_enabled = global::Simon.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_icon = global::Simon.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_id = global::Simon.Droid.Resource.Styleable.MenuItem_android_id;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_menuCategory = global::Simon.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_numericShortcut = global::Simon.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_onClick = global::Simon.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_orderInCategory = global::Simon.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_title = global::Simon.Droid.Resource.Styleable.MenuItem_android_title;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_titleCondensed = global::Simon.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_android_visible = global::Simon.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_contentDescription = global::Simon.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_iconTint = global::Simon.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_iconTintMode = global::Simon.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_numericModifiers = global::Simon.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_showAsAction = global::Simon.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuItem_tooltipText = global::Simon.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView = global::Simon.Droid.Resource.Styleable.MenuView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_headerBackground = global::Simon.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_horizontalDivider = global::Simon.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_itemBackground = global::Simon.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Simon.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_itemTextAppearance = global::Simon.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_verticalDivider = global::Simon.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Simon.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_preserveIconSpacing = global::Simon.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.MenuView_subMenuArrow = global::Simon.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView = global::Simon.Droid.Resource.Styleable.NavigationView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_android_background = global::Simon.Droid.Resource.Styleable.NavigationView_android_background;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Simon.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_android_maxWidth = global::Simon.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_elevation = global::Simon.Droid.Resource.Styleable.NavigationView_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_headerLayout = global::Simon.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemBackground = global::Simon.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemHorizontalPadding = global::Simon.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemIconPadding = global::Simon.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemIconTint = global::Simon.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemTextAppearance = global::Simon.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_itemTextColor = global::Simon.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.NavigationView_menu = global::Simon.Droid.Resource.Styleable.NavigationView_menu;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindow = global::Simon.Droid.Resource.Styleable.PopupWindow;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindowBackgroundState = global::Simon.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Simon.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::Simon.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindow_android_popupBackground = global::Simon.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.PopupWindow_overlapAnchor = global::Simon.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecycleListView = global::Simon.Droid.Resource.Styleable.RecycleListView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::Simon.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::Simon.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView = global::Simon.Droid.Resource.Styleable.RecyclerView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Simon.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_android_orientation = global::Simon.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Simon.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Simon.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Simon.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Simon.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Simon.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_layoutManager = global::Simon.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_reverseLayout = global::Simon.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_spanCount = global::Simon.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.RecyclerView_stackFromEnd = global::Simon.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ScrimInsetsFrameLayout = global::Simon.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Simon.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ScrollingViewBehavior_Layout = global::Simon.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::Simon.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView = global::Simon.Droid.Resource.Styleable.SearchView;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_android_focusable = global::Simon.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_android_imeOptions = global::Simon.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_android_inputType = global::Simon.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_android_maxWidth = global::Simon.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_closeIcon = global::Simon.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_commitIcon = global::Simon.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_defaultQueryHint = global::Simon.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_goIcon = global::Simon.Droid.Resource.Styleable.SearchView_goIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_iconifiedByDefault = global::Simon.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_layout = global::Simon.Droid.Resource.Styleable.SearchView_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_queryBackground = global::Simon.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_queryHint = global::Simon.Droid.Resource.Styleable.SearchView_queryHint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_searchHintIcon = global::Simon.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_searchIcon = global::Simon.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_submitBackground = global::Simon.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_suggestionRowLayout = global::Simon.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SearchView_voiceIcon = global::Simon.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Snackbar = global::Simon.Droid.Resource.Styleable.Snackbar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SnackbarLayout = global::Simon.Droid.Resource.Styleable.SnackbarLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Simon.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SnackbarLayout_elevation = global::Simon.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Simon.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Snackbar_snackbarButtonStyle = global::Simon.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Snackbar_snackbarStyle = global::Simon.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner = global::Simon.Droid.Resource.Styleable.Spinner;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner_android_dropDownWidth = global::Simon.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner_android_entries = global::Simon.Droid.Resource.Styleable.Spinner_android_entries;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner_android_popupBackground = global::Simon.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner_android_prompt = global::Simon.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Spinner_popupTheme = global::Simon.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable = global::Simon.Droid.Resource.Styleable.StateListDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawableItem = global::Simon.Droid.Resource.Styleable.StateListDrawableItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawableItem_android_drawable = global::Simon.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_constantSize = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_dither = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_variablePadding = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.StateListDrawable_android_visible = global::Simon.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat = global::Simon.Droid.Resource.Styleable.SwitchCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_android_textOff = global::Simon.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_android_textOn = global::Simon.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_android_thumb = global::Simon.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_showText = global::Simon.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_splitTrack = global::Simon.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_switchMinWidth = global::Simon.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_switchPadding = global::Simon.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Simon.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Simon.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_thumbTint = global::Simon.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_thumbTintMode = global::Simon.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_track = global::Simon.Droid.Resource.Styleable.SwitchCompat_track;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_trackTint = global::Simon.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.SwitchCompat_trackTintMode = global::Simon.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabItem = global::Simon.Droid.Resource.Styleable.TabItem;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabItem_android_icon = global::Simon.Droid.Resource.Styleable.TabItem_android_icon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabItem_android_layout = global::Simon.Droid.Resource.Styleable.TabItem_android_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabItem_android_text = global::Simon.Droid.Resource.Styleable.TabItem_android_text;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout = global::Simon.Droid.Resource.Styleable.TabLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabBackground = global::Simon.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabContentStart = global::Simon.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabGravity = global::Simon.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIconTint = global::Simon.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIconTintMode = global::Simon.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicator = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicatorColor = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicatorGravity = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Simon.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabInlineLabel = global::Simon.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabMaxWidth = global::Simon.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabMinWidth = global::Simon.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabMode = global::Simon.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabPadding = global::Simon.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabPaddingBottom = global::Simon.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabPaddingEnd = global::Simon.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabPaddingStart = global::Simon.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabPaddingTop = global::Simon.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabRippleColor = global::Simon.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Simon.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabTextAppearance = global::Simon.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabTextColor = global::Simon.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TabLayout_tabUnboundedRipple = global::Simon.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance = global::Simon.Droid.Resource.Styleable.TextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_fontFamily = global::Simon.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_shadowColor = global::Simon.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_shadowDx = global::Simon.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_shadowDy = global::Simon.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_shadowRadius = global::Simon.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_textColor = global::Simon.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_textColorHint = global::Simon.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_textColorLink = global::Simon.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_textSize = global::Simon.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_textStyle = global::Simon.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_android_typeface = global::Simon.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_fontFamily = global::Simon.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextAppearance_textAllCaps = global::Simon.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout = global::Simon.Droid.Resource.Styleable.TextInputLayout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_android_hint = global::Simon.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_android_textColorHint = global::Simon.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxStrokeColor = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::Simon.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_counterEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_counterMaxLength = global::Simon.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Simon.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Simon.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_errorEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Simon.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_helperText = global::Simon.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_helperTextEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::Simon.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_hintEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Simon.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::Simon.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::Simon.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::Simon.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_passwordToggleTint = global::Simon.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::Simon.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ThemeEnforcement = global::Simon.Droid.Resource.Styleable.ThemeEnforcement;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::Simon.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::Simon.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::Simon.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar = global::Simon.Droid.Resource.Styleable.Toolbar;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_android_gravity = global::Simon.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_android_minHeight = global::Simon.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_buttonGravity = global::Simon.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_collapseContentDescription = global::Simon.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_collapseIcon = global::Simon.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetEnd = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetLeft = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetRight = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetStart = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::Simon.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_logo = global::Simon.Droid.Resource.Styleable.Toolbar_logo;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_logoDescription = global::Simon.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_maxButtonHeight = global::Simon.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_navigationContentDescription = global::Simon.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_navigationIcon = global::Simon.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_popupTheme = global::Simon.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_subtitle = global::Simon.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Simon.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_subtitleTextColor = global::Simon.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_title = global::Simon.Droid.Resource.Styleable.Toolbar_title;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMargin = global::Simon.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMarginBottom = global::Simon.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMarginEnd = global::Simon.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMargins = global::Simon.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMarginStart = global::Simon.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleMarginTop = global::Simon.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleTextAppearance = global::Simon.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.Toolbar_titleTextColor = global::Simon.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View = global::Simon.Droid.Resource.Styleable.View;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewBackgroundHelper = global::Simon.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewBackgroundHelper_android_background = global::Simon.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Simon.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Simon.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewStubCompat = global::Simon.Droid.Resource.Styleable.ViewStubCompat;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewStubCompat_android_id = global::Simon.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Simon.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.ViewStubCompat_android_layout = global::Simon.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View_android_focusable = global::Simon.Droid.Resource.Styleable.View_android_focusable;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View_android_theme = global::Simon.Droid.Resource.Styleable.View_android_theme;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View_paddingEnd = global::Simon.Droid.Resource.Styleable.View_paddingEnd;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View_paddingStart = global::Simon.Droid.Resource.Styleable.View_paddingStart;
+			global::LabelHtml.Forms.Plugin.Resource.Styleable.View_theme = global::Simon.Droid.Resource.Styleable.View_theme;
+			global::LabelHtml.Forms.Plugin.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::Simon.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.alpha = global::Simon.Droid.Resource.Attribute.alpha;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.buttonSize = global::Simon.Droid.Resource.Attribute.buttonSize;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.circleCrop = global::Simon.Droid.Resource.Attribute.circleCrop;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.colorScheme = global::Simon.Droid.Resource.Attribute.colorScheme;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.coordinatorLayoutStyle = global::Simon.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.font = global::Simon.Droid.Resource.Attribute.font;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderAuthority = global::Simon.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderCerts = global::Simon.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderFetchStrategy = global::Simon.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderFetchTimeout = global::Simon.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderPackage = global::Simon.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontProviderQuery = global::Simon.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontStyle = global::Simon.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontVariationSettings = global::Simon.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.fontWeight = global::Simon.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.imageAspectRatio = global::Simon.Droid.Resource.Attribute.imageAspectRatio;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.imageAspectRatioAdjust = global::Simon.Droid.Resource.Attribute.imageAspectRatioAdjust;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.keylines = global::Simon.Droid.Resource.Attribute.keylines;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_anchor = global::Simon.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_anchorGravity = global::Simon.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_behavior = global::Simon.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_dodgeInsetEdges = global::Simon.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_insetEdge = global::Simon.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.layout_keyline = global::Simon.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.scopeUris = global::Simon.Droid.Resource.Attribute.scopeUris;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.statusBarBackground = global::Simon.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.FirebasePushNotification.Resource.Attribute.ttcIndex = global::Simon.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_dark = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_dark;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_dark_default = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_dark_disabled = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_dark_focused = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_dark_pressed = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_light = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_light;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_light_default = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_light_default;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_light_disabled = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_light_focused = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_text_light_pressed = global::Simon.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
+			global::Plugin.FirebasePushNotification.Resource.Color.common_google_signin_btn_tint = global::Simon.Droid.Resource.Color.common_google_signin_btn_tint;
+			global::Plugin.FirebasePushNotification.Resource.Color.notification_action_color_filter = global::Simon.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.FirebasePushNotification.Resource.Color.notification_icon_bg_color = global::Simon.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.FirebasePushNotification.Resource.Color.notification_material_background_media_default_color = global::Simon.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Plugin.FirebasePushNotification.Resource.Color.primary_text_default_material_dark = global::Simon.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.FirebasePushNotification.Resource.Color.ripple_material_light = global::Simon.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.FirebasePushNotification.Resource.Color.secondary_text_default_material_dark = global::Simon.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.FirebasePushNotification.Resource.Color.secondary_text_default_material_light = global::Simon.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_button_inset_horizontal_material = global::Simon.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_button_inset_vertical_material = global::Simon.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_button_padding_horizontal_material = global::Simon.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_button_padding_vertical_material = global::Simon.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_control_corner_material = global::Simon.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_notification_large_icon_max_height = global::Simon.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.compat_notification_large_icon_max_width = global::Simon.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_action_icon_size = global::Simon.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_action_text_size = global::Simon.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_big_circle_margin = global::Simon.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_content_margin_start = global::Simon.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_large_icon_height = global::Simon.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_large_icon_width = global::Simon.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_main_column_padding_top = global::Simon.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_media_narrow_margin = global::Simon.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_right_icon_size = global::Simon.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_right_side_padding_top = global::Simon.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_small_icon_background_padding = global::Simon.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_small_icon_size_as_large = global::Simon.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_subtext_size = global::Simon.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_top_pad = global::Simon.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.notification_top_pad_large_text = global::Simon.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.subtitle_corner_radius = global::Simon.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.subtitle_outline_width = global::Simon.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.subtitle_shadow_offset = global::Simon.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Plugin.FirebasePushNotification.Resource.Dimension.subtitle_shadow_radius = global::Simon.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_full_open_on_phone = global::Simon.Droid.Resource.Drawable.common_full_open_on_phone;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_dark = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_disabled = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_light = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_dark = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_disabled = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_light = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_light;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_light_focused = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::Simon.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.googleg_disabled_color_18 = global::Simon.Droid.Resource.Drawable.googleg_disabled_color_18;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.googleg_standard_color_18 = global::Simon.Droid.Resource.Drawable.googleg_standard_color_18;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_action_background = global::Simon.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg = global::Simon.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg_low = global::Simon.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg_low_normal = global::Simon.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg_low_pressed = global::Simon.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg_normal = global::Simon.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_bg_normal_pressed = global::Simon.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_icon_background = global::Simon.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_template_icon_bg = global::Simon.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_template_icon_low_bg = global::Simon.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notification_tile_bg = global::Simon.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.FirebasePushNotification.Resource.Drawable.notify_panel_notification_icon_bg = global::Simon.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.FirebasePushNotification.Resource.Id.action0 = global::Simon.Droid.Resource.Id.action0;
+			global::Plugin.FirebasePushNotification.Resource.Id.actions = global::Simon.Droid.Resource.Id.actions;
+			global::Plugin.FirebasePushNotification.Resource.Id.action_container = global::Simon.Droid.Resource.Id.action_container;
+			global::Plugin.FirebasePushNotification.Resource.Id.action_divider = global::Simon.Droid.Resource.Id.action_divider;
+			global::Plugin.FirebasePushNotification.Resource.Id.action_image = global::Simon.Droid.Resource.Id.action_image;
+			global::Plugin.FirebasePushNotification.Resource.Id.action_text = global::Simon.Droid.Resource.Id.action_text;
+			global::Plugin.FirebasePushNotification.Resource.Id.adjust_height = global::Simon.Droid.Resource.Id.adjust_height;
+			global::Plugin.FirebasePushNotification.Resource.Id.adjust_width = global::Simon.Droid.Resource.Id.adjust_width;
+			global::Plugin.FirebasePushNotification.Resource.Id.all = global::Simon.Droid.Resource.Id.all;
+			global::Plugin.FirebasePushNotification.Resource.Id.async = global::Simon.Droid.Resource.Id.async;
+			global::Plugin.FirebasePushNotification.Resource.Id.auto = global::Simon.Droid.Resource.Id.auto;
+			global::Plugin.FirebasePushNotification.Resource.Id.blocking = global::Simon.Droid.Resource.Id.blocking;
+			global::Plugin.FirebasePushNotification.Resource.Id.bottom = global::Simon.Droid.Resource.Id.bottom;
+			global::Plugin.FirebasePushNotification.Resource.Id.cancel_action = global::Simon.Droid.Resource.Id.cancel_action;
+			global::Plugin.FirebasePushNotification.Resource.Id.center = global::Simon.Droid.Resource.Id.center;
+			global::Plugin.FirebasePushNotification.Resource.Id.center_horizontal = global::Simon.Droid.Resource.Id.center_horizontal;
+			global::Plugin.FirebasePushNotification.Resource.Id.center_vertical = global::Simon.Droid.Resource.Id.center_vertical;
+			global::Plugin.FirebasePushNotification.Resource.Id.chronometer = global::Simon.Droid.Resource.Id.chronometer;
+			global::Plugin.FirebasePushNotification.Resource.Id.clip_horizontal = global::Simon.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.FirebasePushNotification.Resource.Id.clip_vertical = global::Simon.Droid.Resource.Id.clip_vertical;
+			global::Plugin.FirebasePushNotification.Resource.Id.dark = global::Simon.Droid.Resource.Id.dark;
+			global::Plugin.FirebasePushNotification.Resource.Id.end = global::Simon.Droid.Resource.Id.end;
+			global::Plugin.FirebasePushNotification.Resource.Id.end_padder = global::Simon.Droid.Resource.Id.end_padder;
+			global::Plugin.FirebasePushNotification.Resource.Id.fill = global::Simon.Droid.Resource.Id.fill;
+			global::Plugin.FirebasePushNotification.Resource.Id.fill_horizontal = global::Simon.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.FirebasePushNotification.Resource.Id.fill_vertical = global::Simon.Droid.Resource.Id.fill_vertical;
+			global::Plugin.FirebasePushNotification.Resource.Id.forever = global::Simon.Droid.Resource.Id.forever;
+			global::Plugin.FirebasePushNotification.Resource.Id.icon = global::Simon.Droid.Resource.Id.icon;
+			global::Plugin.FirebasePushNotification.Resource.Id.icon_group = global::Simon.Droid.Resource.Id.icon_group;
+			global::Plugin.FirebasePushNotification.Resource.Id.icon_only = global::Simon.Droid.Resource.Id.icon_only;
+			global::Plugin.FirebasePushNotification.Resource.Id.info = global::Simon.Droid.Resource.Id.info;
+			global::Plugin.FirebasePushNotification.Resource.Id.italic = global::Simon.Droid.Resource.Id.italic;
+			global::Plugin.FirebasePushNotification.Resource.Id.left = global::Simon.Droid.Resource.Id.left;
+			global::Plugin.FirebasePushNotification.Resource.Id.light = global::Simon.Droid.Resource.Id.light;
+			global::Plugin.FirebasePushNotification.Resource.Id.line1 = global::Simon.Droid.Resource.Id.line1;
+			global::Plugin.FirebasePushNotification.Resource.Id.line3 = global::Simon.Droid.Resource.Id.line3;
+			global::Plugin.FirebasePushNotification.Resource.Id.media_actions = global::Simon.Droid.Resource.Id.media_actions;
+			global::Plugin.FirebasePushNotification.Resource.Id.none = global::Simon.Droid.Resource.Id.none;
+			global::Plugin.FirebasePushNotification.Resource.Id.normal = global::Simon.Droid.Resource.Id.normal;
+			global::Plugin.FirebasePushNotification.Resource.Id.notification_background = global::Simon.Droid.Resource.Id.notification_background;
+			global::Plugin.FirebasePushNotification.Resource.Id.notification_main_column = global::Simon.Droid.Resource.Id.notification_main_column;
+			global::Plugin.FirebasePushNotification.Resource.Id.notification_main_column_container = global::Simon.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.FirebasePushNotification.Resource.Id.right = global::Simon.Droid.Resource.Id.right;
+			global::Plugin.FirebasePushNotification.Resource.Id.right_icon = global::Simon.Droid.Resource.Id.right_icon;
+			global::Plugin.FirebasePushNotification.Resource.Id.right_side = global::Simon.Droid.Resource.Id.right_side;
+			global::Plugin.FirebasePushNotification.Resource.Id.standard = global::Simon.Droid.Resource.Id.standard;
+			global::Plugin.FirebasePushNotification.Resource.Id.start = global::Simon.Droid.Resource.Id.start;
+			global::Plugin.FirebasePushNotification.Resource.Id.status_bar_latest_event_content = global::Simon.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.FirebasePushNotification.Resource.Id.tag_transition_group = global::Simon.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.FirebasePushNotification.Resource.Id.tag_unhandled_key_event_manager = global::Simon.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.FirebasePushNotification.Resource.Id.tag_unhandled_key_listeners = global::Simon.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.FirebasePushNotification.Resource.Id.text = global::Simon.Droid.Resource.Id.text;
+			global::Plugin.FirebasePushNotification.Resource.Id.text2 = global::Simon.Droid.Resource.Id.text2;
+			global::Plugin.FirebasePushNotification.Resource.Id.time = global::Simon.Droid.Resource.Id.time;
+			global::Plugin.FirebasePushNotification.Resource.Id.title = global::Simon.Droid.Resource.Id.title;
+			global::Plugin.FirebasePushNotification.Resource.Id.top = global::Simon.Droid.Resource.Id.top;
+			global::Plugin.FirebasePushNotification.Resource.Id.wide = global::Simon.Droid.Resource.Id.wide;
+			global::Plugin.FirebasePushNotification.Resource.Integer.cancel_button_image_alpha = global::Simon.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.FirebasePushNotification.Resource.Integer.google_play_services_version = global::Simon.Droid.Resource.Integer.google_play_services_version;
+			global::Plugin.FirebasePushNotification.Resource.Integer.status_bar_notification_info_maxnum = global::Simon.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_action = global::Simon.Droid.Resource.Layout.notification_action;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_action_tombstone = global::Simon.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_media_action = global::Simon.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_media_cancel_action = global::Simon.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_big_media = global::Simon.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_big_media_custom = global::Simon.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_big_media_narrow = global::Simon.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_big_media_narrow_custom = global::Simon.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_custom_big = global::Simon.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_icon_group = global::Simon.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_lines_media = global::Simon.Droid.Resource.Layout.notification_template_lines_media;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_media = global::Simon.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_media_custom = global::Simon.Droid.Resource.Layout.notification_template_media_custom;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_part_chronometer = global::Simon.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.FirebasePushNotification.Resource.Layout.notification_template_part_time = global::Simon.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_enable_button = global::Simon.Droid.Resource.String.common_google_play_services_enable_button;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_enable_text = global::Simon.Droid.Resource.String.common_google_play_services_enable_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_enable_title = global::Simon.Droid.Resource.String.common_google_play_services_enable_title;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_install_button = global::Simon.Droid.Resource.String.common_google_play_services_install_button;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_install_text = global::Simon.Droid.Resource.String.common_google_play_services_install_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_install_title = global::Simon.Droid.Resource.String.common_google_play_services_install_title;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_notification_channel_name = global::Simon.Droid.Resource.String.common_google_play_services_notification_channel_name;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_notification_ticker = global::Simon.Droid.Resource.String.common_google_play_services_notification_ticker;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_unknown_issue = global::Simon.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_unsupported_text = global::Simon.Droid.Resource.String.common_google_play_services_unsupported_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_update_button = global::Simon.Droid.Resource.String.common_google_play_services_update_button;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_update_text = global::Simon.Droid.Resource.String.common_google_play_services_update_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_update_title = global::Simon.Droid.Resource.String.common_google_play_services_update_title;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_updating_text = global::Simon.Droid.Resource.String.common_google_play_services_updating_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_google_play_services_wear_update_text = global::Simon.Droid.Resource.String.common_google_play_services_wear_update_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_open_on_phone = global::Simon.Droid.Resource.String.common_open_on_phone;
+			global::Plugin.FirebasePushNotification.Resource.String.common_signin_button_text = global::Simon.Droid.Resource.String.common_signin_button_text;
+			global::Plugin.FirebasePushNotification.Resource.String.common_signin_button_text_long = global::Simon.Droid.Resource.String.common_signin_button_text_long;
+			global::Plugin.FirebasePushNotification.Resource.String.fcm_fallback_notification_channel_label = global::Simon.Droid.Resource.String.fcm_fallback_notification_channel_label;
+			global::Plugin.FirebasePushNotification.Resource.String.status_bar_notification_info_overflow = global::Simon.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Info = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Time = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Title = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.FirebasePushNotification.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Simon.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Plugin.FirebasePushNotification.Resource.Style.Widget_Compat_NotificationActionContainer = global::Simon.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.FirebasePushNotification.Resource.Style.Widget_Compat_NotificationActionText = global::Simon.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.FirebasePushNotification.Resource.Style.Widget_Support_CoordinatorLayout = global::Simon.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.ColorStateListItem = global::Simon.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.ColorStateListItem_alpha = global::Simon.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.ColorStateListItem_android_alpha = global::Simon.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.ColorStateListItem_android_color = global::Simon.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout = global::Simon.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_keylines = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Simon.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily = global::Simon.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont = global::Simon.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_android_font = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_android_fontStyle = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_android_fontWeight = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::Simon.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_font = global::Simon.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_fontStyle = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_fontWeight = global::Simon.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamilyFont_ttcIndex = global::Simon.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderAuthority = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderCerts = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderPackage = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.FontFamily_fontProviderQuery = global::Simon.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor = global::Simon.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColorItem = global::Simon.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColorItem_android_color = global::Simon.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColorItem_android_offset = global::Simon.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_centerColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_centerX = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_centerY = global::Simon.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_endColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_endX = global::Simon.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_endY = global::Simon.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_gradientRadius = global::Simon.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_startColor = global::Simon.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_startX = global::Simon.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_startY = global::Simon.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_tileMode = global::Simon.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.GradientColor_android_type = global::Simon.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.LoadingImageView = global::Simon.Droid.Resource.Styleable.LoadingImageView;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.LoadingImageView_circleCrop = global::Simon.Droid.Resource.Styleable.LoadingImageView_circleCrop;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.LoadingImageView_imageAspectRatio = global::Simon.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::Simon.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.SignInButton = global::Simon.Droid.Resource.Styleable.SignInButton;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.SignInButton_buttonSize = global::Simon.Droid.Resource.Styleable.SignInButton_buttonSize;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.SignInButton_colorScheme = global::Simon.Droid.Resource.Styleable.SignInButton_colorScheme;
+			global::Plugin.FirebasePushNotification.Resource.Styleable.SignInButton_scopeUris = global::Simon.Droid.Resource.Styleable.SignInButton_scopeUris;
 			global::Plugin.Media.Resource.Attribute.alpha = global::Simon.Droid.Resource.Attribute.alpha;
 			global::Plugin.Media.Resource.Attribute.coordinatorLayoutStyle = global::Simon.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Plugin.Media.Resource.Attribute.font = global::Simon.Droid.Resource.Attribute.font;
@@ -14424,1172 +17268,1199 @@ namespace Simon.Droid
 			// aapt resource value: 0x7F07005D
 			public const int arrow_forward = 2131165277;
 			
+			// aapt resource value: 0x7F070060
+			public const int attachfile = 2131165280;
+			
 			// aapt resource value: 0x7F07005E
-			public const int Avatar1 = 2131165278;
+			public const int attach_document = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int Avatar10 = 2131165279;
-			
-			// aapt resource value: 0x7F070060
-			public const int Avatar11 = 2131165280;
+			public const int attach_file = 2131165279;
 			
 			// aapt resource value: 0x7F070061
-			public const int Avatar12 = 2131165281;
+			public const int Avatar1 = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int Avatar13 = 2131165282;
+			public const int Avatar10 = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int Avatar14 = 2131165283;
+			public const int Avatar11 = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int Avatar15 = 2131165284;
+			public const int Avatar12 = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int Avatar16 = 2131165285;
+			public const int Avatar13 = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int Avatar17 = 2131165286;
+			public const int Avatar14 = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int Avatar18 = 2131165287;
+			public const int Avatar15 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int Avatar19 = 2131165288;
+			public const int Avatar16 = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Avatar2 = 2131165289;
+			public const int Avatar17 = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Avatar20 = 2131165290;
+			public const int Avatar18 = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int Avatar21 = 2131165291;
+			public const int Avatar19 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int Avatar22 = 2131165292;
+			public const int Avatar2 = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int Avatar23 = 2131165293;
+			public const int Avatar20 = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int Avatar24 = 2131165294;
+			public const int Avatar21 = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int Avatar25 = 2131165295;
+			public const int Avatar22 = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int Avatar26 = 2131165296;
+			public const int Avatar23 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int Avatar27 = 2131165297;
+			public const int Avatar24 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int Avatar28 = 2131165298;
+			public const int Avatar25 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int Avatar29 = 2131165299;
+			public const int Avatar26 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int Avatar3 = 2131165300;
+			public const int Avatar27 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int Avatar30 = 2131165301;
+			public const int Avatar28 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int Avatar4 = 2131165302;
+			public const int Avatar29 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int Avatar5 = 2131165303;
+			public const int Avatar3 = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int Avatar6 = 2131165304;
+			public const int Avatar30 = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int Avatar7 = 2131165305;
+			public const int Avatar4 = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int Avatar8 = 2131165306;
+			public const int Avatar5 = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int Avatar9 = 2131165307;
+			public const int Avatar6 = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int avd_hide_password = 2131165308;
+			public const int Avatar7 = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int avd_show_password = 2131165309;
+			public const int Avatar8 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int back_arrow = 2131165310;
+			public const int Avatar9 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int bluedot = 2131165311;
+			public const int avd_hide_password = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int bookmark = 2131165312;
+			public const int avd_show_password = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int bookmark_fill = 2131165313;
+			public const int back_arrow = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int btn_checkbox = 2131165314;
+			public const int bluedot = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int btn_checkbox_checked = 2131165315;
+			public const int bookmark = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165316;
+			public const int bookmark_fill = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int btn_checkbox_checked_to_unchecked_animation = 2131165317;
+			public const int btn_checkbox = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int btn_checkbox_indeterminate = 2131165318;
+			public const int btn_checkbox_checked = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165319;
+			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165320;
+			public const int btn_checkbox_checked_to_unchecked_animation = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int btn_checkbox_unchecked = 2131165321;
+			public const int btn_checkbox_indeterminate = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int btn_checkbox_unchecked_to_checked_animation = 2131165322;
+			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165323;
+			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int check_box = 2131165324;
+			public const int btn_checkbox_unchecked = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int check_uncheck = 2131165325;
+			public const int btn_checkbox_unchecked_to_checked_animation = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int clear_button_icon = 2131165326;
+			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int close_popup = 2131165327;
+			public const int camera = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int common_full_open_on_phone = 2131165328;
+			public const int check_box = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int common_google_signin_btn_icon_dark = 2131165329;
+			public const int check_uncheck = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int common_google_signin_btn_icon_dark_focused = 2131165330;
+			public const int clear_button_icon = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int common_google_signin_btn_icon_dark_normal = 2131165331;
+			public const int close_popup = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131165332;
+			public const int common_full_open_on_phone = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int common_google_signin_btn_icon_disabled = 2131165333;
+			public const int common_google_signin_btn_icon_dark = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int common_google_signin_btn_icon_light = 2131165334;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int common_google_signin_btn_icon_light_focused = 2131165335;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int common_google_signin_btn_icon_light_normal = 2131165336;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int common_google_signin_btn_icon_light_normal_background = 2131165337;
+			public const int common_google_signin_btn_icon_disabled = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int common_google_signin_btn_text_dark = 2131165338;
+			public const int common_google_signin_btn_icon_light = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int common_google_signin_btn_text_dark_focused = 2131165339;
+			public const int common_google_signin_btn_icon_light_focused = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int common_google_signin_btn_text_dark_normal = 2131165340;
+			public const int common_google_signin_btn_icon_light_normal = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int common_google_signin_btn_text_dark_normal_background = 2131165341;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int common_google_signin_btn_text_disabled = 2131165342;
+			public const int common_google_signin_btn_text_dark = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int common_google_signin_btn_text_light = 2131165343;
+			public const int common_google_signin_btn_text_dark_focused = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int common_google_signin_btn_text_light_focused = 2131165344;
+			public const int common_google_signin_btn_text_dark_normal = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int common_google_signin_btn_text_light_normal = 2131165345;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int common_google_signin_btn_text_light_normal_background = 2131165346;
+			public const int common_google_signin_btn_text_disabled = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int crop_image_menu_flip = 2131165347;
+			public const int common_google_signin_btn_text_light = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int crop_image_menu_rotate_left = 2131165348;
+			public const int common_google_signin_btn_text_light_focused = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int crop_image_menu_rotate_right = 2131165349;
+			public const int common_google_signin_btn_text_light_normal = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int deal = 2131165350;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int deal_active = 2131165351;
+			public const int crop_image_menu_flip = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int delete = 2131165352;
+			public const int crop_image_menu_rotate_left = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int design_bottom_navigation_item_background = 2131165353;
+			public const int crop_image_menu_rotate_right = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int design_fab_background = 2131165354;
+			public const int deal = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int design_ic_visibility = 2131165355;
+			public const int deal_active = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int design_ic_visibility_off = 2131165356;
+			public const int delete = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int design_password_eye = 2131165357;
+			public const int design_bottom_navigation_item_background = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int design_snackbar_background = 2131165358;
+			public const int design_fab_background = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int drawable_ripple = 2131165359;
+			public const int design_ic_visibility = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int drawable_ripple_image = 2131165360;
+			public const int design_ic_visibility_off = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int drawable_ripple_outlined = 2131165361;
+			public const int design_password_eye = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int drawable_ripple_outlined_with_icon = 2131165362;
+			public const int design_snackbar_background = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int drawable_ripple_text = 2131165363;
+			public const int drawable_ripple = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int drawable_ripple_with_icon = 2131165364;
+			public const int drawable_ripple_image = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int drawable_selector = 2131165365;
+			public const int drawable_ripple_outlined = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int drawable_shape = 2131165366;
+			public const int drawable_ripple_outlined_with_icon = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int drawable_shape_text = 2131165367;
+			public const int drawable_ripple_text = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int drawable_shape_with_icon = 2131165368;
-			
-			// aapt resource value: 0x7F0700BA
-			public const int dropdownbuttonimage = 2131165370;
+			public const int drawable_ripple_with_icon = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int drop_down = 2131165369;
+			public const int drawable_selector = 2131165369;
+			
+			// aapt resource value: 0x7F0700BA
+			public const int drawable_shape = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int file = 2131165371;
+			public const int drawable_shape_text = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int filter = 2131165372;
-			
-			// aapt resource value: 0x7F0700BD
-			public const int googleg_disabled_color_18 = 2131165373;
+			public const int drawable_shape_with_icon = 2131165372;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int googleg_standard_color_18 = 2131165374;
+			public const int dropdownbuttonimage = 2131165374;
+			
+			// aapt resource value: 0x7F0700BD
+			public const int drop_down = 2131165373;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int hide_pass = 2131165375;
+			public const int file = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int home = 2131165376;
+			public const int filter = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int home_active = 2131165377;
-			
-			// aapt resource value: 0x7F07018C
-			public const int icon = 2131165580;
+			public const int googleg_disabled_color_18 = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int ic_account = 2131165378;
+			public const int googleg_standard_color_18 = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int ic_audiotrack_dark = 2131165379;
+			public const int hide_pass = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int ic_audiotrack_light = 2131165380;
+			public const int home = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int ic_bell = 2131165381;
-			
-			// aapt resource value: 0x7F0700C6
-			public const int ic_check = 2131165382;
-			
-			// aapt resource value: 0x7F0700C7
-			public const int ic_checkbox = 2131165383;
-			
-			// aapt resource value: 0x7F0700C8
-			public const int ic_circle = 2131165384;
-			
-			// aapt resource value: 0x7F0700C9
-			public const int ic_clipboard_check = 2131165385;
-			
-			// aapt resource value: 0x7F0700CA
-			public const int ic_close = 2131165386;
-			
-			// aapt resource value: 0x7F0700CB
-			public const int ic_comments = 2131165387;
-			
-			// aapt resource value: 0x7F0700CC
-			public const int ic_currency = 2131165388;
-			
-			// aapt resource value: 0x7F0700CD
-			public const int ic_dialog_close_dark = 2131165389;
-			
-			// aapt resource value: 0x7F0700CE
-			public const int ic_dialog_close_light = 2131165390;
-			
-			// aapt resource value: 0x7F0700CF
-			public const int ic_domain = 2131165391;
-			
-			// aapt resource value: 0x7F0700D0
-			public const int ic_down = 2131165392;
-			
-			// aapt resource value: 0x7F0700D1
-			public const int ic_file = 2131165393;
-			
-			// aapt resource value: 0x7F0700D2
-			public const int ic_forum = 2131165394;
-			
-			// aapt resource value: 0x7F0700D3
-			public const int ic_group_collapse_00 = 2131165395;
-			
-			// aapt resource value: 0x7F0700D4
-			public const int ic_group_collapse_01 = 2131165396;
-			
-			// aapt resource value: 0x7F0700D5
-			public const int ic_group_collapse_02 = 2131165397;
-			
-			// aapt resource value: 0x7F0700D6
-			public const int ic_group_collapse_03 = 2131165398;
-			
-			// aapt resource value: 0x7F0700D7
-			public const int ic_group_collapse_04 = 2131165399;
-			
-			// aapt resource value: 0x7F0700D8
-			public const int ic_group_collapse_05 = 2131165400;
-			
-			// aapt resource value: 0x7F0700D9
-			public const int ic_group_collapse_06 = 2131165401;
-			
-			// aapt resource value: 0x7F0700DA
-			public const int ic_group_collapse_07 = 2131165402;
-			
-			// aapt resource value: 0x7F0700DB
-			public const int ic_group_collapse_08 = 2131165403;
-			
-			// aapt resource value: 0x7F0700DC
-			public const int ic_group_collapse_09 = 2131165404;
-			
-			// aapt resource value: 0x7F0700DD
-			public const int ic_group_collapse_10 = 2131165405;
-			
-			// aapt resource value: 0x7F0700DE
-			public const int ic_group_collapse_11 = 2131165406;
-			
-			// aapt resource value: 0x7F0700DF
-			public const int ic_group_collapse_12 = 2131165407;
-			
-			// aapt resource value: 0x7F0700E0
-			public const int ic_group_collapse_13 = 2131165408;
-			
-			// aapt resource value: 0x7F0700E1
-			public const int ic_group_collapse_14 = 2131165409;
-			
-			// aapt resource value: 0x7F0700E2
-			public const int ic_group_collapse_15 = 2131165410;
-			
-			// aapt resource value: 0x7F0700E3
-			public const int ic_group_expand_00 = 2131165411;
-			
-			// aapt resource value: 0x7F0700E4
-			public const int ic_group_expand_01 = 2131165412;
-			
-			// aapt resource value: 0x7F0700E5
-			public const int ic_group_expand_02 = 2131165413;
-			
-			// aapt resource value: 0x7F0700E6
-			public const int ic_group_expand_03 = 2131165414;
-			
-			// aapt resource value: 0x7F0700E7
-			public const int ic_group_expand_04 = 2131165415;
-			
-			// aapt resource value: 0x7F0700E8
-			public const int ic_group_expand_05 = 2131165416;
-			
-			// aapt resource value: 0x7F0700E9
-			public const int ic_group_expand_06 = 2131165417;
-			
-			// aapt resource value: 0x7F0700EA
-			public const int ic_group_expand_07 = 2131165418;
-			
-			// aapt resource value: 0x7F0700EB
-			public const int ic_group_expand_08 = 2131165419;
-			
-			// aapt resource value: 0x7F0700EC
-			public const int ic_group_expand_09 = 2131165420;
-			
-			// aapt resource value: 0x7F0700ED
-			public const int ic_group_expand_10 = 2131165421;
-			
-			// aapt resource value: 0x7F0700EE
-			public const int ic_group_expand_11 = 2131165422;
-			
-			// aapt resource value: 0x7F0700EF
-			public const int ic_group_expand_12 = 2131165423;
-			
-			// aapt resource value: 0x7F0700F0
-			public const int ic_group_expand_13 = 2131165424;
-			
-			// aapt resource value: 0x7F0700F1
-			public const int ic_group_expand_14 = 2131165425;
-			
-			// aapt resource value: 0x7F0700F2
-			public const int ic_group_expand_15 = 2131165426;
-			
-			// aapt resource value: 0x7F0700F3
-			public const int ic_label = 2131165427;
-			
-			// aapt resource value: 0x7F0700F4
-			public const int ic_launcher = 2131165428;
-			
-			// aapt resource value: 0x7F0700F5
-			public const int ic_media_pause_dark = 2131165429;
-			
-			// aapt resource value: 0x7F0700F6
-			public const int ic_media_pause_light = 2131165430;
-			
-			// aapt resource value: 0x7F0700F7
-			public const int ic_media_play_dark = 2131165431;
-			
-			// aapt resource value: 0x7F0700F8
-			public const int ic_media_play_light = 2131165432;
-			
-			// aapt resource value: 0x7F0700F9
-			public const int ic_media_stop_dark = 2131165433;
-			
-			// aapt resource value: 0x7F0700FA
-			public const int ic_media_stop_light = 2131165434;
-			
-			// aapt resource value: 0x7F0700FB
-			public const int ic_message = 2131165435;
-			
-			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connected_00_dark = 2131165436;
-			
-			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connected_00_light = 2131165437;
-			
-			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connected_01_dark = 2131165438;
-			
-			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connected_01_light = 2131165439;
-			
-			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connected_02_dark = 2131165440;
-			
-			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connected_02_light = 2131165441;
-			
-			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connected_03_dark = 2131165442;
-			
-			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connected_03_light = 2131165443;
-			
-			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connected_04_dark = 2131165444;
-			
-			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connected_04_light = 2131165445;
-			
-			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connected_05_dark = 2131165446;
-			
-			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connected_05_light = 2131165447;
-			
-			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_connected_06_dark = 2131165448;
-			
-			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_connected_06_light = 2131165449;
-			
-			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_connected_07_dark = 2131165450;
-			
-			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_connected_07_light = 2131165451;
-			
-			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_connected_08_dark = 2131165452;
-			
-			// aapt resource value: 0x7F07010D
-			public const int ic_mr_button_connected_08_light = 2131165453;
-			
-			// aapt resource value: 0x7F07010E
-			public const int ic_mr_button_connected_09_dark = 2131165454;
-			
-			// aapt resource value: 0x7F07010F
-			public const int ic_mr_button_connected_09_light = 2131165455;
-			
-			// aapt resource value: 0x7F070110
-			public const int ic_mr_button_connected_10_dark = 2131165456;
-			
-			// aapt resource value: 0x7F070111
-			public const int ic_mr_button_connected_10_light = 2131165457;
-			
-			// aapt resource value: 0x7F070112
-			public const int ic_mr_button_connected_11_dark = 2131165458;
-			
-			// aapt resource value: 0x7F070113
-			public const int ic_mr_button_connected_11_light = 2131165459;
-			
-			// aapt resource value: 0x7F070114
-			public const int ic_mr_button_connected_12_dark = 2131165460;
-			
-			// aapt resource value: 0x7F070115
-			public const int ic_mr_button_connected_12_light = 2131165461;
-			
-			// aapt resource value: 0x7F070116
-			public const int ic_mr_button_connected_13_dark = 2131165462;
-			
-			// aapt resource value: 0x7F070117
-			public const int ic_mr_button_connected_13_light = 2131165463;
-			
-			// aapt resource value: 0x7F070118
-			public const int ic_mr_button_connected_14_dark = 2131165464;
-			
-			// aapt resource value: 0x7F070119
-			public const int ic_mr_button_connected_14_light = 2131165465;
-			
-			// aapt resource value: 0x7F07011A
-			public const int ic_mr_button_connected_15_dark = 2131165466;
-			
-			// aapt resource value: 0x7F07011B
-			public const int ic_mr_button_connected_15_light = 2131165467;
-			
-			// aapt resource value: 0x7F07011C
-			public const int ic_mr_button_connected_16_dark = 2131165468;
-			
-			// aapt resource value: 0x7F07011D
-			public const int ic_mr_button_connected_16_light = 2131165469;
-			
-			// aapt resource value: 0x7F07011E
-			public const int ic_mr_button_connected_17_dark = 2131165470;
-			
-			// aapt resource value: 0x7F07011F
-			public const int ic_mr_button_connected_17_light = 2131165471;
-			
-			// aapt resource value: 0x7F070120
-			public const int ic_mr_button_connected_18_dark = 2131165472;
-			
-			// aapt resource value: 0x7F070121
-			public const int ic_mr_button_connected_18_light = 2131165473;
-			
-			// aapt resource value: 0x7F070122
-			public const int ic_mr_button_connected_19_dark = 2131165474;
-			
-			// aapt resource value: 0x7F070123
-			public const int ic_mr_button_connected_19_light = 2131165475;
-			
-			// aapt resource value: 0x7F070124
-			public const int ic_mr_button_connected_20_dark = 2131165476;
-			
-			// aapt resource value: 0x7F070125
-			public const int ic_mr_button_connected_20_light = 2131165477;
-			
-			// aapt resource value: 0x7F070126
-			public const int ic_mr_button_connected_21_dark = 2131165478;
-			
-			// aapt resource value: 0x7F070127
-			public const int ic_mr_button_connected_21_light = 2131165479;
-			
-			// aapt resource value: 0x7F070128
-			public const int ic_mr_button_connected_22_dark = 2131165480;
-			
-			// aapt resource value: 0x7F070129
-			public const int ic_mr_button_connected_22_light = 2131165481;
-			
-			// aapt resource value: 0x7F07012A
-			public const int ic_mr_button_connected_23_dark = 2131165482;
-			
-			// aapt resource value: 0x7F07012B
-			public const int ic_mr_button_connected_23_light = 2131165483;
-			
-			// aapt resource value: 0x7F07012C
-			public const int ic_mr_button_connected_24_dark = 2131165484;
-			
-			// aapt resource value: 0x7F07012D
-			public const int ic_mr_button_connected_24_light = 2131165485;
-			
-			// aapt resource value: 0x7F07012E
-			public const int ic_mr_button_connected_25_dark = 2131165486;
-			
-			// aapt resource value: 0x7F07012F
-			public const int ic_mr_button_connected_25_light = 2131165487;
-			
-			// aapt resource value: 0x7F070130
-			public const int ic_mr_button_connected_26_dark = 2131165488;
-			
-			// aapt resource value: 0x7F070131
-			public const int ic_mr_button_connected_26_light = 2131165489;
-			
-			// aapt resource value: 0x7F070132
-			public const int ic_mr_button_connected_27_dark = 2131165490;
-			
-			// aapt resource value: 0x7F070133
-			public const int ic_mr_button_connected_27_light = 2131165491;
-			
-			// aapt resource value: 0x7F070134
-			public const int ic_mr_button_connected_28_dark = 2131165492;
-			
-			// aapt resource value: 0x7F070135
-			public const int ic_mr_button_connected_28_light = 2131165493;
-			
-			// aapt resource value: 0x7F070136
-			public const int ic_mr_button_connected_29_dark = 2131165494;
-			
-			// aapt resource value: 0x7F070137
-			public const int ic_mr_button_connected_29_light = 2131165495;
-			
-			// aapt resource value: 0x7F070138
-			public const int ic_mr_button_connected_30_dark = 2131165496;
-			
-			// aapt resource value: 0x7F070139
-			public const int ic_mr_button_connected_30_light = 2131165497;
-			
-			// aapt resource value: 0x7F07013A
-			public const int ic_mr_button_connecting_00_dark = 2131165498;
-			
-			// aapt resource value: 0x7F07013B
-			public const int ic_mr_button_connecting_00_light = 2131165499;
-			
-			// aapt resource value: 0x7F07013C
-			public const int ic_mr_button_connecting_01_dark = 2131165500;
-			
-			// aapt resource value: 0x7F07013D
-			public const int ic_mr_button_connecting_01_light = 2131165501;
-			
-			// aapt resource value: 0x7F07013E
-			public const int ic_mr_button_connecting_02_dark = 2131165502;
-			
-			// aapt resource value: 0x7F07013F
-			public const int ic_mr_button_connecting_02_light = 2131165503;
-			
-			// aapt resource value: 0x7F070140
-			public const int ic_mr_button_connecting_03_dark = 2131165504;
-			
-			// aapt resource value: 0x7F070141
-			public const int ic_mr_button_connecting_03_light = 2131165505;
-			
-			// aapt resource value: 0x7F070142
-			public const int ic_mr_button_connecting_04_dark = 2131165506;
-			
-			// aapt resource value: 0x7F070143
-			public const int ic_mr_button_connecting_04_light = 2131165507;
-			
-			// aapt resource value: 0x7F070144
-			public const int ic_mr_button_connecting_05_dark = 2131165508;
-			
-			// aapt resource value: 0x7F070145
-			public const int ic_mr_button_connecting_05_light = 2131165509;
-			
-			// aapt resource value: 0x7F070146
-			public const int ic_mr_button_connecting_06_dark = 2131165510;
-			
-			// aapt resource value: 0x7F070147
-			public const int ic_mr_button_connecting_06_light = 2131165511;
-			
-			// aapt resource value: 0x7F070148
-			public const int ic_mr_button_connecting_07_dark = 2131165512;
-			
-			// aapt resource value: 0x7F070149
-			public const int ic_mr_button_connecting_07_light = 2131165513;
-			
-			// aapt resource value: 0x7F07014A
-			public const int ic_mr_button_connecting_08_dark = 2131165514;
-			
-			// aapt resource value: 0x7F07014B
-			public const int ic_mr_button_connecting_08_light = 2131165515;
-			
-			// aapt resource value: 0x7F07014C
-			public const int ic_mr_button_connecting_09_dark = 2131165516;
-			
-			// aapt resource value: 0x7F07014D
-			public const int ic_mr_button_connecting_09_light = 2131165517;
-			
-			// aapt resource value: 0x7F07014E
-			public const int ic_mr_button_connecting_10_dark = 2131165518;
-			
-			// aapt resource value: 0x7F07014F
-			public const int ic_mr_button_connecting_10_light = 2131165519;
-			
-			// aapt resource value: 0x7F070150
-			public const int ic_mr_button_connecting_11_dark = 2131165520;
-			
-			// aapt resource value: 0x7F070151
-			public const int ic_mr_button_connecting_11_light = 2131165521;
-			
-			// aapt resource value: 0x7F070152
-			public const int ic_mr_button_connecting_12_dark = 2131165522;
-			
-			// aapt resource value: 0x7F070153
-			public const int ic_mr_button_connecting_12_light = 2131165523;
-			
-			// aapt resource value: 0x7F070154
-			public const int ic_mr_button_connecting_13_dark = 2131165524;
-			
-			// aapt resource value: 0x7F070155
-			public const int ic_mr_button_connecting_13_light = 2131165525;
-			
-			// aapt resource value: 0x7F070156
-			public const int ic_mr_button_connecting_14_dark = 2131165526;
-			
-			// aapt resource value: 0x7F070157
-			public const int ic_mr_button_connecting_14_light = 2131165527;
-			
-			// aapt resource value: 0x7F070158
-			public const int ic_mr_button_connecting_15_dark = 2131165528;
-			
-			// aapt resource value: 0x7F070159
-			public const int ic_mr_button_connecting_15_light = 2131165529;
-			
-			// aapt resource value: 0x7F07015A
-			public const int ic_mr_button_connecting_16_dark = 2131165530;
-			
-			// aapt resource value: 0x7F07015B
-			public const int ic_mr_button_connecting_16_light = 2131165531;
-			
-			// aapt resource value: 0x7F07015C
-			public const int ic_mr_button_connecting_17_dark = 2131165532;
-			
-			// aapt resource value: 0x7F07015D
-			public const int ic_mr_button_connecting_17_light = 2131165533;
-			
-			// aapt resource value: 0x7F07015E
-			public const int ic_mr_button_connecting_18_dark = 2131165534;
-			
-			// aapt resource value: 0x7F07015F
-			public const int ic_mr_button_connecting_18_light = 2131165535;
-			
-			// aapt resource value: 0x7F070160
-			public const int ic_mr_button_connecting_19_dark = 2131165536;
-			
-			// aapt resource value: 0x7F070161
-			public const int ic_mr_button_connecting_19_light = 2131165537;
-			
-			// aapt resource value: 0x7F070162
-			public const int ic_mr_button_connecting_20_dark = 2131165538;
-			
-			// aapt resource value: 0x7F070163
-			public const int ic_mr_button_connecting_20_light = 2131165539;
-			
-			// aapt resource value: 0x7F070164
-			public const int ic_mr_button_connecting_21_dark = 2131165540;
-			
-			// aapt resource value: 0x7F070165
-			public const int ic_mr_button_connecting_21_light = 2131165541;
-			
-			// aapt resource value: 0x7F070166
-			public const int ic_mr_button_connecting_22_dark = 2131165542;
-			
-			// aapt resource value: 0x7F070167
-			public const int ic_mr_button_connecting_22_light = 2131165543;
-			
-			// aapt resource value: 0x7F070168
-			public const int ic_mr_button_connecting_23_dark = 2131165544;
-			
-			// aapt resource value: 0x7F070169
-			public const int ic_mr_button_connecting_23_light = 2131165545;
-			
-			// aapt resource value: 0x7F07016A
-			public const int ic_mr_button_connecting_24_dark = 2131165546;
-			
-			// aapt resource value: 0x7F07016B
-			public const int ic_mr_button_connecting_24_light = 2131165547;
-			
-			// aapt resource value: 0x7F07016C
-			public const int ic_mr_button_connecting_25_dark = 2131165548;
-			
-			// aapt resource value: 0x7F07016D
-			public const int ic_mr_button_connecting_25_light = 2131165549;
-			
-			// aapt resource value: 0x7F07016E
-			public const int ic_mr_button_connecting_26_dark = 2131165550;
-			
-			// aapt resource value: 0x7F07016F
-			public const int ic_mr_button_connecting_26_light = 2131165551;
-			
-			// aapt resource value: 0x7F070170
-			public const int ic_mr_button_connecting_27_dark = 2131165552;
-			
-			// aapt resource value: 0x7F070171
-			public const int ic_mr_button_connecting_27_light = 2131165553;
-			
-			// aapt resource value: 0x7F070172
-			public const int ic_mr_button_connecting_28_dark = 2131165554;
-			
-			// aapt resource value: 0x7F070173
-			public const int ic_mr_button_connecting_28_light = 2131165555;
-			
-			// aapt resource value: 0x7F070174
-			public const int ic_mr_button_connecting_29_dark = 2131165556;
-			
-			// aapt resource value: 0x7F070175
-			public const int ic_mr_button_connecting_29_light = 2131165557;
-			
-			// aapt resource value: 0x7F070176
-			public const int ic_mr_button_connecting_30_dark = 2131165558;
-			
-			// aapt resource value: 0x7F070177
-			public const int ic_mr_button_connecting_30_light = 2131165559;
-			
-			// aapt resource value: 0x7F070178
-			public const int ic_mr_button_disabled_dark = 2131165560;
-			
-			// aapt resource value: 0x7F070179
-			public const int ic_mr_button_disabled_light = 2131165561;
-			
-			// aapt resource value: 0x7F07017A
-			public const int ic_mr_button_disconnected_dark = 2131165562;
-			
-			// aapt resource value: 0x7F07017B
-			public const int ic_mr_button_disconnected_light = 2131165563;
-			
-			// aapt resource value: 0x7F07017C
-			public const int ic_mr_button_grey = 2131165564;
-			
-			// aapt resource value: 0x7F07017D
-			public const int ic_mtrl_chip_checked_black = 2131165565;
-			
-			// aapt resource value: 0x7F07017E
-			public const int ic_mtrl_chip_checked_circle = 2131165566;
-			
-			// aapt resource value: 0x7F07017F
-			public const int ic_mtrl_chip_close_circle = 2131165567;
-			
-			// aapt resource value: 0x7F070180
-			public const int ic_pencil = 2131165568;
-			
-			// aapt resource value: 0x7F070181
-			public const int ic_person = 2131165569;
-			
-			// aapt resource value: 0x7F070182
-			public const int ic_stat_appstore = 2131165570;
-			
-			// aapt resource value: 0x7F070183
-			public const int ic_timer = 2131165571;
-			
-			// aapt resource value: 0x7F070184
-			public const int ic_trash = 2131165572;
-			
-			// aapt resource value: 0x7F070185
-			public const int ic_up = 2131165573;
-			
-			// aapt resource value: 0x7F070186
-			public const int ic_vol_type_speaker_dark = 2131165574;
-			
-			// aapt resource value: 0x7F070187
-			public const int ic_vol_type_speaker_group_dark = 2131165575;
-			
-			// aapt resource value: 0x7F070188
-			public const int ic_vol_type_speaker_group_light = 2131165576;
-			
-			// aapt resource value: 0x7F070189
-			public const int ic_vol_type_speaker_light = 2131165577;
-			
-			// aapt resource value: 0x7F07018A
-			public const int ic_vol_type_tv_dark = 2131165578;
-			
-			// aapt resource value: 0x7F07018B
-			public const int ic_vol_type_tv_light = 2131165579;
-			
-			// aapt resource value: 0x7F07018E
-			public const int images = 2131165582;
-			
-			// aapt resource value: 0x7F07018D
-			public const int image_placeholder = 2131165581;
+			public const int home_active = 2131165381;
 			
 			// aapt resource value: 0x7F070190
-			public const int inputlayout_togglecollapseicon = 2131165584;
+			public const int icon = 2131165584;
 			
-			// aapt resource value: 0x7F070191
-			public const int inputlayout_togglevisibleicon = 2131165585;
+			// aapt resource value: 0x7F0700C6
+			public const int ic_account = 2131165382;
+			
+			// aapt resource value: 0x7F0700C7
+			public const int ic_audiotrack_dark = 2131165383;
+			
+			// aapt resource value: 0x7F0700C8
+			public const int ic_audiotrack_light = 2131165384;
+			
+			// aapt resource value: 0x7F0700C9
+			public const int ic_bell = 2131165385;
+			
+			// aapt resource value: 0x7F0700CA
+			public const int ic_check = 2131165386;
+			
+			// aapt resource value: 0x7F0700CB
+			public const int ic_checkbox = 2131165387;
+			
+			// aapt resource value: 0x7F0700CC
+			public const int ic_circle = 2131165388;
+			
+			// aapt resource value: 0x7F0700CD
+			public const int ic_clipboard_check = 2131165389;
+			
+			// aapt resource value: 0x7F0700CE
+			public const int ic_close = 2131165390;
+			
+			// aapt resource value: 0x7F0700CF
+			public const int ic_comments = 2131165391;
+			
+			// aapt resource value: 0x7F0700D0
+			public const int ic_currency = 2131165392;
+			
+			// aapt resource value: 0x7F0700D1
+			public const int ic_dialog_close_dark = 2131165393;
+			
+			// aapt resource value: 0x7F0700D2
+			public const int ic_dialog_close_light = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int ic_domain = 2131165395;
+			
+			// aapt resource value: 0x7F0700D4
+			public const int ic_down = 2131165396;
+			
+			// aapt resource value: 0x7F0700D5
+			public const int ic_file = 2131165397;
+			
+			// aapt resource value: 0x7F0700D6
+			public const int ic_forum = 2131165398;
+			
+			// aapt resource value: 0x7F0700D7
+			public const int ic_group_collapse_00 = 2131165399;
+			
+			// aapt resource value: 0x7F0700D8
+			public const int ic_group_collapse_01 = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int ic_group_collapse_02 = 2131165401;
+			
+			// aapt resource value: 0x7F0700DA
+			public const int ic_group_collapse_03 = 2131165402;
+			
+			// aapt resource value: 0x7F0700DB
+			public const int ic_group_collapse_04 = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int ic_group_collapse_05 = 2131165404;
+			
+			// aapt resource value: 0x7F0700DD
+			public const int ic_group_collapse_06 = 2131165405;
+			
+			// aapt resource value: 0x7F0700DE
+			public const int ic_group_collapse_07 = 2131165406;
+			
+			// aapt resource value: 0x7F0700DF
+			public const int ic_group_collapse_08 = 2131165407;
+			
+			// aapt resource value: 0x7F0700E0
+			public const int ic_group_collapse_09 = 2131165408;
+			
+			// aapt resource value: 0x7F0700E1
+			public const int ic_group_collapse_10 = 2131165409;
+			
+			// aapt resource value: 0x7F0700E2
+			public const int ic_group_collapse_11 = 2131165410;
+			
+			// aapt resource value: 0x7F0700E3
+			public const int ic_group_collapse_12 = 2131165411;
+			
+			// aapt resource value: 0x7F0700E4
+			public const int ic_group_collapse_13 = 2131165412;
+			
+			// aapt resource value: 0x7F0700E5
+			public const int ic_group_collapse_14 = 2131165413;
+			
+			// aapt resource value: 0x7F0700E6
+			public const int ic_group_collapse_15 = 2131165414;
+			
+			// aapt resource value: 0x7F0700E7
+			public const int ic_group_expand_00 = 2131165415;
+			
+			// aapt resource value: 0x7F0700E8
+			public const int ic_group_expand_01 = 2131165416;
+			
+			// aapt resource value: 0x7F0700E9
+			public const int ic_group_expand_02 = 2131165417;
+			
+			// aapt resource value: 0x7F0700EA
+			public const int ic_group_expand_03 = 2131165418;
+			
+			// aapt resource value: 0x7F0700EB
+			public const int ic_group_expand_04 = 2131165419;
+			
+			// aapt resource value: 0x7F0700EC
+			public const int ic_group_expand_05 = 2131165420;
+			
+			// aapt resource value: 0x7F0700ED
+			public const int ic_group_expand_06 = 2131165421;
+			
+			// aapt resource value: 0x7F0700EE
+			public const int ic_group_expand_07 = 2131165422;
+			
+			// aapt resource value: 0x7F0700EF
+			public const int ic_group_expand_08 = 2131165423;
+			
+			// aapt resource value: 0x7F0700F0
+			public const int ic_group_expand_09 = 2131165424;
+			
+			// aapt resource value: 0x7F0700F1
+			public const int ic_group_expand_10 = 2131165425;
+			
+			// aapt resource value: 0x7F0700F2
+			public const int ic_group_expand_11 = 2131165426;
+			
+			// aapt resource value: 0x7F0700F3
+			public const int ic_group_expand_12 = 2131165427;
+			
+			// aapt resource value: 0x7F0700F4
+			public const int ic_group_expand_13 = 2131165428;
+			
+			// aapt resource value: 0x7F0700F5
+			public const int ic_group_expand_14 = 2131165429;
+			
+			// aapt resource value: 0x7F0700F6
+			public const int ic_group_expand_15 = 2131165430;
+			
+			// aapt resource value: 0x7F0700F7
+			public const int ic_label = 2131165431;
+			
+			// aapt resource value: 0x7F0700F8
+			public const int ic_launcher = 2131165432;
+			
+			// aapt resource value: 0x7F0700F9
+			public const int ic_media_pause_dark = 2131165433;
+			
+			// aapt resource value: 0x7F0700FA
+			public const int ic_media_pause_light = 2131165434;
+			
+			// aapt resource value: 0x7F0700FB
+			public const int ic_media_play_dark = 2131165435;
+			
+			// aapt resource value: 0x7F0700FC
+			public const int ic_media_play_light = 2131165436;
+			
+			// aapt resource value: 0x7F0700FD
+			public const int ic_media_stop_dark = 2131165437;
+			
+			// aapt resource value: 0x7F0700FE
+			public const int ic_media_stop_light = 2131165438;
+			
+			// aapt resource value: 0x7F0700FF
+			public const int ic_message = 2131165439;
+			
+			// aapt resource value: 0x7F070100
+			public const int ic_mr_button_connected_00_dark = 2131165440;
+			
+			// aapt resource value: 0x7F070101
+			public const int ic_mr_button_connected_00_light = 2131165441;
+			
+			// aapt resource value: 0x7F070102
+			public const int ic_mr_button_connected_01_dark = 2131165442;
+			
+			// aapt resource value: 0x7F070103
+			public const int ic_mr_button_connected_01_light = 2131165443;
+			
+			// aapt resource value: 0x7F070104
+			public const int ic_mr_button_connected_02_dark = 2131165444;
+			
+			// aapt resource value: 0x7F070105
+			public const int ic_mr_button_connected_02_light = 2131165445;
+			
+			// aapt resource value: 0x7F070106
+			public const int ic_mr_button_connected_03_dark = 2131165446;
+			
+			// aapt resource value: 0x7F070107
+			public const int ic_mr_button_connected_03_light = 2131165447;
+			
+			// aapt resource value: 0x7F070108
+			public const int ic_mr_button_connected_04_dark = 2131165448;
+			
+			// aapt resource value: 0x7F070109
+			public const int ic_mr_button_connected_04_light = 2131165449;
+			
+			// aapt resource value: 0x7F07010A
+			public const int ic_mr_button_connected_05_dark = 2131165450;
+			
+			// aapt resource value: 0x7F07010B
+			public const int ic_mr_button_connected_05_light = 2131165451;
+			
+			// aapt resource value: 0x7F07010C
+			public const int ic_mr_button_connected_06_dark = 2131165452;
+			
+			// aapt resource value: 0x7F07010D
+			public const int ic_mr_button_connected_06_light = 2131165453;
+			
+			// aapt resource value: 0x7F07010E
+			public const int ic_mr_button_connected_07_dark = 2131165454;
+			
+			// aapt resource value: 0x7F07010F
+			public const int ic_mr_button_connected_07_light = 2131165455;
+			
+			// aapt resource value: 0x7F070110
+			public const int ic_mr_button_connected_08_dark = 2131165456;
+			
+			// aapt resource value: 0x7F070111
+			public const int ic_mr_button_connected_08_light = 2131165457;
+			
+			// aapt resource value: 0x7F070112
+			public const int ic_mr_button_connected_09_dark = 2131165458;
+			
+			// aapt resource value: 0x7F070113
+			public const int ic_mr_button_connected_09_light = 2131165459;
+			
+			// aapt resource value: 0x7F070114
+			public const int ic_mr_button_connected_10_dark = 2131165460;
+			
+			// aapt resource value: 0x7F070115
+			public const int ic_mr_button_connected_10_light = 2131165461;
+			
+			// aapt resource value: 0x7F070116
+			public const int ic_mr_button_connected_11_dark = 2131165462;
+			
+			// aapt resource value: 0x7F070117
+			public const int ic_mr_button_connected_11_light = 2131165463;
+			
+			// aapt resource value: 0x7F070118
+			public const int ic_mr_button_connected_12_dark = 2131165464;
+			
+			// aapt resource value: 0x7F070119
+			public const int ic_mr_button_connected_12_light = 2131165465;
+			
+			// aapt resource value: 0x7F07011A
+			public const int ic_mr_button_connected_13_dark = 2131165466;
+			
+			// aapt resource value: 0x7F07011B
+			public const int ic_mr_button_connected_13_light = 2131165467;
+			
+			// aapt resource value: 0x7F07011C
+			public const int ic_mr_button_connected_14_dark = 2131165468;
+			
+			// aapt resource value: 0x7F07011D
+			public const int ic_mr_button_connected_14_light = 2131165469;
+			
+			// aapt resource value: 0x7F07011E
+			public const int ic_mr_button_connected_15_dark = 2131165470;
+			
+			// aapt resource value: 0x7F07011F
+			public const int ic_mr_button_connected_15_light = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int ic_mr_button_connected_16_dark = 2131165472;
+			
+			// aapt resource value: 0x7F070121
+			public const int ic_mr_button_connected_16_light = 2131165473;
+			
+			// aapt resource value: 0x7F070122
+			public const int ic_mr_button_connected_17_dark = 2131165474;
+			
+			// aapt resource value: 0x7F070123
+			public const int ic_mr_button_connected_17_light = 2131165475;
+			
+			// aapt resource value: 0x7F070124
+			public const int ic_mr_button_connected_18_dark = 2131165476;
+			
+			// aapt resource value: 0x7F070125
+			public const int ic_mr_button_connected_18_light = 2131165477;
+			
+			// aapt resource value: 0x7F070126
+			public const int ic_mr_button_connected_19_dark = 2131165478;
+			
+			// aapt resource value: 0x7F070127
+			public const int ic_mr_button_connected_19_light = 2131165479;
+			
+			// aapt resource value: 0x7F070128
+			public const int ic_mr_button_connected_20_dark = 2131165480;
+			
+			// aapt resource value: 0x7F070129
+			public const int ic_mr_button_connected_20_light = 2131165481;
+			
+			// aapt resource value: 0x7F07012A
+			public const int ic_mr_button_connected_21_dark = 2131165482;
+			
+			// aapt resource value: 0x7F07012B
+			public const int ic_mr_button_connected_21_light = 2131165483;
+			
+			// aapt resource value: 0x7F07012C
+			public const int ic_mr_button_connected_22_dark = 2131165484;
+			
+			// aapt resource value: 0x7F07012D
+			public const int ic_mr_button_connected_22_light = 2131165485;
+			
+			// aapt resource value: 0x7F07012E
+			public const int ic_mr_button_connected_23_dark = 2131165486;
+			
+			// aapt resource value: 0x7F07012F
+			public const int ic_mr_button_connected_23_light = 2131165487;
+			
+			// aapt resource value: 0x7F070130
+			public const int ic_mr_button_connected_24_dark = 2131165488;
+			
+			// aapt resource value: 0x7F070131
+			public const int ic_mr_button_connected_24_light = 2131165489;
+			
+			// aapt resource value: 0x7F070132
+			public const int ic_mr_button_connected_25_dark = 2131165490;
+			
+			// aapt resource value: 0x7F070133
+			public const int ic_mr_button_connected_25_light = 2131165491;
+			
+			// aapt resource value: 0x7F070134
+			public const int ic_mr_button_connected_26_dark = 2131165492;
+			
+			// aapt resource value: 0x7F070135
+			public const int ic_mr_button_connected_26_light = 2131165493;
+			
+			// aapt resource value: 0x7F070136
+			public const int ic_mr_button_connected_27_dark = 2131165494;
+			
+			// aapt resource value: 0x7F070137
+			public const int ic_mr_button_connected_27_light = 2131165495;
+			
+			// aapt resource value: 0x7F070138
+			public const int ic_mr_button_connected_28_dark = 2131165496;
+			
+			// aapt resource value: 0x7F070139
+			public const int ic_mr_button_connected_28_light = 2131165497;
+			
+			// aapt resource value: 0x7F07013A
+			public const int ic_mr_button_connected_29_dark = 2131165498;
+			
+			// aapt resource value: 0x7F07013B
+			public const int ic_mr_button_connected_29_light = 2131165499;
+			
+			// aapt resource value: 0x7F07013C
+			public const int ic_mr_button_connected_30_dark = 2131165500;
+			
+			// aapt resource value: 0x7F07013D
+			public const int ic_mr_button_connected_30_light = 2131165501;
+			
+			// aapt resource value: 0x7F07013E
+			public const int ic_mr_button_connecting_00_dark = 2131165502;
+			
+			// aapt resource value: 0x7F07013F
+			public const int ic_mr_button_connecting_00_light = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int ic_mr_button_connecting_01_dark = 2131165504;
+			
+			// aapt resource value: 0x7F070141
+			public const int ic_mr_button_connecting_01_light = 2131165505;
+			
+			// aapt resource value: 0x7F070142
+			public const int ic_mr_button_connecting_02_dark = 2131165506;
+			
+			// aapt resource value: 0x7F070143
+			public const int ic_mr_button_connecting_02_light = 2131165507;
+			
+			// aapt resource value: 0x7F070144
+			public const int ic_mr_button_connecting_03_dark = 2131165508;
+			
+			// aapt resource value: 0x7F070145
+			public const int ic_mr_button_connecting_03_light = 2131165509;
+			
+			// aapt resource value: 0x7F070146
+			public const int ic_mr_button_connecting_04_dark = 2131165510;
+			
+			// aapt resource value: 0x7F070147
+			public const int ic_mr_button_connecting_04_light = 2131165511;
+			
+			// aapt resource value: 0x7F070148
+			public const int ic_mr_button_connecting_05_dark = 2131165512;
+			
+			// aapt resource value: 0x7F070149
+			public const int ic_mr_button_connecting_05_light = 2131165513;
+			
+			// aapt resource value: 0x7F07014A
+			public const int ic_mr_button_connecting_06_dark = 2131165514;
+			
+			// aapt resource value: 0x7F07014B
+			public const int ic_mr_button_connecting_06_light = 2131165515;
+			
+			// aapt resource value: 0x7F07014C
+			public const int ic_mr_button_connecting_07_dark = 2131165516;
+			
+			// aapt resource value: 0x7F07014D
+			public const int ic_mr_button_connecting_07_light = 2131165517;
+			
+			// aapt resource value: 0x7F07014E
+			public const int ic_mr_button_connecting_08_dark = 2131165518;
+			
+			// aapt resource value: 0x7F07014F
+			public const int ic_mr_button_connecting_08_light = 2131165519;
+			
+			// aapt resource value: 0x7F070150
+			public const int ic_mr_button_connecting_09_dark = 2131165520;
+			
+			// aapt resource value: 0x7F070151
+			public const int ic_mr_button_connecting_09_light = 2131165521;
+			
+			// aapt resource value: 0x7F070152
+			public const int ic_mr_button_connecting_10_dark = 2131165522;
+			
+			// aapt resource value: 0x7F070153
+			public const int ic_mr_button_connecting_10_light = 2131165523;
+			
+			// aapt resource value: 0x7F070154
+			public const int ic_mr_button_connecting_11_dark = 2131165524;
+			
+			// aapt resource value: 0x7F070155
+			public const int ic_mr_button_connecting_11_light = 2131165525;
+			
+			// aapt resource value: 0x7F070156
+			public const int ic_mr_button_connecting_12_dark = 2131165526;
+			
+			// aapt resource value: 0x7F070157
+			public const int ic_mr_button_connecting_12_light = 2131165527;
+			
+			// aapt resource value: 0x7F070158
+			public const int ic_mr_button_connecting_13_dark = 2131165528;
+			
+			// aapt resource value: 0x7F070159
+			public const int ic_mr_button_connecting_13_light = 2131165529;
+			
+			// aapt resource value: 0x7F07015A
+			public const int ic_mr_button_connecting_14_dark = 2131165530;
+			
+			// aapt resource value: 0x7F07015B
+			public const int ic_mr_button_connecting_14_light = 2131165531;
+			
+			// aapt resource value: 0x7F07015C
+			public const int ic_mr_button_connecting_15_dark = 2131165532;
+			
+			// aapt resource value: 0x7F07015D
+			public const int ic_mr_button_connecting_15_light = 2131165533;
+			
+			// aapt resource value: 0x7F07015E
+			public const int ic_mr_button_connecting_16_dark = 2131165534;
+			
+			// aapt resource value: 0x7F07015F
+			public const int ic_mr_button_connecting_16_light = 2131165535;
+			
+			// aapt resource value: 0x7F070160
+			public const int ic_mr_button_connecting_17_dark = 2131165536;
+			
+			// aapt resource value: 0x7F070161
+			public const int ic_mr_button_connecting_17_light = 2131165537;
+			
+			// aapt resource value: 0x7F070162
+			public const int ic_mr_button_connecting_18_dark = 2131165538;
+			
+			// aapt resource value: 0x7F070163
+			public const int ic_mr_button_connecting_18_light = 2131165539;
+			
+			// aapt resource value: 0x7F070164
+			public const int ic_mr_button_connecting_19_dark = 2131165540;
+			
+			// aapt resource value: 0x7F070165
+			public const int ic_mr_button_connecting_19_light = 2131165541;
+			
+			// aapt resource value: 0x7F070166
+			public const int ic_mr_button_connecting_20_dark = 2131165542;
+			
+			// aapt resource value: 0x7F070167
+			public const int ic_mr_button_connecting_20_light = 2131165543;
+			
+			// aapt resource value: 0x7F070168
+			public const int ic_mr_button_connecting_21_dark = 2131165544;
+			
+			// aapt resource value: 0x7F070169
+			public const int ic_mr_button_connecting_21_light = 2131165545;
+			
+			// aapt resource value: 0x7F07016A
+			public const int ic_mr_button_connecting_22_dark = 2131165546;
+			
+			// aapt resource value: 0x7F07016B
+			public const int ic_mr_button_connecting_22_light = 2131165547;
+			
+			// aapt resource value: 0x7F07016C
+			public const int ic_mr_button_connecting_23_dark = 2131165548;
+			
+			// aapt resource value: 0x7F07016D
+			public const int ic_mr_button_connecting_23_light = 2131165549;
+			
+			// aapt resource value: 0x7F07016E
+			public const int ic_mr_button_connecting_24_dark = 2131165550;
+			
+			// aapt resource value: 0x7F07016F
+			public const int ic_mr_button_connecting_24_light = 2131165551;
+			
+			// aapt resource value: 0x7F070170
+			public const int ic_mr_button_connecting_25_dark = 2131165552;
+			
+			// aapt resource value: 0x7F070171
+			public const int ic_mr_button_connecting_25_light = 2131165553;
+			
+			// aapt resource value: 0x7F070172
+			public const int ic_mr_button_connecting_26_dark = 2131165554;
+			
+			// aapt resource value: 0x7F070173
+			public const int ic_mr_button_connecting_26_light = 2131165555;
+			
+			// aapt resource value: 0x7F070174
+			public const int ic_mr_button_connecting_27_dark = 2131165556;
+			
+			// aapt resource value: 0x7F070175
+			public const int ic_mr_button_connecting_27_light = 2131165557;
+			
+			// aapt resource value: 0x7F070176
+			public const int ic_mr_button_connecting_28_dark = 2131165558;
+			
+			// aapt resource value: 0x7F070177
+			public const int ic_mr_button_connecting_28_light = 2131165559;
+			
+			// aapt resource value: 0x7F070178
+			public const int ic_mr_button_connecting_29_dark = 2131165560;
+			
+			// aapt resource value: 0x7F070179
+			public const int ic_mr_button_connecting_29_light = 2131165561;
+			
+			// aapt resource value: 0x7F07017A
+			public const int ic_mr_button_connecting_30_dark = 2131165562;
+			
+			// aapt resource value: 0x7F07017B
+			public const int ic_mr_button_connecting_30_light = 2131165563;
+			
+			// aapt resource value: 0x7F07017C
+			public const int ic_mr_button_disabled_dark = 2131165564;
+			
+			// aapt resource value: 0x7F07017D
+			public const int ic_mr_button_disabled_light = 2131165565;
+			
+			// aapt resource value: 0x7F07017E
+			public const int ic_mr_button_disconnected_dark = 2131165566;
+			
+			// aapt resource value: 0x7F07017F
+			public const int ic_mr_button_disconnected_light = 2131165567;
+			
+			// aapt resource value: 0x7F070180
+			public const int ic_mr_button_grey = 2131165568;
+			
+			// aapt resource value: 0x7F070181
+			public const int ic_mtrl_chip_checked_black = 2131165569;
+			
+			// aapt resource value: 0x7F070182
+			public const int ic_mtrl_chip_checked_circle = 2131165570;
+			
+			// aapt resource value: 0x7F070183
+			public const int ic_mtrl_chip_close_circle = 2131165571;
+			
+			// aapt resource value: 0x7F070184
+			public const int ic_pencil = 2131165572;
+			
+			// aapt resource value: 0x7F070185
+			public const int ic_person = 2131165573;
+			
+			// aapt resource value: 0x7F070186
+			public const int ic_stat_appstore = 2131165574;
+			
+			// aapt resource value: 0x7F070187
+			public const int ic_timer = 2131165575;
+			
+			// aapt resource value: 0x7F070188
+			public const int ic_trash = 2131165576;
+			
+			// aapt resource value: 0x7F070189
+			public const int ic_up = 2131165577;
+			
+			// aapt resource value: 0x7F07018A
+			public const int ic_vol_type_speaker_dark = 2131165578;
+			
+			// aapt resource value: 0x7F07018B
+			public const int ic_vol_type_speaker_group_dark = 2131165579;
+			
+			// aapt resource value: 0x7F07018C
+			public const int ic_vol_type_speaker_group_light = 2131165580;
+			
+			// aapt resource value: 0x7F07018D
+			public const int ic_vol_type_speaker_light = 2131165581;
+			
+			// aapt resource value: 0x7F07018E
+			public const int ic_vol_type_tv_dark = 2131165582;
 			
 			// aapt resource value: 0x7F07018F
-			public const int input_layout_drop_down_icon = 2131165583;
+			public const int ic_vol_type_tv_light = 2131165583;
 			
 			// aapt resource value: 0x7F070192
-			public const int logout = 2131165586;
+			public const int images = 2131165586;
 			
-			// aapt resource value: 0x7F070193
-			public const int message = 2131165587;
+			// aapt resource value: 0x7F070191
+			public const int image_placeholder = 2131165585;
 			
 			// aapt resource value: 0x7F070194
-			public const int message_active = 2131165588;
+			public const int inputlayout_togglecollapseicon = 2131165588;
 			
 			// aapt resource value: 0x7F070195
-			public const int minus = 2131165589;
+			public const int inputlayout_togglevisibleicon = 2131165589;
+			
+			// aapt resource value: 0x7F070193
+			public const int input_layout_drop_down_icon = 2131165587;
 			
 			// aapt resource value: 0x7F070196
-			public const int mr_button_connected_dark = 2131165590;
+			public const int logout = 2131165590;
 			
 			// aapt resource value: 0x7F070197
-			public const int mr_button_connected_light = 2131165591;
+			public const int message = 2131165591;
 			
 			// aapt resource value: 0x7F070198
-			public const int mr_button_connecting_dark = 2131165592;
+			public const int message_active = 2131165592;
 			
 			// aapt resource value: 0x7F070199
-			public const int mr_button_connecting_light = 2131165593;
+			public const int minus = 2131165593;
 			
 			// aapt resource value: 0x7F07019A
-			public const int mr_button_dark = 2131165594;
+			public const int mr_button_connected_dark = 2131165594;
 			
 			// aapt resource value: 0x7F07019B
-			public const int mr_button_light = 2131165595;
+			public const int mr_button_connected_light = 2131165595;
 			
 			// aapt resource value: 0x7F07019C
-			public const int mr_dialog_close_dark = 2131165596;
+			public const int mr_button_connecting_dark = 2131165596;
 			
 			// aapt resource value: 0x7F07019D
-			public const int mr_dialog_close_light = 2131165597;
+			public const int mr_button_connecting_light = 2131165597;
 			
 			// aapt resource value: 0x7F07019E
-			public const int mr_dialog_material_background_dark = 2131165598;
+			public const int mr_button_dark = 2131165598;
 			
 			// aapt resource value: 0x7F07019F
-			public const int mr_dialog_material_background_light = 2131165599;
+			public const int mr_button_light = 2131165599;
 			
 			// aapt resource value: 0x7F0701A0
-			public const int mr_group_collapse = 2131165600;
+			public const int mr_dialog_close_dark = 2131165600;
 			
 			// aapt resource value: 0x7F0701A1
-			public const int mr_group_expand = 2131165601;
+			public const int mr_dialog_close_light = 2131165601;
 			
 			// aapt resource value: 0x7F0701A2
-			public const int mr_media_pause_dark = 2131165602;
+			public const int mr_dialog_material_background_dark = 2131165602;
 			
 			// aapt resource value: 0x7F0701A3
-			public const int mr_media_pause_light = 2131165603;
+			public const int mr_dialog_material_background_light = 2131165603;
 			
 			// aapt resource value: 0x7F0701A4
-			public const int mr_media_play_dark = 2131165604;
+			public const int mr_group_collapse = 2131165604;
 			
 			// aapt resource value: 0x7F0701A5
-			public const int mr_media_play_light = 2131165605;
+			public const int mr_group_expand = 2131165605;
 			
 			// aapt resource value: 0x7F0701A6
-			public const int mr_media_stop_dark = 2131165606;
+			public const int mr_media_pause_dark = 2131165606;
 			
 			// aapt resource value: 0x7F0701A7
-			public const int mr_media_stop_light = 2131165607;
+			public const int mr_media_pause_light = 2131165607;
 			
 			// aapt resource value: 0x7F0701A8
-			public const int mr_vol_type_audiotrack_dark = 2131165608;
+			public const int mr_media_play_dark = 2131165608;
 			
 			// aapt resource value: 0x7F0701A9
-			public const int mr_vol_type_audiotrack_light = 2131165609;
+			public const int mr_media_play_light = 2131165609;
 			
 			// aapt resource value: 0x7F0701AA
-			public const int mtrl_snackbar_background = 2131165610;
+			public const int mr_media_stop_dark = 2131165610;
 			
 			// aapt resource value: 0x7F0701AB
-			public const int mtrl_tabs_default_indicator = 2131165611;
+			public const int mr_media_stop_light = 2131165611;
 			
 			// aapt resource value: 0x7F0701AC
-			public const int name_ascending = 2131165612;
+			public const int mr_vol_type_audiotrack_dark = 2131165612;
 			
 			// aapt resource value: 0x7F0701AD
-			public const int name_decending = 2131165613;
+			public const int mr_vol_type_audiotrack_light = 2131165613;
 			
 			// aapt resource value: 0x7F0701AE
-			public const int navigation_empty_icon = 2131165614;
+			public const int mtrl_snackbar_background = 2131165614;
 			
 			// aapt resource value: 0x7F0701AF
-			public const int next_arrow = 2131165615;
+			public const int mtrl_tabs_default_indicator = 2131165615;
 			
 			// aapt resource value: 0x7F0701B0
-			public const int notification_action_background = 2131165616;
+			public const int name_ascending = 2131165616;
 			
 			// aapt resource value: 0x7F0701B1
-			public const int notification_bg = 2131165617;
+			public const int name_decending = 2131165617;
 			
 			// aapt resource value: 0x7F0701B2
-			public const int notification_bg_low = 2131165618;
+			public const int navigation_empty_icon = 2131165618;
 			
 			// aapt resource value: 0x7F0701B3
-			public const int notification_bg_low_normal = 2131165619;
+			public const int next_arrow = 2131165619;
 			
 			// aapt resource value: 0x7F0701B4
-			public const int notification_bg_low_pressed = 2131165620;
+			public const int note_add = 2131165620;
 			
 			// aapt resource value: 0x7F0701B5
-			public const int notification_bg_normal = 2131165621;
+			public const int notification_action_background = 2131165621;
 			
 			// aapt resource value: 0x7F0701B6
-			public const int notification_bg_normal_pressed = 2131165622;
+			public const int notification_bg = 2131165622;
 			
 			// aapt resource value: 0x7F0701B7
-			public const int notification_icon_background = 2131165623;
+			public const int notification_bg_low = 2131165623;
 			
 			// aapt resource value: 0x7F0701B8
-			public const int notification_template_icon_bg = 2131165624;
+			public const int notification_bg_low_normal = 2131165624;
 			
 			// aapt resource value: 0x7F0701B9
-			public const int notification_template_icon_low_bg = 2131165625;
+			public const int notification_bg_low_pressed = 2131165625;
 			
 			// aapt resource value: 0x7F0701BA
-			public const int notification_tile_bg = 2131165626;
+			public const int notification_bg_normal = 2131165626;
 			
 			// aapt resource value: 0x7F0701BB
-			public const int notify_panel_notification_icon_bg = 2131165627;
+			public const int notification_bg_normal_pressed = 2131165627;
 			
 			// aapt resource value: 0x7F0701BC
-			public const int number_ascending = 2131165628;
+			public const int notification_icon_background = 2131165628;
 			
 			// aapt resource value: 0x7F0701BD
-			public const int number_decending = 2131165629;
+			public const int notification_template_icon_bg = 2131165629;
 			
 			// aapt resource value: 0x7F0701BE
-			public const int orange_bookmark = 2131165630;
+			public const int notification_template_icon_low_bg = 2131165630;
 			
 			// aapt resource value: 0x7F0701BF
-			public const int orange_dot = 2131165631;
+			public const int notification_tile_bg = 2131165631;
 			
 			// aapt resource value: 0x7F0701C0
-			public const int photo = 2131165632;
+			public const int notify_panel_notification_icon_bg = 2131165632;
 			
 			// aapt resource value: 0x7F0701C1
-			public const int plus = 2131165633;
+			public const int number_ascending = 2131165633;
 			
 			// aapt resource value: 0x7F0701C2
-			public const int popup_forms_android_close_icon = 2131165634;
+			public const int number_decending = 2131165634;
 			
 			// aapt resource value: 0x7F0701C3
-			public const int popup_forms_android_shadow = 2131165635;
+			public const int orange_bookmark = 2131165635;
 			
 			// aapt resource value: 0x7F0701C4
-			public const int popup_forms_dark_theme_close_icon = 2131165636;
+			public const int orange_dot = 2131165636;
 			
 			// aapt resource value: 0x7F0701C5
-			public const int popup_forms_light_theme_close_icon = 2131165637;
+			public const int photo = 2131165637;
 			
 			// aapt resource value: 0x7F0701C6
-			public const int radio_select = 2131165638;
+			public const int plus = 2131165638;
 			
 			// aapt resource value: 0x7F0701C7
-			public const int radio_unselect = 2131165639;
+			public const int popup_forms_android_close_icon = 2131165639;
 			
 			// aapt resource value: 0x7F0701C8
-			public const int redDot = 2131165640;
+			public const int popup_forms_android_shadow = 2131165640;
 			
 			// aapt resource value: 0x7F0701C9
-			public const int search = 2131165641;
+			public const int popup_forms_dark_theme_close_icon = 2131165641;
 			
 			// aapt resource value: 0x7F0701CA
-			public const int sent = 2131165642;
+			public const int popup_forms_light_theme_close_icon = 2131165642;
 			
 			// aapt resource value: 0x7F0701CB
-			public const int Simonnormal = 2131165643;
+			public const int radio_select = 2131165643;
 			
 			// aapt resource value: 0x7F0701CC
-			public const int sort = 2131165644;
+			public const int radio_unselect = 2131165644;
 			
 			// aapt resource value: 0x7F0701CD
-			public const int sort_name = 2131165645;
+			public const int redDot = 2131165645;
 			
 			// aapt resource value: 0x7F0701CE
-			public const int sort_number = 2131165646;
+			public const int round_add = 2131165646;
 			
 			// aapt resource value: 0x7F0701CF
-			public const int Sort_Up = 2131165647;
+			public const int search = 2131165647;
 			
 			// aapt resource value: 0x7F0701D0
-			public const int splash = 2131165648;
+			public const int sent = 2131165648;
 			
 			// aapt resource value: 0x7F0701D1
-			public const int splash1 = 2131165649;
-			
-			// aapt resource value: 0x7F0701D3
-			public const int splashlogo = 2131165651;
-			
-			// aapt resource value: 0x7F0701D4
-			public const int SplashScreen = 2131165652;
+			public const int Simonnormal = 2131165649;
 			
 			// aapt resource value: 0x7F0701D2
-			public const int splash_screen = 2131165650;
+			public const int sort = 2131165650;
+			
+			// aapt resource value: 0x7F0701D3
+			public const int sort_name = 2131165651;
+			
+			// aapt resource value: 0x7F0701D4
+			public const int sort_number = 2131165652;
 			
 			// aapt resource value: 0x7F0701D5
-			public const int tooltip_frame_dark = 2131165653;
+			public const int Sort_Up = 2131165653;
 			
 			// aapt resource value: 0x7F0701D6
-			public const int tooltip_frame_light = 2131165654;
+			public const int splash = 2131165654;
 			
 			// aapt resource value: 0x7F0701D7
-			public const int unreaddot = 2131165655;
-			
-			// aapt resource value: 0x7F0701D8
-			public const int upload = 2131165656;
+			public const int splash1 = 2131165655;
 			
 			// aapt resource value: 0x7F0701D9
-			public const int user = 2131165657;
+			public const int splashlogo = 2131165657;
 			
 			// aapt resource value: 0x7F0701DA
-			public const int view_pass = 2131165658;
+			public const int SplashScreen = 2131165658;
+			
+			// aapt resource value: 0x7F0701D8
+			public const int splash_screen = 2131165656;
 			
 			// aapt resource value: 0x7F0701DB
-			public const int xf_arrow_dropdown = 2131165659;
+			public const int take_picture = 2131165659;
 			
 			// aapt resource value: 0x7F0701DC
-			public const int xf_check = 2131165660;
+			public const int textformat = 2131165660;
 			
 			// aapt resource value: 0x7F0701DD
-			public const int xf_checkbox_selected = 2131165661;
+			public const int tooltip_frame_dark = 2131165661;
 			
 			// aapt resource value: 0x7F0701DE
-			public const int xf_checkbox_unselected = 2131165662;
+			public const int tooltip_frame_light = 2131165662;
 			
 			// aapt resource value: 0x7F0701DF
-			public const int xf_clear = 2131165663;
+			public const int unreaddot = 2131165663;
 			
 			// aapt resource value: 0x7F0701E0
-			public const int xf_error = 2131165664;
+			public const int upload = 2131165664;
 			
 			// aapt resource value: 0x7F0701E1
-			public const int xf_radio_button_selected = 2131165665;
+			public const int upload_success = 2131165665;
 			
 			// aapt resource value: 0x7F0701E2
-			public const int xf_radio_button_unselected = 2131165666;
+			public const int user = 2131165666;
+			
+			// aapt resource value: 0x7F0701E3
+			public const int view_pass = 2131165667;
+			
+			// aapt resource value: 0x7F0701E4
+			public const int xf_arrow_dropdown = 2131165668;
+			
+			// aapt resource value: 0x7F0701E5
+			public const int xf_check = 2131165669;
+			
+			// aapt resource value: 0x7F0701E6
+			public const int xf_checkbox_selected = 2131165670;
+			
+			// aapt resource value: 0x7F0701E7
+			public const int xf_checkbox_unselected = 2131165671;
+			
+			// aapt resource value: 0x7F0701E8
+			public const int xf_clear = 2131165672;
+			
+			// aapt resource value: 0x7F0701E9
+			public const int xf_error = 2131165673;
+			
+			// aapt resource value: 0x7F0701EA
+			public const int xf_radio_button_selected = 2131165674;
+			
+			// aapt resource value: 0x7F0701EB
+			public const int xf_radio_button_unselected = 2131165675;
 			
 			static Drawable()
 			{

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using Android.OS;
 using Android.Text;
 using Android.Widget;
 using Simon.Controls;
@@ -17,17 +16,23 @@ namespace Simon.Droid.Renderers
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
-
-            Control?.SetText(Html.FromHtml(Element.Text), TextView.BufferType.Spannable);
+            if (Control != null && Element != null && !string.IsNullOrWhiteSpace(Element.Text))
+            {
+                Element.TextType = TextType.Html;
+                Control?.SetText(Html.FromHtml(Element.Text), TextView.BufferType.Spannable);
+            }
         }
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
-
-            if (e.PropertyName == Label.TextProperty.PropertyName)
+            if (Control != null && Element != null && !string.IsNullOrWhiteSpace(Element.Text))
             {
-                Control?.SetText(Html.FromHtml(Element.Text), TextView.BufferType.Spannable);
+                if (e.PropertyName == Label.TextProperty.PropertyName)
+                {
+                    Element.TextType = TextType.Html;
+                    Control?.SetText(Html.FromHtml(Element.Text), TextView.BufferType.Spannable);
+                }
             }
         }
     }

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using DLToolkit.Forms.Controls;
+using Plugin.FirebasePushNotification;
 using Plugin.PushNotification;
 using Simon.Helpers;
 using Simon.Models;
@@ -19,26 +22,27 @@ namespace Simon
 
         public static UserListModel SelectedUserData { get; set; }
         public static ObservableCollection<messages> MessageThreadData { get; set; }
+
         public static int buttonClick;
+        public static int selectedPageId;
 
-        public static bool isFromKeyboardDoneButton { get; set; } = false;
-        public static bool isFromAddParticipantPage { get; set; } = false;
-
-        public static bool isSelectRead { get; set; } = false;
-        public static bool isSelectUnRead { get; set; } = false;
+        public static bool IsFromKeyboardDoneButton { get; set; } = false;
+        public static bool IsFromAddParticipantPage { get; set; } = false;
+        public static bool IsSelectRead { get; set; } = false;
+        public static bool IsSelectUnRead { get; set; } = false;
         public static bool AsceDsce { get; set; } = true;
         public static bool AsceDsceName { get; set; } = true;
-        public static bool isFirstTime { get; set; } = false;
+        public static bool IsFirstTime { get; set; } = false;
 
         public static string ReadUnread { get; set; } = string.Empty;
         public static string OrderByText { get; set; } = string.Empty;
         public static string SelectedTitle { get; set; } = string.Empty;
-        public static string selectedName { get; set; } = string.Empty;
+        public static string SelectedName { get; set; } = string.Empty;
         public static string ApprovalSelectedTitle { get; set; } = string.Empty;
-
         public static string tempFile;
-        public static int selectedPageId;
-        BaseViewModel bindingContext;
+        public static string FileName;
+
+        public static ImageSource FrameImage;
 
         public App()
         {
@@ -53,22 +57,16 @@ namespace Simon
             LayoutService.Init();
 
             XF.Material.Forms.Material.Init(this);
-            // MainPage = new MainPage();
-            //App.Current.Properties["REFRESHTOKEN"] =token;
+            
             NavigationPage navPage = new NavigationPage
             {
                 BarBackgroundColor = Color.White,
                 BarTextColor = Color.Black
             };
-            //MainPage = new NavigationPage(new LoginPage())
-            //{
-            //    BarTextColor = Color.Black,
-            //    BarBackgroundColor = Color.1White
-            //};
-
+            
             if (Settings.LoggedInUser != null)
             {
-                isFirstTime = true;
+                IsFirstTime = true;
                 MainPage = new NavigationPage(new LandingPage())
                 {
                     BarTextColor = Color.Black,
@@ -83,46 +81,98 @@ namespace Simon
                     BarBackgroundColor = Color.White
                 };
             }
-
-            bindingContext = (BaseViewModel)this.BindingContext;
-            App.Current.Resources["MsgCount"] = "0";
-            //MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
         {
-            Settings.DeviceToken = CrossPushNotification.Current.Token;
+            Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
+            if (string.IsNullOrEmpty(Settings.DeviceToken))
+            {
+                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                File.AppendAllText(tempFile, "\n\nDevice token is null....");
+                Debug.WriteLine("File Name====" + tempFile);
+            }
+            else
+            {
+                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                File.AppendAllText(tempFile,"\n\n" + Settings.DeviceToken);
+                Debug.WriteLine("File Name====" + tempFile);
+            }
 
-            CrossPushNotification.Current.OnTokenRefresh += (s, p) =>
+            CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
                 if (Device.RuntimePlatform == Device.iOS)
                 {
-                    System.Diagnostics.Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
+                    Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
                     Console.WriteLine("Token ref : " + Settings.DeviceToken);
                 }
                 else
                 {
                     Settings.DeviceToken = p.Token;
-                    System.Diagnostics.Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
+                    Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
                     Console.WriteLine("Token ref : " + Settings.DeviceToken);
                 }
             };
 
-            System.Diagnostics.Debug.WriteLine($"TOKEN: {CrossPushNotification.Current.Token}");
-            Console.WriteLine("Token " + CrossPushNotification.Current.Token);
+            Debug.WriteLine($"TOKEN: {CrossFirebasePushNotification.Current.Token}");
+            Console.WriteLine("Token " + CrossFirebasePushNotification.Current.Token);
 
-            CrossPushNotification.Current.OnNotificationReceived += (s, p) =>
+            CrossFirebasePushNotification.Current.OnNotificationReceived += (s, p) =>
             {
                 try
                 {
-                    System.Diagnostics.Debug.WriteLine("Received");
+                    Debug.WriteLine("Received");
+                    tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                    File.AppendAllText(tempFile, "\n\nNotification Received....");
+                    Debug.WriteLine("File Name====" + tempFile);
+
                     foreach (var data in p.Data)
                     {
-                        System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
+                        Debug.WriteLine($"{data.Key} : {data.Value}");
+                        //Settings.MessageCount++;
+
                         if (data.Key.Equals("MsgCount"))
                         {
                             Settings.MessageCount = Convert.ToInt32(data.Value);
                         }
+
+                        if (selectedPageId == 4)
+                        {
+                            return;
+                        }
+
+                        SessionService.BaseFooterItems.All((arg) =>
+                        {
+                            if (arg.Id == selectedPageId)
+                            {
+                                arg.IsSelected = true;
+                            }
+                            else
+                            {
+                                arg.IsSelected = false;
+                            }
+                            return true;
+                        });
+
+                        Device.BeginInvokeOnMainThread(() =>
+                        {
+                            IsFirstTime = true;
+                            switch (selectedPageId)
+                            {
+                                case 0:
+                                    Current.MainPage = new NavigationPage(new LandingPage()) { BarTextColor = Color.Black };
+                                    break;
+                                case 1:
+                                    Current.MainPage = new NavigationPage(new DealsPage()) { BarTextColor = Color.Black };
+                                    break;
+                                case 2:
+                                    Current.MainPage = new NavigationPage(new MessagesPage()) { BarTextColor = Color.Black };
+                                    break;
+                                case 3:
+                                    Current.MainPage = new NavigationPage(new AssentMainPage()) { BarTextColor = Color.Black };
+                                    break;
+                            }
+                        });
                     }
                     LayoutService.Init();
                 }
@@ -132,34 +182,81 @@ namespace Simon
                 }
             };
 
-            CrossPushNotification.Current.OnNotificationOpened += (s, p) =>
+            CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
             {
-                System.Diagnostics.Debug.WriteLine("Opened");
+                Debug.WriteLine("Opened");
+                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                File.AppendAllText(tempFile, "\n\nNotification Opened....");
+                Debug.WriteLine("File Name====" + tempFile);
+
                 foreach (var data in p.Data)
                 {
-                    System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
+                    Debug.WriteLine($"{data.Key} : {data.Value}");
+                    if (data.Key.Equals("MsgCount"))
+                    {
+                        Settings.MessageCount = Convert.ToInt32(data.Value);
+                    }
+
+                    if (selectedPageId == 4)
+                    {
+                        return;
+                    }
+
+                    SessionService.BaseFooterItems.All((arg) =>
+                    {
+                        if (arg.Id == selectedPageId)
+                        {
+                            arg.IsSelected = true;
+                        }
+                        else
+                        {
+                            arg.IsSelected = false;
+                        }
+                        return true;
+                    });
+
+                    Device.BeginInvokeOnMainThread(() =>
+                    {
+                        IsFirstTime = true;
+                        switch (selectedPageId)
+                        {
+                            case 0:
+                                Current.MainPage = new NavigationPage(new LandingPage()) { BarTextColor = Color.Black };
+                                break;
+                            case 1:
+                                Current.MainPage = new NavigationPage(new DealsPage()) { BarTextColor = Color.Black };
+                                break;
+                            case 2:
+                                Current.MainPage = new NavigationPage(new MessagesPage()) { BarTextColor = Color.Black };
+                                break;
+                            case 3:
+                                Current.MainPage = new NavigationPage(new AssentMainPage()) { BarTextColor = Color.Black };
+                                break;
+                        }
+                    });
                 }
+                LayoutService.Init();
             };
 
-            CrossPushNotification.Current.OnNotificationAction += (s, p) =>
+            CrossFirebasePushNotification.Current.OnNotificationAction += (s, p) =>
             {
-                System.Diagnostics.Debug.WriteLine("Action");
+                Debug.WriteLine("Action");
 
                 if (!string.IsNullOrEmpty(p.Identifier))
                 {
-                    System.Diagnostics.Debug.WriteLine($"ActionId: {p.Identifier}");
+                    Debug.WriteLine($"ActionId: {p.Identifier}");
                     foreach (var data in p.Data)
                     {
-                        System.Diagnostics.Debug.WriteLine($"{data.Key} : {data.Value}");
+                        Debug.WriteLine($"{data.Key} : {data.Value}");
                     }
 
                 }
 
             };
 
-            CrossPushNotification.Current.OnNotificationDeleted += (s, p) =>
+            CrossFirebasePushNotification.Current.OnNotificationDeleted += (s, p) =>
             {
-                System.Diagnostics.Debug.WriteLine("Dismissed");
+                Debug.WriteLine("Dismissed");
             };
         }
 

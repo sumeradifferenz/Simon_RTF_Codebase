@@ -1,17 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Net.Http;
-
-using Newtonsoft.Json;
 using Simon.Controls;
 using Simon.Helpers;
 using Simon.Models;
 using Simon.ServiceHandler;
 using Simon.ViewModel;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Application = Xamarin.Forms.Application;
 
 namespace Simon.Views
@@ -79,9 +73,15 @@ namespace Simon.Views
             App.ReadUnread = "null";
             App.OrderByText = Constants.LastPostDateText;
             App.SelectedTitle = string.Empty;
-            App.selectedName = string.Empty;
+            App.SelectedName = string.Empty;
             vm = new DealViewModel();
             this.BindingContext = vm;
+
+            if (App.IsFirstTime)
+            {
+                App.IsFirstTime = false;
+                vm.FooterNavigation(SessionService.BaseFooterItems[1]);
+            }
 
             if (NetworkCheck.IsInternet())
             {
@@ -97,7 +97,12 @@ namespace Simon.Views
                 userId = Convert.ToString(Application.Current.Properties["USERID"]);
             }
         }
-       
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+        }
+
         protected override bool OnBackButtonPressed()
         {
             return true;

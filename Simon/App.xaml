@@ -205,6 +205,10 @@
                 <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
                 <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
             </Style>
+            <Style x:Key="LatoRegularBlackLableStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
+            </Style>
             <Style x:Key="LatoRegularGrayLableStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{StaticResource DarkGrayColor}" />
                 <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />

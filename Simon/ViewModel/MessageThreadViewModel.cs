@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Plugin.Media.Abstractions;
 using Simon.Helpers;
 using Simon.Interfaces;
 using Simon.Models;
@@ -18,6 +19,7 @@ using Simon.Views;
 using Simon.Views.Popups;
 using Syncfusion.XForms.RichTextEditor;
 using Xamarin.Forms;
+using ImageSource = Xamarin.Forms.ImageSource;
 
 namespace Simon.ViewModel
 {
@@ -26,6 +28,7 @@ namespace Simon.ViewModel
         string userId, threadId, name;
         bool bookMarks;
         public bool sendEnable;
+        public string SaveMessage;
         int id;
         string message;
         JObject jObject = null;
@@ -44,6 +47,28 @@ namespace Simon.ViewModel
         private int _CurrentPage = 1;
         private int _LastPage = 0;
         private bool _isTeamLoading = false;
+
+        private bool _isImageVisible { get; set; } = false;
+        public bool isImageVisible
+        {
+            get { return _isImageVisible; }
+            set
+            {
+                _isImageVisible = value;
+                OnPropertyChanged(nameof(isImageVisible));
+            }
+        }
+
+        private bool _isDocsVisible { get; set; } = false;
+        public bool isDocsVisible
+        {
+            get { return _isDocsVisible; }
+            set
+            {
+                _isDocsVisible = value;
+                OnPropertyChanged(nameof(isDocsVisible));
+            }
+        }
 
         private ObservableCollection<messageUsers> _messageUserList = new ObservableCollection<messageUsers>();
         public ObservableCollection<messageUsers> messageUserList
@@ -78,6 +103,17 @@ namespace Simon.ViewModel
             {
                 _TypedMessage = value;
                 OnPropertyChanged(TypedMessage);
+            }
+        }
+
+        public string _Link { get; set; }
+        public string Link
+        {
+            get { return _Link; }
+            set
+            {
+                _Link = value;
+                OnPropertyChanged(Link);
             }
         }
 
@@ -152,6 +188,61 @@ namespace Simon.ViewModel
             }
         }
 
+        private int _TestMinHeight = 50;
+        public int TestMinHeight
+        {
+            get { return _TestMinHeight; }
+            set { SetProperty(ref _TestMinHeight, value); }
+        }
+
+        private bool _ShowToolBar { get; set; } = false;
+        public bool ShowToolBar
+        {
+            get { return _ShowToolBar; }
+            set
+            {
+                _ShowToolBar = value;
+                OnPropertyChanged(nameof(ShowToolBar));
+            }
+        }
+
+        private MediaFile _imageUrlMediaFile;
+        public MediaFile imageUrlMediaFile
+        {
+            get { return _imageUrlMediaFile; }
+            set
+            {
+                if (value != null)
+                {
+                    SetProperty(ref _imageUrlMediaFile, value);
+                }
+            }
+        }
+
+        public string _imageUrlfile;
+        public string imageUrlfile
+        {
+            get { return _imageUrlfile; }
+            set { SetProperty(ref _imageUrlfile, value); }
+        }
+
+        private ImageSource _imageUrl = "image_placeholder.png";
+        public ImageSource ImageUrl
+        {
+            get { return _imageUrl; }
+            set
+            {
+                SetProperty(ref _imageUrl, value);
+            }
+        }
+
+        public string _FileName;
+        public string FileName
+        {
+            get { return _FileName; }
+            set { SetProperty(ref _FileName, value); }
+        }
+
         HttpClient httpClient;
 
         public ICommand SendMessageCommand { get; set; }
@@ -218,7 +309,7 @@ namespace Simon.ViewModel
             }
         }
 
-        private async void SendMessageCommandExecute()
+        private void SendMessageCommandExecute()
         {
             if (sendEnable)
                 return;
@@ -241,6 +332,11 @@ namespace Simon.ViewModel
                 else
                 {
                     var message = !string.IsNullOrEmpty(Message.Trim()) ? Message.Trim() : string.Empty;
+                    if (message.Contains("https://") || message.Contains("http://"))
+                    {
+                        TypedMessage = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
+                        message = TypedMessage;
+                    }
                     var values = new Dictionary<object, object>
                     {
                         {"author",userId },
@@ -267,17 +363,11 @@ namespace Simon.ViewModel
                         await ClosePopup();
                         var content1 = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(content1);
-                        TypedMessage = "";
+                        TypedMessage = null;
                         Settings.TypedMessage = string.Empty;
                         await FetchThreadUserData();
+
                         //await SendThreadUsersAsync();
-                        //await ShowAlertWithAction("Success", content1, "Ok", "Cancel");
-                        //var yesSelected = await DisplayAlert("Simon", content, "Ok", "Cancel"); // the call is awaited
-                        //if (yesSelected)  // No compile error, as the result will be bool, since we awaited the Task<bool>
-                        //{
-                        //    await Navigation.PopToRootAsync();
-                        //}
-                        //else { return; }
                     }
                 }
             }
@@ -324,7 +414,6 @@ namespace Simon.ViewModel
         {
             MessageReplayViewModel replayViewModel = new MessageReplayViewModel();
             replayViewModel.ScreenTitle = Constants.MessageScreenTitle;
-            Settings.TypedMessage = TypedMessage;
             await App.Current.MainPage.Navigation.PushAsync(new MessageReplyPage(), false);
         }
 
@@ -406,13 +495,15 @@ namespace Simon.ViewModel
                 {
                     IsBusy = true;
                     bool IsBookMarkSelect = false;
-                    if (!string.IsNullOrEmpty(Settings.TypedMessage))
+                    if (App.FrameImage != null)
                     {
-                        TypedMessage = Settings.TypedMessage;
+                        ImageUrl = App.FrameImage;
+                        isImageVisible = true;
                     }
-                    else
+                    if (App.FileName != null)
                     {
-                        TypedMessage = string.Empty;
+                        FileName = App.FileName;
+                        isDocsVisible = true;
                     }
 
                     var jsonString = await hc.GetStringAsync(Config.MESSAGE_THREAD_API + threadId + "/" + page);
@@ -543,17 +634,8 @@ namespace Simon.ViewModel
                         return;
                     }
                     if (_isTeamLoading) { IsLoadingInfinite = false; return; }
-                    //_CurrentPage++;
-                    if (App.isFromAddParticipantPage == true)
-                    {
-                        App.isFromAddParticipantPage = false;
-                        _CurrentPage = 1;
-                    }
-                    else
-                    {
-                        _CurrentPage++;
-                    }
-
+                    _CurrentPage++;
+                    
                     await LoadData(_CurrentPage);
                 }
                 catch (Exception ex)
@@ -668,6 +750,121 @@ namespace Simon.ViewModel
                 }
 
             }
+        }
+
+        public ICommand TextFormatCommand { get { return new Command(TextFormat_click); } }
+        private void TextFormat_click()
+        {
+            if (ShowToolBar == false)
+            {
+                TestMinHeight = 55;
+                ShowToolBar = true;
+            }
+            else
+            {
+                TestMinHeight = 50;
+                ShowToolBar = false;
+            }
+        }
+
+        public ICommand AddDocsCommand { get { return new Command(AddDocs_click); } }
+        private void AddDocs_click()
+        {
+            try
+            {
+                DocumentPicker(((string name, string FileBase64String, string FileType, string FileName) obj) =>
+                {
+                    if (obj.name != null && obj.FileName != null && obj.FileBase64String != null && obj.FileType != null)
+                    {
+                        //AddDocument(obj.FileName, obj.FileBase64String, obj.FileType);
+                        FileName = obj.FileName;
+                        App.FileName = FileName;
+                        if (FileName != null)
+                        {
+                            isDocsVisible = true;
+                        }
+                    }
+                    else
+                    {
+                        return;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception: { ex.Message}");
+            }
+        }
+
+        public ICommand AttachLinkCommand { get { return new Command(AttachLink_click); } }
+        private async void AttachLink_click()
+        {
+            try
+            {
+                await ClosePopup();
+                HyperLinkPopup HyperLinkPopupview = new HyperLinkPopup();
+                HyperLinkPopupview.BindingContext = this;
+                await ShowPopup(HyperLinkPopupview);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception: { ex.Message}");
+            }
+        }
+
+        public ICommand OpenCameraCommand { get { return new Command(OpenCamera_click); } }
+        private void OpenCamera_click()
+        {
+            try
+            {
+                ImagePicker((string file, MediaFile mediafile) =>
+                {
+                    if (string.IsNullOrEmpty(file))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        imageUrlMediaFile = mediafile;
+                        imageUrlfile = file;
+                        ImageUrl = ImageSource.FromFile(file);
+                        App.FrameImage = ImageUrl;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception: { ex.Message}");
+            }
+        }
+
+        public ICommand InsertLinkCommand { get { return new Command(InsertLink_click); } }
+        private async void InsertLink_click()
+        {
+            try
+            {
+                TypedMessage = Link;
+                Link = null;
+                await ClosePopup();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Exception: { ex.Message}");
+            }
+        }
+
+        public ICommand CloseFrame_Command { get { return new Command(CloseFrame_click); } }
+        private void CloseFrame_click()
+        {
+            isImageVisible = false;
+            App.FrameImage = null;
+        }
+
+        public ICommand CloseDocs_Command { get { return new Command(CloseDocs_click); } }
+        private void CloseDocs_click()
+        {
+            isDocsVisible = false;
+            App.FileName = null;
         }
 
         public ICommand ClosePopup_Command { get { return new Command(ClosePopup_click); } }

@@ -4,11 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Windows.Input;
-using Plugin.FilePicker;
-using Plugin.FilePicker.Abstractions;
-using Plugin.Media;
 using Plugin.Media.Abstractions;
-using Plugin.Permissions.Abstractions;
 using Simon.Helpers;
 using Simon.Interfaces;
 using Xamarin.Forms;
@@ -47,7 +43,7 @@ namespace Simon.ViewModel
         }
 
         private ImageSource _imageUrl = "image_placeholder.png";
-        public ImageSource imageUrl
+        public ImageSource ImageUrl
         {
             get { return _imageUrl; }
             set { SetProperty(ref _imageUrl, value); }
@@ -75,7 +71,7 @@ namespace Simon.ViewModel
                     {
                         imageUrlMediaFile = mediafile;
                         imageUrlfile = file;
-                        imageUrl = ImageSource.FromFile(file);
+                        ImageUrl = ImageSource.FromFile(file);
                     }
                 });
             }
@@ -110,204 +106,10 @@ namespace Simon.ViewModel
             }
         }
 
-        public static async void DocumentPicker(Action<(string name, string FileBase64String, string FileType, string FileName)> result)
-        {
-            FileData fileData = new FileData();
-
-            var status = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
-
-            if (status == PermissionStatus.Granted)
-            {
-                fileData = await CrossFilePicker.Current.PickFile();
-
-                if (fileData != null)
-                {
-                    byte[] data = fileData.DataArray;
-
-                    var FileBase64String = Convert.ToBase64String(data);
-                    string FileName = fileData.FileName;
-                    string name = (fileData.FilePath != null) ? Path.GetFileNameWithoutExtension(fileData.FilePath) : string.Empty;
-                    string type = Path.GetExtension(fileData.FilePath);
-                    result.Invoke((name, FileBase64String, type, FileName));
-                }
-            }
-            else if (status != PermissionStatus.Unknown)
-            {
-                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.StoragePermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
-            }
-        }
-
         public ICommand ByteConverterCommand { get { return new Command(ByteConverterCommandExecute); } }
         private void ByteConverterCommandExecute()
         {
             ConvertIntoByte(FilePath);
-        }
-
-
-        //IMAGE PICKER
-        public async void ImagePicker(Action<string, MediaFile> result)
-        {
-            try
-            {
-                MediaFile mediaFile = new MediaFile(null, null);
-                var action = "";
-                action = await App.Current.MainPage.DisplayActionSheet(Constants.CameraOptionTitle.ToUpper(), Constants.CancelCapsText, null, Constants.TakePhotoOption.ToUpper(), Constants.PickPhotoOption.ToUpper());
-
-                if (action.ToUpper() == Constants.TakePhotoOption.ToUpper())
-                {
-                    var status = await RuntimePermission.RuntimePermissionStatus(Permission.Camera);
-                    var Storegestatus = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
-
-                    if (status == PermissionStatus.Granted && Storegestatus == PermissionStatus.Granted)
-                    {
-                        Device.BeginInvokeOnMainThread(async () =>
-                        {
-                            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-                            {
-                                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.NoCameraAvailableMsg, Constants.OkText);
-                                return;
-                            }
-
-                            mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
-                            {
-                                Directory = "Sample",
-                                SaveToAlbum = true,
-                                Name = "test.jpg",
-                                CompressionQuality = 70,
-                                PhotoSize = PhotoSize.Medium,
-                                AllowCropping = true
-                            });
-
-                            if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))
-                            {
-                                new ImageCropper()
-                                {
-                                    CropShape = ImageCropper.CropShapeType.Rectangle,
-                                    Success = (imageFile) =>
-                                    {
-                                        Device.BeginInvokeOnMainThread(() =>
-                                        {
-                                            if (string.IsNullOrEmpty(imageFile))
-                                            {
-                                                result.Invoke(string.Empty, null);
-                                            }
-                                            else
-                                            {
-                                                result.Invoke(imageFile, mediaFile);
-                                            }
-
-                                        });
-                                    }
-                                }.Show(mediaFile.Path);
-                            }
-                            else
-                            {
-                                result.Invoke(null, null);
-                            }
-
-                            FilePath = mediaFile.Path;
-                            imageUrl = ImageSource.FromStream(() =>
-                            {
-                                var stream = mediaFile.GetStream();
-                                mediaFile.Dispose();
-                                return stream;
-                            });
-                        });
-                    }
-                    else if (status != PermissionStatus.Unknown)
-                    {
-                        var res = await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.CameraPermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
-                        if (res)
-                        {
-                            DependencyService.Get<IOpenSetting>().OpenAppSetting();
-                        }
-                        result.Invoke(null, null);
-                    }
-                    else
-                    {
-                        result.Invoke(null, null);
-                    }
-                }
-                else if (action.ToUpper() == Constants.PickPhotoOption.ToUpper())
-                {
-                    var PhotosStatus = await RuntimePermission.RuntimePermissionStatus(Permission.Photos);
-                    var Storegestatus = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
-                    if (PhotosStatus == PermissionStatus.Granted && Storegestatus == PermissionStatus.Granted)
-                    {
-                        Device.BeginInvokeOnMainThread(async () =>
-                        {
-                            if (!CrossMedia.Current.IsPickPhotoSupported)
-                            {
-                                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.NoCameraAvailableMsg.ToUpper(), Constants.OkText);
-                                return;
-                            }
-
-                            mediaFile = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
-                            {
-                                CompressionQuality = 70,
-                                PhotoSize = PhotoSize.Medium,
-                            });
-
-                            if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))
-                            {
-                                new ImageCropper()
-                                {
-                                    CropShape = ImageCropper.CropShapeType.Rectangle,
-                                    Success = (imageFile) =>
-                                    {
-                                        Device.BeginInvokeOnMainThread(() =>
-                                        {
-                                            if (string.IsNullOrEmpty(imageFile))
-                                            {
-                                                result.Invoke(string.Empty, null);
-                                            }
-                                            else
-                                            {
-                                                result.Invoke(imageFile, mediaFile);
-                                            }
-
-                                        });
-                                    }
-                                }.Show(mediaFile.Path);
-                            }
-                            else
-                            {
-                                result.Invoke(null, null);
-                            }
-
-                            FilePath = mediaFile.Path;
-                            imageUrl = ImageSource.FromStream(() =>
-                            {
-                                var stream = mediaFile.GetStream();
-                                mediaFile.Dispose();
-                                return stream;
-                            });
-                        });
-                    }
-                    else if (PhotosStatus != PermissionStatus.Unknown)
-                    {
-                        var res = await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.PhotosPermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
-                        if (res)
-                        {
-                            DependencyService.Get<IOpenSetting>().OpenAppSetting();
-                        }
-                        result.Invoke(null, null);
-                    }
-                    else
-                    {
-                        result.Invoke(null, null);
-                    }
-                }
-                else
-                {
-                    result.Invoke(null, null);
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-                result.Invoke(null, null);
-            }
         }
 
         public void ConvertIntoByte(string image)

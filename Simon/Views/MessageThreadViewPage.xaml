@@ -7,6 +7,7 @@
              xmlns:Controls="clr-namespace:Simon.Controls;assembly=Simon"
              xmlns:SubView="clr-namespace:Simon.Views.SubViews;assembly=Simon"
              NavigationPage.HasNavigationBar="False"
+             xmlns:htmlLabel="clr-namespace:LabelHtml.Forms.Plugin.Abstractions;assembly=HtmlLabel.Forms.Plugin"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon" xmlns:richTextEditor="clr-namespace:Syncfusion.XForms.RichTextEditor;assembly=Syncfusion.SfRichTextEditor.XForms"
@@ -73,8 +74,8 @@
                                                             <ImageButton x:Name="personBtn" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Source="user.png" Aspect="AspectFit" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
                                                         </Frame>
                                                         <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
-                                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
-                                                                <Controls:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" FontFamily="{StaticResource LatoRegular}" Margin="2" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}"></Controls:HtmlLabel>
+                                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                                <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" FontFamily="{StaticResource LatoRegular}" Margin="10" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}"></htmlLabel:HtmlLabel>
                                                                 <!--<Label x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" Style="{StaticResource LatoRegularDarkBlueLableStyle}" />-->
                                                             </StackLayout>
                                                         </Frame>
@@ -103,32 +104,68 @@
                     </StackLayout>
                 </AbsoluteLayout>
 
-                <!--<Controls:HtmlLabel Margin="10" x:Name="sample" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></Controls:HtmlLabel>-->
+                <htmlLabel:HtmlLabel Margin="10" x:Name="sample" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></htmlLabel:HtmlLabel>
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
                     <Frame Margin="0" Style="{StaticResource MessageTextBoxFrameStyle}">
-                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="2" >
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <richTextEditor:SfRichTextEditor x:Name="txtMessage" AutoSize="TextChanges" Text="{Binding TypedMessage}" ImageInsertCommand="{Binding ImageCommand}" Grid.Row="0" Grid.Column="0"  PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"><!--ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,InsertImage,Hyperlink"-->
-                                <richTextEditor:SfRichTextEditor.ToolbarSettings>
-                                    <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
-                                </richTextEditor:SfRichTextEditor.ToolbarSettings>
-                            </richTextEditor:SfRichTextEditor>
-                            <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
-                            <Button Grid.Row="0" Grid.Column="1" Text="B" Clicked="Button_Clicked" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center">FontButtonCommand="{Binding FontCommand}"</Button>-->
-                            <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
-                                <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
-                                </Frame.GestureRecognizers>
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Margin="0" Spacing="0">
+                            <StackLayout IsVisible="{Binding isImageVisible}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,10,0,10">
+                                <Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="100" Padding="0" CornerRadius="5" HasShadow="False">
+                                    <Frame.HeightRequest>
+                                        <OnPlatform x:TypeArguments="x:Double">
+                                            <On Platform="iOS">100</On>
+                                            <On Platform="Android">200</On>
+                                        </OnPlatform>
+                                    </Frame.HeightRequest>
+                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill"></Image>
+                                </Frame>
+                                <Frame IsClippedToBounds="True" Padding="0" BackgroundColor="#AFA9A9A9" HeightRequest="20" WidthRequest="20" CornerRadius="10" HorizontalOptions="End" VerticalOptions="Start" HasShadow="False" Margin="-20,-5,0,0">
+                                    <StackLayout HeightRequest="15" Padding="0" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
+                                        <Image Source="ic_close.png" Aspect="AspectFit"/>
+                                    </StackLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding CloseFrame_Command}"/>
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </StackLayout>
+                            <Frame IsVisible="{Binding isDocsVisible}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasShadow="False">
+                                <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="5" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="10">
+                                    <Image Source="attach_file.png" BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Image>
+                                    <Label Text="{Binding FileName}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                    <ImageButton Source="ic_close.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="CenterAndExpand" Command="{Binding CloseDocs_Command}"></ImageButton>
+                                </StackLayout>
                             </Frame>
-                        </Grid>
+                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="2" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" ImageInsertCommand="{Binding ImageCommand}" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                    <!--ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,InsertImage,Hyperlink" Text="{Binding TypedMessage}"-->
+                                    <richTextEditor:SfRichTextEditor.ToolbarSettings>
+                                        <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
+                                    </richTextEditor:SfRichTextEditor.ToolbarSettings>
+                                </richTextEditor:SfRichTextEditor>
+                                <StackLayout Orientation="Horizontal" Spacing="2" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <ImageButton Source="note_add.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AddDocsCommand}"></ImageButton>
+                                    <ImageButton Source="attachfile.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AttachLinkCommand}"></ImageButton>
+                                    <ImageButton Source="camera.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding OpenCameraCommand}"></ImageButton>
+                                    <ImageButton Source="textformat.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding TextFormatCommand}"></ImageButton>
+                                </StackLayout>
+                                <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <Button Grid.Row="0" Grid.Column="1" Text="B" Clicked="Button_Clicked" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center">FontButtonCommand="{Binding FontCommand}"</Button>-->
+                                <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
+                                    <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
+                                    </Frame.GestureRecognizers>
+                                </Frame>
+                            </Grid>
+                        </StackLayout>
                     </Frame>
                     <Image x:Name="addParticipant" Source="add_participants.png" Style="{x:StaticResource AddParticipantImageStyle}">
                         <Image.GestureRecognizers>

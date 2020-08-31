@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 using DLToolkit.Forms.Controls;
 using Foundation;
+using LabelHtml.Forms.Plugin.iOS;
+using Plugin.FirebasePushNotification;
 using Plugin.PushNotification;
 using Simon.Helpers;
 using UIKit;
@@ -40,6 +44,7 @@ namespace Simon.iOS
                 "Expander_Experimental"
             });
 
+            HtmlLabelRenderer.Initialize();
             global::Xamarin.Forms.Forms.Init();
            
             Rg.Plugins.Popup.Popup.Init();
@@ -54,9 +59,12 @@ namespace Simon.iOS
 
             LoadApplication(new App());
 
-            PushNotificationManager.Initialize(options, true);
+            FirebasePushNotificationManager.Initialize(options, true);
+            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert;
+
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();
+
             //UIView statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBarWindow")).ValueForKey(new NSString("statusBar")) as UIView;
             //statusBar.BackgroundColor = UIColor.White;
 
@@ -93,16 +101,20 @@ namespace Simon.iOS
             Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
             var token = BitConverter.ToString(result).Replace("-", "");
 
-            System.Diagnostics.Debug.WriteLine($"TOKEN : {Settings.DeviceToken}");
+            Debug.WriteLine($"TOKEN : {Settings.DeviceToken}");
             Settings.DeviceToken = token;
-            PushNotificationManager.DidRegisterRemoteNotifications(token);
+
+            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+            File.AppendAllText(App.tempFile, "\n\nRegisteredForRemoteNotifications call \n\niOS Token : " + token);
+            Debug.WriteLine("File Name====" + App.tempFile);
+
+            FirebasePushNotificationManager.DidRegisterRemoteNotifications(token);
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
         }
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
         {
-            PushNotificationManager.RemoteNotificationRegistrationFailed(error);
-
+            FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
         }
         // To receive notifications in foregroung on iOS 9 and below.
         // To receive notifications in background in any iOS version
@@ -114,7 +126,7 @@ namespace Simon.iOS
             // If you disable method swizzling, you'll need to call this method. 
             // This lets FCM track message delivery and analytics, which is performed
             // automatically with method swizzling enabled.
-            PushNotificationManager.DidReceiveMessage(userInfo);
+            FirebasePushNotificationManager.DidReceiveMessage(userInfo);
             // Do your magic to handle the notification data
             System.Console.WriteLine(userInfo);
 

@@ -23,15 +23,15 @@ namespace Simon.Views
             App.ReadUnread = "null";
             App.OrderByText = Constants.LastPostDateText;
             App.SelectedTitle = string.Empty;
-            App.selectedName = string.Empty;
+            App.SelectedName = string.Empty;
             var leftSwipeGesture = new SwipeGestureRecognizer { Direction = SwipeDirection.Left };
 
             ViewModel = new LandingViewModel();
             this.BindingContext = ViewModel;
 
-            if (App.isFirstTime)
+            if (App.IsFirstTime)
             {
-                App.isFirstTime = false;
+                App.IsFirstTime = false;
                 ViewModel.FooterNavigation(SessionService.BaseFooterItems[0]);
             }
 

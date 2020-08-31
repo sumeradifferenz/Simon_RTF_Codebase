@@ -27,9 +27,9 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignKey>iPhone Developer: Laxman Gulawani (DGL7KQFZ4Z)</CodesignKey>
+    <CodesignKey>iPhone Developer: Brijesh Tekrawala (JMVHF7JX2U)</CodesignKey>
     <MtouchExtraArgs>-v -v -v -v</MtouchExtraArgs>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignProvision>SimonInternal_Dev_27Aug2020</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -40,8 +40,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution: Brijesh Tekrawala (296G98S4G5)</CodesignKey>
-    <CodesignProvision>SimonInternal_Appstore_27May2020</CodesignProvision>
+    <CodesignKey>iPhone Developer: Brijesh Tekrawala (JMVHF7JX2U)</CodesignKey>
+    <CodesignProvision>SimonInternal_Dev_27Aug2020</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,7 +68,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer: Brijesh Tekrawala (JMVHF7JX2U)</CodesignKey>
     <PlatformTarget>anycpu</PlatformTarget>
-    <CodesignProvision>SimonInternal_Dev_27May2020</CodesignProvision>
+    <CodesignProvision>SimonInternal_Dev_27Aug2020</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
   </PropertyGroup>
   <ItemGroup>
@@ -168,7 +168,7 @@
       <Version>1.4.2</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor">
-      <Version>18.2.0.48</Version>
+      <Version>18.2.0.55</Version>
     </PackageReference>
     <PackageReference Include="Plugin.PushNotification">
       <Version>3.3.3</Version>
@@ -180,13 +180,16 @@
       <Version>5.0.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
-      <Version>0.9.7</Version>
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Plugin.FilePicker">
       <Version>2.1.41</Version>
     </PackageReference>
-    <PackageReference Include="XamForms.HtmlLabel">
-      <Version>1.0.0</Version>
+    <PackageReference Include="Xam.Plugin.HtmlLabel">
+      <Version>4.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.FirebasePushNotification">
+      <Version>3.3.10</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
@@ -413,9 +416,6 @@
     <BundleResource Include="Resources\Sort_Up.png" />
     <BundleResource Include="Resources\Sort_Up%402x.png" />
     <BundleResource Include="Resources\Sort_Up%403x.png" />
-    <BundleResource Include="Resources\upload.png" />
-    <BundleResource Include="Resources\upload%402x.png" />
-    <BundleResource Include="Resources\upload%403x.png" />
     <BundleResource Include="Resources\image_placeholder%403x.png" />
     <BundleResource Include="Resources\image_placeholder%402x.png" />
     <BundleResource Include="Resources\image_placeholder%401x.png" />
@@ -428,6 +428,39 @@
     <BundleResource Include="Resources\photo%402x.png" />
     <BundleResource Include="Resources\photo%403x.png" />
     <BundleResource Include="Resources\logout.png" />
+    <BundleResource Include="Resources\note_add%402x.png" />
+    <BundleResource Include="Resources\note_add%403x.png" />
+    <BundleResource Include="Resources\note_add.png" />
+    <BundleResource Include="Resources\attachfile.png" />
+    <BundleResource Include="Resources\attachfile%402x.png" />
+    <BundleResource Include="Resources\attachfile%403x.png" />
+    <BundleResource Include="Resources\camera.png" />
+    <BundleResource Include="Resources\camera%402x.png" />
+    <BundleResource Include="Resources\camera%403x.png" />
+    <BundleResource Include="Resources\textformat.png" />
+    <BundleResource Include="Resources\textformat%402x.png" />
+    <BundleResource Include="Resources\textformat%403x.png" />
+    <BundleResource Include="Resources\round_add%403x.png" />
+    <BundleResource Include="Resources\round_add%402x.png" />
+    <BundleResource Include="Resources\round_add.png" />
+    <BundleResource Include="Resources\take_picture%403x.png" />
+    <BundleResource Include="Resources\take_picture%402x.png" />
+    <BundleResource Include="Resources\take_picture.png" />
+    <BundleResource Include="Resources\attach_document%403x.png" />
+    <BundleResource Include="Resources\attach_document%402x.png" />
+    <BundleResource Include="Resources\attach_document.png" />
+    <BundleResource Include="Resources\upload_success%403x.png" />
+    <BundleResource Include="Resources\upload_success%402x.png" />
+    <BundleResource Include="Resources\upload_success.png" />
+    <BundleResource Include="Resources\upload%403x.png" />
+    <BundleResource Include="Resources\upload%402x.png" />
+    <BundleResource Include="Resources\upload.png" />
+    <BundleResource Include="Resources\attach_file%403x.png" />
+    <BundleResource Include="Resources\attach_file%402x.png" />
+    <BundleResource Include="Resources\attach_file.png" />
+    <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\logout%403x.png" />
+    <BundleResource Include="Resources\logout%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

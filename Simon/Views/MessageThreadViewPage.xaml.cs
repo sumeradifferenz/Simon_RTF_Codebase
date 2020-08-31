@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
@@ -22,6 +21,21 @@ namespace Simon.Views
             txtMessage.TextChanged += (sender, e) =>
             {
                 this.InvalidateMeasure();
+
+                if (App.IsFromAddParticipantPage == true)
+                {
+                    txtMessage.Text = Settings.TypedMessage;
+                    App.IsFromAddParticipantPage = false;
+                    return;
+                }
+                if (!string.IsNullOrEmpty(txtMessage.Text) && !string.IsNullOrWhiteSpace(txtMessage.Text))
+                {
+                    var Keyword = txtMessage.Text.Trim();
+                    if (Keyword.Length >= 1)
+                    {
+                        Settings.TypedMessage = txtMessage.Text;
+                    }
+                }
             };
 
             if (Device.RuntimePlatform == Device.iOS)
@@ -60,6 +74,16 @@ namespace Simon.Views
             this.BindingContext = new MessageThreadViewModel();
 
             vm = this.BindingContext as MessageThreadViewModel;
+            App.selectedPageId = 4;
+
+            if (App.IsFromAddParticipantPage == true)
+            {
+                txtMessage.Text = Settings.TypedMessage;
+            }
+            else
+            {
+                txtMessage.Text = string.Empty;
+            }
 
             if (vm != null)
             {
@@ -77,6 +101,7 @@ namespace Simon.Views
 
         protected override void OnDisappearing()
         {
+            App.IsFirstTime = true;
             Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Pan);
         }
 
@@ -160,6 +185,10 @@ namespace Simon.Views
                 string text = Message.Replace("> <", "><");
                 Message = text;
             }
+            if (txtMessage.Text.Contains("https://") || txtMessage.Text.Contains("http://"))
+            {
+                Message = "<p><a class=\"e-rte-anchor\" href=\"" + txtMessage.Text + "\" title=\"" + txtMessage.Text + "\">" + txtMessage.Text + "</a></p>";
+            }
             return Message;
         }
 
@@ -167,16 +196,21 @@ namespace Simon.Views
         {
             string htmlstring = IgnoreVoidElementsInHTML(txtMessage.HtmlText);
             string htmlMessage = ValidationMessage(htmlstring);
-            //sample.Text = htmlMessage;
+            sample.Text = htmlMessage;
+            Settings.TypedMessage = htmlMessage;
 
             if (vm.sendEnable)
                 return;
 
             vm.sendEnable = true;
 
-            await vm.SendMessage(htmlMessage);
+            //await vm.SendMessage(htmlMessage);
 
+            txtMessage.Text = string.Empty;
             vm.sendEnable = false;
         }
     }
 }
+
+
+//<p><a class="e-rte-anchor" href="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/collectionview/populate-data" title="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/collectionview/populate-data">https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/collectionview/populate-data</a></p>

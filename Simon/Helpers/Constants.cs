@@ -78,6 +78,7 @@ namespace Simon.Helpers
         public const string PartyNamelblText = "partyName";
         public static string TakePhotoOption = "Take Photo";
         public static string PickPhotoOption = "Camera Roll";
+        public static string PickFileOption = "Choose From Library";
         public static string CameraOptionTitle = "Select option";
         public static string CancelCapsText = "CANCEL";
         public static string NoCameraAvailableMsg = "Camera not available.";

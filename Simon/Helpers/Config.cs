@@ -43,6 +43,9 @@ namespace Simon.Helpers
         public static string MARK_THREADMESSAGE_READ = BASE_URL + "/messaging/MarkThreadMessagesAsRead";
         public static string MARK_THREADMESSAGE_BOOKMARK = BASE_URL + "/messaging/PostFollowUp/";
 
+        //Message Apis Version 1
+        public static string MESSAGES_API_V1 = BASE_URL + "/messaging/GetUserMessagesForMobile_V1/";
+
         //Firebase api
         public static string SAVE_REGISTRATION_API = BASE_URL + "/user/SaveUserRegistration?userId=";
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Simon.Helpers;
 using Simon.ServiceHandler;
+using Simon.ViewModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

@@ -51,7 +51,15 @@ namespace Simon.Views
             {
                 base.OnAppearing();
 
+                ViewModel = new MessageViewModel();
+                this.BindingContext = ViewModel;
                 Settings.TypedMessage = null;
+
+                if (App.IsFirstTime)
+                {
+                    App.IsFirstTime = false;
+                    ViewModel.FooterNavigation(SessionService.BaseFooterItems[2]);
+                }
 
                 if (Application.Current.Properties.ContainsKey("USERID"))
                 {
@@ -60,8 +68,6 @@ namespace Simon.Views
 
                 if (NetworkCheck.IsInternet())
                 {
-                    ViewModel = new MessageViewModel();
-                    this.BindingContext = ViewModel;
                     await ViewModel.FetchData();
                     ViewModel._helper = this;
                 }

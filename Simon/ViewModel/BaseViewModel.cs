@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
@@ -11,10 +12,16 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Plugin.FilePicker;
+using Plugin.FilePicker.Abstractions;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using Plugin.Permissions.Abstractions;
 using Plugin.Settings;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Simon.Helpers;
+using Simon.Interfaces;
 using Simon.Models;
 using Simon.ServiceHandler;
 using Simon.Views;
@@ -76,6 +83,11 @@ namespace Simon.ViewModel
         // this little bit is how we trigger the PropertyChanged notifier.
         public event PropertyChangedEventHandler PropertyChanged;
         public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        protected virtual void RaisePropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
@@ -172,6 +184,10 @@ namespace Simon.ViewModel
         {
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {
+                App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+                File.AppendAllText(App.tempFile, "\n\nLogout without Device token....");
+                Debug.WriteLine("File Name====" + App.tempFile);
+
                 Settings.LoggedInUser = null;
                 App.SelectedUserData = null;
                 Application.Current.MainPage = new NavigationPage(new LoginPage()) { BarTextColor = Color.Black, BarBackgroundColor = Color.White };
@@ -308,13 +324,212 @@ namespace Simon.ViewModel
             }
         }
 
-        private ObservableCollection<FooterModel> _footerItems = new ObservableCollection<FooterModel>();
+        public ObservableCollection<FooterModel> _footerItems = new ObservableCollection<FooterModel>();
         public ObservableCollection<FooterModel> FooterItems
         {
             get { return _footerItems; }
             set
             {
                 SetProperty(ref _footerItems, value);
+            }
+        }
+
+        public async void ImagePicker(Action<string, MediaFile> result)
+        {
+            try
+            {
+                MediaFile mediaFile = new MediaFile(null, null);
+                var action = "";
+                action = await App.Current.MainPage.DisplayActionSheet(Constants.CameraOptionTitle.ToUpper(), Constants.CancelCapsText, null, Constants.TakePhotoOption.ToUpper(), Constants.PickPhotoOption.ToUpper());
+
+                if (action.ToUpper() == Constants.TakePhotoOption.ToUpper())
+                {
+                    var status = await RuntimePermission.RuntimePermissionStatus(Permission.Camera);
+                    var Storegestatus = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
+
+                    if (status == PermissionStatus.Granted && Storegestatus == PermissionStatus.Granted)
+                    {
+                        Device.BeginInvokeOnMainThread(async () =>
+                        {
+                            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                            {
+                                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.NoCameraAvailableMsg, Constants.OkText);
+                                return;
+                            }
+
+                            await ClosePopup();
+                            mediaFile = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+                            {
+                                Directory = "Simon",
+                                SaveToAlbum = true,
+                                Name = "SIMON.jpg",
+                                CompressionQuality = 70,
+                                PhotoSize = PhotoSize.Medium,
+                                AllowCropping = true
+                            });
+                            await ClosePopup();
+                            if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))
+                            {
+                                new ImageCropper()
+                                {
+                                    CropShape = ImageCropper.CropShapeType.Rectangle,
+                                    Success = (imageFile) =>
+                                    {
+                                        Device.BeginInvokeOnMainThread(() =>
+                                        {
+                                            if (string.IsNullOrEmpty(imageFile))
+                                            {
+                                                result.Invoke(string.Empty, null);
+                                            }
+                                            else
+                                            {
+                                                result.Invoke(imageFile, mediaFile);
+                                            }
+
+                                        });
+                                    }
+                                }.Show(mediaFile.Path);
+                            }
+                            else
+                            {
+                                result.Invoke(null, null);
+                            }
+                        });
+                    }
+                    else if (status != PermissionStatus.Unknown)
+                    {
+                        if (Device.RuntimePlatform == Device.iOS)
+                        {
+                            var res = await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.CameraPermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
+                            if (res)
+                            {
+                                DependencyService.Get<IOpenSetting>().OpenAppSetting();
+                            }
+                            result.Invoke(null, null);
+                        }
+                    }
+                    else
+                    {
+                        result.Invoke(null, null);
+                    }
+                }
+                else if (action.ToUpper() == Constants.PickPhotoOption.ToUpper())
+                {
+                    var PhotosStatus = await RuntimePermission.RuntimePermissionStatus(Permission.Photos);
+                    var Storegestatus = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
+                    if (PhotosStatus == PermissionStatus.Granted && Storegestatus == PermissionStatus.Granted)
+                    {
+                        Device.BeginInvokeOnMainThread(async () =>
+                        {
+                            if (!CrossMedia.Current.IsPickPhotoSupported)
+                            {
+                                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.NoCameraAvailableMsg.ToUpper(), Constants.OkText);
+                                return;
+                            }
+
+                            mediaFile = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+                            {
+                                CompressionQuality = 70,
+                                PhotoSize = PhotoSize.Medium,
+                                SaveMetaData = false,
+                            });
+                            //result.Invoke(mediaFile);
+                            await ClosePopup();
+
+                            if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))
+                            {
+                                new ImageCropper()
+                                {
+                                    CropShape = ImageCropper.CropShapeType.Rectangle,
+                                    Success = (imageFile) =>
+                                    {
+                                        Device.BeginInvokeOnMainThread(() =>
+                                        {
+                                            if (string.IsNullOrEmpty(imageFile))
+                                            {
+                                                result.Invoke(string.Empty, null);
+                                            }
+                                            else
+                                            {
+                                                result.Invoke(imageFile, mediaFile);
+                                            }
+
+                                        });
+                                    }
+                                }.Show(mediaFile.Path);
+                            }
+                            else
+                            {
+                                result.Invoke(null, null);
+                            }
+
+                        });
+                    }
+                    else if (PhotosStatus != PermissionStatus.Unknown)
+                    {
+                        if (Device.RuntimePlatform == Device.iOS)
+                        {
+                            var res = await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.PhotosPermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
+                            if (res)
+                            {
+                                DependencyService.Get<IOpenSetting>().OpenAppSetting();
+                            }
+                            result.Invoke(null, null);
+                        }
+                    }
+                    else
+                    {
+                        result.Invoke(null, null);
+                    }
+                }
+                else
+                {
+                    result.Invoke(null, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                result.Invoke(null, null);
+            }
+        }
+
+        public static async void DocumentPicker(Action<(string name, string FileBase64String, string FileType, string FileName)> result)
+        {
+            FileData fileData = new FileData();
+
+            var status = await RuntimePermission.RuntimePermissionStatus(Permission.Storage);
+
+            if (status == PermissionStatus.Granted)
+            {
+                fileData = await CrossFilePicker.Current.PickFile();
+
+                if (fileData != null)
+                {
+                    byte[] data = fileData.DataArray;
+
+                    var FileBase64String = Convert.ToBase64String(data);
+                    string FileName = fileData.FileName;
+                    string name = (fileData.FilePath != null) ? Path.GetFileNameWithoutExtension(fileData.FilePath) : string.Empty;
+                    string type = Path.GetExtension(fileData.FilePath);
+
+                    var supportedTypes = new[] { "txt", "doc", "docx", "pdf", "xls", "xlsx" };
+                    var fileExt = Path.GetExtension(fileData.FileName).Substring(1);
+
+                    if (!supportedTypes.Contains(fileExt))
+                    {
+                        await App.Current.MainPage.DisplayAlert(Constants.WarningText, "File Extension Is InValid - Only Upload WORD/PDF/EXCEL/TXT File", Constants.OkText);
+                        result.Invoke((null, null, null, null));
+                    }
+                    else
+                    {
+                        result.Invoke((name, FileBase64String, type, FileName));
+                    }
+                }
+            }
+            else if (status != PermissionStatus.Unknown)
+            {
+                await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.StoragePermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
             }
         }
     }

@@ -21,11 +21,11 @@
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource WhiteColor}" Spacing="0" Padding="0">
             <SubView:HeaderWithImageView VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeaderText="{x:Static Helper:Constants.DeallblText}" RightImageSource="filter.png" RightSecondImageSource="sort.png" RightCommand="{Binding FilterCommand}" RightSecondCommand="{Binding SortingCommand}" RightThirdImageSource="logout.png" RightThirdCommand="{Binding LogOutCommand}" Padding="0"/>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding20_10_20_10}" Spacing="0">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" VerticalOptions="Fill" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_10}">
-                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BorderColor="{StaticResource DarkGrayShadeColor}" BackgroundColor="{StaticResource WhiteColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}" Padding="0" HeightRequest="{x:Static Services:LayoutService.HeightWidth50}">
-                        <StackLayout Orientation="Horizontal" Spacing="5" Padding="0" Margin="{x:Static Services:LayoutService.MarginPadding20_00_00_00}">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_10}">
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BorderColor="{StaticResource DarkGrayShadeColor}" BackgroundColor="{StaticResource WhiteColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}" Padding="0" HeightRequest="{StaticResource HeightWidth50}">
+                        <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing05}" Padding="0" Margin="{x:Static Services:LayoutService.MarginPadding20_00_00_00}">
                             <ImageButton Aspect="AspectFit" BackgroundColor="Transparent" Command="{Binding SearchCommand}" HorizontalOptions="Fill" Source="search.png" HeightRequest="{x:Static Services:LayoutService.HeightWidth20}" WidthRequest="{x:Static Services:LayoutService.HeightWidth20}"/>
-                            <Controls:CustomEntry x:Name="txtSearch" Text="{Binding SearchText}" FontSize="{StaticResource FontSize18}" Keyboard="Text" ReturnType="Done" Placeholder="Search" PlaceholderColor="Black" Style="{StaticResource EntryWithBlacktxtStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                            <Controls:CustomEntry x:Name="SearchContent" Text="{Binding SearchText, Mode=TwoWay}" FontSize="{x:Static Services:LayoutService.FontSize18}" Keyboard="Text" ReturnType="Done" Placeholder="Search" PlaceholderColor="Black" Style="{StaticResource EntryWithBlacktxtStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -58,9 +58,9 @@
                                                     <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
                                                         <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing03}">
                                                             <Label Grid.Row="0" Text="{Binding dealId}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
-                                                            <!--<Label Grid.Row="0" Text="-" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>-->
-                                                            <Label Grid.Row="0" Text="{Binding partyName}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize14}" HorizontalOptions="EndAndExpand"/>
-                                                            <!--<ImageButton Grid.Row="0" HeightRequest="15" WidthRequest="15" Source="upload.png" HorizontalOptions="EndAndExpand"/>-->
+                                                            <Label Grid.Row="0" Text="-" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
+                                                            <Label Grid.Row="0" Text="{Binding partyName}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize14}" HorizontalOptions="StartAndExpand"/>
+                                                            <ImageButton Grid.Row="0" BackgroundColor="Transparent" HeightRequest="15" WidthRequest="15" Source="upload.png" HorizontalOptions="EndAndExpand" Command="{Binding Source={x:Reference DealList}, Path=BindingContext.DealListItemTapCommand}" CommandParameter="{Binding .}"/>
                                                         </StackLayout>
                                                         <StackLayout Orientation="Horizontal">
                                                             <Label Grid.Row="1" Text="{Binding product}" MaxLines="2" WidthRequest="190" HorizontalOptions="Start" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
@@ -98,9 +98,9 @@
                                                     </StackLayout>
                                                 </AbsoluteLayout>
                                             </Grid>
-                                            <Frame.GestureRecognizers>
-                                                <TapGestureRecognizer Command="{Binding Source={x:Reference DealList}, Path=BindingContext.DealListItemTapCommand}" CommandParameter="{Binding .}" />
-                                            </Frame.GestureRecognizers>
+                                            <!--<Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding Source={x:Reference DealList}, Path=BindingContext.DealListItemTapCommand}" CommandParameter="{Binding .}" NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>-->
                                         </Frame>
                                     </StackLayout>
                                 </DataTemplate>
