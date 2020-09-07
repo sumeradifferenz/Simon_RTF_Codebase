@@ -1,5 +1,4 @@
-﻿using System;
-using DLToolkit.Forms.Controls;
+﻿using DLToolkit.Forms.Controls;
 using Xamarin.Forms;
 
 namespace Simon.Controls

@@ -74,8 +74,11 @@
                                                             <ImageButton x:Name="personBtn" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Source="user.png" Aspect="AspectFit" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
                                                         </Frame>
                                                         <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
-                                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                                                <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" FontFamily="{StaticResource LatoRegular}" Margin="10" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}"></htmlLabel:HtmlLabel>
+                                                            <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10" Margin="0" Spacing="5">
+                                                                <Frame IsClippedToBounds="True" BackgroundColor="Transparent" WidthRequest="150" HeightRequest="150" Padding="0" Margin="0" CornerRadius="5" HasShadow="False" IsVisible="{Binding IsImageVisible}">
+                                                                    <Image x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill"></Image>
+                                                                </Frame>
+                                                                <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" HorizontalOptions="StartAndExpand" Style="{StaticResource MessageLabelStyle}"></htmlLabel:HtmlLabel>
                                                                 <!--<Label x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" Style="{StaticResource LatoRegularDarkBlueLableStyle}" />-->
                                                             </StackLayout>
                                                         </Frame>
@@ -104,7 +107,10 @@
                     </StackLayout>
                 </AbsoluteLayout>
 
-                <htmlLabel:HtmlLabel Margin="10" x:Name="sample" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></htmlLabel:HtmlLabel>
+                <!--<Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="200" HeightRequest="200" Padding="0" CornerRadius="5" HasShadow="False">
+                    <Image x:Name="ImageMsg" Aspect="AspectFill"></Image>
+                </Frame>
+                <Controls:HtmlLabel Margin="10" x:Name="sample" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></Controls:HtmlLabel>-->
 
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
                     <Frame Margin="0" Style="{StaticResource MessageTextBoxFrameStyle}">
@@ -117,7 +123,7 @@
                                             <On Platform="Android">200</On>
                                         </OnPlatform>
                                     </Frame.HeightRequest>
-                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill"></Image>
+                                    <Image x:Name="ImageUrl" Source="{Binding ImageUrl}" Aspect="AspectFill"></Image>
                                 </Frame>
                                 <Frame IsClippedToBounds="True" Padding="0" BackgroundColor="#AFA9A9A9" HeightRequest="20" WidthRequest="20" CornerRadius="10" HorizontalOptions="End" VerticalOptions="Start" HasShadow="False" Margin="-20,-5,0,0">
                                     <StackLayout HeightRequest="15" Padding="0" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
@@ -131,7 +137,7 @@
                             <Frame IsVisible="{Binding isDocsVisible}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasShadow="False">
                                 <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="5" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="10">
                                     <Image Source="attach_file.png" BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Image>
-                                    <Label Text="{Binding FileName}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
+                                    <Label x:Name="FileName" Text="{Binding FileName}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
                                     <ImageButton Source="ic_close.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="CenterAndExpand" Command="{Binding CloseDocs_Command}"></ImageButton>
                                 </StackLayout>
                             </Frame>

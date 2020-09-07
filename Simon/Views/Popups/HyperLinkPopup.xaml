@@ -41,6 +41,7 @@
                     <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="10" Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
                         <Label Text="URL" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularBlackLableStyle}"/>
                         <Controls:CustomEntry x:Name="txtLink" Text="{Binding Link}" FontSize="{StaticResource FontSize14}" Placeholder="http://www.example.com" Keyboard="Text" Margin="0" Style="{StaticResource EntryWithBlacktxtStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                        <Label Text="{Binding LinkValidationText}" FontSize="{StaticResource FontSize12}" FontFamily="{StaticResource LatoRegular}" TextColor="Red" IsVisible="{Binding isValidationVisible}"/>
                     </StackLayout>
                     <Frame HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="12" Margin="0" CornerRadius="0" BackgroundColor="{StaticResource DarkBlueColor}" HasShadow="False">
                         <Label Text="INSERT" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="{StaticResource FontSize18}" FontFamily="{StaticResource LatoBold}" TextColor="White"></Label>

@@ -10,6 +10,7 @@ namespace Simon.Helpers
         public RuntimePermission()
         {
         }
+
         public async static Task<PermissionStatus> RuntimePermissionStatus(Permission permission)
         {
             try

@@ -41,6 +41,7 @@ namespace Simon
         public static string ApprovalSelectedTitle { get; set; } = string.Empty;
         public static string tempFile;
         public static string FileName;
+        public static string base64String;
 
         public static ImageSource FrameImage;
 
@@ -129,7 +130,7 @@ namespace Simon
                     foreach (var data in p.Data)
                     {
                         Debug.WriteLine($"{data.Key} : {data.Value}");
-                        //Settings.MessageCount++;
+                        Settings.MessageCount++;
 
                         if (data.Key.Equals("MsgCount"))
                         {
@@ -174,6 +175,7 @@ namespace Simon
                             }
                         });
                     }
+
                     LayoutService.Init();
                 }
                 catch (Exception ex)

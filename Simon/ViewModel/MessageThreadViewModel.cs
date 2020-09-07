@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
@@ -25,29 +26,6 @@ namespace Simon.ViewModel
 {
     public class MessageThreadViewModel : BaseViewModel
     {
-        string userId, threadId, name;
-        bool bookMarks;
-        public bool sendEnable;
-        public string SaveMessage;
-        int id;
-        string message;
-        JObject jObject = null;
-        private ObservableCollection<messages> _messageList = new ObservableCollection<messages>();
-        private ObservableCollection<messageUsers> _threadList = new ObservableCollection<messageUsers>();
-        private ObservableCollection<messages> AllItems = new ObservableCollection<messages>();
-        private string _plainContent;
-        public ICommand PersonDetailsCommand { get; set; }
-        public ICommand ReplayCommand { get; set; }
-        public ICommand LoadMoreCommand { get; private set; }
-        public ICommand ImageCommand { get; set; }
-
-        private bool _isLoadingInfinite = false;
-        private int _totalRecords = 0;
-        private bool _isLoadingInfiniteEnabled = false;
-        private int _CurrentPage = 1;
-        private int _LastPage = 0;
-        private bool _isTeamLoading = false;
-
         private bool _isImageVisible { get; set; } = false;
         public bool isImageVisible
         {
@@ -69,6 +47,28 @@ namespace Simon.ViewModel
                 OnPropertyChanged(nameof(isDocsVisible));
             }
         }
+
+        string userId, threadId, name;
+        bool bookMarks;
+        public bool sendEnable;
+        public string SaveMessage, base64String;
+        int id;
+        string message;
+        JObject jObject = null;
+        private ObservableCollection<messages> _messageList = new ObservableCollection<messages>();
+        private ObservableCollection<messageUsers> _threadList = new ObservableCollection<messageUsers>();
+        private ObservableCollection<messages> AllItems = new ObservableCollection<messages>();
+        public ICommand PersonDetailsCommand { get; set; }
+        public ICommand ReplayCommand { get; set; }
+        public ICommand LoadMoreCommand { get; private set; }
+        public ICommand ImageCommand { get; set; }
+
+        private bool _isLoadingInfinite = false;
+        private int _totalRecords = 0;
+        private bool _isLoadingInfiniteEnabled = false;
+        private int _CurrentPage = 1;
+        private int _LastPage = 0;
+        private bool _isTeamLoading = false;
 
         private ObservableCollection<messageUsers> _messageUserList = new ObservableCollection<messageUsers>();
         public ObservableCollection<messageUsers> messageUserList
@@ -243,6 +243,24 @@ namespace Simon.ViewModel
             set { SetProperty(ref _FileName, value); }
         }
 
+        public string _LinkValidationText;
+        public string LinkValidationText
+        {
+            get { return _LinkValidationText; }
+            set { SetProperty(ref _LinkValidationText, value); }
+        }
+
+        private bool _isValidationVisible { get; set; } = false;
+        public bool isValidationVisible
+        {
+            get { return _isValidationVisible; }
+            set
+            {
+                _isValidationVisible = value;
+                OnPropertyChanged(nameof(isValidationVisible));
+            }
+        }
+
         HttpClient httpClient;
 
         public ICommand SendMessageCommand { get; set; }
@@ -365,6 +383,10 @@ namespace Simon.ViewModel
                         Debug.WriteLine(content1);
                         TypedMessage = null;
                         Settings.TypedMessage = string.Empty;
+                        App.FrameImage = string.Empty;
+                        App.FileName = string.Empty;
+                        isDocsVisible = false;
+                        isImageVisible = false;
                         await FetchThreadUserData();
 
                         //await SendThreadUsersAsync();
@@ -420,16 +442,6 @@ namespace Simon.ViewModel
         public void PersonDetailsCommandExecute()
         {
 
-        }
-
-        public string plainContent
-        {
-            get { return _plainContent; }
-            set
-            {
-                _plainContent = value;
-                OnPropertyChanged(nameof(plainContent));
-            }
         }
 
         public ObservableCollection<messages> MessageList
@@ -528,6 +540,29 @@ namespace Simon.ViewModel
                                     user.plainContent = value;
                                 }
 
+                                if (user.plainContent.Contains("data:image"))
+                                {
+                                    var image = user.plainContent.Split(',')[1];
+                                    var image1 = image.Split('"')[0];
+                                    Debug.Write(image1);
+
+                                    string[] delim = { "alt=\"\">" };
+                                    var stringMsg = image.Split(delim, StringSplitOptions.None);
+
+                                    var Base64Stream = Convert.FromBase64String(image1);
+                                    user.MsgImageUrl = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
+                                    user.IsImageVisible = true;
+
+                                    if (!string.IsNullOrEmpty(stringMsg[1]))
+                                    {
+                                        user.plainContent = stringMsg[1];
+                                    }
+                                    else
+                                    {
+                                        user.plainContent = string.Empty;
+                                    }
+                                }
+                                
                                 string authorIdStr = user.authorId;
                                 if (user.messageUsers != null)
                                 {
@@ -635,7 +670,7 @@ namespace Simon.ViewModel
                     }
                     if (_isTeamLoading) { IsLoadingInfinite = false; return; }
                     _CurrentPage++;
-                    
+
                     await LoadData(_CurrentPage);
                 }
                 catch (Exception ex)
@@ -804,6 +839,7 @@ namespace Simon.ViewModel
                 await ClosePopup();
                 HyperLinkPopup HyperLinkPopupview = new HyperLinkPopup();
                 HyperLinkPopupview.BindingContext = this;
+                isValidationVisible = false;
                 await ShowPopup(HyperLinkPopupview);
             }
             catch (Exception ex)
@@ -829,6 +865,14 @@ namespace Simon.ViewModel
                         imageUrlfile = file;
                         ImageUrl = ImageSource.FromFile(file);
                         App.FrameImage = ImageUrl;
+
+                        byte[] b = File.ReadAllBytes(file);
+                        base64String = Convert.ToBase64String(b);
+
+                        if (!string.IsNullOrEmpty(base64String))
+                        {
+                            App.base64String = "<img src=\"data:image/png;base64," + base64String + "\" alt=\"\">";
+                        }
                     }
                 });
             }
@@ -843,9 +887,28 @@ namespace Simon.ViewModel
         {
             try
             {
-                TypedMessage = Link;
-                Link = null;
-                await ClosePopup();
+                string pattern = @"^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$";
+
+                if (!string.IsNullOrEmpty(Link))
+                {
+                    var m = Regex.Match(Link, pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled, TimeSpan.FromSeconds(1));
+                    if (m.Success)
+                    {
+                        TypedMessage = Link;
+                        Link = null;
+                        await ClosePopup();
+                    }
+                    else
+                    {
+                        LinkValidationText = "Invalid Link";
+                        isValidationVisible = true;
+                    }
+                }
+                else
+                {
+                    LinkValidationText = "Link field is required";
+                    isValidationVisible = true;
+                }
             }
             catch (Exception ex)
             {
@@ -857,6 +920,7 @@ namespace Simon.ViewModel
         private void CloseFrame_click()
         {
             isImageVisible = false;
+            App.base64String = null;
             App.FrameImage = null;
         }
 

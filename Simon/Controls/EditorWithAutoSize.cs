@@ -1,4 +1,3 @@
-using System;
 using Xamarin.Forms;
 
 namespace Simon.Controls
@@ -7,9 +6,9 @@ namespace Simon.Controls
     {
         public EditorWithAutoSize()
         {
-            this.TextChanged += (sender, e) =>
+            TextChanged += (sender, e) =>
             {
-                this.InvalidateMeasure();
+                InvalidateMeasure();
             };
         }
     }

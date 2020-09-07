@@ -54,6 +54,8 @@ namespace Simon.Views
                 ViewModel = new MessageViewModel();
                 this.BindingContext = ViewModel;
                 Settings.TypedMessage = null;
+                App.FileName = null;
+                App.FrameImage = null;
 
                 if (App.IsFirstTime)
                 {

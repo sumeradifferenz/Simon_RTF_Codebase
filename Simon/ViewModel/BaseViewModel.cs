@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -530,6 +531,47 @@ namespace Simon.ViewModel
             else if (status != PermissionStatus.Unknown)
             {
                 await App.Current.MainPage.DisplayAlert(Constants.WarningText, Constants.StoragePermissionDeniedMsg.ToUpper(), Constants.PermissionGrantedText, Constants.OkText);
+            }
+        }
+
+        public void ConvertIntoByte(string image)
+        {
+            try
+            {
+                byte[] imageData = File.ReadAllBytes(image);
+
+                //string url = "";
+
+                //url = Constants.BaseServiceURL + Constants.AddExericseImageURL;
+
+                //create new HttpClient and MultipartFormDataContent and add our file
+                string boundary = "---8d0f01e6b3b5dafaaadaad";
+                HttpClient client = new HttpClient();
+                client.Timeout = new TimeSpan(0, 10, 0);
+                MultipartFormDataContent multipartContent = new MultipartFormDataContent(boundary);
+                ByteArrayContent baContent = new ByteArrayContent(imageData);
+
+                baContent.Headers.ContentType = MediaTypeHeaderValue.Parse("application/octet-stream");
+                baContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "Upload",
+                    FileName = Path.GetFileName(image)
+                };
+
+                multipartContent.Add(baContent);
+
+                //upload MultipartFormDataContent content async and store response in response var
+                //var response = await client.PostAsync(url + "/" + ExerciseId, multipartContent);
+
+                //read response result as a string async into json var
+                //var result = response.Content.ReadAsStringAsync().Result;
+                //Debug.WriteLine("\nResult : " + result);
+                //var resultobject = JsonConvert.DeserializeObject<AddExericseImageResponseModel>(result);
+                //return resultobject;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
             }
         }
     }

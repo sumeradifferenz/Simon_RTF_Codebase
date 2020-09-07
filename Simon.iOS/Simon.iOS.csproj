@@ -147,7 +147,7 @@
       <Version>6.7.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.8.0.1269</Version>
+      <Version>4.8.0.1364</Version>
     </PackageReference>
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
       <Version>2.0.11</Version>
@@ -165,10 +165,10 @@
       <Version>1.4.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.PancakeView">
-      <Version>1.4.2</Version>
+      <Version>2.1.0.714</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor">
-      <Version>18.2.0.55</Version>
+      <Version>18.2.0.56</Version>
     </PackageReference>
     <PackageReference Include="Plugin.PushNotification">
       <Version>3.3.3</Version>

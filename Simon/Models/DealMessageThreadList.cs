@@ -38,6 +38,19 @@ namespace Simon.Models
         public bool IsSenderBookMarkVisible { get; set; } = false;
         public bool IsSenderProfileVisible { get; set; } = false;
         public bool IsProfileVisible { get; set; } = false;
+        public bool IsImageVisible { get; set; } = false;
+        public Style LastMsgStyle { get; set; }
+
+        public ImageSource _MsgImageUrl { get; set; }
+        public ImageSource MsgImageUrl
+        {
+            get { return _MsgImageUrl; }
+            set
+            {
+                _MsgImageUrl = value;
+                OnPropertyChanged("MsgImageUrl");
+            }
+        }
 
         public string _BookMarkImg { get; set; } = "bookmark.png";
         public string BookMarkImg

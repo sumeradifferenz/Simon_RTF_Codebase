@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Simon" xmlns:SubView="clr-namespace:Simon.Views.SubViews"
              xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon"
              xmlns:Controls="clr-namespace:Simon.Controls;assembly=Simon"
+             xmlns:htmlLabel="clr-namespace:LabelHtml.Forms.Plugin.Abstractions;assembly=HtmlLabel.Forms.Plugin"
              xmlns:Converters="clr-namespace:Simon.Helpers"
              x:Class="Simon.App">
     <Application.Resources>
@@ -256,6 +257,21 @@
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="Padding" Value="{x:Static Services:LayoutService.MarginPadding10_00_00_00}"/>
                 <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style x:Key="ImageLabelStyle" TargetType="htmlLabel:HtmlLabel">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="WidthRequest" Value="200"></Setter>
+                <Setter Property="HeightRequest" Value="200"></Setter>
+                <Setter Property="Margin" Value="{x:Static Services:LayoutService.MarginPadding10}"/>
+            </Style>
+
+            <Style x:Key="MessageLabelStyle" TargetType="htmlLabel:HtmlLabel">
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}"/>
+                <Setter Property="TextColor" Value="{StaticResource DarkBlueColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
+                <Setter Property="VerticalTextAlignment" Value="Center"></Setter>
             </Style>
 
             <!--Frame Style Start-->

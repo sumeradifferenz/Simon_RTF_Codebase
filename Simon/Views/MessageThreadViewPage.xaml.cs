@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
@@ -12,7 +14,7 @@ namespace Simon.Views
     public partial class MessageThreadViewPage : ContentPage
     {
         private MessageThreadViewModel vm = null;
-        string URL;
+        string URL, htmlMessage;
 
         public MessageThreadViewPage()
         {
@@ -78,6 +80,16 @@ namespace Simon.Views
 
             if (App.IsFromAddParticipantPage == true)
             {
+                if (App.FrameImage != null)
+                {
+                    vm.ImageUrl = App.FrameImage;
+                    vm.isImageVisible = true;
+                }
+                if (App.FileName != null)
+                {
+                    vm.FileName = App.FileName;
+                    vm.isDocsVisible = true;
+                }
                 txtMessage.Text = Settings.TypedMessage;
             }
             else
@@ -170,44 +182,75 @@ namespace Simon.Views
                 string text = Message.Replace("<strong>​</strong>", "");
                 Message = text;
             }
-            if (txtMessage.Text.Contains("\n"))
+            if (Message.Contains("\n"))
             {
                 string text = Message.Replace("\n", "");
                 Message = text;
             }
-            if (txtMessage.Text.Contains("\n \n"))
+            if (Message.Contains("\n \n"))
             {
                 string text = Message.Replace("\n \n", "");
                 Message = text;
             }
-            if (txtMessage.Text.Contains("> <"))
+            if (Message.Contains("> <"))
             {
                 string text = Message.Replace("> <", "><");
                 Message = text;
             }
-            if (txtMessage.Text.Contains("https://") || txtMessage.Text.Contains("http://"))
+            if (Message.Contains("https://") || Message.Contains("http://"))
             {
-                Message = "<p><a class=\"e-rte-anchor\" href=\"" + txtMessage.Text + "\" title=\"" + txtMessage.Text + "\">" + txtMessage.Text + "</a></p>";
+                Message = "<p><a class=\"e-rte-anchor\" href=\"" + Message + "\" title=\"" + Message + "\">" + Message + "</a></p>";
             }
             return Message;
         }
 
         async void SendMessageTappedCommand(object sender, EventArgs e)
         {
-            string htmlstring = IgnoreVoidElementsInHTML(txtMessage.HtmlText);
-            string htmlMessage = ValidationMessage(htmlstring);
-            sample.Text = htmlMessage;
-            Settings.TypedMessage = htmlMessage;
+            this.BindingContext = new MessageThreadViewModel();
+            vm = this.BindingContext as MessageThreadViewModel;
+            
+            if (!string.IsNullOrEmpty(App.base64String))
+            {
+                if (!string.IsNullOrEmpty(txtMessage.HtmlText))
+                {
+                    string htmlstring = IgnoreVoidElementsInHTML(txtMessage.HtmlText);
+                    htmlMessage = ValidationMessage(htmlstring);
+                    htmlMessage = App.base64String + htmlMessage;
+                }
+                else
+                {
+                    htmlMessage = App.base64String;
+                }
 
+                //var image = htmlMessage.Split(',')[1];
+                //var image1 = image.Split('"')[0];
+
+                //string[] delim = { "alt=\"\">" };
+                //var stringMsg = image.Split(delim, StringSplitOptions.None);
+
+                //var Base64Stream = Convert.FromBase64String(image1);
+                //ImageMsg.Source = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
+                //sample.Text = stringMsg[1];
+            }
+            else
+            {
+                string htmlstring = IgnoreVoidElementsInHTML(txtMessage.HtmlText);
+                htmlMessage = ValidationMessage(htmlstring);
+                //sample.Text = htmlMessage;
+                Settings.TypedMessage = htmlMessage;
+            }
+            
             if (vm.sendEnable)
                 return;
 
             vm.sendEnable = true;
 
-            //await vm.SendMessage(htmlMessage);
+            await vm.SendMessage(htmlMessage);
 
             txtMessage.Text = string.Empty;
             vm.sendEnable = false;
+            App.FrameImage = null;
+            App.FileName = null;
         }
     }
 }

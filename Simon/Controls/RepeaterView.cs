@@ -1,10 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms;
-using System.Diagnostics;
 
 namespace Simon.Controls
 {
@@ -135,8 +132,8 @@ namespace Simon.Controls
 
                     var grd = new Grid()
                     {
-                        ColumnSpacing = this.Spacing,
-                        RowSpacing = this.Spacing,
+                        ColumnSpacing = Spacing,
+                        RowSpacing = Spacing,
                         Padding = 0
                     };
 
@@ -205,8 +202,7 @@ namespace Simon.Controls
         {
             try
             {
-                var selector = template as DataTemplateSelector;
-                if (selector != null)
+                if (template is DataTemplateSelector selector)
                 {
                     template = selector.SelectTemplate(item, container);
                 }

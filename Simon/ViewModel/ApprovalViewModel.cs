@@ -22,13 +22,11 @@ namespace Simon.ViewModel
     {
         string userId;
         private ObservableCollection<ApprovalMainModel> _dataItems { get; set; }
-        private ObservableCollection<ApprovalMainModel> sortItems { get; set; }
         private ObservableCollection<ApprovalMainModel> tempContainerList = new ObservableCollection<ApprovalMainModel>();
         public ICommand SortingCommand { get; set; }
         public ICommand SearchCommand { get; set; }
         public ICommand SortCommand { get; set; }
         public NavigationHelper _helper;
-        bool IsSortApplied;
 
         public ApprovalViewModel()
         {

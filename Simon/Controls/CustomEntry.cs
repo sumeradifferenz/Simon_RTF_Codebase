@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Windows.Input;
 using Simon.Helpers;
 using Xamarin.Forms;
@@ -36,16 +35,16 @@ namespace Simon.Controls
         /// <summary>
         /// The MaxLength property
         /// </summary>
-        public static readonly BindableProperty MaxLengthProperty =
+        public new static readonly BindableProperty MaxLengthProperty =
             BindableProperty.Create("MaxLength", typeof(int), typeof(CustomEntry), int.MaxValue);
 
         /// <summary>
         /// Gets or sets the MaxLength
         /// </summary>
-        public int MaxLength
+        public new int MaxLength
         {
-            get { return (int)this.GetValue(MaxLengthProperty); }
-            set { this.SetValue(MaxLengthProperty, value); }
+            get { return (int)GetValue(MaxLengthProperty); }
+            set { SetValue(MaxLengthProperty, value); }
         }
 
         /// <summary>
@@ -158,8 +157,8 @@ namespace Simon.Controls
             set { SetValue(HasAutoCapitalizationProperty, value); }
         }
 
-        public static readonly BindableProperty ReturnTypeProperty = BindableProperty.Create(propertyName: "ReturnType", returnType: typeof(KeyboardReturnType), declaringType: typeof(CustomEntry), defaultValue: KeyboardReturnType.Default);
-        public KeyboardReturnType ReturnType
+        public new static readonly BindableProperty ReturnTypeProperty = BindableProperty.Create(propertyName: "ReturnType", returnType: typeof(KeyboardReturnType), declaringType: typeof(CustomEntry), defaultValue: KeyboardReturnType.Default);
+        public new KeyboardReturnType ReturnType
         {
             get { return (KeyboardReturnType)GetValue(ReturnTypeProperty); }
             set { SetValue(ReturnTypeProperty, value); }
