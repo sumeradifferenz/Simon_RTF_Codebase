@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using Newtonsoft.Json;
@@ -56,6 +57,8 @@ namespace Simon.Views
                 Settings.TypedMessage = null;
                 App.FileName = null;
                 App.FrameImage = null;
+
+                
 
                 if (App.IsFirstTime)
                 {

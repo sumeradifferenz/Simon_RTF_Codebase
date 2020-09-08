@@ -335,6 +335,8 @@ namespace Simon.ViewModel
             }
         }
 
+        
+
         public async void ImagePicker(Action<string, MediaFile> result)
         {
             try

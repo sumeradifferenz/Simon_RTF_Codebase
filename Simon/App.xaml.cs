@@ -87,6 +87,8 @@ namespace Simon
         protected override void OnStart()
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
+            Debug.WriteLine($"Device Token: {CrossFirebasePushNotification.Current.Token}");
+
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {
                 tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
@@ -130,11 +132,10 @@ namespace Simon
                     foreach (var data in p.Data)
                     {
                         Debug.WriteLine($"{data.Key} : {data.Value}");
-                        Settings.MessageCount++;
 
                         if (data.Key.Equals("MsgCount"))
                         {
-                            Settings.MessageCount = Convert.ToInt32(data.Value);
+                            MessagingCenter.Send(new MessageViewModel(), "OnNotificationReceived", Convert.ToInt32(data.Value));
                         }
 
                         if (selectedPageId == 4)
@@ -154,28 +155,7 @@ namespace Simon
                             }
                             return true;
                         });
-
-                        Device.BeginInvokeOnMainThread(() =>
-                        {
-                            IsFirstTime = true;
-                            switch (selectedPageId)
-                            {
-                                case 0:
-                                    Current.MainPage = new NavigationPage(new LandingPage()) { BarTextColor = Color.Black };
-                                    break;
-                                case 1:
-                                    Current.MainPage = new NavigationPage(new DealsPage()) { BarTextColor = Color.Black };
-                                    break;
-                                case 2:
-                                    Current.MainPage = new NavigationPage(new MessagesPage()) { BarTextColor = Color.Black };
-                                    break;
-                                case 3:
-                                    Current.MainPage = new NavigationPage(new AssentMainPage()) { BarTextColor = Color.Black };
-                                    break;
-                            }
-                        });
                     }
-
                     LayoutService.Init();
                 }
                 catch (Exception ex)

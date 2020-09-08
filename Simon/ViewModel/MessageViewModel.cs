@@ -60,6 +60,22 @@ namespace Simon.ViewModel
             BookMarkCommand = new Command(() => BookMarkCommandExecute());
             SortCommand = new Command(() => SortCommandCommandExecute());
             LoadMoreCommand = new Command(async () => { await LoadMore_click(); });
+
+            MessagingCenter.Subscribe<MessageViewModel, int>(this, "OnNotificationReceived", (sender, args) =>
+            {
+                if (Settings.MessageCount == args)
+                {
+                    return;
+                }
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    var msgFooter = this.FooterItems.FirstOrDefault(x => x.Id == 2);
+                    msgFooter.MsgCount = args;
+                    Settings.MessageCount = args;
+                });
+
+            });
         }
 
         /// <summary>
