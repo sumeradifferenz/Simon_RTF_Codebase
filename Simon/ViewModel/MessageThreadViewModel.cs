@@ -383,8 +383,8 @@ namespace Simon.ViewModel
                         Debug.WriteLine(content1);
                         TypedMessage = null;
                         Settings.TypedMessage = string.Empty;
-                        App.FrameImage = string.Empty;
-                        App.FileName = string.Empty;
+                        App.FrameImage = null;
+                        App.FileName = null;
                         isDocsVisible = false;
                         isImageVisible = false;
                         await FetchThreadUserData();

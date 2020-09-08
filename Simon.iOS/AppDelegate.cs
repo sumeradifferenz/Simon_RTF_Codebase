@@ -45,7 +45,6 @@ namespace Simon.iOS
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();
 
-            var result = base.FinishedLaunching(app, options);
             app.KeyWindow.TintColor = UIColor.Gray;
 
             // Color of the tabbar background:
@@ -67,7 +66,7 @@ namespace Simon.iOS
                 },
                 UIControlState.Normal);
 
-            return result;
+            return base.FinishedLaunching(app, options);
         }
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)

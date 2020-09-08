@@ -249,8 +249,6 @@ namespace Simon.Views
 
             txtMessage.Text = string.Empty;
             vm.sendEnable = false;
-            App.FrameImage = null;
-            App.FileName = null;
         }
     }
 }
