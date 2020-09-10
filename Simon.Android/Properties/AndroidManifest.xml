@@ -5,6 +5,7 @@
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<application android:label="Simon.Android" android:usesCleartextTraffic="true" android:name="android.support.multidex.MultiDexApplication">
 		<!-- Callback from authentication screen -->
 		<activity android:name="net.openid.appauth.RedirectUriReceiverActivity">

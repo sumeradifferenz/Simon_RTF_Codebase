@@ -87,7 +87,7 @@ namespace Simon
         protected override void OnStart()
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
-            Debug.WriteLine($"Device Token: {CrossFirebasePushNotification.Current.Token}");
+            //Debug.WriteLine($"Device Token: {CrossFirebasePushNotification.Current.Token}");
 
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {

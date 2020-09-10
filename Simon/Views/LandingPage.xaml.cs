@@ -36,18 +36,20 @@ namespace Simon.Views
             }
 
             txtName.Text = Settings.LoggedInUser.name;
-            //_headerList.Add(new LandingModel { Date = "Date", Borrower = "Borrower", Amount = "Amount" });
-            //headerList.ItemsSource = _headerList;
            
             if (NetworkCheck.IsInternet())
             {
                 await ViewModel.FetchClosingData();
-                //await ViewModel.FetchDecisionDueData();
             }
             else
             {
                 await DisplayAlert("Simon", "No network is available.", "OK");
             }
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
         }
 
         private void onDealBtnClicked(object sender, EventArgs e)

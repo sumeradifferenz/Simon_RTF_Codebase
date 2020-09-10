@@ -74,12 +74,6 @@ namespace Simon.Views
             ViewModel = new ApprovalViewModel();
             this.BindingContext = ViewModel;
 
-            if (App.IsFirstTime)
-            {
-                App.IsFirstTime = false;
-                ViewModel.FooterNavigation(SessionService.BaseFooterItems[3]);
-            }
-
             if (NetworkCheck.IsInternet())
             {
                 await ViewModel.GetApprovalData();

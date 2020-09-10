@@ -58,14 +58,6 @@ namespace Simon.Views
                 App.FileName = null;
                 App.FrameImage = null;
 
-                
-
-                if (App.IsFirstTime)
-                {
-                    App.IsFirstTime = false;
-                    ViewModel.FooterNavigation(SessionService.BaseFooterItems[2]);
-                }
-
                 if (Application.Current.Properties.ContainsKey("USERID"))
                 {
                     userId = Convert.ToString(Application.Current.Properties["USERID"]);

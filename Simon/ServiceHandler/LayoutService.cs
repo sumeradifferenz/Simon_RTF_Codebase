@@ -13,18 +13,6 @@ namespace Simon.ServiceHandler
     {
         public static void Init()
         {
-            //if (Device.RuntimePlatform == Device.iOS)
-            //{
-            //    if (DeviceInfo.Version < Version.Parse("11.0"))
-            //    {
-            //        App.Current.Resources["SafeAreaPadding"] = new Thickness(0, 20, 0, 0);
-            //    }
-            //    else
-            //    {
-            //        App.Current.Resources["SafeAreaPadding"] = new Thickness(0, 0, 0, 0);
-            //    }
-            //}
-
             SessionService.BaseFooterItems = new ObservableCollection<FooterModel>();
 
             SessionService.BaseFooterItems.Add(new FooterModel()

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -316,6 +317,39 @@ namespace Simon.ViewModel
             }
         }
 
+        public ImageSource _displayImage { get; set; }
+        public ImageSource displayImage
+        {
+            get { return _displayImage; }
+            set
+            {
+                _displayImage = value;
+                OnPropertyChanged("displayImage");
+            }
+        }
+
+        public ImageSource _MsgImageUrl { get; set; }
+        public ImageSource MsgImageUrl
+        {
+            get { return _MsgImageUrl; }
+            set
+            {
+                _MsgImageUrl = value;
+                OnPropertyChanged("MsgImageUrl");
+            }
+        }
+
+        private bool _IsImageVisible { get; set; } = false;
+        public bool IsImageVisible
+        {
+            get { return _IsImageVisible; }
+            set
+            {
+                _IsImageVisible = value;
+                OnPropertyChanged(nameof(IsImageVisible));
+            }
+        }
+
         //public string plusImg = "plus.png";
 
         //public Image _plusImage { get; set; } = plusImg.so;
@@ -609,8 +643,35 @@ namespace Simon.ViewModel
                         {
                             sendMessageVisible = true;
                             senderName = obj.lastPostBy;
-                            SubjectDec = obj.lastMessage;
                             sendingDate = DateTime.Parse(obj.lastPostDate, new CultureInfo("en-US", true));
+
+                            if (obj.lastMessage.Contains("data:image"))
+                            {
+                                var image = obj.lastMessage.Split(',')[1];
+                                var image1 = image.Split('"')[0];
+
+                                string[] delim = { "alt=\"\">" };
+                                var stringMsg = image.Split(delim, StringSplitOptions.None);
+
+                                var Base64Stream = Convert.FromBase64String(image1);
+                                MsgImageUrl = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
+                                displayImage = MsgImageUrl;
+                                IsImageVisible = true;
+
+                                if (!string.IsNullOrEmpty(stringMsg[1]))
+                                {
+                                    SubjectDec = stringMsg[1];
+                                }
+                                else
+                                {
+                                    SubjectDec = string.Empty;
+                                }
+                            }
+                            else
+                            {
+                                IsImageVisible = false;
+                                SubjectDec = obj.lastMessage;
+                            }
                         }
 
                         needsExceptionActions = "false";
@@ -727,7 +788,7 @@ namespace Simon.ViewModel
         {
             ShowImagePopUp ImagePopupview = new ShowImagePopUp();
             ImagePopupview.BindingContext = this;
-            await ShowPopup(ImagePopupview);
+            await ShowPopup(ImagePopupview, true);
         }
 
         public ICommand ClosePopup_Command { get { return new Command(ClosePopup_click); } }

@@ -204,7 +204,5 @@ namespace Simon.Models
         public string primaryOfficer { get; set; }
         public List<reqQuestionDefinitions> reqQuestionDefinitions { get; set; }
     }
-
-
 }
 

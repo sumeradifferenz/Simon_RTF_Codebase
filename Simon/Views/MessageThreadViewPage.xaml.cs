@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
@@ -76,7 +74,6 @@ namespace Simon.Views
             this.BindingContext = new MessageThreadViewModel();
 
             vm = this.BindingContext as MessageThreadViewModel;
-            App.selectedPageId = 4;
 
             if (App.IsFromAddParticipantPage == true)
             {
@@ -113,7 +110,6 @@ namespace Simon.Views
 
         protected override void OnDisappearing()
         {
-            App.IsFirstTime = true;
             Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Pan);
         }
 

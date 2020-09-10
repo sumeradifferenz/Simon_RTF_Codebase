@@ -50,7 +50,6 @@ namespace Simon.Views
             base.OnAppearing();
 
             App.IsFromAddParticipantPage = true;
-            App.selectedPageId = 4;
 
             thisVm = new MessageReplayViewModel();
             this.BindingContext = thisVm;

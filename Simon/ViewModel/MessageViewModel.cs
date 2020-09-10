@@ -76,6 +76,22 @@ namespace Simon.ViewModel
                 });
 
             });
+
+            MessagingCenter.Subscribe<MessageViewModel, int>(this, "OnNotificationOpen", (sender, args) =>
+            {
+                if (Settings.MessageCount == args)
+                {
+                    return;
+                }
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    var msgFooter = this.FooterItems.FirstOrDefault(x => x.Id == 2);
+                    msgFooter.MsgCount = args;
+                    Settings.MessageCount = args;
+                });
+
+            });
         }
 
         /// <summary>
@@ -89,6 +105,7 @@ namespace Simon.ViewModel
                 if (App.buttonClick == 0)
                 {
                     App.buttonClick++;
+
                     int threadIdNo = dealMessage.threadId;
                     string strPartyName = dealMessage.partyName;
                     string strTopic = dealMessage.topic;

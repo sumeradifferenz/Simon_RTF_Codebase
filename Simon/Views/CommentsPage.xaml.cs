@@ -57,7 +57,6 @@ namespace Simon.Views
         {
             base.OnAppearing();
 
-            App.selectedPageId = 4;
             vm = new CommentsPageViewModel();
             this.BindingContext = vm;
             if (NetworkCheck.IsInternet())
@@ -332,7 +331,6 @@ namespace Simon.Views
 
         protected override void OnDisappearing()
         {
-            App.IsFirstTime = true;
             base.OnDisappearing();
         }
     }

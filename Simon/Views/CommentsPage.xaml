@@ -125,7 +125,10 @@
                                         <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" Spacing="0" Padding="0">
                                             <Label x:Name="SubDate" Text="{Binding sendingDate, StringFormat='{0:MM/dd/yyyy, h:mm tt}'}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"/>
                                         </StackLayout>
-                                        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,5,0,0" Spacing="0" Padding="0">
+                                        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,5,0,0" Spacing="5" Padding="0">
+                                            <Frame IsClippedToBounds="True" BackgroundColor="Transparent" WidthRequest="150" HeightRequest="150" Padding="0" Margin="0" CornerRadius="5" HasShadow="False" IsVisible="{Binding IsImageVisible}">
+                                                <ImageButton x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill" Command="{Binding ImageCommand}"></ImageButton>
+                                            </Frame>
                                             <htmlLabel:HtmlLabel x:Name="SubjectDesc" Text="{Binding SubjectDec}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldDarkGrayLableStyle}"/>
                                         </StackLayout>
                                     </Grid>

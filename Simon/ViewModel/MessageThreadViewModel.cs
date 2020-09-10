@@ -544,7 +544,7 @@ namespace Simon.ViewModel
                                 {
                                     var image = user.plainContent.Split(',')[1];
                                     var image1 = image.Split('"')[0];
-                                    Debug.Write(image1);
+                                    //Debug.Write(image1);
 
                                     string[] delim = { "alt=\"\">" };
                                     var stringMsg = image.Split(delim, StringSplitOptions.None);

@@ -277,7 +277,6 @@ namespace Simon.ViewModel
                 CrossSettings.Current.Remove(Settings.ApprovePageSelectedTabKey);
 
                 SessionService.SelectedFooterItem = selectedItem;
-                App.selectedPageId = selectedItem.Id;
                 SessionService.BaseFooterItems.All((arg) =>
                 {
                     if (arg.Id == selectedItem.Id)
@@ -334,8 +333,6 @@ namespace Simon.ViewModel
                 SetProperty(ref _footerItems, value);
             }
         }
-
-        
 
         public async void ImagePicker(Action<string, MediaFile> result)
         {

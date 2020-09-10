@@ -1,42 +1,35 @@
 {
   "project_info": {
-    "project_number": "333618605919",
-    "firebase_url": "https://simon-836d2.firebaseio.com",
-    "project_id": "simon-836d2",
-    "storage_bucket": "simon-836d2.appspot.com"
+    "project_number": "810031998418",
+    "firebase_url": "https://simon-370d5.firebaseio.com",
+    "project_id": "simon-370d5",
+    "storage_bucket": "simon-370d5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:333618605919:android:44cea08b6142a4b8d490ea",
+        "mobilesdk_app_id": "1:810031998418:android:6abc1d17c85f779d1b140b",
         "android_client_info": {
           "package_name": "com.anarsolutions.simon"
         }
       },
       "oauth_client": [
         {
-          "client_id": "333618605919-ra3o5a14v0g6q3a52auaj4p90idqqglq.apps.googleusercontent.com",
+          "client_id": "810031998418-idk2rdhl2gu72g7jc0rfr1bl497le0s7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA8O4YJNd6ElylH-pLhD7ApAjTp4i7obM8"
+          "current_key": "AIzaSyAQcK3TdDDaDGGHdJAm339EVKexkWf53cU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "333618605919-ra3o5a14v0g6q3a52auaj4p90idqqglq.apps.googleusercontent.com",
+              "client_id": "810031998418-idk2rdhl2gu72g7jc0rfr1bl497le0s7.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "333618605919-5b9m0hbb62ttsis6jq5rtprqp46804u3.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.developer.simon"
-              }
             }
           ]
         }

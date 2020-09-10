@@ -40,11 +40,12 @@ namespace Simon.iOS
             LoadApplication(new App());
 
             FirebasePushNotificationManager.Initialize(options, true);
-            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert;
+            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert | UserNotifications.UNNotificationPresentationOptions.Badge | UserNotifications.UNNotificationPresentationOptions.Sound;
 
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();
 
+            var result = base.FinishedLaunching(app, options);
             app.KeyWindow.TintColor = UIColor.Gray;
 
             // Color of the tabbar background:
@@ -66,7 +67,7 @@ namespace Simon.iOS
                 },
                 UIControlState.Normal);
 
-            return base.FinishedLaunching(app, options);
+            return result;
         }
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
@@ -88,6 +89,10 @@ namespace Simon.iOS
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
         {
+            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
+            File.AppendAllText(App.tempFile, "\n\nFailedToRegisterForRemoteNotifications call");
+            Debug.WriteLine("File Name====" + App.tempFile);
+
             FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
         }
         

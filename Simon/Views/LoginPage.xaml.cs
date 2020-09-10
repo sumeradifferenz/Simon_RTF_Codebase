@@ -23,7 +23,6 @@ namespace Simon.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            App.selectedPageId = 4;
             if (App.SelectedUserData!=null)
             {
                 txtusername.Text = App.SelectedUserData.name;

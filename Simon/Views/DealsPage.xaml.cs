@@ -77,12 +77,6 @@ namespace Simon.Views
             vm = new DealViewModel();
             this.BindingContext = vm;
 
-            if (App.IsFirstTime)
-            {
-                App.IsFirstTime = false;
-                vm.FooterNavigation(SessionService.BaseFooterItems[1]);
-            }
-
             if (NetworkCheck.IsInternet())
             {
                 _ = vm.FetchDealData();
