@@ -396,6 +396,11 @@ namespace Simon.ViewModel
                                     string value = user.lastMessage.Replace("<p><br/></p>", null);
                                     user.lastMessage = value;
                                 }
+                                if (user.lastMessage.Contains("<li>"))
+                                {
+                                    string value = user.lastMessage.Replace("?", "");
+                                    user.lastMessage = value;
+                                }
                                 user.ImageVisible = false;
                                 user.MessageVisible = true;
                             }

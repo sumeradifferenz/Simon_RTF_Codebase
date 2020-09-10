@@ -534,9 +534,10 @@ namespace Simon.ViewModel
                                     string value = user.plainContent.Replace("<p><br/></p>", null);
                                     user.plainContent = value;
                                 }
-                                if (user.plainContent.Contains(">?<"))
+
+                                if (user.plainContent.Contains("<li>"))
                                 {
-                                    string value = user.plainContent.Replace(">?<", "><");
+                                    string value = user.plainContent.Replace("?", "");
                                     user.plainContent = value;
                                 }
 
