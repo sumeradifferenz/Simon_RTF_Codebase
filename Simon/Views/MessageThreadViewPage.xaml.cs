@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
@@ -195,7 +196,8 @@ namespace Simon.Views
             }
             if (Message.Contains("https://") || Message.Contains("http://"))
             {
-                Message = "<p><a class=\"e-rte-anchor\" href=\"" + Message + "\" title=\"" + Message + "\">" + Message + "</a></p>";
+                string message = Regex.Replace(Message, "<.*?>", string.Empty);
+                Message = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
             }
             return Message;
         }

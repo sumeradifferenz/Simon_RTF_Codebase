@@ -350,11 +350,11 @@ namespace Simon.ViewModel
                 else
                 {
                     var message = !string.IsNullOrEmpty(Message.Trim()) ? Message.Trim() : string.Empty;
-                    if (message.Contains("https://") || message.Contains("http://"))
-                    {
-                        TypedMessage = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
-                        message = TypedMessage;
-                    }
+                    //if (message.Contains("https://") || message.Contains("http://"))
+                    //{
+                    //    TypedMessage = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
+                    //    message = TypedMessage;
+                    //}
                     var values = new Dictionary<object, object>
                     {
                         {"author",userId },
