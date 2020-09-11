@@ -5,14 +5,12 @@ using System.IO;
 using System.Linq;
 using DLToolkit.Forms.Controls;
 using Plugin.FirebasePushNotification;
-using Plugin.PushNotification;
 using Simon.Helpers;
 using Simon.Models;
 using Simon.ServiceHandler;
 using Simon.ViewModel;
 using Simon.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Simon
 {

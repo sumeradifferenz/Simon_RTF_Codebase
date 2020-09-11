@@ -6,7 +6,6 @@ using DLToolkit.Forms.Controls;
 using Foundation;
 using LabelHtml.Forms.Plugin.iOS;
 using Plugin.FirebasePushNotification;
-using Plugin.PushNotification;
 using Simon.Helpers;
 using UIKit;
 using Xamarin;

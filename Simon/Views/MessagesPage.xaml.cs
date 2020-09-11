@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using Newtonsoft.Json;
 using Simon.Controls;
 using Simon.Helpers;
 using Simon.Models;
