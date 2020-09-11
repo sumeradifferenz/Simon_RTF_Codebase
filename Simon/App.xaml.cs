@@ -88,6 +88,7 @@ namespace Simon
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
             //Debug.WriteLine($"Device Token: {CrossFirebasePushNotification.Current.Token}");
+            CrossFirebasePushNotification.Current.Subscribe("general");
 
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {
@@ -115,6 +116,8 @@ namespace Simon
                     Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
                     Console.WriteLine("Token ref : " + Settings.DeviceToken);
                 }
+
+                Debug.WriteLine($"Token generated in plugin: {p.Token}");
             };
 
             Debug.WriteLine($"TOKEN: {CrossFirebasePushNotification.Current.Token}");
