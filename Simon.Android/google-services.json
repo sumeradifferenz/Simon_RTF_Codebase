@@ -30,6 +30,13 @@
             {
               "client_id": "810031998418-idk2rdhl2gu72g7jc0rfr1bl497le0s7.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "810031998418-uon7enlm16kldck5dnsonvjastcpqv1r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.developer.simon"
+              }
             }
           ]
         }

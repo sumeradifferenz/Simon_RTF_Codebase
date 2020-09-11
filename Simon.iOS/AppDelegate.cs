@@ -2,12 +2,14 @@
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using DLToolkit.Forms.Controls;
 using Foundation;
 using LabelHtml.Forms.Plugin.iOS;
 using Plugin.FirebasePushNotification;
 using Simon.Helpers;
 using UIKit;
+using UserNotifications;
 using Xamarin;
 using Xamarin.Forms;
 
@@ -66,24 +68,74 @@ namespace Simon.iOS
                 },
                 UIControlState.Normal);
 
+            RegisterForRemoteNotifications();
+
             return result;
+        }
+
+        private void RegisterForRemoteNotifications()
+        {
+            // register for remote notifications based on system version
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert |
+                    UNAuthorizationOptions.Sound |
+                    UNAuthorizationOptions.Sound,
+                    (granted, error) =>
+                    {
+                        if (granted)
+                            InvokeOnMainThread(UIApplication.SharedApplication.RegisterForRemoteNotifications);
+                    });
+            }
+            else if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+            {
+                var pushSettings = UIUserNotificationSettings.GetSettingsForTypes(
+                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
+                new NSSet());
+
+                UIApplication.SharedApplication.RegisterUserNotificationSettings(pushSettings);
+                UIApplication.SharedApplication.RegisterForRemoteNotifications();
+            }
+            else
+            {
+                UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
+                UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
+            }
+
+            UIApplication.SharedApplication.RegisterForRemoteNotifications();
         }
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
-            byte[] result = new byte[deviceToken.Length];
-            Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
-            var token = BitConverter.ToString(result).Replace("-", "");
+            var token = ExtractToken(deviceToken);
 
-            Debug.WriteLine($"TOKEN : {Settings.DeviceToken}");
             Settings.DeviceToken = token;
+            Debug.WriteLine($"TOKEN : {Settings.DeviceToken}");
+
+            FirebasePushNotificationManager.DidRegisterRemoteNotifications(token);
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
             App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
             File.AppendAllText(App.tempFile, "\n\nRegisteredForRemoteNotifications call \n\niOS Token : " + token);
             Debug.WriteLine("File Name====" + App.tempFile);
+        }
 
-            FirebasePushNotificationManager.DidRegisterRemoteNotifications(token);
-            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+        private string ExtractToken(NSData deviceToken)
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+            {
+                if (deviceToken.Length > 0)
+                {
+                    var result = new byte[deviceToken.Length];
+                    Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
+                    return BitConverter.ToString(result).Replace("-", string.Empty);
+                }
+            }
+            else
+            {
+                return deviceToken?.Description?.Trim('<', '>')?.Replace(" ", string.Empty);
+            }
+            return null;
         }
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
