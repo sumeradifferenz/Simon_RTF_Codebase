@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
 using DLToolkit.Forms.Controls;
 using Foundation;
 using LabelHtml.Forms.Plugin.iOS;
@@ -27,10 +27,10 @@ namespace Simon.iOS
 
             HtmlLabelRenderer.Initialize();
             global::Xamarin.Forms.Forms.Init();
-           
+
             Rg.Plugins.Popup.Popup.Init();
             XF.Material.iOS.Material.Init();
- 
+
             IQKeyboardManager.SharedManager.Enable = true;
             IQKeyboardManager.SharedManager.EnableAutoToolbar = true;
             IQKeyboardManager.SharedManager.ShouldResignOnTouchOutside = true;
@@ -40,7 +40,17 @@ namespace Simon.iOS
 
             LoadApplication(new App());
 
-            FirebasePushNotificationManager.Initialize(options, true);
+            FirebasePushNotificationManager.Initialize(options, new NotificationUserCategory[]
+            {
+                new NotificationUserCategory("message",new List<NotificationUserAction> {
+                    new NotificationUserAction("Reply","Reply",NotificationActionType.Foreground)
+                }),
+                new NotificationUserCategory("request",new List<NotificationUserAction> {
+                    new NotificationUserAction("Accept","Accept"),
+                    new NotificationUserAction("Reject","Reject",NotificationActionType.Destructive)
+                })
+
+            });
             FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert | UserNotifications.UNNotificationPresentationOptions.Badge | UserNotifications.UNNotificationPresentationOptions.Sound;
 
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
@@ -68,74 +78,24 @@ namespace Simon.iOS
                 },
                 UIControlState.Normal);
 
-            RegisterForRemoteNotifications();
-
             return result;
-        }
-
-        private void RegisterForRemoteNotifications()
-        {
-            // register for remote notifications based on system version
-            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
-            {
-                UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert |
-                    UNAuthorizationOptions.Sound |
-                    UNAuthorizationOptions.Sound,
-                    (granted, error) =>
-                    {
-                        if (granted)
-                            InvokeOnMainThread(UIApplication.SharedApplication.RegisterForRemoteNotifications);
-                    });
-            }
-            else if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
-            {
-                var pushSettings = UIUserNotificationSettings.GetSettingsForTypes(
-                UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound,
-                new NSSet());
-
-                UIApplication.SharedApplication.RegisterUserNotificationSettings(pushSettings);
-                UIApplication.SharedApplication.RegisterForRemoteNotifications();
-            }
-            else
-            {
-                UIRemoteNotificationType notificationTypes = UIRemoteNotificationType.Alert | UIRemoteNotificationType.Badge | UIRemoteNotificationType.Sound;
-                UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(notificationTypes);
-            }
-
-            UIApplication.SharedApplication.RegisterForRemoteNotifications();
         }
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
-            var token = ExtractToken(deviceToken);
-
-            Settings.DeviceToken = token;
-            Debug.WriteLine($"TOKEN : {Settings.DeviceToken}");
-
-            FirebasePushNotificationManager.DidRegisterRemoteNotifications(token);
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+            {
+                byte[] result = new byte[deviceToken.Length];
+                Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
+                deviceToken = BitConverter.ToString(result).Replace("-", "");
+            }
+            
+            FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
             App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-            File.AppendAllText(App.tempFile, "\n\nRegisteredForRemoteNotifications call \n\niOS Token : " + token);
+            File.AppendAllText(App.tempFile, "\n\nRegisteredForRemoteNotifications call \n\niOS Token : " + deviceToken);
             Debug.WriteLine("File Name====" + App.tempFile);
-        }
-
-        private string ExtractToken(NSData deviceToken)
-        {
-            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
-            {
-                if (deviceToken.Length > 0)
-                {
-                    var result = new byte[deviceToken.Length];
-                    Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
-                    return BitConverter.ToString(result).Replace("-", string.Empty);
-                }
-            }
-            else
-            {
-                return deviceToken?.Description?.Trim('<', '>')?.Replace(" ", string.Empty);
-            }
-            return null;
         }
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
@@ -146,7 +106,7 @@ namespace Simon.iOS
 
             FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
         }
-        
+
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
         {
             App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
@@ -158,7 +118,7 @@ namespace Simon.iOS
             completionHandler(UIBackgroundFetchResult.NewData);
         }
 
-        public override bool OpenUrl(UIApplication application, NSUrl url,string sourceApplication, NSObject annotation)
+        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
         {
             return false;
         }

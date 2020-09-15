@@ -25,7 +25,7 @@
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.1.0.714" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.2.0.56" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.2.0.58" />
     <PackageReference Include="Plugin.PushNotification" Version="3.3.3" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />

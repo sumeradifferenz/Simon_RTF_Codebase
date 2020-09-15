@@ -85,8 +85,9 @@ namespace Simon
         protected override void OnStart()
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
-            //Debug.WriteLine($"Device Token: {CrossFirebasePushNotification.Current.Token}");
-            CrossFirebasePushNotification.Current.Subscribe("general");
+            Debug.WriteLine($"Device Token: " + Settings.DeviceToken);
+
+            //CrossFirebasePushNotification.Current.Subscribe("general");
 
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {
@@ -103,19 +104,9 @@ namespace Simon
 
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
-                if (Device.RuntimePlatform == Device.iOS)
-                {
-                    Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
-                    Console.WriteLine("Token ref : " + Settings.DeviceToken);
-                }
-                else
-                {
-                    Settings.DeviceToken = p.Token;
-                    Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
-                    Console.WriteLine("Token ref : " + Settings.DeviceToken);
-                }
-
-                Debug.WriteLine($"Token generated in plugin: {p.Token}");
+                Settings.DeviceToken = p.Token;
+                Debug.WriteLine($"TOKEN REC: {Settings.DeviceToken}");
+                Console.WriteLine("Token ref : " + Settings.DeviceToken);
             };
 
             Debug.WriteLine($"TOKEN: {CrossFirebasePushNotification.Current.Token}");
@@ -138,26 +129,7 @@ namespace Simon
                         {
                             MessagingCenter.Send(new MessageViewModel(), "OnNotificationReceived", Convert.ToInt32(data.Value));
                         }
-
-                        if (selectedPageId == 4)
-                        {
-                            return;
-                        }
-
-                        SessionService.BaseFooterItems.All((arg) =>
-                        {
-                            if (arg.Id == selectedPageId)
-                            {
-                                arg.IsSelected = true;
-                            }
-                            else
-                            {
-                                arg.IsSelected = false;
-                            }
-                            return true;
-                        });
                     }
-                    LayoutService.Init();
                 }
                 catch (Exception ex)
                 {
@@ -177,64 +149,9 @@ namespace Simon
                     Debug.WriteLine($"{data.Key} : {data.Value}");
                     if (data.Key.Equals("MsgCount"))
                     {
-                        Settings.MessageCount = Convert.ToInt32(data.Value);
+                        MessagingCenter.Send(new MessageViewModel(), "OnNotificationReceived", Convert.ToInt32(data.Value));
                     }
-
-                    if (selectedPageId == 4)
-                    {
-                        return;
-                    }
-
-                    SessionService.BaseFooterItems.All((arg) =>
-                    {
-                        if (arg.Id == selectedPageId)
-                        {
-                            arg.IsSelected = true;
-                        }
-                        else
-                        {
-                            arg.IsSelected = false;
-                        }
-                        return true;
-                    });
-
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        IsFirstTime = true;
-                        switch (selectedPageId)
-                        {
-                            case 0:
-                                Current.MainPage = new NavigationPage(new LandingPage()) { BarTextColor = Color.Black };
-                                break;
-                            case 1:
-                                Current.MainPage = new NavigationPage(new DealsPage()) { BarTextColor = Color.Black };
-                                break;
-                            case 2:
-                                Current.MainPage = new NavigationPage(new MessagesPage()) { BarTextColor = Color.Black };
-                                break;
-                            case 3:
-                                Current.MainPage = new NavigationPage(new AssentMainPage()) { BarTextColor = Color.Black };
-                                break;
-                        }
-                    });
                 }
-                LayoutService.Init();
-            };
-
-            CrossFirebasePushNotification.Current.OnNotificationAction += (s, p) =>
-            {
-                Debug.WriteLine("Action");
-
-                if (!string.IsNullOrEmpty(p.Identifier))
-                {
-                    Debug.WriteLine($"ActionId: {p.Identifier}");
-                    foreach (var data in p.Data)
-                    {
-                        Debug.WriteLine($"{data.Key} : {data.Value}");
-                    }
-
-                }
-
             };
 
             CrossFirebasePushNotification.Current.OnNotificationDeleted += (s, p) =>

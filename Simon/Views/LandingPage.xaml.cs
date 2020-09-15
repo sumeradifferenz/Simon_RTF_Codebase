@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using Plugin.FirebasePushNotification;
 using Simon.Controls;
 using Simon.Helpers;
 using Simon.ServiceHandler;
