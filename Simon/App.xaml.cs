@@ -87,21 +87,6 @@ namespace Simon
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
             Debug.WriteLine($"Device Token: " + Settings.DeviceToken);
 
-            //CrossFirebasePushNotification.Current.Subscribe("general");
-
-            if (string.IsNullOrEmpty(Settings.DeviceToken))
-            {
-                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-                File.AppendAllText(tempFile, "\n\nDevice token is null....");
-                Debug.WriteLine("File Name====" + tempFile);
-            }
-            else
-            {
-                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-                File.AppendAllText(tempFile,"\n\n" + Settings.DeviceToken);
-                Debug.WriteLine("File Name====" + tempFile);
-            }
-
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {
                 Settings.DeviceToken = p.Token;
@@ -117,10 +102,6 @@ namespace Simon
                 try
                 {
                     Debug.WriteLine("Received");
-                    tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-                    File.AppendAllText(tempFile, "\n\nNotification Received....");
-                    Debug.WriteLine("File Name====" + tempFile);
-
                     foreach (var data in p.Data)
                     {
                         Debug.WriteLine($"{data.Key} : {data.Value}");
@@ -140,16 +121,12 @@ namespace Simon
             CrossFirebasePushNotification.Current.OnNotificationOpened += (s, p) =>
             {
                 Debug.WriteLine("Opened");
-                tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-                File.AppendAllText(tempFile, "\n\nNotification Opened....");
-                Debug.WriteLine("File Name====" + tempFile);
-
                 foreach (var data in p.Data)
                 {
                     Debug.WriteLine($"{data.Key} : {data.Value}");
                     if (data.Key.Equals("MsgCount"))
                     {
-                        MessagingCenter.Send(new MessageViewModel(), "OnNotificationReceived", Convert.ToInt32(data.Value));
+                        MessagingCenter.Send(new MessageViewModel(), "OnNotificationOpen", Convert.ToInt32(data.Value));
                     }
                 }
             };

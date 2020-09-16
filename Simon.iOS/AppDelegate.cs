@@ -40,17 +40,7 @@ namespace Simon.iOS
 
             LoadApplication(new App());
 
-            FirebasePushNotificationManager.Initialize(options, new NotificationUserCategory[]
-            {
-                new NotificationUserCategory("message",new List<NotificationUserAction> {
-                    new NotificationUserAction("Reply","Reply",NotificationActionType.Foreground)
-                }),
-                new NotificationUserCategory("request",new List<NotificationUserAction> {
-                    new NotificationUserAction("Accept","Accept"),
-                    new NotificationUserAction("Reject","Reject",NotificationActionType.Destructive)
-                })
-
-            });
+            FirebasePushNotificationManager.Initialize(options, true);
             FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert | UserNotifications.UNNotificationPresentationOptions.Badge | UserNotifications.UNNotificationPresentationOptions.Sound;
 
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
@@ -92,27 +82,15 @@ namespace Simon.iOS
             
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-
-            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-            File.AppendAllText(App.tempFile, "\n\nRegisteredForRemoteNotifications call \n\niOS Token : " + deviceToken);
-            Debug.WriteLine("File Name====" + App.tempFile);
         }
 
         public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
         {
-            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-            File.AppendAllText(App.tempFile, "\n\nFailedToRegisterForRemoteNotifications call");
-            Debug.WriteLine("File Name====" + App.tempFile);
-
             FirebasePushNotificationManager.RemoteNotificationRegistrationFailed(error);
         }
 
         public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
         {
-            App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
-            File.AppendAllText(App.tempFile, "\n\nDidReceiveRemoteNotification call");
-            Debug.WriteLine("File Name====" + App.tempFile);
-
             FirebasePushNotificationManager.DidReceiveMessage(userInfo);
             Console.WriteLine(userInfo);
             completionHandler(UIBackgroundFetchResult.NewData);

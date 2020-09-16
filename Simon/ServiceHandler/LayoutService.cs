@@ -428,7 +428,7 @@ namespace Simon.ServiceHandler
         public static Thickness MarginPadding0_120_0_0 { get { return MarginPaddingConvertAsPerDevice(0, 120, 0, 0); } }
         public static Thickness MarginPadding0_200_0_0 { get { return MarginPaddingConvertAsPerDevice(0, 200, 0, 0); } }
 
-        public static Thickness MarginPaddingm5_00_00_00 { get { return MarginPaddingConvertAsPerDevice(-5, 00, 00, 00); } }
+        public static Thickness MarginPaddingm5_m5_00_00 { get { return MarginPaddingConvertAsPerDevice(-5, -5, 00, 00); } }
         public static Thickness MarginPadding0_m05_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -5, 0, 0); } }
         public static Thickness MarginPadding0_m10_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -10, 0, 0); } }
         public static Thickness MarginPadding0_m20_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -20, 0, 0); } }
