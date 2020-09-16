@@ -2,7 +2,6 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using DLToolkit.Forms.Controls;
 using Plugin.FirebasePushNotification;
 using Simon.Helpers;
@@ -86,6 +85,10 @@ namespace Simon
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
             Debug.WriteLine($"Device Token: " + Settings.DeviceToken);
+
+            //tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Favorites), "LogFile.txt");
+            //File.AppendAllText(App.tempFile, "Device Token : " + Settings.DeviceToken);
+            //Debug.WriteLine("File Name====" + App.tempFile);
 
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {

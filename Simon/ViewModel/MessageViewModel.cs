@@ -71,6 +71,10 @@ namespace Simon.ViewModel
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     var msgFooter = this.FooterItems.FirstOrDefault(x => x.Id == 2);
+                    if (args == 0)
+                    {
+                        msgFooter.isMsgBadgeVisible = false;
+                    }
                     msgFooter.MsgCount = args;
                     Settings.MessageCount = args;
                 });
@@ -87,6 +91,10 @@ namespace Simon.ViewModel
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     var msgFooter = this.FooterItems.FirstOrDefault(x => x.Id == 2);
+                    if (args == 0)
+                    {
+                        msgFooter.isMsgBadgeVisible = false;
+                    }
                     msgFooter.MsgCount = args;
                     Settings.MessageCount = args;
                 });
