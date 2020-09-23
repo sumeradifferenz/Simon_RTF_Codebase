@@ -76,13 +76,13 @@ namespace Simon.ViewModel
             set
             {
                 _isBusy = value;
-                // again, this is very important
                 OnPropertyChanged(nameof(IsBusy));
             }
         }
 
         // this little bit is how we trigger the PropertyChanged notifier.
         public event PropertyChangedEventHandler PropertyChanged;
+
         public virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -165,11 +165,6 @@ namespace Simon.ViewModel
                     if (NavigationStackCount > 1)
                     {
                         var PreviousScreen = App.Current.MainPage.Navigation.NavigationStack[NavigationStackCount - 2];
-                        if (PreviousScreen != null)
-                        {
-                            //App.ScreenTitle = ((BaseViewModel)PreviousScreen.BindingContext).;
-                            //App.CurrentMenuTitle = string.Empty;
-                        }
                     }
                     await App.Current.MainPage.Navigation.PopAsync(false);
                 });
@@ -365,7 +360,7 @@ namespace Simon.ViewModel
                                 Name = "SIMON.jpg",
                                 CompressionQuality = 70,
                                 PhotoSize = PhotoSize.Medium,
-                                AllowCropping = true
+                                AllowCropping = false
                             });
                             await ClosePopup();
                             if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))

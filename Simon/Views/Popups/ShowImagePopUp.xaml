@@ -10,14 +10,14 @@
         </OnPlatform>
     </pages:PopupPage.HasSystemPadding>
     <pages:PopupPage.Animation>
-        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" ScaleIn="1.2" ScaleOut="0.8" DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="True" />
+        <animations:ScaleAnimation PositionIn="Center" PositionOut="Center" ScaleIn="1.2" ScaleOut="0.8" DurationIn="400" DurationOut="300" EasingIn="SinOut" EasingOut="SinIn" HasBackgroundAnimation="False" />
     </pages:PopupPage.Animation>
     <pages:PopupPage.BindingContext>
         <simonVm:CommentsPageViewModel/>
     </pages:PopupPage.BindingContext>
     <pages:PopupPage.Content>
-        <StackLayout BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="5" Margin="30">
-            <Frame CornerRadius="10" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="False" Padding="0" IsClippedToBounds="True">
+        <StackLayout BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="0" Margin="10">
+            <Frame CornerRadius="5" BackgroundColor="Transparent" HeightRequest="400" HasShadow="False" Padding="0" IsClippedToBounds="True">
                 <Image Source="{Binding displayImage}" Aspect="AspectFill"></Image>
             </Frame>
         </StackLayout>

@@ -72,10 +72,9 @@ namespace Simon.Droid
                     //refreshedToken = instanceid.Token;
                 });
 
-                if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
+                if (Build.VERSION.SdkInt >= BuildVersionCodes.M)
                 {
                     Window.SetStatusBarColor(Android.Graphics.Color.Black);
-                    Window.Attributes.LayoutInDisplayCutoutMode = LayoutInDisplayCutoutMode.ShortEdges;
                 }
 
                 if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)

@@ -74,6 +74,7 @@ namespace Simon.Views
             App.OrderByText = Constants.LastPostDateText;
             App.SelectedTitle = string.Empty;
             App.SelectedName = string.Empty;
+            App.FollowUp = "null";
             vm = new DealViewModel();
             this.BindingContext = vm;
 

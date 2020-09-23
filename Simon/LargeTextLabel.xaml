@@ -17,7 +17,7 @@
             IsVisible="false"
             FontSize="Medium"/>
         <Button x:Name="ExpandContractButton"
-                Text="More" 
+                Text="MORE" 
                 BackgroundColor="Transparent" 
                 TextColor="Blue"
                 HorizontalOptions="EndAndExpand"

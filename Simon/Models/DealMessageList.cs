@@ -33,9 +33,6 @@ namespace Simon.Models
         [JsonProperty("totalPages")]
         public double totalPages { get; set; }
 
-       
-        
-
         public bool IsRedDotVisible { get; set; }
         public bool IsBookMarkVisible { get; set; }
         public Style LastMsgStyle { get; set; }

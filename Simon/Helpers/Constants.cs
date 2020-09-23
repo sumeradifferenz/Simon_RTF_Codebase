@@ -31,7 +31,7 @@ namespace Simon.Helpers
 
         //Anjali
         //Lable title 
-        public const string LoginText = "Login";
+        public const string LoginText = "LOGIN";
         public const string LogindetailText = "Enter your credentials to connect.";
         public const string SelectUsernameText = "Select Username";
         public const string SelectUsernamePlaceholdertxt = "Select";
@@ -93,9 +93,9 @@ namespace Simon.Helpers
         public const string NoneText = "None";
 
         //Button title
-        public const string DoneBtnText = "Done";
-        public const string ApplyBtnText = "Apply";
-        public const string YesBtnText = "Yes";
+        public const string DoneBtnText = "DONE";
+        public const string ApplyBtnText = "APPLY";
+        public const string YesBtnText = "YES";
 
         //img title
         public const string NameAcendingImg = "name_ascending.png";

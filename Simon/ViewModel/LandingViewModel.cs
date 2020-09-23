@@ -256,31 +256,29 @@ namespace Simon.ViewModel
 
         public async Task FetchClosingData()
         {
-            using (HttpClient hc = new HttpClient())
+            try
             {
-                try
+                //IsBusy = true;
+                HttpClient hc = new HttpClient();
+                var jsonString = await hc.GetStringAsync(Config.CLOSING_API + userId);
+                ClosingList = LandingModel.FromJson(jsonString);
+                //IsBusy = false;
+                if (ClosingList.Count > 0)
                 {
-                    //IsBusy = true;
-                    var jsonString = await hc.GetStringAsync(Config.CLOSING_API + userId);
-                    ClosingList = LandingModel.FromJson(jsonString);
-                    //IsBusy = false;
-                    if (ClosingList.Count > 0)
-                    {
-                        IsDataNotAvailable = false;
-                        IsClosingsListVisible = true;
-                        IsDecisionDueListVisible = false;
-                    }
-                    else
-                    {
-                        IsDataNotAvailable = true;
-                        IsClosingsListVisible = true;
-                        IsDecisionDueListVisible = false;
-                    }
+                    IsDataNotAvailable = false;
+                    IsClosingsListVisible = true;
+                    IsDecisionDueListVisible = false;
                 }
-                finally
+                else
                 {
-                    IsBusy = false;
+                    IsDataNotAvailable = true;
+                    IsClosingsListVisible = true;
+                    IsDecisionDueListVisible = false;
                 }
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
 

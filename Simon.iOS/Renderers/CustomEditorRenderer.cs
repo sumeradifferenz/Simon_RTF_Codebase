@@ -143,11 +143,6 @@ namespace Simon.iOS.Renderers
                     prevLines = numLines;
                 }
 
-                //if (!string.IsNullOrEmpty(Settings.TypedMessage))
-                //{
-                //    Control.Text = Settings.TypedMessage;
-                //}
-
                 _placeholderLabel.Hidden = !string.IsNullOrEmpty(Control.Text);
             }
             else if (CustomEditor.PlaceholderProperty.PropertyName == e.PropertyName)

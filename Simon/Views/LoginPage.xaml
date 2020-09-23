@@ -23,7 +23,7 @@
                 <ScrollView Grid.Row="2" Margin="0,-14,0,0" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <StackLayout Grid.Row="2" HorizontalOptions="Fill" VerticalOptions="Fill" Spacing="{x:Static Services:LayoutService.Spacing10}" BackgroundColor="{StaticResource DarkBlueColor}" Margin="{x:Static Services:LayoutService.MarginPadding0_m10_00_00}" Padding="{x:Static Services:LayoutService.MarginPadding20_00_20_00}" Orientation="Vertical">
                         <StackLayout Orientation="Vertical" Padding="{x:Static Services:LayoutService.MarginPadding00_30_00_00}" Spacing="{x:Static Services:LayoutService.Spacing10}">
-                            <Label Text="{x:Static Helper:Constants.LoginText}" FontSize="{StaticResource FontSize40}" Style="{StaticResource LatoRegularOrangeLableStyle}"/>
+                            <Label Text="Login" FontSize="{StaticResource FontSize40}" Style="{StaticResource LatoRegularOrangeLableStyle}"/>
                             <Label Text="{x:Static Helper:Constants.LogindetailText}" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoRegularWhiteLableStyle}"/>
                         </StackLayout>
                         <StackLayout Orientation="Vertical" Padding="{x:Static Services:LayoutService.MarginPadding00_30_00_00}" Spacing="{x:Static Services:LayoutService.Spacing10}">

@@ -33,9 +33,9 @@ namespace Simon.ViewModel
             HeaderTitle = Constants.ApprovalHeaderlblText;
             HeaderLeftImage = "back_arrow.png";
 
-            if (Xamarin.Forms.Application.Current.Properties.ContainsKey("USERID"))
+            if (Application.Current.Properties.ContainsKey("USERID"))
             {
-                userId = Convert.ToString(Xamarin.Forms.Application.Current.Properties["USERID"]);
+                userId = Convert.ToString(Application.Current.Properties["USERID"]);
             }
         }
 
@@ -349,19 +349,6 @@ namespace Simon.ViewModel
                 OnPropertyChanged(nameof(IsImageVisible));
             }
         }
-
-        //public string plusImg = "plus.png";
-
-        //public Image _plusImage { get; set; } = plusImg.so;
-        //public Image plusImage
-        //{
-        //    get { return _plusImage; }
-        //    set
-        //    {
-        //        _plusImage = value;
-        //        OnPropertyChanged("plusImage");
-        //    }
-        //}
 
         public async Task FetchCommnetData(int requirementId)
         {
@@ -788,7 +775,7 @@ namespace Simon.ViewModel
         {
             ShowImagePopUp ImagePopupview = new ShowImagePopUp();
             ImagePopupview.BindingContext = this;
-            await ShowPopup(ImagePopupview, true);
+            await ShowPopup(ImagePopupview, false);
         }
 
         public ICommand ClosePopup_Command { get { return new Command(ClosePopup_click); } }

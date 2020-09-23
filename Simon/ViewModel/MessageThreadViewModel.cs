@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -14,11 +15,9 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Plugin.Media.Abstractions;
 using Simon.Helpers;
-using Simon.Interfaces;
 using Simon.Models;
 using Simon.Views;
 using Simon.Views.Popups;
-using Syncfusion.XForms.RichTextEditor;
 using Xamarin.Forms;
 using ImageSource = Xamarin.Forms.ImageSource;
 
@@ -26,6 +25,58 @@ namespace Simon.ViewModel
 {
     public class MessageThreadViewModel : BaseViewModel
     {
+        string userId, threadId, name;
+        bool bookMarks;
+        public bool sendEnable;
+        public string SaveMessage, base64String;
+        int id;
+        JObject jObject = null;
+
+        private ObservableCollection<messages> AllItems = new ObservableCollection<messages>();
+
+        public ICommand ReplayCommand { get; set; }
+        public ICommand LoadMoreCommand { get; private set; }
+
+        private bool _isLoadingInfinite = false;
+        private int _totalRecords = 0;
+        private bool _isLoadingInfiniteEnabled = false;
+        private int _CurrentPage = 1;
+        private int _LastPage = 0;
+        private bool _isTeamLoading = false;
+
+        private ObservableCollection<messages> _messageList = new ObservableCollection<messages>();
+        public ObservableCollection<messages> MessageList
+        {
+            get { return _messageList; }
+            set
+            {
+                _messageList = value;
+                OnPropertyChanged(nameof(MessageList));
+            }
+        }
+
+        private ObservableCollection<messageUsers> _messageUserList = new ObservableCollection<messageUsers>();
+        public ObservableCollection<messageUsers> messageUserList
+        {
+            get { return _messageUserList; }
+            set
+            {
+                _messageUserList = value;
+                OnPropertyChanged(nameof(messageUserList));
+            }
+        }
+
+        private ObservableCollection<messageUsers> _threadList = new ObservableCollection<messageUsers>();
+        public ObservableCollection<messageUsers> ThreadList
+        {
+            get { return _threadList; }
+            set
+            {
+                _threadList = value;
+                OnPropertyChanged(nameof(ThreadList));
+            }
+        }
+
         private bool _isImageVisible { get; set; } = false;
         public bool isImageVisible
         {
@@ -48,36 +99,14 @@ namespace Simon.ViewModel
             }
         }
 
-        string userId, threadId, name;
-        bool bookMarks;
-        public bool sendEnable;
-        public string SaveMessage, base64String;
-        int id;
-        string message;
-        JObject jObject = null;
-        private ObservableCollection<messages> _messageList = new ObservableCollection<messages>();
-        private ObservableCollection<messageUsers> _threadList = new ObservableCollection<messageUsers>();
-        private ObservableCollection<messages> AllItems = new ObservableCollection<messages>();
-        public ICommand PersonDetailsCommand { get; set; }
-        public ICommand ReplayCommand { get; set; }
-        public ICommand LoadMoreCommand { get; private set; }
-        public ICommand ImageCommand { get; set; }
-
-        private bool _isLoadingInfinite = false;
-        private int _totalRecords = 0;
-        private bool _isLoadingInfiniteEnabled = false;
-        private int _CurrentPage = 1;
-        private int _LastPage = 0;
-        private bool _isTeamLoading = false;
-
-        private ObservableCollection<messageUsers> _messageUserList = new ObservableCollection<messageUsers>();
-        public ObservableCollection<messageUsers> messageUserList
+        private bool _IsLoadingInfiniteVisible { get; set; } = false;
+        public bool IsLoadingInfiniteVisible
         {
-            get { return _messageUserList; }
+            get { return _IsLoadingInfiniteVisible; }
             set
             {
-                _messageUserList = value;
-                OnPropertyChanged(nameof(messageUserList));
+                _IsLoadingInfiniteVisible = value;
+                OnPropertyChanged(nameof(IsLoadingInfiniteVisible));
             }
         }
 
@@ -95,14 +124,21 @@ namespace Simon.ViewModel
             set { SetProperty(ref _labelTopic, value); }
         }
 
-        public string _TypedMessage { get; set; }
+        private string _TypedMessage { get; set; }
         public string TypedMessage
         {
-            get { return _TypedMessage; }
             set
             {
-                _TypedMessage = value;
-                OnPropertyChanged(TypedMessage);
+                Debug.WriteLine("Value : " + value);
+                if (_TypedMessage != value)
+                {
+                    _TypedMessage = value;
+                    OnPropertyChanged(_TypedMessage);
+                }
+            }
+            get
+            {
+                return _TypedMessage;
             }
         }
 
@@ -177,8 +213,8 @@ namespace Simon.ViewModel
             set { SetProperty(ref _isLoadingInfiniteEnabled, value); }
         }
 
-        public Xamarin.Forms.ImageSource _FrameImage { get; set; }
-        public Xamarin.Forms.ImageSource FrameImage
+        public ImageSource _FrameImage { get; set; }
+        public ImageSource FrameImage
         {
             get { return _FrameImage; }
             set
@@ -263,8 +299,6 @@ namespace Simon.ViewModel
 
         HttpClient httpClient;
 
-        public ICommand SendMessageCommand { get; set; }
-
         public MessageThreadViewModel()
         {
             if (Application.Current.Properties.ContainsKey("PARTYNAME"))
@@ -299,42 +333,97 @@ namespace Simon.ViewModel
 
             var assembly = Assembly.GetAssembly(Application.Current.GetType());
 
-            PersonDetailsCommand = new Command(() => PersonDetailsCommandExecute());
             ReplayCommand = new Command(() => ReplayCommandExecute());
-            SendMessageCommand = new Command(() => SendMessageCommandExecute());
             LoadMoreCommand = new Command(async () => { await LoadMore_click(); });
-            ImageCommand = new Command<object>(LoadImage);
         }
 
-        private void LoadImage(object obj)
+        private string IgnoreVoidElementsInHTML(string inputString)
         {
-            ImageInsertedEventArgs imageInsertedEventArgs = (obj as ImageInsertedEventArgs);
-            this.GetImage(imageInsertedEventArgs);
+            inputString = inputString.Replace("<meta http-equiv=\"Content-Type\" content=\"application/xhtml+xml; charset=utf-8\">", "");
+            inputString = inputString.Replace("<br>", "<br/>");
+            inputString = inputString.Replace("\n", "");
+            inputString = inputString.Replace("\r", "");
+            inputString = inputString.Replace("<title></title>", "");
+            inputString = inputString.Replace("﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><!DOCTYPE html PUBLIC" +
+                " \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">", "");
+            return inputString;
         }
 
-        private async void GetImage(ImageInsertedEventArgs imageInsertedEventArgs)
+        private string ValidationMessage(string Message)
         {
-            using (Stream imageStream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync())
+            if (Message.Contains("<strong>​</strong>"))
             {
-                if (imageStream != null)
+                string text = Message.Replace("<strong>​</strong>", "");
+                Message = text;
+            }
+            if (Message.Contains("\n"))
+            {
+                string text = Message.Replace("\n", "");
+                Message = text;
+            }
+            if (Message.Contains("\n \n"))
+            {
+                string text = Message.Replace("\n \n", "");
+                Message = text;
+            }
+            if (Message.Contains("> <"))
+            {
+                string text = Message.Replace("> <", "><");
+                Message = text;
+            }
+            if (Message.Contains("https://") || Message.Contains("http://"))
+            {
+                string message = Regex.Replace(Message, "<.*?>", string.Empty);
+                Message = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
+            }
+            return Message;
+        }
+
+        public async void ValidateSendMsg(string MessageText)
+        {
+            if (MessageText.Contains("<p><br></p>"))
+            {
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(App.base64String))
+            {
+                if (!string.IsNullOrEmpty(MessageText) || !string.IsNullOrEmpty(App.Link))
                 {
-                    Syncfusion.XForms.RichTextEditor.ImageSource imageSource = new Syncfusion.XForms.RichTextEditor.ImageSource();
-                    imageSource.ImageStream = imageStream;
-                    imageSource.Height = 100;
-                    imageSource.Width = 100;
-                    imageInsertedEventArgs.ImageSourceCollection.Add(imageSource);
+                    string htmlstring = IgnoreVoidElementsInHTML(MessageText);
+                    string simpleText = htmlstring.Replace(App.Link, "");
+                    string link = ValidationMessage(App.Link);
+                    MessageText = ValidationMessage(simpleText);
+                    MessageText = App.base64String + MessageText + link;
+                }
+                else
+                {
+                    MessageText = App.base64String;
                 }
             }
-        }
+            else
+            {
+                if (!string.IsNullOrEmpty(App.Link))
+                {
+                    string htmlstring = IgnoreVoidElementsInHTML(MessageText);
+                    string simpleText = htmlstring.Replace(App.Link, "");
+                    string link = ValidationMessage(App.Link);
+                    MessageText = ValidationMessage(simpleText);
+                    MessageText = MessageText + link;
+                }
+                else
+                {
+                    string htmlstring = IgnoreVoidElementsInHTML(MessageText);
+                    MessageText = ValidationMessage(htmlstring);
+                }
+            }
 
-        private void SendMessageCommandExecute()
-        {
             if (sendEnable)
                 return;
 
             sendEnable = true;
 
-            //await SendMessage();
+            await SendMessage(MessageText);
 
             sendEnable = false;
         }
@@ -350,11 +439,7 @@ namespace Simon.ViewModel
                 else
                 {
                     var message = !string.IsNullOrEmpty(Message.Trim()) ? Message.Trim() : string.Empty;
-                    //if (message.Contains("https://") || message.Contains("http://"))
-                    //{
-                    //    TypedMessage = "<p><a class=\"e-rte-anchor\" href=\"" + message + "\" title=\"" + message + "\">" + message + "</a></p>";
-                    //    message = TypedMessage;
-                    //}
+
                     var values = new Dictionary<object, object>
                     {
                         {"author",userId },
@@ -378,18 +463,17 @@ namespace Simon.ViewModel
                     }
                     else
                     {
-                        await ClosePopup();
                         var content1 = await response.Content.ReadAsStringAsync();
                         Debug.WriteLine(content1);
                         TypedMessage = null;
-                        Settings.TypedMessage = string.Empty;
+                        Settings.TypedMessage = null;
+                        App.Link = null;
                         App.FrameImage = null;
                         App.FileName = null;
                         isDocsVisible = false;
                         isImageVisible = false;
+                        await ClosePopup();
                         await FetchThreadUserData();
-
-                        //await SendThreadUsersAsync();
                     }
                 }
             }
@@ -404,75 +488,11 @@ namespace Simon.ViewModel
             }
         }
 
-
-        private async Task SendThreadUsersAsync()
-        {
-            httpClient = new HttpClient();
-            if (Settings.MessageThreadUsersData != null && Settings.MessageThreadUsersData.Count > 0)
-            {
-                var content = new StringContent(JsonConvert.SerializeObject(Settings.MessageThreadUsersData), Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync(Config.SYNC_PARTICIPANTS + threadId, content);
-                if (response.StatusCode != System.Net.HttpStatusCode.OK || response.Content == null)
-                {
-                    await ClosePopup();
-                    Device.BeginInvokeOnMainThread(async () =>
-                    {
-                        await ShowAlert("Data Not Sent!!", string.Format("Response contained status code: {0}", response.StatusCode));
-                    });
-                }
-                else
-                {
-                    var responceContent = await response.Content.ReadAsStringAsync();
-                    Debug.WriteLine(responceContent);
-                }
-            }
-            else
-            {
-                await FetchThreadUserData();
-            }
-        }
-
         private async void ReplayCommandExecute()
         {
             MessageReplayViewModel replayViewModel = new MessageReplayViewModel();
             replayViewModel.ScreenTitle = Constants.MessageScreenTitle;
             await App.Current.MainPage.Navigation.PushAsync(new MessageReplyPage(), false);
-        }
-
-        public void PersonDetailsCommandExecute()
-        {
-
-        }
-
-        public ObservableCollection<messages> MessageList
-        {
-            get { return _messageList; }
-            set
-            {
-                _messageList = value;
-                OnPropertyChanged(nameof(MessageList));
-            }
-        }
-
-        public ObservableCollection<messageUsers> ThreadList
-        {
-            get { return _threadList; }
-            set
-            {
-                _threadList = value;
-                OnPropertyChanged(nameof(ThreadList));
-            }
-        }
-
-        private bool _IsLoadingInfiniteVisible { get; set; } = false;
-        public bool IsLoadingInfiniteVisible
-        {
-            get { return _IsLoadingInfiniteVisible; }
-            set
-            {
-                _IsLoadingInfiniteVisible = value;
-                OnPropertyChanged(nameof(IsLoadingInfiniteVisible));
-            }
         }
 
         public async Task FetchThreadUserData()
@@ -507,6 +527,9 @@ namespace Simon.ViewModel
                 {
                     IsBusy = true;
                     bool IsBookMarkSelect = false;
+
+                    //TypedMessage = App.IsFromAddParticipantPage == true ? Settings.TypedMessage : string.Empty;
+
                     if (App.FrameImage != null)
                     {
                         ImageUrl = App.FrameImage;
@@ -554,16 +577,20 @@ namespace Simon.ViewModel
                                     user.MsgImageUrl = ImageSource.FromStream(() => new MemoryStream(Base64Stream));
                                     user.IsImageVisible = true;
 
-                                    if (!string.IsNullOrEmpty(stringMsg[1]))
+                                    int index = 2;
+                                    if (index == stringMsg.Length)
                                     {
-                                        user.plainContent = stringMsg[1];
+                                        if (!string.IsNullOrEmpty(stringMsg[1]))
+                                        {
+                                            user.plainContent = stringMsg[1];
+                                        }
                                     }
                                     else
                                     {
                                         user.plainContent = string.Empty;
                                     }
                                 }
-                                
+
                                 string authorIdStr = user.authorId;
                                 if (user.messageUsers != null)
                                 {
@@ -784,7 +811,6 @@ namespace Simon.ViewModel
                     var content = await response.Content.ReadAsStringAsync();
                     Debug.WriteLine(content);
                 }
-
             }
         }
 
@@ -804,27 +830,28 @@ namespace Simon.ViewModel
         }
 
         public ICommand AddDocsCommand { get { return new Command(AddDocs_click); } }
-        private void AddDocs_click()
+        private async void AddDocs_click()
         {
             try
             {
-                DocumentPicker(((string name, string FileBase64String, string FileType, string FileName) obj) =>
-                {
-                    if (obj.name != null && obj.FileName != null && obj.FileBase64String != null && obj.FileType != null)
-                    {
-                        //AddDocument(obj.FileName, obj.FileBase64String, obj.FileType);
-                        FileName = obj.FileName;
-                        App.FileName = FileName;
-                        if (FileName != null)
-                        {
-                            isDocsVisible = true;
-                        }
-                    }
-                    else
-                    {
-                        return;
-                    }
-                });
+                await App.Current.MainPage.DisplayAlert("Alert", "coming soon...", "OK");
+                //DocumentPicker(((string name, string FileBase64String, string FileType, string FileName) obj) =>
+                //{
+                //    if (obj.name != null && obj.FileName != null && obj.FileBase64String != null && obj.FileType != null)
+                //    {
+                //        //AddDocument(obj.FileName, obj.FileBase64String, obj.FileType);
+                //        FileName = obj.FileName;
+                //        App.FileName = FileName;
+                //        if (FileName != null)
+                //        {
+                //            isDocsVisible = true;
+                //        }
+                //    }
+                //    else
+                //    {
+                //        return;
+                //    }
+                //});
             }
             catch (Exception ex)
             {
@@ -890,12 +917,26 @@ namespace Simon.ViewModel
             {
                 string pattern = @"^(ht|f)tp(s?)\:\/\/[0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*(:(0-9)*)*(\/?)([a-zA-Z0-9\-\.\?\,\'\/\\\+&%\$#_]*)?$";
 
+                if (TypedMessage.Contains("\n"))
+                {
+                    var messge = TypedMessage.Replace("\n", null);
+                    TypedMessage = messge;
+                }
+
                 if (!string.IsNullOrEmpty(Link))
                 {
                     var m = Regex.Match(Link, pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled, TimeSpan.FromSeconds(1));
                     if (m.Success)
                     {
-                        TypedMessage = Link;
+                        if (!string.IsNullOrEmpty(TypedMessage))
+                        {
+                            TypedMessage = TypedMessage + "\n" + Link;
+                        }
+                        else
+                        {
+                            TypedMessage = Link;
+                        }
+                        App.Link = Link;
                         Link = null;
                         await ClosePopup();
                     }
@@ -936,6 +977,26 @@ namespace Simon.ViewModel
         private async void ClosePopup_click()
         {
             await ClosePopup();
+        }
+
+        public ImageSource _displayImage { get; set; }
+        public ImageSource displayImage
+        {
+            get { return _displayImage; }
+            set
+            {
+                _displayImage = value;
+                OnPropertyChanged("displayImage");
+            }
+        }
+
+        public ICommand ImageOpenCommand { get { return new Command<messages>(Image_Click); } }
+        private async void Image_Click(messages messageList)
+        {
+            ShowImagePopUp ImagePopupview = new ShowImagePopUp();
+            ImagePopupview.BindingContext = this;
+            displayImage = messageList.MsgImageUrl;
+            await ShowPopup(ImagePopupview, false);
         }
     }
 }

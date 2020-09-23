@@ -19,7 +19,7 @@ namespace Simon.ViewModel
     public class MessageViewModel : BaseViewModel
     {
         string userId;
-        bool SetValue;
+        bool SetValue = true;
         private ObservableCollection<DealMessageList> _openData = new ObservableCollection<DealMessageList>();
         public ICommand SortCommand { get; set; }
         public ICommand SortingCommand { get; set; }
@@ -44,6 +44,15 @@ namespace Simon.ViewModel
 
         public MessageViewModel()
         {
+            if (App.FollowUp == "true")
+            {
+                BookMarkImage = "orange_bookmark.png";
+            }
+            else
+            {
+                BookMarkImage = "bookmark.png";
+            }
+
             if (Application.Current.Properties.ContainsKey("USERID"))
             {
                 userId = Convert.ToString(Application.Current.Properties["USERID"]);
@@ -75,6 +84,10 @@ namespace Simon.ViewModel
                     {
                         msgFooter.isMsgBadgeVisible = false;
                     }
+                    else
+                    {
+                        msgFooter.isMsgBadgeVisible = true;
+                    }
                     msgFooter.MsgCount = args;
                     Settings.MessageCount = args;
                 });
@@ -94,6 +107,10 @@ namespace Simon.ViewModel
                     if (args == 0)
                     {
                         msgFooter.isMsgBadgeVisible = false;
+                    }
+                    else
+                    {
+                        msgFooter.isMsgBadgeVisible = true;
                     }
                     msgFooter.MsgCount = args;
                     Settings.MessageCount = args;
@@ -344,7 +361,7 @@ namespace Simon.ViewModel
                 OpenData = new ObservableCollection<DealMessageList>();
                 IsBusy = true;
                 _CurrentPage = 1;
-                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce);
+                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce, App.FollowUp);
                 //await LoadData(_CurrentPage, App.ReadUnread);
             }
             catch (Exception ex)
@@ -358,7 +375,8 @@ namespace Simon.ViewModel
             }
         }
 
-        async Task LoadDataV1(int page, string ReadUnread, string OrderByText, bool AsceDsce)
+        //--------------- Method for New Message API call ------------------
+        async Task LoadDataV1(int page, string ReadUnread, string OrderByText, bool AsceDsce, string FollowUp)
         {
             try
             {
@@ -370,7 +388,7 @@ namespace Simon.ViewModel
 
                 var tempOpenData = new ObservableCollection<DealMessageList>(OpenData);
                 HttpClient hc = new HttpClient();
-                string api = Config.MESSAGES_API_V1 + userId + "/" + page + "/" + ReadUnread + "/" + OrderByText + "/" + AsceDsce;
+                string api = Config.MESSAGES_API_V1 + userId + "/" + page + "/" + ReadUnread + "/" + OrderByText + "/" + AsceDsce + "/" + FollowUp;
 
                 if (!string.IsNullOrEmpty(_searchText))
                 {
@@ -409,6 +427,11 @@ namespace Simon.ViewModel
                                     string value = user.lastMessage.Replace("?", "");
                                     user.lastMessage = value;
                                 }
+                                if (user.lastMessage.Contains("e-rte-anchor"))
+                                {
+                                    user.lastMessage = user.lastMessage.Split('"')[3];
+                                }
+
                                 user.ImageVisible = false;
                                 user.MessageVisible = true;
                             }
@@ -475,117 +498,118 @@ namespace Simon.ViewModel
             }
         }
 
-        async Task LoadData(int page, string ReadUnread)
-        {
-            //try
-            //{
-            //    if (isFirstTime)
-            //    {
-            //        isFirstTime = false;
-            //        OpenData.Clear();
-            //    }
+        //--------------- Method for Old Message API call ------------------
+        //async Task LoadData(int page, string ReadUnread)
+        //{
+        //    try
+        //    {
+        //        if (isFirstTime)
+        //        {
+        //            isFirstTime = false;
+        //            OpenData.Clear();
+        //        }
 
-            //    var tempOpenData = new ObservableCollection<DealMessageList>(OpenData);
-            //    HttpClient hc = new HttpClient();
-            //    string api = Config.MESSAGES_API + userId + "/" + page + "/" + ReadUnread;
+        //        var tempOpenData = new ObservableCollection<DealMessageList>(OpenData);
+        //        HttpClient hc = new HttpClient();
+        //        string api = Config.MESSAGES_API + userId + "/" + page + "/" + ReadUnread;
 
-            //    if (!string.IsNullOrEmpty(_searchText))
-            //    {
-            //        api = api + "/" + _searchText;
-            //    }
-            //    var jsonString = await hc.GetStringAsync(api);
-            //    if (jsonString != "")
-            //    {
-            //        var obj = JsonConvert.DeserializeObject<List<DealMessageList>>(jsonString);
-            //        if (obj.Count > 0)
-            //        {
-            //            IsDataNotAvailable = false;
-            //            IsMessagsListVisible = true;
+        //        if (!string.IsNullOrEmpty(_searchText))
+        //        {
+        //            api = api + "/" + _searchText;
+        //        }
+        //        var jsonString = await hc.GetStringAsync(api);
+        //        if (jsonString != "")
+        //        {
+        //            var obj = JsonConvert.DeserializeObject<List<DealMessageList>>(jsonString);
+        //            if (obj.Count > 0)
+        //            {
+        //                IsDataNotAvailable = false;
+        //                IsMessagsListVisible = true;
 
-            //            foreach (var user in obj)
-            //            {
-            //                if(user.lastMessage == null)
-            //                {
-            //                    user.ImageVisible = false;
-            //                    user.MessageVisible = true;
-            //                }
-            //                else if (user.lastMessage.Contains("data:image"))
-            //                {
-            //                    user.ImageVisible = true;
-            //                    user.MessageVisible = false;
-            //                }
-            //                else
-            //                {
-            //                    if (user.lastMessage.Contains("<p><br/></p>"))
-            //                    {
-            //                        string value = user.lastMessage.Replace("<p><br/></p>", null);
-            //                        user.lastMessage = value;
-            //                    }
-            //                    user.ImageVisible = false;
-            //                    user.MessageVisible = true;
-            //                }
+        //                foreach (var user in obj)
+        //                {
+        //                    if (user.lastMessage == null)
+        //                    {
+        //                        user.ImageVisible = false;
+        //                        user.MessageVisible = true;
+        //                    }
+        //                    else if (user.lastMessage.Contains("data:image"))
+        //                    {
+        //                        user.ImageVisible = true;
+        //                        user.MessageVisible = false;
+        //                    }
+        //                    else
+        //                    {
+        //                        if (user.lastMessage.Contains("<p><br/></p>"))
+        //                        {
+        //                            string value = user.lastMessage.Replace("<p><br/></p>", null);
+        //                            user.lastMessage = value;
+        //                        }
+        //                        user.ImageVisible = false;
+        //                        user.MessageVisible = true;
+        //                    }
 
-            //                bool IsRead = user.hasBeenRead;
-            //                bool IsBookMark = user.followupExist;
-            //                if (IsRead == true)
-            //                {
-            //                    user.IsRedDotVisible = false;
-            //                    user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
-            //                }
-            //                else if (IsRead == false)
-            //                {
-            //                    user.IsRedDotVisible = true;
-            //                    user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularDarkBlueLableStyle"];
-            //                }
+        //                    bool IsRead = user.hasBeenRead;
+        //                    bool IsBookMark = user.followupExist;
+        //                    if (IsRead == true)
+        //                    {
+        //                        user.IsRedDotVisible = false;
+        //                        user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
+        //                    }
+        //                    else if (IsRead == false)
+        //                    {
+        //                        user.IsRedDotVisible = true;
+        //                        user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularDarkBlueLableStyle"];
+        //                    }
 
-            //                if (IsBookMark == true)
-            //                {
-            //                    user.IsBookMarkVisible = true;
-            //                    user.Switchimg = "orange_bookmark.png";
-            //                    user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
-            //                }
-            //                else if (IsBookMark == false)
-            //                {
-            //                    user.IsBookMarkVisible = false;
-            //                    user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularDarkBlueLableStyle"];
-            //                }
+        //                    if (IsBookMark == true)
+        //                    {
+        //                        user.IsBookMarkVisible = true;
+        //                        user.Switchimg = "orange_bookmark.png";
+        //                        user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
+        //                    }
+        //                    else if (IsBookMark == false)
+        //                    {
+        //                        user.IsBookMarkVisible = false;
+        //                        user.LastMsgStyle = (Style)App.Current.Resources["LatoRegularDarkBlueLableStyle"];
+        //                    }
 
-            //                TotalRecords = user.totalRecords;
-            //                _LastPage = Convert.ToInt32(user.totalPages);
-            //                tempOpenData.Add(user);
-            //            }
+        //                    TotalRecords = user.totalRecords;
+        //                    _LastPage = Convert.ToInt32(user.totalPages);
+        //                    tempOpenData.Add(user);
+        //                }
 
-            //            OpenData = new ObservableCollection<DealMessageList>(tempOpenData);
-            //            AllItems = new ObservableCollection<DealMessageList>(tempOpenData);
+        //                OpenData = new ObservableCollection<DealMessageList>(tempOpenData);
+        //                AllItems = new ObservableCollection<DealMessageList>(tempOpenData);
 
-            //            if (!string.IsNullOrEmpty(SearchText))
-            //            {
-            //                SearchDeal(SearchText);
-            //            }
-            //        }
-            //        else
-            //        {
-            //            if (searchFlag == true)
-            //            {
-            //                IsDataNotAvailable = false;
-            //            }
-            //            else
-            //            {
-            //                IsDataNotAvailable = true;
-            //            }
-            //            IsMessagsListVisible = false;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        await App.Current.MainPage.DisplayAlert("Alert", "Error", "CANCLE");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    Debug.WriteLine("Exception:>" + ex);
-            //}
-        }
+        //                if (!string.IsNullOrEmpty(SearchText))
+        //                {
+        //                    SearchDeal(SearchText);
+        //                }
+        //            }
+        //            else
+        //            {
+        //                if (searchFlag == true)
+        //                {
+        //                    IsDataNotAvailable = false;
+        //                }
+        //                else
+        //                {
+        //                    IsDataNotAvailable = true;
+        //                }
+        //                IsMessagsListVisible = false;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            await App.Current.MainPage.DisplayAlert("Alert", "Error", "CANCLE");
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine("Exception:>" + ex);
+        //    }
+        //}
 
         public async Task LoadMore_click()
         {
@@ -601,13 +625,6 @@ namespace Simon.ViewModel
                     {
                         SetValue = App.AsceDsce;
                     }
-                    if (_isBookMarkFilterOn == true)
-                    {
-                        //_isBookMarkFilterOn = false;
-                        IsLoadingInfinite = false;
-                        IsLoadingInfiniteEnabled = false;
-                        return;
-                    }
 
                     if (_LastPage == _CurrentPage)
                     {
@@ -616,9 +633,10 @@ namespace Simon.ViewModel
                         return;
                     }
                     if (_isTeamLoading) { IsLoadingInfinite = false; return; }
+
                     _CurrentPage++;
 
-                    await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, SetValue);
+                    await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, SetValue, App.FollowUp);
                     //await LoadData(_CurrentPage, App.ReadUnread);
                 }
                 catch (Exception ex)
@@ -631,6 +649,7 @@ namespace Simon.ViewModel
                     IsBusy = false;
                 }
             }
+            
             IsLoadingInfinite = false;
         }
 
@@ -692,7 +711,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.ReadUnread = "true";
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce, App.FollowUp);
                                 //await LoadData(_CurrentPage, App.ReadUnread);
                             }
                         }
@@ -704,7 +723,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.ReadUnread = "false";
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce, App.FollowUp);
                                 //await LoadData(_CurrentPage, App.ReadUnread);
                             }
                         }
@@ -716,7 +735,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.ReadUnread = "null";
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce, App.FollowUp);
                                 //await LoadData(_CurrentPage, App.ReadUnread);
                             }
                         }
@@ -728,7 +747,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.OrderByText = Constants.PartyNamelblText;
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsceName);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsceName, App.FollowUp);
                             }
                         }
                         else if (item.name == Constants.LastPostDatelblText)
@@ -739,7 +758,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.OrderByText = Constants.LastPostDateText;
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, App.AsceDsce, App.FollowUp);
                             }
                         }
                         else if (item.name == Constants.ClearlblText)
@@ -750,7 +769,7 @@ namespace Simon.ViewModel
                                 isFirstTime = true;
                                 App.OrderByText = Constants.LastPostDateText;
                                 _CurrentPage = 0;
-                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, true);
+                                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, true, App.FollowUp);
                             }
                         }
                     }
@@ -821,32 +840,30 @@ namespace Simon.ViewModel
 
         private async void BookMarkCommandExecute()
         {
-            IsLoadingInfiniteEnabled = true;
-            OpenData = new ObservableCollection<DealMessageList>(AllItems);
-            if (OpenData != null && OpenData.Count > 0)
+            if (App.SelectedName == Constants.BorrowerlblText)
             {
-                if (BookMarkImage == "bookmark.png")
-                {
-                    BookMarkImage = "orange_bookmark.png";
-                    var tempRecords = _openData.Where(c => c.followupExist == true).ToList();
-                    if (tempRecords != null && tempRecords.Count > 0)
-                    {
-                        OpenData = new ObservableCollection<DealMessageList>(tempRecords);
-                        IsLoadingInfiniteVisible = false;
-                    }
-                    else
-                    {
-                        await ShowAlert("Alert", "No Bookmark Messages..!!");
-                        BookMarkImage = "bookmark.png";
-                    }
-                    _isBookMarkFilterOn = true;
-                }
-                else
-                {
-                    _isBookMarkFilterOn = false;
-                    BookMarkImage = "bookmark.png";
-                    OpenData = new ObservableCollection<DealMessageList>(AllItems);
-                }
+                SetValue = App.AsceDsceName;
+            }
+            if (App.SelectedName == Constants.LastPostDatelblText)
+            {
+                SetValue = App.AsceDsce;
+            }
+
+            if (BookMarkImage == "bookmark.png")
+            {
+                BookMarkImage = "orange_bookmark.png";
+                isFirstTime = true;
+                App.FollowUp = "true";
+                _CurrentPage = 0;
+                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, SetValue, App.FollowUp);
+            }
+            else
+            {
+                BookMarkImage = "bookmark.png";
+                isFirstTime = true;
+                App.FollowUp = "null";
+                _CurrentPage = 0;
+                await LoadDataV1(_CurrentPage, App.ReadUnread, App.OrderByText, SetValue, App.FollowUp);
             }
         }
 
@@ -978,3 +995,4 @@ namespace Simon.ViewModel
         }
     }
 }
+

@@ -58,6 +58,7 @@ namespace Simon.Views
             base.OnAppearing();
 
             App.ReadUnread = "null";
+            App.FollowUp = "null";
             App.OrderByText = Constants.LastPostDateText;
             App.SelectedTitle = string.Empty;
             App.SelectedName = string.Empty;

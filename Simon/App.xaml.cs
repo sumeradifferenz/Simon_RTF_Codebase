@@ -31,6 +31,7 @@ namespace Simon
         public static bool AsceDsceName { get; set; } = true;
         public static bool IsFirstTime { get; set; } = false;
 
+        public static string FollowUp { get; set; } = string.Empty;
         public static string ReadUnread { get; set; } = string.Empty;
         public static string OrderByText { get; set; } = string.Empty;
         public static string SelectedTitle { get; set; } = string.Empty;
@@ -39,6 +40,7 @@ namespace Simon
         public static string tempFile;
         public static string FileName;
         public static string base64String;
+        public static string Link;
 
         public static ImageSource FrameImage;
 
@@ -55,11 +57,11 @@ namespace Simon
             LayoutService.Init();
 
             XF.Material.Forms.Material.Init(this);
-            
+
             NavigationPage navPage = new NavigationPage
             {
                 BarBackgroundColor = Color.White,
-                BarTextColor = Color.Black
+                BarTextColor = Color.Black,
             };
             
             if (Settings.LoggedInUser != null)
@@ -85,10 +87,7 @@ namespace Simon
         {
             Settings.DeviceToken = CrossFirebasePushNotification.Current.Token;
             Debug.WriteLine($"Device Token: " + Settings.DeviceToken);
-
-            //tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Favorites), "LogFile.txt");
-            //File.AppendAllText(App.tempFile, "Device Token : " + Settings.DeviceToken);
-            //Debug.WriteLine("File Name====" + App.tempFile);
+            //App.Current.MainPage.DisplayAlert("Simon", Settings.DeviceToken, "OK");
 
             CrossFirebasePushNotification.Current.OnTokenRefresh += (s, p) =>
             {

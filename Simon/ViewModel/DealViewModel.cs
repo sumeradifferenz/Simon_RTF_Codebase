@@ -973,6 +973,7 @@ namespace Simon.ViewModel
             await ClosePopup();
             var tempRecords = _dealList.OrderByDescending(c => c.partyName).ToList();//Descending order
             DealList.Clear();
+
             foreach (var item in tempRecords)
             {
                 DealList.Add(item);

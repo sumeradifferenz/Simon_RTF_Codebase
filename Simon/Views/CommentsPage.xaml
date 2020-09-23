@@ -109,13 +109,13 @@
                             </StackLayout>
                             <StackLayout x:Name="SubjectStack" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0,5,0,0" Spacing="0" IsVisible="{Binding sendMessageVisible}">
                                 <Frame HorizontalOptions="Fill" Padding="0" VerticalOptions="Fill" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="20">
-                                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10" ColumnSpacing="15" RowSpacing="5">
+                                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10" ColumnSpacing="5" RowSpacing="5">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto"/>
                                             <RowDefinition Height="*"/>
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" Padding="0">
@@ -131,10 +131,10 @@
                                             </Frame>
                                             <htmlLabel:HtmlLabel x:Name="SubjectDesc" Text="{Binding SubjectDec}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldDarkGrayLableStyle}"/>
                                         </StackLayout>
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding MessageFrameClick}"></TapGestureRecognizer>
+                                        </Grid.GestureRecognizers>
                                     </Grid>
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding MessageFrameClick}"></TapGestureRecognizer>
-                                    </Frame.GestureRecognizers>
                                 </Frame>
                             </StackLayout>
                         </StackLayout>

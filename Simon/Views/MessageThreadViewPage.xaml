@@ -76,7 +76,7 @@
                                                         <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
                                                             <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10" Margin="0" Spacing="5">
                                                                 <Frame IsClippedToBounds="True" BackgroundColor="Transparent" WidthRequest="150" HeightRequest="150" Padding="0" Margin="0" CornerRadius="5" HasShadow="False" IsVisible="{Binding IsImageVisible}">
-                                                                    <Image x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill"></Image>
+                                                                    <ImageButton x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.ImageOpenCommand}" CommandParameter="{Binding .}"></ImageButton>
                                                                 </Frame>
                                                                 <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" HorizontalOptions="StartAndExpand" Style="{StaticResource MessageLabelStyle}"></htmlLabel:HtmlLabel>
                                                                 <!--<Label x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" Style="{StaticResource LatoRegularDarkBlueLableStyle}" />-->
@@ -150,8 +150,7 @@
                                     <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" ImageInsertCommand="{Binding ImageCommand}" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                                    <!--ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,InsertImage,Hyperlink" Text="{Binding TypedMessage}"-->
+                                <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                                     <richTextEditor:SfRichTextEditor.ToolbarSettings>
                                         <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
                                     </richTextEditor:SfRichTextEditor.ToolbarSettings>
@@ -162,8 +161,7 @@
                                     <ImageButton Source="camera.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding OpenCameraCommand}"></ImageButton>
                                     <ImageButton Source="textformat.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding TextFormatCommand}"></ImageButton>
                                 </StackLayout>
-                                <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
-                            <Button Grid.Row="0" Grid.Column="1" Text="B" Clicked="Button_Clicked" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="Center">FontButtonCommand="{Binding FontCommand}"</Button>-->
+                                <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>-->
                                 <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
                                     <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
                                     <Frame.GestureRecognizers>
@@ -184,10 +182,3 @@
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
-
-<!--<Controls:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></Controls:HtmlLabel>-->
-<!--<richTextEditor:SfRichTextEditor x:Name="txtMessage" ShowToolbar="False" AutoSize="TextChanges" Text="{Binding TypedMessage}" ImageInsertCommand="{Binding ImageCommand}" Grid.Row="0" Grid.Column="0"  PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                <richTextEditor:SfRichTextEditor.ToolbarSettings>
-                                    <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
-                                </richTextEditor:SfRichTextEditor.ToolbarSettings>
-                            </richTextEditor:SfRichTextEditor>-->

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Runtime.InteropServices;
 using DLToolkit.Forms.Controls;
 using Foundation;
 using LabelHtml.Forms.Plugin.iOS;
 using Plugin.FirebasePushNotification;
-using Simon.Helpers;
 using UIKit;
 using UserNotifications;
 using Xamarin;
@@ -41,7 +37,7 @@ namespace Simon.iOS
             LoadApplication(new App());
 
             FirebasePushNotificationManager.Initialize(options, true);
-            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UserNotifications.UNNotificationPresentationOptions.Alert | UserNotifications.UNNotificationPresentationOptions.Badge | UserNotifications.UNNotificationPresentationOptions.Sound;
+            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UNNotificationPresentationOptions.None | UNNotificationPresentationOptions.Sound;
 
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();

@@ -55,7 +55,7 @@
                             <Frame Grid.Row="0" Padding="0,20,0,20" Grid.Column="1" CornerRadius="10" BackgroundColor="White" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
                                 <StackLayout Orientation="Vertical" Padding="0" Spacing="15" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                                     <Image Source="take_picture.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="50" WidthRequest="50"></Image>
-                                    <Label Text="Take a Photo" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
+                                    <Label Text="Take a Picture" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding uploadImageCommand}"></TapGestureRecognizer>
@@ -67,7 +67,7 @@
                         <Controls:CustomFlowListView x:Name="UploadDocumentListView" FlowColumnCount="1" SeparatorVisibility="None" HasUnevenRows="true" FlowItemsSource="{Binding UploadDocumentList}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BackgroundColor="White" HideScorllbar="true">
                             <Controls:CustomFlowListView.FlowColumnTemplate>
                                 <DataTemplate>
-                                    <StackLayout BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0" Padding="0" Margin="5">
+                                    <StackLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0" Padding="0" Margin="5">
                                         <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="10" Padding="15">
                                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" >
                                                 <Label Text="{Binding Filename}" Style="{StaticResource LatoRegularDarkGrayLableStyle}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="{StaticResource FontSize15}"/>
@@ -79,7 +79,7 @@
                             </Controls:CustomFlowListView.FlowColumnTemplate>
                         </Controls:CustomFlowListView>
                         <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0" Spacing="0">
-                            <Button Text="Upload" Style="{StaticResource DoneButtonStyle}" x:Name="Applybtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding UploadCommand}"/>
+                            <Button Text="UPLOAD" Style="{StaticResource DoneButtonStyle}" x:Name="Applybtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding UploadCommand}"/>
                         </StackLayout>
                     </StackLayout>
                     <StackLayout HeightRequest="150" BackgroundColor="White" Orientation="Vertical" Spacing="30" Grid.Row="0" Grid.RowSpan="2" Padding="30,40,30,40" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadSuccessVisible}">
