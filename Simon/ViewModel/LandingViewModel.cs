@@ -258,8 +258,11 @@ namespace Simon.ViewModel
         {
             try
             {
-                //IsBusy = true;
+                IsBusy = true;
                 HttpClient hc = new HttpClient();
+
+                await Task.Delay(new TimeSpan(0, 0, 2)).ConfigureAwait(false);
+
                 var jsonString = await hc.GetStringAsync(Config.CLOSING_API + userId);
                 ClosingList = LandingModel.FromJson(jsonString);
                 //IsBusy = false;

@@ -64,6 +64,11 @@ namespace Simon.Views
             {
                 DealList.FlowScrollTo(args, ScrollToPosition.Start, true);
             });
+
+            MessagingCenter.Subscribe<object, DealsMainModel>(this, "DealsSortClear", (sender, args) =>
+            {
+                DealList.FlowScrollTo(args, ScrollToPosition.Start, true);
+            });
         }
 
         protected override void OnAppearing()

@@ -37,10 +37,10 @@ namespace Simon
         public static string SelectedTitle { get; set; } = string.Empty;
         public static string SelectedName { get; set; } = string.Empty;
         public static string ApprovalSelectedTitle { get; set; } = string.Empty;
-        public static string tempFile;
-        public static string FileName;
-        public static string base64String;
-        public static string Link;
+        public static string tempFile { get; set; } = string.Empty;
+        public static string FileName { get; set; } = string.Empty;
+        public static string base64String { get; set; } = string.Empty;
+        public static string Link { get; set; } = string.Empty;
 
         public static ImageSource FrameImage;
 

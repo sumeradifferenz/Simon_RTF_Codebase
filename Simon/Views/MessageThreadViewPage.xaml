@@ -16,11 +16,13 @@
     <ContentPage.Content>
         <StackLayout x:Name="MainStackLayout" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Spacing="0">
             <!--<SubView:HeaderView VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" HeaderText="{Binding LabelParty}" LeftImageSource="back_arrow.png" LeftCommand="{Binding BackCommand}" Padding="0"/>-->
-            <StackLayout x:Name="WrapperStackLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding20_10_20_10}" Spacing="0">
-                <Label Text="{Binding LabelTopic}" FontSize="{StaticResource FontSize16}" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_10}" Style="{StaticResource LatoRegularOrangeLableStyle}" BackgroundColor="Transparent"/>
-                <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource WhiteColor}">
-                    <StackLayout x:Name="MessagesThreadStackLayout" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="{StaticResource WhiteColor}">
-                        <controls:FlowListView BackgroundColor="{StaticResource WhiteColor}"
+            <Controls:KeyboardView Padding="0"
+                         VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="WrapperStackLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding20_10_20_10}" Spacing="0">
+                    <Label Text="{Binding LabelTopic}" FontSize="{StaticResource FontSize16}" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_10}" Style="{StaticResource LatoRegularOrangeLableStyle}" BackgroundColor="Transparent"/>
+                    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource WhiteColor}">
+                        <StackLayout x:Name="MessagesThreadStackLayout" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="{StaticResource WhiteColor}">
+                            <controls:FlowListView BackgroundColor="{StaticResource WhiteColor}"
                                   FlowColumnCount="1"
                                   FlowItemTapped="MessageList_ItemTapped"
                                   x:Name="MessageList"
@@ -32,152 +34,155 @@
                                   Rotation="180"
                                   FlowIsLoadingInfinite="{Binding IsLoadingInfinite}"
                                   FlowTotalRecords="{Binding TotalRecords}"
-                                  FlowIsLoadingInfiniteEnabled="{Binding IsLoadingInfiniteEnabled}"
+                                  FlowIsLoadingInfiniteEnabled="true"
                                   FlowLoadingCommand="{Binding LoadMoreCommand}"
                                   VerticalScrollBarVisibility="Never">
-                            <controls:FlowListView.FlowLoadingTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <StackLayout BackgroundColor="Transparent" Padding="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-                                            <!--<Label FlowDirection="RightToLeft" Rotation="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Loading..." />-->
-                                        </StackLayout>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </controls:FlowListView.FlowLoadingTemplate>
-                            <controls:FlowListView.FlowColumnTemplate>
-                                <DataTemplate>
-                                    <Grid Padding="{x:Static Services:LayoutService.MarginPadding05}">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <StackLayout FlowDirection="LeftToRight" Rotation="180">
-                                            <StackLayout HorizontalOptions="{Binding HorizontalOption}">
-                                                <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
-                                                    <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
-                                                        <Label Text="{Binding author}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkGrayLableStyle}"/>
-                                                        <Label Grid.Column="1" Text="{Binding createdDate, StringFormat='\{0:MM/dd/yy, hh:mm tt}', Converter={StaticResource UtcToLocalDateTimeConverter}}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkGrayLableStyle}"/>
+                                <controls:FlowListView.FlowLoadingTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout BackgroundColor="Transparent" Padding="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                                                <!--<Label FlowDirection="RightToLeft" Rotation="180" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Loading..." />-->
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </controls:FlowListView.FlowLoadingTemplate>
+                                <controls:FlowListView.FlowColumnTemplate>
+                                    <DataTemplate>
+                                        <Grid Padding="{x:Static Services:LayoutService.MarginPadding05}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout FlowDirection="LeftToRight" Rotation="180">
+                                                <StackLayout HorizontalOptions="{Binding HorizontalOption}">
+                                                    <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
+                                                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand">
+                                                            <Label Text="{Binding author}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkGrayLableStyle}"/>
+                                                            <Label Grid.Column="1" Text="{Binding createdDate, StringFormat='\{0:MM/dd/yy, hh:mm tt}', Converter={StaticResource UtcToLocalDateTimeConverter}}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkGrayLableStyle}"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                                <StackLayout HorizontalOptions="{Binding HorizontalOption}" VerticalOptions="FillAndExpand">
+                                                    <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand">
+                                                        <StackLayout Orientation="Horizontal" Spacing="10">
+                                                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding BookMarkImg}" x:Name="bookMarkImageSender"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding IsSenderBookMarkVisible}">
+                                                                <Image.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.BookMarkCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                                                </Image.GestureRecognizers>
+                                                            </Image>
+                                                            <Frame Grid.Row="0" Grid.Column="0" Padding="10" x:Name="personBtnImage" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsSenderProfileVisible}" >
+                                                                <ImageButton x:Name="personBtn" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Source="user.png" Aspect="AspectFit" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                                                            </Frame>
+                                                            <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
+                                                                <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10" Margin="0" Spacing="5">
+                                                                    <Frame IsClippedToBounds="True" BackgroundColor="Transparent" WidthRequest="150" HeightRequest="150" Padding="0" Margin="0" CornerRadius="5" HasShadow="False" IsVisible="{Binding IsImageVisible}">
+                                                                        <ImageButton x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.ImageOpenCommand}" CommandParameter="{Binding .}"></ImageButton>
+                                                                    </Frame>
+                                                                    <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" HorizontalOptions="StartAndExpand" Style="{StaticResource MessageLabelStyle}"></htmlLabel:HtmlLabel>
+                                                                    <!--<Label x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" Style="{StaticResource LatoRegularDarkBlueLableStyle}" />-->
+                                                                </StackLayout>
+                                                            </Frame>
+                                                            <Frame Grid.Row="0" Grid.Column="2" Padding="10" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsProfileVisible}">
+                                                                <ImageButton Grid.Row="0" Grid.Column="2" Source="user.png" Aspect="AspectFit" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                                                            </Frame>
+                                                            <Image Grid.Row="0" Grid.Column="2" Source="{Binding BookMarkImg}" x:Name="bookMarkImage"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding IsBookMarkVisible}">
+                                                                <Image.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.BookMarkCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                                                </Image.GestureRecognizers>
+                                                            </Image>
+                                                        </StackLayout>
                                                     </StackLayout>
                                                 </StackLayout>
                                             </StackLayout>
-                                            <StackLayout HorizontalOptions="{Binding HorizontalOption}" VerticalOptions="FillAndExpand">
-                                                <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand">
-                                                    <StackLayout Orientation="Horizontal" Spacing="10">
-                                                        <Image Grid.Row="0" Grid.Column="0" Source="{Binding BookMarkImg}" x:Name="bookMarkImageSender"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding IsSenderBookMarkVisible}">
-                                                            <Image.GestureRecognizers>
-                                                                <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.BookMarkCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
-                                                            </Image.GestureRecognizers>
-                                                        </Image>
-                                                        <Frame Grid.Row="0" Grid.Column="0" Padding="10" x:Name="personBtnImage" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsSenderProfileVisible}" >
-                                                            <ImageButton x:Name="personBtn" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Source="user.png" Aspect="AspectFit" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
-                                                        </Frame>
-                                                        <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
-                                                            <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10" Margin="0" Spacing="5">
-                                                                <Frame IsClippedToBounds="True" BackgroundColor="Transparent" WidthRequest="150" HeightRequest="150" Padding="0" Margin="0" CornerRadius="5" HasShadow="False" IsVisible="{Binding IsImageVisible}">
-                                                                    <ImageButton x:Name="ImageMsg" Source="{Binding MsgImageUrl}" Aspect="AspectFill" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.ImageOpenCommand}" CommandParameter="{Binding .}"></ImageButton>
-                                                                </Frame>
-                                                                <htmlLabel:HtmlLabel x:Name="plainContentLabel" Text="{Binding plainContent}" HorizontalOptions="StartAndExpand" Style="{StaticResource MessageLabelStyle}"></htmlLabel:HtmlLabel>
-                                                                <!--<Label x:Name="plainContentLabel" Text="{Binding plainContent}" FontSize="{StaticResource FontSize14}" VerticalTextAlignment="Center" Style="{StaticResource LatoRegularDarkBlueLableStyle}" />-->
-                                                            </StackLayout>
-                                                        </Frame>
-                                                        <Frame Grid.Row="0" Grid.Column="2" Padding="10" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsProfileVisible}">
-                                                            <ImageButton Grid.Row="0" Grid.Column="2" Source="user.png" Aspect="AspectFit" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
-                                                        </Frame>
-                                                        <Image Grid.Row="0" Grid.Column="2" Source="{Binding BookMarkImg}" x:Name="bookMarkImage"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding IsBookMarkVisible}">
-                                                            <Image.GestureRecognizers>
-                                                                <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.BookMarkCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
-                                                            </Image.GestureRecognizers>
-                                                        </Image>
-                                                    </StackLayout>
-                                                </StackLayout>
-                                            </StackLayout>
-                                        </StackLayout>
-                                    </Grid>
-                                </DataTemplate>
-                            </controls:FlowListView.FlowColumnTemplate>
-                        </controls:FlowListView>
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="onMessageStackClick"></TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                    <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
-                        <ActivityIndicator IsRunning="{Binding IsBusy}" Color="{StaticResource BlackColor}"/>
-                    </StackLayout>
-                </AbsoluteLayout>
+                                        </Grid>
+                                    </DataTemplate>
+                                </controls:FlowListView.FlowColumnTemplate>
+                            </controls:FlowListView>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="onMessageStackClick"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                        <StackLayout IsVisible="{Binding IsBusy}" HorizontalOptions="Center" VerticalOptions="Center" Padding="12" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                            <Frame CornerRadius="10" BackgroundColor="White" HasShadow="False">
+                                <ActivityIndicator IsRunning="{Binding IsBusy}" Color="{StaticResource BlackColor}"/>
+                            </Frame>
+                        </StackLayout>
+                    </AbsoluteLayout>
 
-                <!--<Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="200" HeightRequest="200" Padding="0" CornerRadius="5" HasShadow="False">
+                    <!--<Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="200" HeightRequest="200" Padding="0" CornerRadius="5" HasShadow="False">
                     <Image x:Name="ImageMsg" Aspect="AspectFill"></Image>
                 </Frame>
                 <Controls:HtmlLabel Margin="10" x:Name="sample" FontSize="18" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" TextColor="{StaticResource DarkBlueColor}" FontFamily="{StaticResource LatoRegular}"></Controls:HtmlLabel>-->
 
-                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,5,0,0">
-                    <Frame Margin="0" Style="{StaticResource MessageTextBoxFrameStyle}">
-                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Margin="0" Spacing="0">
-                            <StackLayout IsVisible="{Binding isImageVisible}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,10,0,10">
-                                <Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="100" Padding="0" CornerRadius="5" HasShadow="False">
-                                    <Frame.HeightRequest>
-                                        <OnPlatform x:TypeArguments="x:Double">
-                                            <On Platform="iOS">100</On>
-                                            <On Platform="Android">200</On>
-                                        </OnPlatform>
-                                    </Frame.HeightRequest>
-                                    <Image x:Name="ImageUrl" Source="{Binding ImageUrl}" Aspect="AspectFill"></Image>
-                                </Frame>
-                                <Frame IsClippedToBounds="True" Padding="0" BackgroundColor="#AFA9A9A9" HeightRequest="20" WidthRequest="20" CornerRadius="10" HorizontalOptions="End" VerticalOptions="Start" HasShadow="False" Margin="-20,-5,0,0">
-                                    <StackLayout HeightRequest="15" Padding="0" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
-                                        <Image Source="ic_close.png" Aspect="AspectFit"/>
-                                    </StackLayout>
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding CloseFrame_Command}"/>
-                                    </Frame.GestureRecognizers>
-                                </Frame>
-                            </StackLayout>
-                            <Frame IsVisible="{Binding isDocsVisible}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasShadow="False">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,5,0,0">
+                        <Frame Margin="0" Style="{StaticResource MessageTextBoxFrameStyle}">
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Margin="0" Spacing="0">
+                                <StackLayout IsVisible="{Binding isImageVisible}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Padding="0" Margin="0,10,0,10">
+                                    <Frame IsClippedToBounds="True" BackgroundColor="White" WidthRequest="100" Padding="0" CornerRadius="5" HasShadow="False">
+                                        <Frame.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="iOS">100</On>
+                                                <On Platform="Android">200</On>
+                                            </OnPlatform>
+                                        </Frame.HeightRequest>
+                                        <Image x:Name="ImageUrl" Source="{Binding ImageUrl}" Aspect="AspectFill"></Image>
+                                    </Frame>
+                                    <Frame IsClippedToBounds="True" Padding="0" BackgroundColor="#AFA9A9A9" HeightRequest="20" WidthRequest="20" CornerRadius="10" HorizontalOptions="End" VerticalOptions="Start" HasShadow="False" Margin="-20,-5,0,0">
+                                        <StackLayout HeightRequest="15" Padding="0" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
+                                            <Image Source="ic_close.png" Aspect="AspectFit"/>
+                                        </StackLayout>
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding CloseFrame_Command}"/>
+                                        </Frame.GestureRecognizers>
+                                    </Frame>
+                                </StackLayout>
+                                <!--<Frame IsVisible="{Binding isDocsVisible}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" HasShadow="False">
                                 <StackLayout Orientation="Horizontal" BackgroundColor="LightGray" Padding="5" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Spacing="10">
                                     <Image Source="attach_file.png" BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Image>
                                     <Label x:Name="FileName" Text="{Binding FileName}" FontSize="20" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="Center"></Label>
                                     <ImageButton Source="ic_close.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="CenterAndExpand" Command="{Binding CloseDocs_Command}"></ImageButton>
                                 </StackLayout>
-                            </Frame>
-                            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="2" >
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"></RowDefinition>
-                                    <RowDefinition Height="40"></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
-                                    <richTextEditor:SfRichTextEditor.ToolbarSettings>
-                                        <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
-                                    </richTextEditor:SfRichTextEditor.ToolbarSettings>
-                                </richTextEditor:SfRichTextEditor>
-                                <StackLayout Orientation="Horizontal" Spacing="2" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                                    <ImageButton Source="note_add.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AddDocsCommand}"></ImageButton>
-                                    <ImageButton Source="attachfile.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AttachLinkCommand}"></ImageButton>
-                                    <ImageButton Source="camera.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding OpenCameraCommand}"></ImageButton>
-                                    <ImageButton Source="textformat.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding TextFormatCommand}"></ImageButton>
-                                </StackLayout>
-                                <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>-->
-                                <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
-                                    <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
-                                    <Frame.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
-                                    </Frame.GestureRecognizers>
-                                </Frame>
-                            </Grid>
-                        </StackLayout>
-                    </Frame>
-                    <Image x:Name="addParticipant" Source="add_participants.png" Style="{x:StaticResource AddParticipantImageStyle}">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ReplayCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
-                        </Image.GestureRecognizers>
-                    </Image>
+                            </Frame>-->
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="2" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                        <richTextEditor:SfRichTextEditor.ToolbarSettings>
+                                            <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
+                                        </richTextEditor:SfRichTextEditor.ToolbarSettings>
+                                    </richTextEditor:SfRichTextEditor>
+                                    <StackLayout Orientation="Horizontal" Spacing="2" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <!--<ImageButton Source="note_add.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AddDocsCommand}"></ImageButton>-->
+                                        <ImageButton Source="attachfile.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AttachLinkCommand}"></ImageButton>
+                                        <ImageButton Source="camera.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding OpenCameraCommand}"></ImageButton>
+                                        <ImageButton Source="textformat.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding TextFormatCommand}"></ImageButton>
+                                    </StackLayout>
+                                    <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>-->
+                                    <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
+                                        <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
+                                        </Frame.GestureRecognizers>
+                                    </Frame>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                        <Image x:Name="addParticipant" Source="add_participants.png" Style="{x:StaticResource AddParticipantImageStyle}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ReplayCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
                 </StackLayout>
-            </StackLayout>
+            </Controls:KeyboardView>
             <BoxView x:Name="PlaceHolder" HeightRequest="0" VerticalOptions="End"/>
         </StackLayout>
     </ContentPage.Content>

@@ -168,35 +168,25 @@ namespace Simon.ViewModel
 
         public async Task GetApprovalData()
         {
-            IsBusy = true;
             App.buttonClick = 0;
-            ActiveTabHandler();
-            using (HttpClient hc = new HttpClient())
+            //ActiveTabHandler();
+
+            try
             {
-                try
+                IsBusy = true;
+                HttpClient hc = new HttpClient();
+
+                await Task.Delay(new TimeSpan(0, 0, 2)).ConfigureAwait(false);
+
+                var jsonString = await hc.GetStringAsync(Config.APPROVAL_URL + userId);
+                if (jsonString != null)
                 {
-                    var jsonString = await hc.GetStringAsync(Config.APPROVAL_URL + userId);
-                    if (jsonString != null)
+                    ApprovalItems = ApprovalMainModel.FromJson(jsonString);
+
+                    if (ApprovalItems.Count > 0)
                     {
-                        var obj = JsonConvert.DeserializeObject<List<ApprovalMainModel>>(jsonString);
-
-                        if (obj.Count > 0)
-                        {
-                            IsDataNotAvailable = false;
-                            IsApprovalListVisible = true;
-
-                            foreach (var user in obj)
-                            {
-                                ApprovalItems.Add(user);
-                                tempContainerList.Add(user);
-                            }
-                        }
-                        else
-                        {
-                            IsDataNotAvailable = true;
-                            IsApprovalListVisible = false;
-                        }
-                        GetApprovalSortByData();
+                        IsDataNotAvailable = false;
+                        IsApprovalListVisible = true;
                     }
                     else
                     {
@@ -204,10 +194,15 @@ namespace Simon.ViewModel
                         IsApprovalListVisible = false;
                     }
                 }
-                finally
+                else
                 {
-                    IsBusy = false;
+                    IsDataNotAvailable = true;
+                    IsApprovalListVisible = false;
                 }
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
 
@@ -238,6 +233,7 @@ namespace Simon.ViewModel
             try
             {
                 await ClosePopup();
+                GetApprovalSortByData();
                 DealSortByPopup DealSortByPopupview = new DealSortByPopup();
                 DealSortByPopupview.BindingContext = this;
                 SortBylblText = Constants.SortBylblText;
@@ -318,7 +314,7 @@ namespace Simon.ViewModel
             {
                 if (data.name == Constants.BorrowerlblText)
                 {
-                    if(data.SortByAscDescbtnimg == Constants.NameDescendingImg)
+                    if (data.SortByAscDescbtnimg == Constants.NameDescendingImg)
                     {
                         data.SortByAscDescbtnimg = Constants.NameAcendingImg;
                     }

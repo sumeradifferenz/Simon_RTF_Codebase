@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
+using UIKit;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
@@ -16,47 +15,79 @@ namespace Simon.Views
         private MessageThreadViewModel vm = null;
         string URL, htmlMessage;
         bool isFromSendMsg = false;
+        bool FirstTime = true;
 
         public MessageThreadViewPage()
         {
             InitializeComponent();
+            this.BindingContext = new MessageThreadViewModel();
+            vm = this.BindingContext as MessageThreadViewModel;
 
-            
-            if (Device.RuntimePlatform == Device.iOS)
-            {
-                //Divyesh - Date: 28 July, 2020
-                //Embeded all controls inside scrollview to avoid header shifting up when keyboard is open.
-                var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-                if (mainDisplayInfo.Height <= 1334)
-                {
-                    // iPhone 6, 7, 8
-                    MessagesThreadStackLayout.HeightRequest = 465;
-                }
-                else
-                {
-                    //iPhone X, XS, XR, 11
-                    MessagesThreadStackLayout.HeightRequest = 565;
-                }
 
-                txtMessage.Focused += (sender, e) => PlaceHolder.HeightRequest = 20;
-                txtMessage.Unfocused += (sender, e) => PlaceHolder.HeightRequest = 0;
+            //Commemted by Ekta - Date: 28 September, 2020 
+            //if (Device.RuntimePlatform == Device.iOS)
+            //{
+            //    //Divyesh - Date: 28 July, 2020
+            //    //Embeded all controls inside scrollview to avoid header shifting up when keyboard is open.
+            //    var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            //    if (mainDisplayInfo.Height <= 1334)
+            //    {
+            //        // iPhone 6, 7, 8
+            //        MessagesThreadStackLayout.HeightRequest = 465;
+            //    }
+            //    else
+            //    {
+            //        //iPhone X, XS, XR, 11
+            //        MessagesThreadStackLayout.HeightRequest = 565;
+            //    }
 
-                ScrollView scroll = new ScrollView
-                {
-                    Content = WrapperStackLayout
-                };
-                MainStackLayout.Children.Add(scroll);
-            }
+            //    txtMessage.Focused += (sender, e) => PlaceHolder.HeightRequest = 20;
+            //    txtMessage.Unfocused += (sender, e) => PlaceHolder.HeightRequest = 0;
+
+            //    ScrollView scroll = new ScrollView
+            //    {
+            //        Content = WrapperStackLayout
+            //    };
+            //    MainStackLayout.Children.Add(scroll);
+            //}
         }
 
         protected async override void OnAppearing()
         {
             base.OnAppearing();
 
-            Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
+            Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);            
 
-            this.BindingContext = new MessageThreadViewModel();
-            vm = this.BindingContext as MessageThreadViewModel;
+            if (FirstTime)
+            {
+                FirstTime = false;
+
+                if (vm != null)
+                {
+                    if (NetworkCheck.IsInternet())
+                    {
+                        await vm.PostReadThreadData();
+                        await vm.FetchThreadUserData();
+                    }
+                    else
+                    {
+                        await DisplayAlert("Simon", "No network is available.", "OK");
+                    }
+                }
+            }
+            else
+            {
+                if (App.FrameImage != null)
+                {
+                    vm.ImageUrl = App.FrameImage;
+                    vm.isImageVisible = true;
+                }
+                if (App.FileName != null)
+                {
+                    vm.FileName = App.FileName;
+                    vm.isDocsVisible = true;
+                }
+            }
 
             if (App.IsFromAddParticipantPage == true)
             {
@@ -75,19 +106,6 @@ namespace Simon.Views
             else
             {
                 txtMessage.HtmlText = null;
-            }
-
-            if (vm != null)
-            {
-                if (NetworkCheck.IsInternet())
-                {
-                    await vm.PostReadThreadData();
-                    await vm.FetchThreadUserData();
-                }
-                else
-                {
-                    await DisplayAlert("Simon", "No network is available.", "OK");
-                }
             }
         }
 
@@ -127,7 +145,7 @@ namespace Simon.Views
             return true;
         }
 
-        void MessageList_ItemTapped(System.Object sender, Xamarin.Forms.ItemTappedEventArgs e)
+        void MessageList_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             MessageList.SeparatorColor = Color.Transparent;
             MessageList.SeparatorVisibility = SeparatorVisibility.None;
@@ -144,11 +162,7 @@ namespace Simon.Views
 
         void SendMessageTappedCommand(object sender, EventArgs e)
         {
-            this.BindingContext = new MessageThreadViewModel();
-            vm = this.BindingContext as MessageThreadViewModel;
-
             vm.ValidateSendMsg(txtMessage.HtmlText);
-            txtMessage = null;
         }
     }
 }

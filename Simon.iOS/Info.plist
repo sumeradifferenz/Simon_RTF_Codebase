@@ -15,7 +15,7 @@
 	<key>UIFileSharingEnabled</key>
 	<true/>
 	<key>CFBundleVersion</key>
-	<string>1.15</string>
+	<string>1.19</string>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>UIBackgroundModes</key>
@@ -93,5 +93,11 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We use your location to store latitude and longitude.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>The application requires Calendar access to save events.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We use your location to store latitude and longitude.</string>
 </dict>
 </plist>

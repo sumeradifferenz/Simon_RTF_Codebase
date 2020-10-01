@@ -19,13 +19,13 @@
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
     <PackageReference Include="Vapolia.XamarinFormsGesture.Forked" Version="3.0.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView" Version="2.0.11" />
     <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.1.0.714" />
-    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.2.0.58" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor" Version="18.1.0.42" />
     <PackageReference Include="Plugin.PushNotification" Version="3.3.3" />
     <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />

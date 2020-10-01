@@ -37,7 +37,7 @@ namespace Simon.iOS
             LoadApplication(new App());
 
             FirebasePushNotificationManager.Initialize(options, true);
-            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UNNotificationPresentationOptions.None | UNNotificationPresentationOptions.Sound;
+            FirebasePushNotificationManager.CurrentNotificationPresentationOption = UNNotificationPresentationOptions.Alert | UNNotificationPresentationOptions.Badge | UNNotificationPresentationOptions.Sound;
 
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
             Syncfusion.XForms.iOS.RichTextEditor.SfRichTextEditorRenderer.Init();

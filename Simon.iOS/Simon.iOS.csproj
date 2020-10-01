@@ -66,10 +66,11 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer: Brijesh Tekrawala (JMVHF7JX2U)</CodesignKey>
+    <CodesignKey>iPhone Distribution: Brijesh Tekrawala (296G98S4G5)</CodesignKey>
     <PlatformTarget>anycpu</PlatformTarget>
-    <CodesignProvision>SimonInternal_Dev_27Aug2020</CodesignProvision>
+    <CodesignProvision>SimonInternal_Appstore_27Aug2020</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -147,7 +148,7 @@
       <Version>6.7.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.8.0.1364</Version>
+      <Version>4.8.0.1451</Version>
     </PackageReference>
     <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
       <Version>2.0.11</Version>
@@ -168,7 +169,7 @@
       <Version>2.1.0.714</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRichTextEditor">
-      <Version>18.2.0.58</Version>
+      <Version>18.1.0.42</Version>
     </PackageReference>
     <PackageReference Include="Plugin.PushNotification">
       <Version>3.3.3</Version>

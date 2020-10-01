@@ -1,184 +1,76 @@
 using System;
 using CoreGraphics;
 using Foundation;
+using Simon.Controls;
 using Simon.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-//[assembly: ExportRenderer(typeof(Page), typeof(KeyboardRender))]
+[assembly: ExportRenderer(typeof(KeyboardView), typeof(KeyboardRender))]
 namespace Simon.iOS.Renderers
 {
-    public class KeyboardRender : PageRenderer
+    public class KeyboardRender : ViewRenderer
     {
         NSObject _keyboardShowObserver;
         NSObject _keyboardHideObserver;
-        private bool _pageWasShiftedUp;
-        private double _activeViewBottom;
-        private bool _isKeyboardShown;
-
-        public KeyboardRender() { }
-
-        public new static void Init()
+        bool IsFirstTime = true;
+        protected override void OnElementChanged(ElementChangedEventArgs<View> e)
         {
-            var now = DateTime.Now;
-        }
+            base.OnElementChanged(e);
 
-        public override void ViewWillAppear(bool animated)
-        {
-            base.ViewWillAppear(animated);
-
-            var page = Element as ContentPage;
-
-            if (page != null)
+            if (e.NewElement != null)
             {
-                var contentScrollView = page.Content as ScrollView;
-
-                if (contentScrollView != null)
-                    return;
-
                 RegisterForKeyboardNotifications();
             }
-        }
 
-        public override void ViewWillDisappear(bool animated)
-        {
-            base.ViewWillDisappear(animated);
-
-            UnregisterForKeyboardNotifications();
+            if (e.OldElement != null)
+            {
+                UnregisterForKeyboardNotifications();
+            }
         }
 
         void RegisterForKeyboardNotifications()
         {
             if (_keyboardShowObserver == null)
-                _keyboardShowObserver = NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillShowNotification, OnKeyboardShow);
+                _keyboardShowObserver = UIKeyboard.Notifications.ObserveWillShow(OnKeyboardShow);
             if (_keyboardHideObserver == null)
-                _keyboardHideObserver = NSNotificationCenter.DefaultCenter.AddObserver(UIKeyboard.WillHideNotification, OnKeyboardHide);
+                _keyboardHideObserver = UIKeyboard.Notifications.ObserveWillHide(OnKeyboardHide);
         }
+
+        void OnKeyboardShow(object sender, UIKeyboardEventArgs args)
+        {
+            NSValue result = (NSValue)args.Notification.UserInfo.ObjectForKey(new NSString(UIKeyboard.FrameEndUserInfoKey));
+            CGSize keyboardSize = result.RectangleFValue.Size;
+            if (Element != null)
+            {
+                Element.Margin = new Thickness(0, 0, 0, keyboardSize.Height - 40); //push the entry up to keyboard height when keyboard is activated
+            }
+        }
+
+        void OnKeyboardHide(object sender, UIKeyboardEventArgs args)
+        {
+            if (Element != null)
+            {
+                Element.Margin = new Thickness(0); //set the margins to zero when keyboard is dismissed
+            }
+
+        }
+
 
         void UnregisterForKeyboardNotifications()
         {
-            _isKeyboardShown = false;
             if (_keyboardShowObserver != null)
             {
-                NSNotificationCenter.DefaultCenter.RemoveObserver(_keyboardShowObserver);
                 _keyboardShowObserver.Dispose();
                 _keyboardShowObserver = null;
             }
 
             if (_keyboardHideObserver != null)
             {
-                NSNotificationCenter.DefaultCenter.RemoveObserver(_keyboardHideObserver);
                 _keyboardHideObserver.Dispose();
                 _keyboardHideObserver = null;
             }
         }
-
-        protected virtual void OnKeyboardShow(NSNotification notification)
-        {
-            if (!IsViewLoaded || _isKeyboardShown)
-                return;
-
-            _isKeyboardShown = true;
-            var activeView = View.FindFirstResponder();
-
-            if (activeView == null)
-                return;
-
-            var keyboardFrame = UIKeyboard.FrameEndFromNotification(notification);
-            var isOverlapping = activeView.IsKeyboardOverlapping(View, keyboardFrame);
-
-            if (!isOverlapping)
-                return;
-
-            if (isOverlapping)
-            {
-                _activeViewBottom = activeView.GetViewRelativeBottom(View);
-                ShiftPageUp(keyboardFrame.Height, _activeViewBottom);
-            }
-        }
-
-        private void OnKeyboardHide(NSNotification notification)
-        {
-            if (!IsViewLoaded)
-                return;
-
-            _isKeyboardShown = false;
-            var keyboardFrame = UIKeyboard.FrameEndFromNotification(notification);
-
-            if (_pageWasShiftedUp)
-            {
-                ShiftPageDown(keyboardFrame.Height, _activeViewBottom);
-            }
-        }
-
-        private void ShiftPageUp(nfloat keyboardHeight, double activeViewBottom)
-        {
-            var pageFrame = Element.Bounds;
-
-            var newHeight = pageFrame.Height + CalculateShiftByAmount(pageFrame.Height, keyboardHeight, activeViewBottom);
-
-            Element.LayoutTo(new Rectangle(pageFrame.X, pageFrame.Y,
-               pageFrame.Width, newHeight));
-
-            _pageWasShiftedUp = true;
-        }
-
-        private void ShiftPageDown(nfloat keyboardHeight, double activeViewBottom)
-        {
-            CGSize screenSize = UIScreen.MainScreen.Bounds.Size;
-            var pageFrame = Element.Bounds;
-
-            var newHeight = activeViewBottom;
-
-            Element.LayoutTo(new Rectangle(pageFrame.X, pageFrame.Y,
-             pageFrame.Width, screenSize.Height));
-
-            _pageWasShiftedUp = false;
-        }
-
-        private double CalculateShiftByAmount(double pageHeight, nfloat keyboardHeight, double activeViewBottom)
-        {
-            return (pageHeight - activeViewBottom) - keyboardHeight-60;
-        }
     }
-
-    public static class ViewExtensions
-    {
-
-        public static UIView FindFirstResponder(this UIView view)
-        {
-            if (view.IsFirstResponder)
-            {
-                return view;
-            }
-            foreach (UIView subView in view.Subviews)
-            {
-                var firstResponder = subView.FindFirstResponder();
-                if (firstResponder != null)
-                    return firstResponder;
-            }
-            return null;
-        }
-
-        public static double GetViewRelativeBottom(this UIView view, UIView rootView)
-        {
-            var viewRelativeCoordinates = rootView.ConvertPointFromView(view.Frame.Location, view);
-            var activeViewRoundedY = Math.Round(viewRelativeCoordinates.Y, 2);
-
-            return activeViewRoundedY + view.Frame.Height;
-        }
-
-        public static bool IsKeyboardOverlapping(this UIView activeView, UIView rootView, CGRect keyboardFrame)
-        {
-            var activeViewBottom = activeView.GetViewRelativeBottom(rootView);
-            var pageHeight = rootView.Frame.Height;
-            var keyboardHeight = keyboardFrame.Height;
-
-            var isOverlapping = activeViewBottom >= (pageHeight - keyboardHeight-60);
-
-            return isOverlapping;
-        }
-    }
-
 }

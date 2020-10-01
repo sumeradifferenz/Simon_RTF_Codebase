@@ -31,6 +31,7 @@ namespace Simon.ViewModel
         public string SaveMessage, base64String;
         int id;
         JObject jObject = null;
+        const string HTML_TAG_PATTERN = "<[^>]+>|&nbsp;";
 
         private ObservableCollection<messages> AllItems = new ObservableCollection<messages>();
 
@@ -43,6 +44,7 @@ namespace Simon.ViewModel
         private int _CurrentPage = 1;
         private int _LastPage = 0;
         private bool _isTeamLoading = false;
+        private bool FirstTime = Device.RuntimePlatform == Device.iOS;
 
         private ObservableCollection<messages> _messageList = new ObservableCollection<messages>();
         public ObservableCollection<messages> MessageList
@@ -124,21 +126,15 @@ namespace Simon.ViewModel
             set { SetProperty(ref _labelTopic, value); }
         }
 
-        private string _TypedMessage { get; set; }
+        public string _TypedMessage { get; set; } = string.Empty;
         public string TypedMessage
         {
+            get { return _TypedMessage; }
             set
             {
-                Debug.WriteLine("Value : " + value);
-                if (_TypedMessage != value)
-                {
-                    _TypedMessage = value;
-                    OnPropertyChanged(_TypedMessage);
-                }
-            }
-            get
-            {
-                return _TypedMessage;
+                _TypedMessage = value;
+                OnPropertyChanged(nameof(TypedMessage));
+                Settings.TypedMessage = value;
             }
         }
 
@@ -329,8 +325,9 @@ namespace Simon.ViewModel
             }
 
             HeaderTitle = LabelParty;
-            HeaderLeftImage = "back_arrow.png";
 
+            HeaderLeftImage = "back_arrow.png";
+            
             var assembly = Assembly.GetAssembly(Application.Current.GetType());
 
             ReplayCommand = new Command(() => ReplayCommandExecute());
@@ -351,20 +348,14 @@ namespace Simon.ViewModel
 
         private string ValidationMessage(string Message)
         {
-            if (Message.Contains("<strong>​</strong>"))
+            if (Message != null)
             {
-                string text = Message.Replace("<strong>​</strong>", "");
-                Message = text;
-            }
-            if (Message.Contains("\n"))
-            {
-                string text = Message.Replace("\n", "");
-                Message = text;
-            }
-            if (Message.Contains("\n \n"))
-            {
-                string text = Message.Replace("\n \n", "");
-                Message = text;
+                string message = Regex.Replace(Message, HTML_TAG_PATTERN, string.Empty);
+
+                if (string.IsNullOrEmpty(message.TrimEnd()))
+                {
+                    Message = message;
+                }
             }
             if (Message.Contains("> <"))
             {
@@ -379,26 +370,23 @@ namespace Simon.ViewModel
             return Message;
         }
 
+        string simpleText, link;
         public async void ValidateSendMsg(string MessageText)
         {
-            if (MessageText.Contains("<p><br></p>"))
-            {
-                return;
-            }
-
             if (!string.IsNullOrEmpty(App.base64String))
             {
-                if (!string.IsNullOrEmpty(MessageText) || !string.IsNullOrEmpty(App.Link))
+                string htmlstring = IgnoreVoidElementsInHTML(MessageText);
+                if (!string.IsNullOrEmpty(App.Link))
                 {
-                    string htmlstring = IgnoreVoidElementsInHTML(MessageText);
-                    string simpleText = htmlstring.Replace(App.Link, "");
-                    string link = ValidationMessage(App.Link);
+                    simpleText = htmlstring.Replace(App.Link, "");
+                    link = ValidationMessage(App.Link);
                     MessageText = ValidationMessage(simpleText);
                     MessageText = App.base64String + MessageText + link;
                 }
                 else
                 {
-                    MessageText = App.base64String;
+                    MessageText = ValidationMessage(htmlstring);
+                    MessageText = App.base64String + MessageText;
                 }
             }
             else
@@ -406,8 +394,8 @@ namespace Simon.ViewModel
                 if (!string.IsNullOrEmpty(App.Link))
                 {
                     string htmlstring = IgnoreVoidElementsInHTML(MessageText);
-                    string simpleText = htmlstring.Replace(App.Link, "");
-                    string link = ValidationMessage(App.Link);
+                    simpleText = htmlstring.Replace(App.Link, "");
+                    link = ValidationMessage(App.Link);
                     MessageText = ValidationMessage(simpleText);
                     MessageText = MessageText + link;
                 }
@@ -432,6 +420,16 @@ namespace Simon.ViewModel
         {
             try
             {
+                IsBusy = true;
+                TypedMessage = null;
+                Settings.TypedMessage = null;
+                App.base64String = null;
+                App.Link = null;
+                App.FrameImage = null;
+                App.FileName = null;
+                isDocsVisible = false;
+                isImageVisible = false;
+
                 if (Message == null || Message == "" || string.IsNullOrWhiteSpace(Message))
                 {
                     return;
@@ -451,6 +449,7 @@ namespace Simon.ViewModel
                     };
 
                     httpClient = new HttpClient();
+                    var a = JsonConvert.SerializeObject(values);
                     var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
                     var response = await httpClient.PostAsync(Config.SAVE_MESSAGE_API, content);
                     if (response.StatusCode != System.Net.HttpStatusCode.OK || response.Content == null)
@@ -463,16 +462,12 @@ namespace Simon.ViewModel
                     }
                     else
                     {
-                        var content1 = await response.Content.ReadAsStringAsync();
-                        Debug.WriteLine(content1);
                         TypedMessage = null;
                         Settings.TypedMessage = null;
-                        App.Link = null;
-                        App.FrameImage = null;
-                        App.FileName = null;
-                        isDocsVisible = false;
-                        isImageVisible = false;
+                        var content1 = await response.Content.ReadAsStringAsync();
+                        Debug.WriteLine(content1);
                         await ClosePopup();
+                        //IsBusy = false;
                         await FetchThreadUserData();
                     }
                 }
@@ -498,12 +493,13 @@ namespace Simon.ViewModel
         public async Task FetchThreadUserData()
         {
             _isTeamLoading = true;
+            //IsLoadingInfinite = true;
             IsLoadingInfiniteEnabled = true;
             App.buttonClick = 0;
             try
             {
-                MessageList = new ObservableCollection<messages>();
-                IsBusy = true;
+                //MessageList = new ObservableCollection<messages>();
+                //IsBusy = true;
                 _CurrentPage = 1;
                 await LoadData(_CurrentPage);
             }
@@ -520,15 +516,17 @@ namespace Simon.ViewModel
 
         async Task LoadData(int page)
         {
-            var tempOpenData = new ObservableCollection<messages>(MessageList);
+            ObservableCollection<messages> tempOpenData;
+            if (page == 1)
+                tempOpenData = new ObservableCollection<messages>();
+            else
+                tempOpenData = new ObservableCollection<messages>(MessageList);
             using (HttpClient hc = new HttpClient())
             {
                 try
                 {
                     IsBusy = true;
                     bool IsBookMarkSelect = false;
-
-                    //TypedMessage = App.IsFromAddParticipantPage == true ? Settings.TypedMessage : string.Empty;
 
                     if (App.FrameImage != null)
                     {
@@ -552,6 +550,11 @@ namespace Simon.ViewModel
                             {
                                 ThreadList.Clear();
 
+                                if (string.IsNullOrEmpty(user.plainContent))
+                                {
+                                    user.plainContent = "";
+                                }
+
                                 if (user.plainContent.Contains("<p><br/></p>"))
                                 {
                                     string value = user.plainContent.Replace("<p><br/></p>", null);
@@ -566,7 +569,9 @@ namespace Simon.ViewModel
 
                                 if (user.plainContent.Contains("data:image"))
                                 {
-                                    var image = user.plainContent.Split(',')[1];
+                                    string[] delim1 = { "<img src=\"data:image/png;base64," };
+                                    var MessageValue = user.plainContent.Split(delim1, StringSplitOptions.None)[0];
+                                    var image = user.plainContent.Split(delim1, StringSplitOptions.None)[1];
                                     var image1 = image.Split('"')[0];
                                     //Debug.Write(image1);
 
@@ -580,14 +585,22 @@ namespace Simon.ViewModel
                                     int index = 2;
                                     if (index == stringMsg.Length)
                                     {
-                                        if (!string.IsNullOrEmpty(stringMsg[1]))
+                                        if (stringMsg[1] != null)
                                         {
-                                            user.plainContent = stringMsg[1];
+                                            user.plainContent = MessageValue + stringMsg[1];
                                         }
                                     }
                                     else
                                     {
-                                        user.plainContent = string.Empty;
+                                        string message = Regex.Replace(MessageValue, HTML_TAG_PATTERN, string.Empty);
+                                        if (!string.IsNullOrEmpty(message))
+                                        {
+                                            user.plainContent = MessageValue;
+                                        }
+                                        else
+                                        {
+                                            user.plainContent = string.Empty;
+                                        }
                                     }
                                 }
 
@@ -663,11 +676,10 @@ namespace Simon.ViewModel
                                     user.HeightRequest = 35;
                                     user.MaxLines = 3;
                                 }
-                                TotalRecords = obj.totalRecords;
-                                _LastPage = Convert.ToInt32(obj.totalPages);
                                 tempOpenData.Add(user);
                             }
-
+                            TotalRecords = obj.totalRecords;
+                            _LastPage = Convert.ToInt32(obj.totalPages);
                             ObservableCollection<messages> OrderbyIdDesc = new ObservableCollection<messages>(tempOpenData.OrderByDescending(x => x.createdDate.Date));
                             MessageList = new ObservableCollection<messages>(OrderbyIdDesc);
                         }
@@ -686,6 +698,8 @@ namespace Simon.ViewModel
 
         public async Task LoadMore_click()
         {
+            if (IsBusy)
+                return;
             using (HttpClient hc = new HttpClient())
             {
                 try
@@ -697,9 +711,15 @@ namespace Simon.ViewModel
                         return;
                     }
                     if (_isTeamLoading) { IsLoadingInfinite = false; return; }
-                    _CurrentPage++;
-
-                    await LoadData(_CurrentPage);
+                    if (FirstTime)
+                    {
+                        FirstTime = false;
+                    }
+                    else
+                    {
+                        _CurrentPage++;
+                        await LoadData(_CurrentPage);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -1000,4 +1020,3 @@ namespace Simon.ViewModel
         }
     }
 }
-

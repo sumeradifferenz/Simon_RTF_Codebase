@@ -195,6 +195,7 @@ namespace Simon.ViewModel
             DealsSortByItems.Add(new DealsSortByModel { name = Constants.AmountlblText, Radiobtnimg = (selectedName == Constants.AmountlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
             DealsSortByItems.Add(new DealsSortByModel { name = Constants.DueDatelblText, Radiobtnimg = (selectedName == Constants.DueDatelblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
             DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClosingDatelblText, Radiobtnimg = (selectedName == Constants.ClosingDatelblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
+            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClearlblText, Radiobtnimg = (App.SelectedName == Constants.ClearlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
         }
 
         public ICommand DealsSortByclicked { get { return new Command<DealsSortByModel>(DealsSortBy_click); } }
@@ -285,62 +286,78 @@ namespace Simon.ViewModel
                 IsLoadingInfiniteEnabled = true;
                 if (DealsSortByItems != null && DealsSortByItems.Count > 0)
                 {
-                    foreach (var item in DealsSortByItems)
+                    bool IsOptionSelect = DealsSortByItems.Any(x => x.Radiobtnimg == Constants.RadiobtnSelectImg);
+
+                    if (!IsOptionSelect)
                     {
-                        isSortApplied = true;
-                        if (item.name == Constants.BorrowerlblText)
+                        await App.Current.MainPage.DisplayAlert("Alert", "Please select an option", "OK");
+                    }
+                    else
+                    {
+                        foreach (var item in DealsSortByItems)
                         {
-                            if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
+                            isSortApplied = true;
+                            if (item.name == Constants.BorrowerlblText)
                             {
-                                if (item.SortByAscDescbtnimg == Constants.NameAcendingImg)
+                                if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
                                 {
-                                    SortBorrowerUpCommandExecute();
-                                }
-                                else
-                                {
-                                    SortBorrowerDownCommandExecute();
+                                    if (item.SortByAscDescbtnimg == Constants.NameAcendingImg)
+                                    {
+                                        SortBorrowerUpCommandExecute();
+                                    }
+                                    else
+                                    {
+                                        SortBorrowerDownCommandExecute();
+                                    }
                                 }
                             }
-                        }
-                        else if (item.name == Constants.AmountlblText)
-                        {
-                            if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
+                            else if (item.name == Constants.AmountlblText)
                             {
-                                if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
                                 {
-                                    SortAmtUpCommandExecute();
-                                }
-                                else
-                                {
-                                    SortAmtDownCommandExecute();
+                                    if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                    {
+                                        SortAmtUpCommandExecute();
+                                    }
+                                    else
+                                    {
+                                        SortAmtDownCommandExecute();
+                                    }
                                 }
                             }
-                        }
-                        else if (item.name == Constants.DueDatelblText)
-                        {
-                            if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
+                            else if (item.name == Constants.DueDatelblText)
                             {
-                                if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
                                 {
-                                    SortDueDateUpCommandExecute();
-                                }
-                                else
-                                {
-                                    SortDueDateDownCommandExecute();
+                                    if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                    {
+                                        SortDueDateUpCommandExecute();
+                                    }
+                                    else
+                                    {
+                                        SortDueDateDownCommandExecute();
+                                    }
                                 }
                             }
-                        }
-                        else if (item.name == Constants.ClosingDatelblText)
-                        {
-                            if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
+                            else if (item.name == Constants.ClosingDatelblText)
                             {
-                                if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
                                 {
-                                    SortClosingUpCommandExecute();
+                                    if (item.SortByAscDescbtnimg == Constants.NumberDescendingImg)
+                                    {
+                                        SortClosingUpCommandExecute();
+                                    }
+                                    else
+                                    {
+                                        SortClosingDownCommandExecute();
+                                    }
                                 }
-                                else
+                            }
+                            else if (item.name == Constants.ClearlblText)
+                            {
+                                if (item.Radiobtnimg == Constants.RadiobtnSelectImg)
                                 {
-                                    SortClosingDownCommandExecute();
+                                    SortClearCommandExecute();
                                 }
                             }
                         }
@@ -1037,6 +1054,21 @@ namespace Simon.ViewModel
             IsStopVisible = false;
             var dealClosingDown = DealList.FirstOrDefault();
             MessagingCenter.Send<object, DealsMainModel>(this, "DealsSortClosingDown", dealClosingDown);
+        }
+
+        public async void SortClearCommandExecute()
+        {
+            await ClosePopup();
+            var tempRecords = _dealList.OrderBy(c => c.dealId).ToList();
+            DealList.Clear();
+            
+            foreach (var item in tempRecords)
+            {
+                DealList.Add(item);
+            }
+            IsStopVisible = false;
+            var dealClear = DealList.FirstOrDefault();
+            MessagingCenter.Send<object, DealsMainModel>(this, "DealsSortClear", dealClear);
         }
 
         public ICommand DealListItemTapCommand { get { return new Command<DealsMainModel>(DealListItemTapCommandExecute); } }
