@@ -2,8 +2,6 @@
 using System.Threading.Tasks;
 using Simon.Helpers;
 using Simon.ViewModel;
-using UIKit;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using ListView = Xamarin.Forms.ListView;

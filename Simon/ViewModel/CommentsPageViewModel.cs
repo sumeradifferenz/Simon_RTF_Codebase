@@ -24,8 +24,7 @@ namespace Simon.ViewModel
         string userId, statusTxt, needsExceptionActions, primaryDocumentException, initiateProcessIdTxt, threadId, threadTitle, Operand;
         IEnumerable<ApprovalPendingModel> resultUserList;
         JObject jObject = null;
-        public bool isQuestionAvailable = false;
-        
+        public int QuestionCount;
         public NavigationHelper _helper;
 
         public CommentsPageViewModel()
@@ -82,8 +81,7 @@ namespace Simon.ViewModel
             set { SetProperty(ref _stageIdTxt, value); }
         }
 
-        private int _questionsListHeight = 90;
-
+        private int _questionsListHeight = 100;
         public int QuestionsListHeight
         {
             get { return _questionsListHeight; }
@@ -373,19 +371,16 @@ namespace Simon.ViewModel
                         threadId = obj.threadId;
                         threadTitle = obj.threadTitle;
 
+                        QuestionsListHeight = 100 * obj.reqQuestionDefinitions.Count;
+
                         if (obj.reqQuestionDefinitions.Count != 0)
                         {
-                            isQuestionAvailable = true;
                             isPlusVisible = true;
                             IsStackExpanded = true;
                             IsExpanderActive = true;
 
-                            QuestionsListHeight = 90;
-
                             foreach (var item in obj.reqQuestionDefinitions)
                             {
-                                QuestionsListHeight = QuestionsListHeight * obj.reqQuestionDefinitions.Count;
-
                                 if (item.actualValueBit != null)
                                 {
                                     switch (item.actualValueBit.Trim().ToUpper())
@@ -542,7 +537,7 @@ namespace Simon.ViewModel
                                     }
                                 }
 
-                                if(item.expectedValueLowOperand == "=")
+                                if (item.expectedValueLowOperand == "=")
                                 {
                                     Operand = "";
                                 }
@@ -588,8 +583,7 @@ namespace Simon.ViewModel
                         {
                             isPlusVisible = false;
                             IsStackExpanded = false;
-                            IsExpanderActive = false;
-                            isQuestionAvailable = false;
+                            IsExpanderActive = true;
                         }
 
                         if (obj.isSubjectTo == null || obj.isSubjectTo == "false")
@@ -599,7 +593,14 @@ namespace Simon.ViewModel
                         else
                         {
                             isSubjectToVisible = true;
-                            subjectTo = obj.subjectTo;
+                            if (obj.subjectTo.Contains("\n"))
+                            {
+                                subjectTo = obj.subjectTo.Replace("\n", "</br>");
+                            }
+                            else
+                            {
+                                subjectTo = obj.subjectTo;
+                            }
                         }
 
                         if (obj.isMitigatingFactors == null || obj.isMitigatingFactors == "false")
@@ -609,7 +610,14 @@ namespace Simon.ViewModel
                         else
                         {
                             isMitigatingVisible = true;
-                            MitigatingFactors = obj.mitigatingFactors;
+                            if (obj.mitigatingFactors.Contains("\n"))
+                            {
+                                MitigatingFactors = obj.mitigatingFactors.Replace("\n", "</br>");
+                            }
+                            else
+                            {
+                                MitigatingFactors = obj.mitigatingFactors;
+                            }
                         }
 
                         if (obj.comment == null)
@@ -619,7 +627,14 @@ namespace Simon.ViewModel
                         else
                         {
                             commnetsVisible = true;
-                            comments = obj.comment;
+                            if (obj.comment.Contains("\n"))
+                            {
+                                comments = obj.comment.Replace("\n", "</br>");
+                            }
+                            else
+                            {
+                                comments = obj.comment;
+                            }
                         }
 
                         if (obj.lastMessage == null && obj.lastPostBy == null && obj.lastPostDate == null)

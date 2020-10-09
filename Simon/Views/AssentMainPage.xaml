@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Controls:GradientColorStack xmlns="http://xamarin.com/schemas/2014/forms" 
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-
         x:Class="Simon.Views.AssentMainPage"
         StartColor="Transparent"
         EndColor="{StaticResource DarkBlueColor}"
@@ -47,7 +46,7 @@
                                 <TapGestureRecognizer Command="{Binding OpenTab_ClickCommand}" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="{x:Static Services:LayoutService.MarginPadding00_00_15_00}" Grid.Row="1" Grid.Column="0" IsVisible="{Binding IsOpenSeperatorVisible}"/>
+                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="{x:Static Services:LayoutService.MarginPadding00_00_15_00}" Grid.Row="1" Grid.Column="0"/>
                         <!--<StackLayout Grid.Column="1" Grid.Row="0">
                             <Label x:Name="recentlbl" Text="{x:Static Helper:Constants.RecentTabText}" FontSize="{x:Static Services:LayoutService.FontSize18}" Style="{Binding recenttabStyle}" Grid.Column="1" Grid.Row="0"/>
                             <StackLayout.GestureRecognizers>
@@ -76,7 +75,7 @@
                                                     <AbsoluteLayout>
                                                         <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
                                                             <StackLayout Orientation="Horizontal">
-                                                                <Label Grid.Row="0" Text="{Binding dealid_05}" HorizontalOptions="StartAndExpand" FontSize="{x:Static Services:LayoutService.FontSize16}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                                                <Label Grid.Row="0" Text="{Binding dealid_05}" HorizontalOptions="Start" LineBreakMode="NoWrap" WidthRequest="100" FontSize="{x:Static Services:LayoutService.FontSize16}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
                                                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding partyname_10}" HorizontalOptions="EndAndExpand" FontSize="{x:Static Services:LayoutService.FontSize16}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
                                                             </StackLayout>
                                                             <StackLayout Orientation="Horizontal">

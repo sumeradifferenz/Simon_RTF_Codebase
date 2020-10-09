@@ -74,6 +74,9 @@
                                                             </Image>
                                                             <Frame Grid.Row="0" Grid.Column="0" Padding="10" x:Name="personBtnImage" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsSenderProfileVisible}" >
                                                                 <ImageButton x:Name="personBtn" Grid.Row="0" Grid.Column="0" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Source="user.png" Aspect="AspectFit" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                                                                <Frame.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                                                </Frame.GestureRecognizers>
                                                             </Frame>
                                                             <Frame Grid.Row="0" Grid.Column="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" HorizontalOptions="Fill" VerticalOptions="Fill" HasShadow="False" CornerRadius="10">
                                                                 <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10" Margin="0" Spacing="5">
@@ -86,6 +89,9 @@
                                                             </Frame>
                                                             <Frame Grid.Row="0" Grid.Column="2" Padding="10" IsClippedToBounds="True" BackgroundColor="{StaticResource opacity30DarkGrayShadeColor}" CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HasShadow="False" IsVisible="{Binding IsProfileVisible}">
                                                                 <ImageButton Grid.Row="0" Grid.Column="2" Source="user.png" Aspect="AspectFit" HeightRequest="{StaticResource HeightWidth20}" WidthRequest="{StaticResource HeightWidth20}" Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Transparent"/>
+                                                                <Frame.GestureRecognizers>
+                                                                    <TapGestureRecognizer Command="{Binding Source={x:Reference MessageList}, Path=BindingContext.personIcon_Clicked}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                                                </Frame.GestureRecognizers>
                                                             </Frame>
                                                             <Image Grid.Row="0" Grid.Column="2" Source="{Binding BookMarkImg}" x:Name="bookMarkImage"  BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" IsVisible="{Binding IsBookMarkVisible}">
                                                                 <Image.GestureRecognizers>
@@ -145,41 +151,43 @@
                                     <ImageButton Source="ic_close.png" BackgroundColor="Transparent" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" VerticalOptions="CenterAndExpand" Command="{Binding CloseDocs_Command}"></ImageButton>
                                 </StackLayout>
                             </Frame>-->
-                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="2" >
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="15" >
                                     <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
                                         <RowDefinition Height="Auto"></RowDefinition>
                                         <RowDefinition Height="40"></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth200}"/>
                                         <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="40"></ColumnDefinition>
+                                        <ColumnDefinition Width="40"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" Grid.Row="0" Grid.Column="0" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                    <Frame x:Name="SendMessage" Grid.Column="1" Grid.Row="0" Style="{StaticResource SendMessageButtonFrameStyle}">
+                                        <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
+                                        </Frame.GestureRecognizers>
+                                    </Frame>
+                                    <Image x:Name="addParticipant" Grid.Column="2" Grid.Row="0" Source="add_participants.png" Style="{x:StaticResource AddParticipantImageStyle}">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ReplayCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <richTextEditor:SfRichTextEditor MaximumHeightRequest="150" MinimumHeightRequest="{Binding TestMinHeight}" x:Name="txtMessage" Text="{Binding TypedMessage}" ShowToolbar="{Binding ShowToolBar}" ToolbarOptions="Bold,Italic,Underline,BulletList,NumberList,ClearFormat" AutoSize="TextChanges" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" PlaceHolder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
                                         <richTextEditor:SfRichTextEditor.ToolbarSettings>
                                             <richTextEditor:ToolbarSettings TextColor="{StaticResource DarkBlueColor}" ToolbarBackgroundColor="White"></richTextEditor:ToolbarSettings>
                                         </richTextEditor:SfRichTextEditor.ToolbarSettings>
                                     </richTextEditor:SfRichTextEditor>
-                                    <StackLayout Orientation="Horizontal" Spacing="2" Grid.Row="1" Grid.Column="0" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal" Spacing="2" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                                         <!--<ImageButton Source="note_add.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AddDocsCommand}"></ImageButton>-->
                                         <ImageButton Source="attachfile.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding AttachLinkCommand}"></ImageButton>
                                         <ImageButton Source="camera.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding OpenCameraCommand}"></ImageButton>
                                         <ImageButton Source="textformat.png" BackgroundColor="White" HeightRequest="40" WidthRequest="40" Command="{Binding TextFormatCommand}"></ImageButton>
                                     </StackLayout>
                                     <!--<Controls:EditorWithAutoSize x:Name="txtMessage" Text="{Binding TypedMessage}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" Grid.Row="0" Grid.Column="0"  Placeholder="Type a message" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>-->
-                                    <Frame x:Name="SendMessage" Grid.Column="1" Style="{StaticResource SendMessageButtonFrameStyle}">
-                                        <Image Grid.Row="0" Grid.Column="1" Source="sent.png" Style="{StaticResource SendMessageImageStyle}" />
-                                        <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="SendMessageTappedCommand" NumberOfTapsRequired="1" />
-                                        </Frame.GestureRecognizers>
-                                    </Frame>
                                 </Grid>
                             </StackLayout>
                         </Frame>
-                        <Image x:Name="addParticipant" Source="add_participants.png" Style="{x:StaticResource AddParticipantImageStyle}">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding ReplayCommand}" CommandParameter="{Binding .}"></TapGestureRecognizer>
-                            </Image.GestureRecognizers>
-                        </Image>
                     </StackLayout>
                 </StackLayout>
             </Controls:KeyboardView>

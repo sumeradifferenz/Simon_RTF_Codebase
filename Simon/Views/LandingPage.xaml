@@ -19,7 +19,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource WhiteColor}" HorizontalOptions="FillAndExpand" Padding="0" Spacing="0">
-            <SubView:HeaderWithImageView VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeaderText="{x:Static Helper:Constants.HomeScreenTitle}" Padding="0" RightThirdImageSource="logout.png" RightThirdCommand="{Binding LogOutCommand}"/>
+            <SubView:HeaderWithImageView VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeaderText="{x:Static Helper:Constants.HomeScreenTitle}" Padding="0" RightThirdImageSource="logout.png" RightThirdCommand="{Binding LogOutCommand}"/><!--RightImageSource="sort.png"-->
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding30_10_30_10}" Spacing="0">
                 <StackLayout Padding="{x:Static Services:LayoutService.MarginPadding00_00_00_15}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Orientation="Horizontal">
                     <Label Text="{x:Static Helper:Constants.WelcomeText}" FontSize="{StaticResource FontSize24}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>

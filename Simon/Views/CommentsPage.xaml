@@ -22,7 +22,7 @@
                                           IsEnabled="{Binding IsExpanderActive}"
                                           ExpandAnimationEasing="{x:Static Easing.SinIn}"
                                           ExpandAnimationLength="300"
-                                          CollapseAnimationEasing="{x:Static Easing.SpringOut}"
+                                          CollapseAnimationEasing="{x:Static Easing.SinOut}"
                                           CollapseAnimationLength="400">
                                     <Expander.Header>
                                         <Grid HorizontalOptions="Fill" VerticalOptions="Fill" ColumnSpacing="{x:Static Services:LayoutService.Spacing10}" RowSpacing="{x:Static Services:LayoutService.Spacing10}" Padding="{x:Static Services:LayoutService.MarginPadding10}">
@@ -38,10 +38,18 @@
                                                 <RowDefinition Height="Auto"/>
                                                 <RowDefinition Height="Auto"/>
                                             </Grid.RowDefinitions>
-                                            <Label Grid.Row="0" Grid.Column="0" x:Name="dealIdTxt" FontSize="{StaticResource FontSize18}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
-                                            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="partyNamelblTxt" Text="{Binding LabelParty}" FontSize="{StaticResource FontSize18}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Transparent" LineBreakMode="TailTruncation" FontSize="{StaticResource FontSize18}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span x:Name="dealIdTxt" FontSize="{StaticResource FontSize18}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                                        <Span x:Name="partyNamelblTxt" FontSize="{StaticResource FontSize18}" Text="{Binding LabelParty}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            <!--<Label Grid.Row="0" Grid.Column="0" x:Name="dealIdTxt" FontSize="{StaticResource FontSize18}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" x:Name="partyNamelblTxt" Text="{Binding LabelParty}" FontSize="{StaticResource FontSize18}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>-->
                                             <Label Grid.Row="1" Grid.Column="0" x:Name="productNameLbl" Text="{Binding LabelProduct}" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" LineBreakMode="WordWrap"/>
-                                            <Label Grid.Row="1" Grid.Column="1" x:Name="amountLbl" Text="{Binding amount_06, StringFormat='${0:N0}'}" HorizontalOptions="Center" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                            <Label Grid.Row="1" Grid.Column="1" x:Name="amountLbl" Text="{Binding amount_06, StringFormat='${0:N0}'}" HorizontalOptions="StartAndExpand" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
                                             <Image x:Name="ExpandCollapseImage" Source="minus.png" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" Aspect="AspectFit" Grid.Row="4" Grid.Column="2" IsVisible="{Binding isPlusVisible}">
                                                 <Image.Triggers>
                                                     <DataTrigger TargetType="Image" Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}},Path=IsExpanded}" Value="False">

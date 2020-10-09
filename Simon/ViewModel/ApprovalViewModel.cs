@@ -182,17 +182,10 @@ namespace Simon.ViewModel
                 if (jsonString != null)
                 {
                     ApprovalItems = ApprovalMainModel.FromJson(jsonString);
+                    tempContainerList = ApprovalMainModel.FromJson(jsonString);
 
-                    if (ApprovalItems.Count > 0)
-                    {
-                        IsDataNotAvailable = false;
-                        IsApprovalListVisible = true;
-                    }
-                    else
-                    {
-                        IsDataNotAvailable = true;
-                        IsApprovalListVisible = false;
-                    }
+                    IsDataNotAvailable = ApprovalItems.Count > 0 ? false : true;
+                    IsApprovalListVisible = ApprovalItems.Count > 0 ? true : false;
                 }
                 else
                 {
@@ -398,7 +391,7 @@ namespace Simon.ViewModel
         public async void SortBorrowerUpCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = tempContainerList.OrderBy(c => c.partyname_10).ToList();
+            var tempRecords = ApprovalItems.OrderBy(c => c.partyname_10).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -411,7 +404,7 @@ namespace Simon.ViewModel
         public async void SortBorrowerDownCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = tempContainerList.OrderByDescending(c => c.partyname_10).ToList();
+            var tempRecords = ApprovalItems.OrderByDescending(c => c.partyname_10).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -424,7 +417,7 @@ namespace Simon.ViewModel
         public async void SortDateUpCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = tempContainerList.OrderBy(c => c.ApprovalDate).ToList();
+            var tempRecords = ApprovalItems.OrderBy(c => c.ApprovalDate).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -437,7 +430,7 @@ namespace Simon.ViewModel
         public async void SortDateDownCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = tempContainerList.OrderByDescending(c => c.ApprovalDate).ToList();
+            var tempRecords = ApprovalItems.OrderByDescending(c => c.ApprovalDate).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -450,7 +443,7 @@ namespace Simon.ViewModel
         private async void clearSortingAsync()
         {
             await ClosePopup();
-            var tempRecords = tempContainerList;
+            var tempRecords = ApprovalItems;
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {

@@ -769,7 +769,7 @@ namespace Simon.ViewModel
             ParticipantListPopup ParticipantPopupview = new ParticipantListPopup();
             ParticipantPopupview.BindingContext = this;
             this.GetParticipantData(list);
-            await ShowPopup(ParticipantPopupview);
+            await ShowPopup(ParticipantPopupview, true);
         }
 
         public void GetParticipantData(messages messages)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
@@ -11,7 +10,6 @@ using Simon.Helpers;
 using Simon.Models;
 using Simon.ViewModel;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Config = Simon.Helpers.Config;
 using Picker = Xamarin.Forms.Picker;
 
@@ -35,12 +33,12 @@ namespace Simon.Views
         {
             InitializeComponent();
 
-            if (Xamarin.Forms.Application.Current.Properties.ContainsKey("USERID"))
+            if (Application.Current.Properties.ContainsKey("USERID"))
             {
-                userId = Convert.ToString(Xamarin.Forms.Application.Current.Properties["USERID"]);
+                userId = Convert.ToString(Application.Current.Properties["USERID"]);
             }
             requirementId = item.requirementid_05;
-            dealIdTxt.Text = item.dealid_05;
+            dealIdTxt.Text = item.dealid_05 + " - ";
             dealId = item.dealid_05;
             partyNamelblTxt.Text = item.partyname_10;
             productNameLbl.Text = item.productdesc_10;
@@ -83,8 +81,6 @@ namespace Simon.Views
                     var response1 = await hc.GetStringAsync(Config.COMMENT_INFO_URL + requirementId);
                     var obj = JsonConvert.DeserializeObject<CommentsInfoModel>(response1);
 
-                    //if (userListPicker.SelectedIndex != -1)
-                    //{
                     var values = new Dictionary<object, object>
                     {
                         { "lastMessage", obj.lastMessage},
@@ -190,15 +186,6 @@ namespace Simon.Views
                         {
                             await Navigation.PopToRootAsync();
                         });
-                        //await DisplayAlert("Simon", content, "OK", "Cancel");
-                        // the call is awaited
-                        //// the execution is stopped here, the next line won't be executed until the user chooses Yes or No
-                        //if (yesSelected)  // No compile error, as the result will be bool, since we awaited the Task<bool>
-                        //{
-                        //   await Navigation.PopToRootAsync();
-                        //}
-                        //else
-                        //{ return; }
                     }
                 }
             }
@@ -295,24 +282,7 @@ namespace Simon.Views
         {
             //entryMitigatingFactor.IsReadOnly = false;
         }
-        //public void onCommentEditClicked(object sender, EventArgs e)
-        //{
-        //    if (commentTxt != "")
-        //    {
-        //        //entryCommentTxt.IsReadOnly = true;
-        //        //EditorCommentTxt.IsVisible = true;
-        //        //frameECommenttxt.IsVisible = true;
-        //    }
-        //    else
-        //    {
-        //        //entryCommentTxt.IsReadOnly = false;
-        //        //EditorCommentTxt.HeightRequest = 0;
-        //        //EditorCommentTxt.IsVisible = false;
-        //        //frameECommenttxt.HeightRequest = 0;
-        //        //frameECommenttxt.IsVisible = false;
-        //    }
-
-        //}
+        
         public void onApprovalEditBtnClicked(object sender, EventArgs e)
         {
             //entryApproval.IsReadOnly = false;

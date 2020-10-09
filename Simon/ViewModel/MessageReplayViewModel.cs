@@ -226,6 +226,8 @@ namespace Simon.ViewModel
                 {
                     MessageThreadUsers.Add(new MessageThread { id = dealMessage.id, name = dealMessage.name });
 
+                    MessageThreadUsers = new ObservableCollection<MessageThread>(MessageThreadUsers.OrderBy(x => x.name).ToList());
+
                     var content = new StringContent(JsonConvert.SerializeObject(MessageThreadUsers), Encoding.UTF8, "application/json");
                     var response = await httpClient.PostAsync(Config.SYNC_PARTICIPANTS + threadId, content);
                     if (response.StatusCode != System.Net.HttpStatusCode.OK || response.Content == null)
@@ -399,7 +401,7 @@ namespace Simon.ViewModel
                         {
                             IsListEmpty = false;
                             IsListdataAvailable = true;
-                            MessageThreadUsers = data;
+                            MessageThreadUsers = new ObservableCollection<MessageThread>(data.OrderBy(x => x.name).ToList());
                             Settings.MessageThreadUsersData = MessageThreadUsers;
                         }
                     }

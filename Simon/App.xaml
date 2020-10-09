@@ -247,6 +247,12 @@
                 <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
             </Style>
 
+            <Style x:Key="LatoBoldOrangeLinebreakModeLableStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource OrangeColor}" />
+                <Setter Property="FontFamily" Value="{StaticResource LatoBold}" />
+                <Setter Property="LineBreakMode" Value="TailTruncation"></Setter>
+            </Style>
+
             <!--Divyesh: 27 July, 2020-->
             <Style x:Key="HeaderTextLabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="{x:Static Services:LayoutService.FontSize24}"/>
@@ -277,7 +283,7 @@
             <!--Frame Style Start-->
             
             <Style x:Key="SendMessageButtonFrameStyle" TargetType="Frame">
-                <Setter Property="Padding" Value="{x:Static Services:LayoutService.MarginPadding10}" />
+                <Setter Property="Padding" Value="{x:Static Services:LayoutService.MarginPadding08}" />
                 <Setter Property="Margin" Value="0" />
                 <Setter Property="HorizontalOptions" Value="End" />
                 <Setter Property="VerticalOptions" Value="Center" />
