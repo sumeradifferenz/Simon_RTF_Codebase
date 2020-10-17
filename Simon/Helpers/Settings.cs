@@ -162,5 +162,22 @@ namespace Simon.Helpers
                 AppSettings.AddOrUpdateValue(MessageCountKey, value);
             }
         }
+
+        private const string UploadDocumentListKey = "UploadDocumentList_key";
+        public static ObservableCollection<UploadFileModel> UploadDocumentList
+        {
+            get
+            {
+                var value = AppSettings.GetValueOrDefault(UploadDocumentListKey, string.Empty);
+                if (string.IsNullOrEmpty(value)) { return null; }
+                else { return JsonConvert.DeserializeObject<ObservableCollection<UploadFileModel>>(value); }
+            }
+            set
+            {
+                string data = string.Empty;
+                if (value != null) { data = JsonConvert.SerializeObject(value); }
+                AppSettings.AddOrUpdateValue(UploadDocumentListKey, data);
+            }
+        }
     }
 }

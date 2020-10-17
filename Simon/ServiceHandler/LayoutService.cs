@@ -275,12 +275,14 @@ namespace Simon.ServiceHandler
         public static Double FontSize22 { get { return sizeConvertAsPerDevice(22); } }
         public static Double FontSize24 { get { return sizeConvertAsPerDevice(24); } }
         public static Double FontSize26 { get { return sizeConvertAsPerDevice(26); } }
+        public static Double FontSize30 { get { return sizeConvertAsPerDevice(30); } }
 
         #endregion
 
         #region View Height Width
 
         public static Double HeightWidth1 { get { return sizeConvertAsPerDevice(1); } }
+        public static Double HeightWidth2 { get { return sizeConvertAsPerDevice(2); } }
         public static Double HeightWidth3 { get { return sizeConvertAsPerDevice(3); } }
         public static Double HeightWidth10 { get { return sizeConvertAsPerDevice(10); } }
         public static Double HeightWidth12 { get { return sizeConvertAsPerDevice(12); } }
@@ -290,6 +292,7 @@ namespace Simon.ServiceHandler
         public static Double HeightWidth22 { get { return sizeConvertAsPerDevice(22); } }
         public static Double HeightWidth25 { get { return sizeConvertAsPerDevice(25); } }
         public static Double HeightWidth30 { get { return sizeConvertAsPerDevice(30); } }
+        public static Double HeightWidth35 { get { return sizeConvertAsPerDevice(35); } }
         public static Double HeightWidth40 { get { return sizeConvertAsPerDevice(40); } }
         public static Double HeightWidth45 { get { return sizeConvertAsPerDevice(45); } }
         public static Double HeightWidth50 { get { return sizeConvertAsPerDevice(50); } }
@@ -312,12 +315,18 @@ namespace Simon.ServiceHandler
         public static Double HeightWidth160 { get { return sizeConvertAsPerDevice(160); } }
         public static Double HeightWidth170 { get { return sizeConvertAsPerDevice(170); } }
         public static Double HeightWidth180 { get { return sizeConvertAsPerDevice(180); } }
+        public static Double HeightWidth200 { get { return sizeConvertAsPerDevice(200); } }
+        public static Double HeightWidth220 { get { return sizeConvertAsPerDevice(220); } }
+        public static Double HeightWidth260 { get { return sizeConvertAsPerDevice(260); } }
         public static Double HeightWidth300 { get { return sizeConvertAsPerDevice(300); } }
+        public static Double HeightWidth350 { get { return sizeConvertAsPerDevice(350); } }
+        public static Double HeightWidth400 { get { return sizeConvertAsPerDevice(400); } }
 
         #endregion
 
         #region View Spacing
 
+        public static Double Spacing02 { get { return sizeConvertAsPerDevice(2); } }
         public static Double Spacing03 { get { return sizeConvertAsPerDevice(3); } }
         public static Double Spacing05 { get { return sizeConvertAsPerDevice(5); } }
         public static Double Spacing10 { get { return sizeConvertAsPerDevice(10); } }
@@ -332,6 +341,8 @@ namespace Simon.ServiceHandler
         #region Corner Radius
 
         public static Single CornerRadius04 { get { return (float)sizeConvertAsPerDevice(4); } }
+        public static Single CornerRadius05 { get { return (float)sizeConvertAsPerDevice(5); } }
+        public static Single CornerRadius08 { get { return (float)sizeConvertAsPerDevice(8); } }
         public static Single CornerRadius10 { get { return (float)sizeConvertAsPerDevice(10); } }
         public static Single CornerRadius15 { get { return (float)sizeConvertAsPerDevice(15); } }
         public static Single CornerRadius20 { get { return (float)sizeConvertAsPerDevice(20); } }
@@ -364,12 +375,17 @@ namespace Simon.ServiceHandler
         public static GridLength GridHeightWidth120 { get { return sizeConvertAsPerDevice(120); } }
         public static GridLength GridHeightWidth130 { get { return sizeConvertAsPerDevice(130); } }
         public static GridLength GridHeightWidth200 { get { return sizeConvertAsPerDevice(200); } }
+        public static GridLength GridHeightWidth250 { get { return sizeConvertAsPerDevice(250); } }
+        public static GridLength GridHeightWidth300 { get { return sizeConvertAsPerDevice(300); } }
+        public static GridLength GridHeightWidth450 { get { return sizeConvertAsPerDevice(450); } }
+
         public static GridLength GBCallGridHeight50 { get { return sizeConvertAsPerDevice(50); } }
 
         #endregion
 
         #region View Margin Padding
 
+        public static Thickness MarginPadding01 { get { return MarginPaddingConvertAsPerDevice(01, 01, 01, 01); } }
         public static Thickness MarginPadding02 { get { return MarginPaddingConvertAsPerDevice(02, 02, 02, 02); } }
         public static Thickness MarginPadding04 { get { return MarginPaddingConvertAsPerDevice(04, 04, 04, 04); } }
         public static Thickness MarginPadding05 { get { return MarginPaddingConvertAsPerDevice(05, 05, 05, 05); } }
@@ -384,21 +400,33 @@ namespace Simon.ServiceHandler
         public static Thickness MarginPadding05_00_05_00 { get { return MarginPaddingConvertAsPerDevice(05, 00, 05, 00); } }
         public static Thickness MarginPadding05_10_05_10 { get { return MarginPaddingConvertAsPerDevice(05, 10, 05, 10); } }
         public static Thickness MarginPadding10_05_10_05 { get { return MarginPaddingConvertAsPerDevice(10, 05, 10, 05); } }
+        public static Thickness MarginPadding10_05_00_00 { get { return MarginPaddingConvertAsPerDevice(10, 05, 00, 00); } }
         public static Thickness MarginPadding10_00_10_00 { get { return MarginPaddingConvertAsPerDevice(10, 00, 10, 00); } }
         public static Thickness MarginPadding10_10_10_00 { get { return MarginPaddingConvertAsPerDevice(10, 10, 10, 00); } }
+        public static Thickness MarginPadding10_10_00_10 { get { return MarginPaddingConvertAsPerDevice(10, 10, 00, 10); } }
+        public static Thickness MarginPadding10_10_10_15 { get { return MarginPaddingConvertAsPerDevice(10, 10, 10, 15); } }
         public static Thickness MarginPadding10_00_10_10 { get { return MarginPaddingConvertAsPerDevice(10, 00, 10, 10); } }
         public static Thickness MarginPadding00_00_10_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 10, 00); } }
+        public static Thickness MarginPadding00_10_00_00 { get { return MarginPaddingConvertAsPerDevice(00, 10, 00, 00); } }
         public static Thickness MarginPadding00_10_00_10 { get { return MarginPaddingConvertAsPerDevice(00, 10, 00, 10); } }
         public static Thickness MarginPadding10_00_00_00 { get { return MarginPaddingConvertAsPerDevice(10, 00, 00, 00); } }
         public static Thickness MarginPadding00_00_00_10 { get { return MarginPaddingConvertAsPerDevice(00, 00, 00, 10); } }
         public static Thickness MarginPadding12_00_12_00 { get { return MarginPaddingConvertAsPerDevice(12, 00, 12, 00); } }
 
+        public static Thickness MarginPadding10_30_00_00 { get { return MarginPaddingConvertAsPerDevice(10, 30, 00, 00); } }
+
         public static Thickness MarginPadding15_15_15_10 { get { return MarginPaddingConvertAsPerDevice(15, 15, 15, 10); } }
+        public static Thickness MarginPadding15_15_15_00 { get { return MarginPaddingConvertAsPerDevice(15, 15, 15, 00); } }
         public static Thickness MarginPadding15_00_00_00 { get { return MarginPaddingConvertAsPerDevice(15, 00, 00, 00); } }
         public static Thickness MarginPadding15_00_15_00 { get { return MarginPaddingConvertAsPerDevice(15, 00, 15, 00); } }
         public static Thickness MarginPadding00_00_15_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 15, 00); } }
         public static Thickness MarginPadding15_00_15_10 { get { return MarginPaddingConvertAsPerDevice(15, 00, 15, 10); } }
+        public static Thickness MarginPadding15_10_15_10 { get { return MarginPaddingConvertAsPerDevice(15, 10, 15, 10); } }
+        public static Thickness MarginPadding15_10_15_00 { get { return MarginPaddingConvertAsPerDevice(15, 10, 15, 00); } }
         public static Thickness MarginPadding00_00_00_15 { get { return MarginPaddingConvertAsPerDevice(00, 00, 00, 15); } }
+        public static Thickness MarginPadding15_20_15_00 { get { return MarginPaddingConvertAsPerDevice(15, 20, 15, 00); } }
+        public static Thickness MarginPadding15_20_15_10 { get { return MarginPaddingConvertAsPerDevice(15, 20, 15, 10); } }
+
 
         public static Thickness MarginPadding20_00_20_00 { get { return MarginPaddingConvertAsPerDevice(20, 00, 20, 00); } }
         public static Thickness MarginPadding00_00_20_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 20, 00); } }
@@ -412,6 +440,14 @@ namespace Simon.ServiceHandler
         public static Thickness MarginPadding20_00_20_10 { get { return MarginPaddingConvertAsPerDevice(20, 00, 20, 10); } }
         public static Thickness MarginPadding20_05_10_05 { get { return MarginPaddingConvertAsPerDevice(20, 05, 10, 05); } }
         public static Thickness MarginPadding20_07_20_07 { get { return MarginPaddingConvertAsPerDevice(20, 07, 20, 07); } }
+        public static Thickness MarginPadding20_220_20_220 { get { return MarginPaddingConvertAsPerDevice(20, 220, 20, 220); } }
+        public static Thickness MarginPadding20_05_20_00 { get { return MarginPaddingConvertAsPerDevice(20, 05, 20, 00); } }
+        public static Thickness MarginPadding20_30_20_00 { get { return MarginPaddingConvertAsPerDevice(20, 30, 20, 00); } }
+        public static Thickness MarginPadding20_30_20_30 { get { return MarginPaddingConvertAsPerDevice(20, 30, 20, 30); } }
+        public static Thickness MarginPadding00_30_00_20 { get { return MarginPaddingConvertAsPerDevice(00, 30, 00, 20); } }
+
+        public static Thickness MarginPadding00_00_25_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 25, 00); } }
+
 
         public static Thickness MarginPadding30_00_00_00 { get { return MarginPaddingConvertAsPerDevice(30, 00, 00, 00); } }
         public static Thickness MarginPadding00_30_00_00 { get { return MarginPaddingConvertAsPerDevice(00, 30, 00, 00); } }
@@ -420,8 +456,13 @@ namespace Simon.ServiceHandler
         public static Thickness MarginPadding30_10_30_10 { get { return MarginPaddingConvertAsPerDevice(30, 10, 30, 10); } }
         public static Thickness MarginPadding30_00_30_20 { get { return MarginPaddingConvertAsPerDevice(30, 00, 30, 20); } }
         public static Thickness MarginPadding30_20_30_00 { get { return MarginPaddingConvertAsPerDevice(30, 20, 30, 00); } }
+        public static Thickness MarginPadding30_40_30_40 { get { return MarginPaddingConvertAsPerDevice(30, 40, 30, 40); } }
+
+        public static Thickness MarginPadding00_00_40_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 40, 00); } }
+        public static Thickness MarginPadding00_00_80_00 { get { return MarginPaddingConvertAsPerDevice(00, 00, 80, 00); } }
 
         public static Thickness MarginPadding00_50_00_00 { get { return MarginPaddingConvertAsPerDevice(00, 50, 00, 00); } }
+        public static Thickness MarginPadding00_100_00_00 { get { return MarginPaddingConvertAsPerDevice(00, 100, 00, 00); } }
 
         public static Thickness MarginPadding60_15_60_15 { get { return MarginPaddingConvertAsPerDevice(60, 15, 60, 15); } }
 
@@ -433,17 +474,24 @@ namespace Simon.ServiceHandler
         public static Thickness MarginPadding0_m05_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -5, 0, 0); } }
         public static Thickness MarginPadding0_m10_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -10, 0, 0); } }
         public static Thickness MarginPadding0_m20_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -20, 0, 0); } }
+        public static Thickness MarginPadding0_m18_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -18, 0, 0); } }
         public static Thickness MarginPaddingm20_0_0_0 { get { return MarginPaddingConvertAsPerDevice(-20, 0, 0, 0); } }
         public static Thickness MarginPadding0_0_m20_0 { get { return MarginPaddingConvertAsPerDevice(0, 0, -20, 0); } }
         public static Thickness MarginPadding30_m05_0_0 { get { return MarginPaddingConvertAsPerDevice(30, -5, 0, 0); } }
 
         public static Thickness MarginPadding20_m05_0_m05 { get { return MarginPaddingConvertAsPerDevice(20, -5, 0, -5); } }
         public static Thickness MarginPadding20_m07_0_m07 { get { return MarginPaddingConvertAsPerDevice(20, -7, 0, -7); } }
+
+        public static Thickness MarginPadding0_m14_0_0 { get { return MarginPaddingConvertAsPerDevice(0, -14, 0, 0); } }
+        public static Thickness MarginPadding0_0_0_m13 { get { return MarginPaddingConvertAsPerDevice(0, 0, 0, -13); } }
+        public static Thickness MarginPadding0_0_0_m18 { get { return MarginPaddingConvertAsPerDevice(0, 0, 0, -18); } }
         public static Thickness MarginPadding0_0_0_m40 { get { return MarginPaddingConvertAsPerDevice(0, 0, 0, -40); } }
+
 
         public static Thickness MarginPadding0_m10_00_00 { get { return MarginPaddingConvertAsPerDevice(0, -10, 0, 0); } }
         public static Thickness MarginPadding0_m10_m20_m10 { get { return MarginPaddingConvertAsPerDevice(0, -10, -20, -10); } }
         public static Thickness MarginPaddingm20_m10_0_m10 { get { return MarginPaddingConvertAsPerDevice(-20, -10, 0, -10); } }
+        public static Thickness MarginPaddingm20_m5_0_0 { get { return MarginPaddingConvertAsPerDevice(-20, -5, 0, 0); } }
 
         public static Thickness MarginPadding15_0_0_0 { get { return MarginPaddingConvertAsPerDevice(15, 0, 0, 0); } }
         public static Thickness MarginPadding15_0_0_m100 { get { return MarginPaddingConvertAsPerDevice(15, 0, 0, -100); } }

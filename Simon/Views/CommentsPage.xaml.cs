@@ -38,7 +38,7 @@ namespace Simon.Views
                 userId = Convert.ToString(Application.Current.Properties["USERID"]);
             }
             requirementId = item.requirementid_05;
-            dealIdTxt.Text = item.dealid_05 + " - ";
+            dealIdTxt.Text = item.dealid_05;
             dealId = item.dealid_05;
             partyNamelblTxt.Text = item.partyname_10;
             productNameLbl.Text = item.productdesc_10;

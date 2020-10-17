@@ -10,26 +10,7 @@ namespace Simon.Views.Popups
     {
         public DeletePopup()
         {
-            InitializeComponent();
-
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                popupStackView.Padding = new Thickness(15, 120, 15, 120);
-            }
-            else if (Device.RuntimePlatform == Device.iOS)
-            {
-                var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-                if (mainDisplayInfo.Height <= 1334)
-                {
-                    // iPhone 6, 7, 8
-                    popupStackView.Padding = new Thickness(20, 200, 20, 200);
-                }
-                else
-                {
-                    //iPhone X, XS, XR, 11
-                    popupStackView.Padding = new Thickness(20, 270, 20, 270);
-                }
-            }
+            InitializeComponent();   
         }
 
         protected override void OnAppearing()

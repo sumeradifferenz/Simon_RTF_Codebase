@@ -28,7 +28,7 @@
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0" Spacing="{x:Static Services:LayoutService.Spacing10}">
                     <Frame HorizontalOptions="Fill" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}" HeightRequest="{x:Static Services:LayoutService.HeightWidth40}">
-                        <Label Text="{x:Static Helper:Constants.UpcomingText}" FontSize="{x:Static Services:LayoutService.FontSize20}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        <Label Text="{x:Static Helper:Constants.UpcomingText}" FontSize="{StaticResource FontSize20}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
                     </Frame>
                     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding00_10_00_10}" ColumnSpacing="{x:Static Services:LayoutService.Spacing30}" RowSpacing="{x:Static Services:LayoutService.Spacing05}">
                         <Grid.RowDefinitions>
@@ -45,14 +45,14 @@
                                 <TapGestureRecognizer Command="{Binding ClosingsTab_ClickCommand}" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="0,0,40,0" Grid.Row="1" Grid.Column="0" IsVisible="{Binding IsClosingSeperatorVisible}"/>
+                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="{x:Static Services:LayoutService.MarginPadding00_00_40_00}" Grid.Row="1" Grid.Column="0" IsVisible="{Binding IsClosingSeperatorVisible}"/>
                         <StackLayout Grid.Column="1" Grid.Row="0">
                             <Label x:Name="DecisionDuelbl" Text="{x:Static Helper:Constants.DecisionDueTabText}" FontSize="{StaticResource FontSize18}" Style="{Binding DecisionDuetabStyle}" Grid.Column="1" Grid.Row="0"/>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding DecisionDueTab_ClickCommand}" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
-                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="0,0,80,0" Grid.Row="1" Grid.Column="1" IsVisible="{Binding IsDecisionDueSeperatorVisible}"/>
+                        <BoxView BackgroundColor="{StaticResource OrangeColor}" WidthRequest="{x:Static Services:LayoutService.HeightWidth3}" Margin="{x:Static Services:LayoutService.MarginPadding00_00_80_00}" Grid.Row="1" Grid.Column="1" IsVisible="{Binding IsDecisionDueSeperatorVisible}"/>
                     </Grid>
                 </StackLayout>
                 <StackLayout IsVisible="{Binding IsClosingsListVisible}" Padding="0">
@@ -62,10 +62,10 @@
                             <ListView x:Name="closingList" ItemsSource="{Binding ClosingList}" HasUnevenRows="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SeparatorVisibility="None" IsPullToRefreshEnabled="True" RefreshCommand="{Binding ClosingListRefereshCommand}" IsRefreshing="{Binding IsRefreshing}" IsVisible="{Binding IsClosingsListVisible}">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <ViewCell>
-                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" Padding="0,0,0,20">
-                                                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="20" Padding="10">
-                                                    <Grid HorizontalOptions="FillAndExpand" RowSpacing="1" Margin="5">
+                                        <ViewCell IsEnabled="False">
+                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" Padding="{x:Static Services:LayoutService.MarginPadding00_00_00_20}">
+                                                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius20}" Padding="{x:Static Services:LayoutService.MarginPadding10}">
+                                                    <Grid HorizontalOptions="FillAndExpand" RowSpacing="1" Margin="{x:Static Services:LayoutService.MarginPadding05}">
                                                         <Grid.RowDefinitions>
                                                             <RowDefinition Height="Auto"/>
                                                             <RowDefinition Height="Auto"/>
@@ -103,8 +103,8 @@
                                 </ListView.ItemTemplate>
                             </ListView>
                         </StackLayout>
-                        <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
-                            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="Black"/>
+                        <StackLayout IsVisible="{Binding IsBusy}" Padding="{x:Static Services:LayoutService.MarginPadding12}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="{StaticResource BlackColor}"/>
                         </StackLayout>
                     </AbsoluteLayout>
                 </StackLayout>
@@ -115,10 +115,10 @@
                             <ListView x:Name="decisionDueList" ItemsSource="{Binding DecisionDueList}" HasUnevenRows="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" SeparatorVisibility="None" IsPullToRefreshEnabled="True" RefreshCommand="{Binding DecisionDueListRefereshCommand}" IsRefreshing="{Binding IsRefreshing}" IsVisible="{Binding IsDecisionDueListVisible}">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <ViewCell >
-                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,20" Spacing="0">
-                                                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="20" Padding="10">
-                                                    <Grid HorizontalOptions="FillAndExpand" RowSpacing="1" Margin="5">
+                                        <ViewCell IsEnabled="False">
+                                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding00_00_00_20}" Spacing="0">
+                                                <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius20}" Padding="{x:Static Services:LayoutService.MarginPadding10}">
+                                                    <Grid HorizontalOptions="FillAndExpand" RowSpacing="1" Margin="{x:Static Services:LayoutService.MarginPadding05}">
                                                         <Grid.RowDefinitions>
                                                             <RowDefinition Height="Auto"/>
                                                             <RowDefinition Height="Auto"/>
@@ -127,7 +127,7 @@
                                                         </Grid.RowDefinitions>
                                                         <AbsoluteLayout>
                                                             <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
-                                                                <StackLayout Orientation="Horizontal" Spacing="3" HeightRequest="30">
+                                                                <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing03}" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}">
                                                                     <Label Grid.Row="0" FontSize="{StaticResource FontSize14}" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                                                                         <Label.FormattedText>
                                                                             <FormattedString>
@@ -156,8 +156,8 @@
                                 </ListView.ItemTemplate>
                             </ListView>
                         </StackLayout>
-                        <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
-                            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="Black"/>
+                        <StackLayout IsVisible="{Binding IsBusy}" Padding="{x:Static Services:LayoutService.MarginPadding12}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="{StaticResource BlackColor}"/>
                         </StackLayout>
                     </AbsoluteLayout>
                 </StackLayout>

@@ -30,6 +30,8 @@ namespace Simon
         public static bool AsceDsce { get; set; } = true;
         public static bool AsceDsceName { get; set; } = true;
         public static bool IsFirstTime { get; set; } = false;
+        public static bool AsceDsceApproval { get; set; } = true;
+        public static bool AsceDsceNameApproval { get; set; } = true;
 
         public static string FollowUp { get; set; } = string.Empty;
         public static string ReadUnread { get; set; } = string.Empty;

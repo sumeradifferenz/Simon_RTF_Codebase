@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Simon.Views.SubViews.HeaderWithSingleImage" BackgroundColor="Transparent" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon" x:Class="Simon.Views.SubViews.HeaderWithSingleImage" BackgroundColor="Transparent" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" ios:Page.UseSafeArea="true">
     <ContentView.Content>
-        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10,0,10,0" Spacing="0" >
-            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="5" Padding="10,10,10,0">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_00}" Spacing="0" >
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="{x:Static Services:LayoutService.Spacing05}" Padding="{x:Static Services:LayoutService.MarginPadding10_10_10_00}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="{x:Static Services:LayoutService.GridHeightWidth50}" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="30" />
-                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth30}" />
+                    <ColumnDefinition Width="{x:Static Services:LayoutService.GridHeightWidth30}" />
                 </Grid.ColumnDefinitions>
-                <Label x:Name="headertext" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize24}" Margin="10,0,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0">
+                <Label x:Name="headertext" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize24}" Margin="{x:Static Services:LayoutService.MarginPadding10_00_00_00}" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0">
                 </Label>
-                <ContentView Padding="0" x:Name="RightImageView" HeightRequest="30" WidthRequest="40" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1">
-                    <Image x:Name="RightImage" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit">
+                <ContentView Padding="0" x:Name="RightImageView" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" WidthRequest="{x:Static Services:LayoutService.HeightWidth40}" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1">
+                    <Image x:Name="RightImage" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit">
                     </Image>
                 </ContentView>
-                <ContentView Padding="0" x:Name="RightSecondImageView" HeightRequest="30" WidthRequest="40" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2">
-                    <Image x:Name="RightSecondImage" HeightRequest="30" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit">
+                <ContentView Padding="0" x:Name="RightSecondImageView" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" WidthRequest="{x:Static Services:LayoutService.HeightWidth40}" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2">
+                    <Image x:Name="RightSecondImage" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit">
                     </Image>
                 </ContentView>
                 <ContentView x:Name="SpacingView1" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="0">

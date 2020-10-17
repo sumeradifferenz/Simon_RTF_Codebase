@@ -4,7 +4,8 @@
              xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material.Forms" 
              xmlns:local="clr-namespace:Simon"
              x:Class="Simon.MainPage"
-              xmlns:simonVm="clr-namespace:Simon.ViewModel"
+             xmlns:simonVm="clr-namespace:Simon.ViewModel"
+             xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon"
              NavigationPage.HasNavigationBar="false">
      <ContentPage.BindingContext>
     <simonVm:LoginViewModel/>
@@ -12,21 +13,21 @@
     <ContentPage.Content>
      <Grid>
          <StackLayout>
-         <Label Text="Simon 2.0" TextColor="{StaticResource backTitleColor}" HorizontalOptions="Center" FontSize="30"  Margin="0,30,0,0"/>
-         <StackLayout Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
-         <material:MaterialCard BackgroundColor="White"  OutlineColor="Navy"  HasShadow="true" BorderColor="Navy"  Margin="5" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+         <Label Text="Simon 2.0" TextColor="{StaticResource backTitleColor}" HorizontalOptions="Center" FontSize="{StaticResource FontSize30}"  Margin="{x:Static Services:LayoutService.MarginPadding00_30_00_00}"/>
+         <StackLayout Margin="{x:Static Services:LayoutService.MarginPadding10}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
+         <material:MaterialCard BackgroundColor="{StaticResource WhiteColor}"  OutlineColor="{StaticResource NavyBlueColor}"  HasShadow="true" BorderColor="{StaticResource NavyBlueColor}"  Margin="{x:Static Services:LayoutService.MarginPadding05}" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" >
          <AbsoluteLayout> 
          <StackLayout  AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" >
-                <Picker x:Name="userListPicker" BindingContext="{Binding UserListItems}" ItemsSource="{Binding UserListItems}"  ItemDisplayBinding="{Binding name}" SelectedIndexChanged="OnPickerSelectedIndexChanged"  BackgroundColor="White"  Title="Select UserName" TitleColor="{StaticResource backTitleColor}" >
+                <Picker x:Name="userListPicker" BindingContext="{Binding UserListItems}" ItemsSource="{Binding UserListItems}"  ItemDisplayBinding="{Binding name}" SelectedIndexChanged="OnPickerSelectedIndexChanged"  BackgroundColor="{StaticResource WhiteColor}"  Title="Select UserName" TitleColor="{StaticResource backTitleColor}" >
                </Picker>                 
-            <material:MaterialTextField x:Name="psw" AlwaysShowUnderline="true" Placeholder="Password"  PlaceholderColor="{StaticResource backTitleColor}" InputType="Password" BackgroundColor="White" />
+            <material:MaterialTextField x:Name="psw" AlwaysShowUnderline="true" Placeholder="Password"  PlaceholderColor="{StaticResource backTitleColor}" InputType="Password" BackgroundColor="{StaticResource WhiteColor}" />
             <Button
                 Text="Login"
-                TextColor="White"
+                TextColor="{StaticResource WhiteColor}"
                 BackgroundColor="{StaticResource backTitleColor}"
                 BorderWidth="0"
                 VerticalOptions="End"
-                Margin="10"
+                Margin="{x:Static Services:LayoutService.MarginPadding10}"
                 FontSize="Large"
                 FontAttributes="Bold"
                 Clicked="OnLogInButtonClicked"
@@ -37,7 +38,7 @@
                 IsVisible="{Binding IsBusy}"
                 IsRunning="True"
                 IsEnabled="True"
-                Color="Orange"/>
+                Color="{StaticResource OrangeColor}"/>
             </StackLayout>
             </AbsoluteLayout>
             </material:MaterialCard>

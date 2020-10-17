@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Simon.Views.Popups.DeletePopup" xmlns:simonVm="clr-namespace:Simon.ViewModel" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" BackgroundColor="Transparent" xmlns:Helper="clr-namespace:Simon.Helpers;assembly=Simon"
-             xmlns:Controls="clr-namespace:Simon.Controls;assembly=Simon"
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Simon.Views.Popups.DeletePopup" xmlns:simonVm="clr-namespace:Simon.ViewModel" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:Helper="clr-namespace:Simon.Helpers;assembly=Simon"
+             xmlns:Controls="clr-namespace:Simon.Controls;assembly=Simon" xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon"
              xmlns:SubView="clr-namespace:Simon.Views.SubViews;assembly=Simon" CloseWhenBackgroundIsClicked="false">
     <pages:PopupPage.HasSystemPadding>
         <OnPlatform x:TypeArguments="x:Boolean">
@@ -18,42 +18,35 @@
     <pages:PopupPage.BindingContext>
         <simonVm:DealViewModel/>
     </pages:PopupPage.BindingContext>
-    <ContentView x:Name="popupView" BackgroundColor="#66111111" Padding="15,0">
-        <StackLayout x:Name="popupStackView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0" Spacing="0">
-            <!--<StackLayout.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android">15,120,15,120</On>
-                    <On Platform="iOS">20,205,20,205</On>
-                </OnPlatform>
-            </StackLayout.Padding>-->
-            <Grid BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" RowSpacing="0">
-                <Frame Grid.Row="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="false" Margin="0" Padding="10" CornerRadius="10">
-                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="0" BackgroundColor="White" Padding="0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="40" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <StackLayout Grid.Row="0" Padding="0,20,0,0" HorizontalOptions="CenterAndExpand">
-                            <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" Text="{x:Static Helper:Constants.DeletePartcipantlblText}"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Padding="20,30,20,0">
-                            <Label Style="{StaticResource LatoRegularDarkBlueLableStyle}" FontSize="{StaticResource FontSize16}" Text="{x:Static Helper:Constants.DeletealertlblText}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                        <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="20,30,20,30" Spacing="0">
-                            <Button Text="{x:Static Helper:Constants.YesBtnText}" Style="{StaticResource DoneButtonStyle}" x:Name="Okbtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding DeleteParticipantCommand}"/>
-                        </StackLayout>
-                    </Grid>
-                </Frame>
-                <Frame Grid.Row="0" Padding="0" IsClippedToBounds="True" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="End" HasShadow="False" Margin="0,0,0,-18">
-                    <StackLayout HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Image Source="close_popup.png" Aspect="AspectFit"/>
-                    </StackLayout>
-                </Frame>
+    <StackLayout x:Name="popupStackView" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding30}" Margin="0" Spacing="0">
+        <Frame Grid.Row="0" BackgroundColor="{StaticResource WhiteColor}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="false" Margin="0" Padding="{x:Static Services:LayoutService.MarginPadding10}" CornerRadius="{x:Static Services:LayoutService.CornerRadius10}">
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="{x:Static Services:LayoutService.Spacing10}" ColumnSpacing="0" BackgroundColor="{StaticResource WhiteColor}" Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="{x:Static Services:LayoutService.GridHeightWidth40}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Padding="{x:Static Services:LayoutService.MarginPadding00_20_00_00}" HorizontalOptions="CenterAndExpand">
+                    <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" Text="{x:Static Helper:Constants.DeletePartcipantlblText}"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Fill" Padding="{x:Static Services:LayoutService.MarginPadding20_20_20_00}">
+                    <Label Style="{StaticResource LatoRegularDarkBlueLableStyle}" FontSize="{StaticResource FontSize18}" Text="{x:Static Helper:Constants.DeletealertlblText}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="{x:Static Services:LayoutService.MarginPadding20}" Spacing="0">
+                    <Button Text="{x:Static Helper:Constants.YesBtnText}" Style="{StaticResource DoneButtonStyle}" x:Name="Okbtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding DeleteParticipantCommand}"/>
+                </StackLayout>
             </Grid>
-            <StackLayout.GestureRecognizers>
+        </Frame>
+        <Frame Grid.Row="1" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource WhiteColor}" HeightRequest="{x:Static Services:LayoutService.HeightWidth40}" WidthRequest="{x:Static Services:LayoutService.HeightWidth40}" CornerRadius="{x:Static Services:LayoutService.CornerRadius20}" HorizontalOptions="Center" VerticalOptions="Start" HasShadow="False" Margin="{x:Static Services:LayoutService.MarginPadding0_m20_0_0}">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image HeightRequest="{x:Static Services:LayoutService.HeightWidth15}" WidthRequest="{x:Static Services:LayoutService.HeightWidth15}" Source="close_popup.png" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ClosePopup_Command}"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Frame.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ClosePopup_Command}"/>
-            </StackLayout.GestureRecognizers>
-        </StackLayout>
-    </ContentView>
+            </Frame.GestureRecognizers>
+        </Frame>
+    </StackLayout>
 </pages:PopupPage>

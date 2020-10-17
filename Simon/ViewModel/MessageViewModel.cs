@@ -940,7 +940,7 @@ namespace Simon.ViewModel
             DealsSortByItems.Clear();
             DealsSortByItems.Add(new DealsSortByModel { name = Constants.BorrowerlblText, Radiobtnimg = (App.SelectedName == Constants.BorrowerlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg, SortByAscDescbtnimg = (App.AsceDsceName == true) ? Constants.NameDescendingImg : Constants.NameAcendingImg });
             DealsSortByItems.Add(new DealsSortByModel { name = Constants.LastPostDatelblText, Radiobtnimg = (App.SelectedName == Constants.LastPostDatelblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg, SortByAscDescbtnimg = (App.AsceDsce == true) ? Constants.NumberDescendingImg : Constants.NumberAcendingImg });
-            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClearlblText, Radiobtnimg = (App.SelectedName == Constants.ClearlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
+            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClearlblText});
         }
 
         public void GetMessageFilter()

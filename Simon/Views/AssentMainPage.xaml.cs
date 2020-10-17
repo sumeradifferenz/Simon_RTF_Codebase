@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
 using Simon.Controls;
 using Simon.Helpers;
 using Simon.Models;
 using Simon.ServiceHandler;
 using Simon.ViewModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace Simon.Views
 {

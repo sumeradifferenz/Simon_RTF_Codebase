@@ -189,15 +189,16 @@ namespace Simon.ViewModel
         {
             try
             {
+                ClosingstabStyle = (Style)App.Current.Resources["LatoRegularDarkGrayLableStyle"];
+                DecisionDuetabStyle = (Style)App.Current.Resources["LatoBoldDarkBlueLableStyle"]; ;
+                IsClosingSeperatorVisible = false;
+                IsDecisionDueSeperatorVisible = true;
+
                 if (DecisionDueList.Count < 0 || DecisionDueList.Count == 0)
                 {
                     await FetchDecisionDueData();
                 }
 
-                ClosingstabStyle = (Style)App.Current.Resources["LatoRegularDarkGrayLableStyle"];
-                DecisionDuetabStyle = (Style)App.Current.Resources["LatoBoldDarkBlueLableStyle"]; ;
-                IsClosingSeperatorVisible = false;
-                IsDecisionDueSeperatorVisible = true;
                 if (DecisionDueList.Count > 0)
                 {
                     IsDataNotAvailable = false;
@@ -258,25 +259,29 @@ namespace Simon.ViewModel
         {
             try
             {
-                IsBusy = true;
+                if (!IsRefreshing)
+                {
+                    IsBusy = true;
+                }
+
+                IsClosingsListVisible = true;
+                IsDecisionDueListVisible = false;
+
                 HttpClient hc = new HttpClient();
 
                 await Task.Delay(new TimeSpan(0, 0, 2)).ConfigureAwait(false);
 
                 var jsonString = await hc.GetStringAsync(Config.CLOSING_API + userId);
                 ClosingList = LandingModel.FromJson(jsonString);
-                //IsBusy = false;
+
+                IsBusy = false;
                 if (ClosingList.Count > 0)
                 {
                     IsDataNotAvailable = false;
-                    IsClosingsListVisible = true;
-                    IsDecisionDueListVisible = false;
                 }
                 else
                 {
                     IsDataNotAvailable = true;
-                    IsClosingsListVisible = true;
-                    IsDecisionDueListVisible = false;
                 }
             }
             finally
@@ -287,31 +292,36 @@ namespace Simon.ViewModel
 
         public async Task FetchDecisionDueData()
         {
-            using (HttpClient hc = new HttpClient())
+            try
             {
-                try
+                if (!IsRefreshing)
                 {
-                    //IsBusy = true;
-                    var jsonString = await hc.GetStringAsync(Config.DECISIONDUE_API + userId);
-                    DecisionDueList = LandingModel.FromJson(jsonString);
-                    //IsBusy = false;
-                    if (DecisionDueList.Count > 0)
-                    {
-                        IsDataNotAvailable = false;
-                        IsDecisionDueListVisible = true;
-                        IsClosingsListVisible = false;
-                    }
-                    else
-                    {
-                        IsDataNotAvailable = true;
-                        IsDecisionDueListVisible = true;
-                        IsClosingsListVisible = false;
-                    }
+                    IsBusy = true;
                 }
-                finally
+
+                IsDecisionDueListVisible = true;
+                IsClosingsListVisible = false;
+
+                HttpClient hc = new HttpClient();
+
+                await Task.Delay(new TimeSpan(0, 0, 2)).ConfigureAwait(false);
+
+                var jsonString = await hc.GetStringAsync(Config.DECISIONDUE_API + userId);
+                DecisionDueList = LandingModel.FromJson(jsonString);
+                
+                IsBusy = false;
+                if (DecisionDueList.Count > 0)
                 {
-                    IsBusy = false;
+                    IsDataNotAvailable = false;
                 }
+                else
+                {
+                    IsDataNotAvailable = true;
+                }
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

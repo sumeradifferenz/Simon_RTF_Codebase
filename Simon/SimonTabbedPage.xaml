@@ -2,14 +2,14 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
             xmlns:local="clr-namespace:Simon.Views"
-            BarBackgroundColor="#F1F1F1"
-            BarTextColor="Black"
+            BarBackgroundColor="{StaticResource VeryLightGrayColor}"
+            BarTextColor="{StaticResource BlackColor}"
             x:Class="Simon.SimonTabbedPage">
 
     <!--xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
     android:TabbedPage.ToolbarPlacement="Bottom"
-            android:TabbedPage.BarItemColor="#666666"
-            android:TabbedPage.BarSelectedItemColor="#ffffff"-->
+            android:TabbedPage.BarItemColor="{StaticResource DarkGrayColor}"
+            android:TabbedPage.BarSelectedItemColor="{StaticResource WhiteColor}"-->
 
     <!--Pages can be added as references or inline-->
     <!-- <local:LandingPage/>

@@ -2,20 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Simon.Views.AlertPage"
-             BackgroundColor="DarkGray" 
-            Padding="20,220,20,220">
-  
+             BackgroundColor="{StaticResource txtGray}" 
+             Padding="{x:Static Services:LayoutService.MarginPadding20_220_20_220}"
+             xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon">
+
     <ContentPage.Content>
-        <StackLayout BackgroundColor="White" Padding="10" Margin="0,20,0,20">
+        <StackLayout BackgroundColor="{StaticResource WhiteColor}" Padding="{x:Static Services:LayoutService.MarginPadding10}" Margin="{x:Static Services:LayoutService.MarginPadding00_20_00_20}">
             <Label x:Name="lblTitle" FontAttributes="Bold" FontSize="Large" Text="Title" HorizontalOptions="Center" TextColor="{StaticResource backTitleColor}"></Label>
-            <BoxView HeightRequest="1" BackgroundColor="DarkGray"></BoxView>
+            <BoxView HeightRequest="{x:Static Services:LayoutService.HeightWidth1}" BackgroundColor="{StaticResource txtGray}"></BoxView>
             <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
                 <Label x:Name="lblText" FontSize="Medium" HorizontalOptions="CenterAndExpand"></Label>
             </ScrollView>
-            <BoxView HeightRequest="1" BackgroundColor="DarkGray"></BoxView>
+            <BoxView HeightRequest="{x:Static Services:LayoutService.HeightWidth1}" BackgroundColor="{StaticResource txtGray}"></BoxView>
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="btn1" Text="Button 1" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White" BackgroundColor="{StaticResource backTitleColor }" HeightRequest="45" WidthRequest="65"></Button>
-                <Button x:Name="btn2" Text="Button 2" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="White" BackgroundColor="{StaticResource backTitleColor }" ></Button>
+                <Button x:Name="btn1" Text="Button 1" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="{StaticResource WhiteColor}" BackgroundColor="{StaticResource backTitleColor}" HeightRequest="{x:Static Services:LayoutService.HeightWidth45}" WidthRequest="{x:Static Services:LayoutService.HeightWidth65}"></Button>
+                <Button x:Name="btn2" Text="Button 2" HorizontalOptions="CenterAndExpand" FontSize="Medium" TextColor="{StaticResource WhiteColor}" BackgroundColor="{StaticResource backTitleColor}" ></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

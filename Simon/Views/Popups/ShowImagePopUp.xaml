@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:simonVm="clr-namespace:Simon.ViewModel" x:Class="Simon.Views.Popups.ShowImagePopUp" CloseWhenBackgroundIsClicked="True">
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:simonVm="clr-namespace:Simon.ViewModel" x:Class="Simon.Views.Popups.ShowImagePopUp" xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon" CloseWhenBackgroundIsClicked="True">
     <pages:PopupPage.Resources>
         <ResourceDictionary />
     </pages:PopupPage.Resources>
@@ -16,8 +16,8 @@
         <simonVm:CommentsPageViewModel/>
     </pages:PopupPage.BindingContext>
     <pages:PopupPage.Content>
-        <StackLayout BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="0" Margin="10">
-            <Frame CornerRadius="5" BackgroundColor="Transparent" HeightRequest="400" HasShadow="False" Padding="0" IsClippedToBounds="True">
+        <StackLayout BackgroundColor="Transparent" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="0" Margin="{x:Static Services:LayoutService.MarginPadding10}">
+            <Frame CornerRadius="{x:Static Services:LayoutService.CornerRadius05}" BackgroundColor="Transparent" HeightRequest="{x:Static Services:LayoutService.HeightWidth400}" HasShadow="False" Padding="0" IsClippedToBounds="True">
                 <Image Source="{Binding displayImage}" Aspect="AspectFill"></Image>
             </Frame>
         </StackLayout>

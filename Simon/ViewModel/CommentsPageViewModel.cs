@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Newtonsoft.Json;
@@ -26,6 +24,7 @@ namespace Simon.ViewModel
         JObject jObject = null;
         public int QuestionCount;
         public NavigationHelper _helper;
+        private bool isQuestionAvailable;
 
         public CommentsPageViewModel()
         {
@@ -79,13 +78,6 @@ namespace Simon.ViewModel
         {
             get { return _stageIdTxt; }
             set { SetProperty(ref _stageIdTxt, value); }
-        }
-
-        private int _questionsListHeight = 100;
-        public int QuestionsListHeight
-        {
-            get { return _questionsListHeight; }
-            set { SetProperty(ref _questionsListHeight, value); }
         }
 
         private string _labelParty;
@@ -180,39 +172,6 @@ namespace Simon.ViewModel
             {
                 _isPlusVisible = value;
                 OnPropertyChanged(nameof(isPlusVisible));
-            }
-        }
-
-        private bool _isStackExpanded { get; set; } = true;
-        public bool IsStackExpanded
-        {
-            get { return _isStackExpanded; }
-            set
-            {
-                _isStackExpanded = value;
-                OnPropertyChanged(nameof(IsStackExpanded));
-            }
-        }
-
-        private bool _isExpanderActive { get; set; } = true;
-        public bool IsExpanderActive
-        {
-            get { return _isExpanderActive; }
-            set
-            {
-                _isExpanderActive = value;
-                OnPropertyChanged(nameof(IsExpanderActive));
-            }
-        }
-
-        private bool _isQuestionListVisible { get; set; } = true;
-        public bool isQuestionListVisible
-        {
-            get { return _isQuestionListVisible; }
-            set
-            {
-                _isQuestionListVisible = value;
-                OnPropertyChanged(nameof(isQuestionListVisible));
             }
         }
 
@@ -348,6 +307,28 @@ namespace Simon.ViewModel
             }
         }
 
+        public string _ExpandImage { get; set; } = "minus.png";
+        public string ExpandImage
+        {
+            get { return _ExpandImage; }
+            set
+            {
+                _ExpandImage = value;
+                OnPropertyChanged("ExpandImage");
+            }
+        }
+        
+        private bool _isQuestionListVisible { get; set; } = true;
+        public bool isQuestionListVisible
+        {
+            get { return _isQuestionListVisible; }
+            set
+            {
+                _isQuestionListVisible = value;
+                OnPropertyChanged(nameof(isQuestionListVisible));
+            }
+        }
+
         public async Task FetchCommnetData(int requirementId)
         {
             using (HttpClient hc = new HttpClient())
@@ -371,14 +352,10 @@ namespace Simon.ViewModel
                         threadId = obj.threadId;
                         threadTitle = obj.threadTitle;
 
-                        QuestionsListHeight = 100 * obj.reqQuestionDefinitions.Count;
-
                         if (obj.reqQuestionDefinitions.Count != 0)
                         {
                             isPlusVisible = true;
-                            IsStackExpanded = true;
-                            IsExpanderActive = true;
-
+                            isQuestionAvailable = true;
                             foreach (var item in obj.reqQuestionDefinitions)
                             {
                                 if (item.actualValueBit != null)
@@ -582,8 +559,7 @@ namespace Simon.ViewModel
                         else
                         {
                             isPlusVisible = false;
-                            IsStackExpanded = false;
-                            IsExpanderActive = true;
+                            isQuestionAvailable = false;
                         }
 
                         if (obj.isSubjectTo == null || obj.isSubjectTo == "false")
@@ -703,6 +679,28 @@ namespace Simon.ViewModel
             }
         }
 
+        public ICommand ExpandCollapseTapped { get { return new Command(ExpandCollapse_click); } }
+        private void ExpandCollapse_click()
+        {
+            if (isQuestionAvailable == true)
+            {
+                if (ExpandImage.Equals("plus.png"))
+                {
+                    ExpandImage = "minus.png";
+                    isQuestionListVisible = true;
+                }
+                else
+                {
+                    ExpandImage = "plus.png";
+                    isQuestionListVisible = false;
+                }
+            }
+            else
+            {
+                isQuestionListVisible = false;
+            }
+        }
+
         public ICommand MessageFrameClick { get { return new Command(MessageFrameClicked); } }
         private async void MessageFrameClicked()
         {
@@ -721,28 +719,6 @@ namespace Simon.ViewModel
                 ShowExceptionAlert(ex);
             }
         }
-
-        //public ICommand ExpandCollapseTapped { get { return new Command(ExpandCollapse_click); } }
-        //private void ExpandCollapse_click()
-        //{
-        //    if(isQuestionAvailable == true)
-        //    {
-        //        if (plusImage.Source.Equals("plus.png"))
-        //        {
-        //            plusImage.Source = "minus.png";
-        //            isQuestionListVisible = true;
-        //        }
-        //        else
-        //        {
-        //            plusImage.Source = "plus.png";
-        //            isQuestionListVisible = false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        isQuestionListVisible = false;
-        //    }
-        //}
 
         public async void GetPendingApprovalJSON()
         {

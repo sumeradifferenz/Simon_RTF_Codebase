@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:simonVm="clr-namespace:Simon.ViewModel" x:Class="Simon.Views.Popups.ParticipantListPopup" xmlns:Helper="clr-namespace:Simon.Helpers;assembly=Simon" CloseWhenBackgroundIsClicked="True">
+<pages:PopupPage  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup" xmlns:simonVm="clr-namespace:Simon.ViewModel" x:Class="Simon.Views.Popups.ParticipantListPopup" xmlns:Helper="clr-namespace:Simon.Helpers;assembly=Simon" xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon" CloseWhenBackgroundIsClicked="True">
     <pages:PopupPage.HasSystemPadding>
         <OnPlatform x:TypeArguments="x:Boolean">
             <OnPlatform.iOS>false</OnPlatform.iOS>
@@ -16,13 +16,13 @@
     <pages:PopupPage.BindingContext>
         <simonVm:MessageThreadViewModel/>
     </pages:PopupPage.BindingContext>
-    <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="0,100,0,0" Spacing="0" >
-        <Label IsVisible="{Binding IsDataNotAvailable}" Text="{x:Static Helper:Constants.NoneText}" TextColor="Black" VerticalOptions="CenterAndExpand" FontSize="Large" HorizontalOptions="Center"/>
-        <ListView x:Name="list" SeparatorVisibility="None" Margin="10" HasUnevenRows="False" ItemsSource="{Binding messageUserList}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsListDataAvailable}">
+    <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="{x:Static Services:LayoutService.MarginPadding00_100_00_00}" Spacing="0" >
+        <Label IsVisible="{Binding IsDataNotAvailable}" Text="{x:Static Helper:Constants.NoneText}" TextColor="{StaticResource BlackColor}" VerticalOptions="CenterAndExpand" FontSize="Large" HorizontalOptions="Center"/>
+        <ListView x:Name="list" SeparatorVisibility="None" Margin="{x:Static Services:LayoutService.MarginPadding10}" HasUnevenRows="False" ItemsSource="{Binding messageUserList}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsListDataAvailable}">
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
-                        <Label Style="{Binding NamelblStyle}" TextColor="Black" VerticalTextAlignment="Center" VerticalOptions="Center" FontSize="{StaticResource FontSize18}" Text="{Binding name}"/>
+                        <Label Style="{Binding NamelblStyle}" TextColor="{StaticResource BlackColor}" VerticalTextAlignment="Center" VerticalOptions="Center" FontSize="{StaticResource FontSize18}" Text="{Binding name}"/>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

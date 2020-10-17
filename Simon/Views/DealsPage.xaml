@@ -25,7 +25,7 @@
                     <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BorderColor="{StaticResource DarkGrayShadeColor}" BackgroundColor="{StaticResource WhiteColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}" Padding="0" HeightRequest="{StaticResource HeightWidth50}">
                         <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing05}" Padding="0" Margin="{x:Static Services:LayoutService.MarginPadding20_00_00_00}">
                             <ImageButton Aspect="AspectFit" BackgroundColor="Transparent" Command="{Binding SearchCommand}" HorizontalOptions="Fill" Source="search.png" HeightRequest="{x:Static Services:LayoutService.HeightWidth20}" WidthRequest="{x:Static Services:LayoutService.HeightWidth20}"/>
-                            <Controls:CustomEntry x:Name="SearchContent" Text="{Binding SearchText, Mode=TwoWay}" FontSize="{x:Static Services:LayoutService.FontSize18}" Keyboard="Text" ReturnType="Done" Placeholder="Search" PlaceholderColor="Black" Style="{StaticResource EntryWithBlacktxtStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                            <Controls:CustomEntry x:Name="SearchContent" Text="{Binding SearchText, Mode=TwoWay}" FontSize="{StaticResource FontSize18}" Keyboard="Text" ReturnType="Done" Placeholder="Search" PlaceholderColor="{StaticResource BlackColor}" Style="{StaticResource EntryWithBlacktxtStyle}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -38,7 +38,7 @@
                                 <DataTemplate>
                                     <ViewCell>
                                         <StackLayout BackgroundColor="Transparent" Padding="{x:Static Services:LayoutService.MarginPadding10}" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-                                            <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Loading..." />-->
+                                            <!--<Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource BlackColor}" Text="Loading..." />-->
                                         </StackLayout>
                                     </ViewCell>
                                 </DataTemplate>
@@ -57,22 +57,22 @@
                                                 <AbsoluteLayout>
                                                     <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,1" AbsoluteLayout.LayoutFlags="All">
                                                         <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing03}">
-                                                            <Label Grid.Row="0" Text="{Binding dealId}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
+                                                            <Label Grid.Row="0" Text="{Binding dealId}" LineBreakMode="NoWrap" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldOrangeLableStyle}"/>
                                                             <Label Grid.Row="0" Text="-" FontSize="{StaticResource FontSize16}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
-                                                            <Label Grid.Row="0" Text="{Binding partyName}" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize14}" HorizontalOptions="StartAndExpand"/>
-                                                            <!--<ImageButton Grid.Row="0" BackgroundColor="Transparent" HeightRequest="15" WidthRequest="15" Source="upload.png" HorizontalOptions="EndAndExpand" Command="{Binding Source={x:Reference DealList}, Path=BindingContext.DealListItemTapCommand}" CommandParameter="{Binding .}"/>-->
+                                                            <Label Grid.Row="0" Text="{Binding partyName}" WidthRequest="{x:Static Services:LayoutService.HeightWidth200}" MaxLines="1" Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize16}" HorizontalOptions="StartAndExpand"/>
+                                                            <!--<ImageButton Grid.Row="0" BackgroundColor="Transparent" HeightRequest="{x:Static Services:LayoutService.HeightWidth15}" WidthRequest="{x:Static Services:LayoutService.HeightWidth15}" Source="upload.png" HorizontalOptions="EndAndExpand" Command="{Binding Source={x:Reference DealList}, Path=BindingContext.DealListItemTapCommand}" CommandParameter="{Binding .}"/>-->
                                                         </StackLayout>
                                                         <StackLayout Orientation="Horizontal">
-                                                            <Label Grid.Row="1" Text="{Binding product}" MaxLines="2" WidthRequest="190" HorizontalOptions="Start" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
-                                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding amount, StringFormat='${0:N0}'}" HorizontalOptions="EndAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" HorizontalTextAlignment="Start"/>
+                                                            <Label Grid.Row="1" Text="{Binding product}" MaxLines="2" WidthRequest="{x:Static Services:LayoutService.HeightWidth180}" HorizontalOptions="Start" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
+                                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding amount, StringFormat='${0:N0}'}" HorizontalOptions="EndAndExpand" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}" HorizontalTextAlignment="Start"/>
                                                         </StackLayout>
                                                         <StackLayout Orientation="Horizontal" Spacing="{x:Static Services:LayoutService.Spacing03}">
                                                             <Label Grid.Row="2">
                                                                 <Label.FormattedText>
                                                                     <FormattedString>
-                                                                        <Span Text="Status" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
-                                                                        <Span Text=" : " FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
-                                                                        <Span Text="{Binding status}" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"/>
+                                                                        <Span Text="Status" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
+                                                                        <Span Text=" : " FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoBoldDarkBlueLableStyle}"/>
+                                                                        <Span Text="{Binding status}" FontSize="{StaticResource FontSize14}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"/>
                                                                     </FormattedString>
                                                                 </Label.FormattedText>
                                                             </Label>
@@ -106,12 +106,12 @@
                                 </DataTemplate>
                             </controls:FlowListView.FlowColumnTemplate>
                             <controls:FlowListView.Footer>
-                                <Label IsVisible="{Binding IsLoadingInfinite}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="Black" Text="Loading..." />
+                                <Label IsVisible="{Binding IsLoadingInfinite}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="{StaticResource BlackColor}" Text="Loading..." />
                             </controls:FlowListView.Footer>
                         </controls:FlowListView>
                     </StackLayout>
-                    <StackLayout IsVisible="{Binding IsBusy}" Padding="12" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
-                        <ActivityIndicator IsRunning="{Binding IsBusy}" Color="Black"/>
+                    <StackLayout IsVisible="{Binding IsBusy}" Padding="{x:Static Services:LayoutService.MarginPadding12}" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1">
+                        <ActivityIndicator IsRunning="{Binding IsBusy}" Color="{StaticResource BlackColor}"/>
                     </StackLayout>
                 </AbsoluteLayout>
             </StackLayout>

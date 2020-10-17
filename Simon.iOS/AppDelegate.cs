@@ -8,6 +8,7 @@ using UIKit;
 using UserNotifications;
 using Xamarin;
 using Xamarin.Forms;
+using System.Diagnostics;
 
 namespace Simon.iOS
 {
@@ -69,13 +70,14 @@ namespace Simon.iOS
 
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
-            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
-            {
-                byte[] result = new byte[deviceToken.Length];
-                Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
-                deviceToken = BitConverter.ToString(result).Replace("-", "");
-            }
-            
+            //if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
+            //{
+            //    byte[] result = new byte[deviceToken.Length];
+            //    Marshal.Copy(deviceToken.Bytes, result, 0, (int)deviceToken.Length);
+            //    deviceToken = BitConverter.ToString(result).Replace("-", "");
+            //    Debug.WriteLine($"Device Token iOS: " + deviceToken);
+            //}
+
             FirebasePushNotificationManager.DidRegisterRemoteNotifications(deviceToken);
             UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
         }

@@ -5,6 +5,7 @@
                   xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
                   xmlns:simonVm="clr-namespace:Simon.ViewModel"
                   xmlns:Controls="clr-namespace:Simon.Controls"
+                  xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon"
                   x:Class="Simon.Views.Popups.DealUploadPopup">
     <pages:PopupPage.HasSystemPadding>
         <OnPlatform x:TypeArguments="x:Boolean">
@@ -22,20 +23,20 @@
     <pages:PopupPage.BindingContext>
         <simonVm:DealViewModel/>
     </pages:PopupPage.BindingContext>
-    <StackLayout x:Name="SortPopupStackVw" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="30" Margin="0" Spacing="0">
+    <StackLayout x:Name="SortPopupStackVw" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding30}" Margin="0" Spacing="0">
         <Grid BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0">
-            <Frame Grid.Row="0" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="false" Margin="0" Padding="15" CornerRadius="15">
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="0" BackgroundColor="White" Padding="0">
+            <Frame Grid.Row="0" BackgroundColor="{StaticResource WhiteColor}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasShadow="false" Margin="0" Padding="{x:Static Services:LayoutService.MarginPadding15}" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="{x:Static Services:LayoutService.Spacing10}" ColumnSpacing="0" BackgroundColor="{StaticResource WhiteColor}" Padding="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="50" />
+                        <RowDefinition Height="{x:Static Services:LayoutService.GridHeightWidth50}" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <StackLayout Grid.Row="0" Padding="15,20,15,0">
+                    <StackLayout Grid.Row="0" Padding="{x:Static Services:LayoutService.MarginPadding15_20_15_00}">
                         <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" Text="Upload Document"/>
                     </StackLayout>
-                    <StackLayout HeightRequest="150" Orientation="Horizontal" Grid.Row="1" Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadOptionStackVisible}">
-                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="10" ColumnSpacing="10" BackgroundColor="White" Padding="0">
+                    <StackLayout HeightRequest="{x:Static Services:LayoutService.HeightWidth150}" Orientation="Horizontal" Grid.Row="1" Padding="{x:Static Services:LayoutService.MarginPadding10}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadOptionStackVisible}">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="{x:Static Services:LayoutService.Spacing10}" ColumnSpacing="{x:Static Services:LayoutService.Spacing10}" BackgroundColor="{StaticResource WhiteColor}" Padding="0">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
@@ -43,18 +44,18 @@
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Frame Grid.Row="0" Padding="0,20,0,20" Grid.Column="0" CornerRadius="10" BackgroundColor="White" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-                                <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="15" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                                    <Image Source="attach_document.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="50" WidthRequest="50"></Image>
+                            <Frame Grid.Row="0" Padding="{x:Static Services:LayoutService.MarginPadding00_20_00_20}" Grid.Column="0" CornerRadius="{x:Static Services:LayoutService.CornerRadius10}" BackgroundColor="{StaticResource WhiteColor}" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                                <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="{x:Static Services:LayoutService.Spacing15}" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Image Source="attach_document.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="{x:Static Services:LayoutService.HeightWidth50}" WidthRequest="{x:Static Services:LayoutService.HeightWidth50}"></Image>
                                     <Label Text="Attach a Document" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Command="{Binding uploadDocumentCommand}"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
                             </Frame>
-                            <Frame Grid.Row="0" Padding="0,20,0,20" Grid.Column="1" CornerRadius="10" BackgroundColor="White" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-                                <StackLayout Orientation="Vertical" Padding="0" Spacing="15" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                                    <Image Source="take_picture.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="50" WidthRequest="50"></Image>
+                            <Frame Grid.Row="0" Padding="{x:Static Services:LayoutService.MarginPadding00_20_00_20}" Grid.Column="1" CornerRadius="{x:Static Services:LayoutService.CornerRadius10}" BackgroundColor="{StaticResource WhiteColor}" BorderColor="{StaticResource GrayColor}" HasShadow="False" HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
+                                <StackLayout Orientation="Vertical" Padding="0" Spacing="{x:Static Services:LayoutService.Spacing15}" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Image Source="take_picture.png" HorizontalOptions="FillAndExpand" VerticalOptions="Start" HeightRequest="{x:Static Services:LayoutService.HeightWidth50}" WidthRequest="{x:Static Services:LayoutService.HeightWidth50}"></Image>
                                     <Label Text="Take a Picture" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" FontSize="{StaticResource FontSize12}" Style="{StaticResource LatoRegularDarkBlueLableStyle}"></Label>
                                 </StackLayout>
                                 <Frame.GestureRecognizers>
@@ -63,15 +64,15 @@
                             </Frame>
                         </Grid>
                     </StackLayout>
-                    <StackLayout HeightRequest="150" Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="10,0,10,10" VerticalOptions="Fill" Spacing="0" IsVisible="{Binding UploadStackVisible}">
-                        <Controls:CustomFlowListView x:Name="UploadDocumentListView" FlowColumnCount="1" SeparatorVisibility="None" HasUnevenRows="true" FlowItemsSource="{Binding UploadDocumentList}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BackgroundColor="White" HideScorllbar="true">
+                    <StackLayout HeightRequest="{x:Static Services:LayoutService.HeightWidth150}" Grid.Row="1" HorizontalOptions="FillAndExpand" Margin="{x:Static Services:LayoutService.MarginPadding10_00_10_10}" VerticalOptions="Fill" Spacing="0" IsVisible="{Binding UploadStackVisible}">
+                        <Controls:CustomFlowListView x:Name="UploadDocumentListView" FlowColumnCount="1" SeparatorVisibility="None" HasUnevenRows="true" FlowItemsSource="{Binding UploadDocumentList}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" BackgroundColor="{StaticResource WhiteColor}" HideScorllbar="true">
                             <Controls:CustomFlowListView.FlowColumnTemplate>
                                 <DataTemplate>
-                                    <StackLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0" Padding="0" Margin="5">
-                                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="10" Padding="15">
+                                    <StackLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0" Padding="0" Margin="{x:Static Services:LayoutService.MarginPadding05}">
+                                        <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource opacity10GrayColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius10}" Padding="{x:Static Services:LayoutService.MarginPadding15}">
                                             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0" >
                                                 <Label Text="{Binding Filename}" Style="{StaticResource LatoRegularDarkGrayLableStyle}" HorizontalOptions="StartAndExpand" VerticalTextAlignment="Center" FontSize="{StaticResource FontSize15}"/>
-                                                <ImageButton Margin="10,0,0,0" Aspect="AspectFit" BackgroundColor="Transparent" Command="{Binding Source={x:Reference UploadDocumentListView}, Path=BindingContext.removeFileCommand}" CommandParameter="{Binding .}" HorizontalOptions="End" Source="close_popup.png" HeightRequest="{StaticResource HeightWidth15}" WidthRequest="{StaticResource HeightWidth15}"/>
+                                                <ImageButton Margin="{x:Static Services:LayoutService.MarginPadding10_00_00_00}" Aspect="AspectFit" BackgroundColor="Transparent" Command="{Binding Source={x:Reference UploadDocumentListView}, Path=BindingContext.removeFileCommand}" CommandParameter="{Binding .}" HorizontalOptions="End" Source="close_popup.png" HeightRequest="{StaticResource HeightWidth15}" WidthRequest="{StaticResource HeightWidth15}"/>
                                             </StackLayout>
                                         </Frame>
                                     </StackLayout>
@@ -82,14 +83,14 @@
                             <Button Text="UPLOAD" Style="{StaticResource DoneButtonStyle}" x:Name="Applybtn" HeightRequest="{StaticResource HeightWidth50}" Command="{Binding UploadCommand}"/>
                         </StackLayout>
                     </StackLayout>
-                    <StackLayout HeightRequest="150" BackgroundColor="White" Orientation="Vertical" Spacing="30" Grid.Row="0" Grid.RowSpan="2" Padding="30,40,30,40" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadSuccessVisible}">
-                        <Image Source="upload_success.png" HeightRequest="100" WidthRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                    <StackLayout HeightRequest="{x:Static Services:LayoutService.HeightWidth150}" BackgroundColor="{StaticResource WhiteColor}" Orientation="Vertical" Spacing="{x:Static Services:LayoutService.Spacing30}" Grid.Row="0" Grid.RowSpan="2" Padding="{x:Static Services:LayoutService.MarginPadding30_40_30_40}" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding UploadSuccessVisible}">
+                        <Image Source="upload_success.png" HeightRequest="{x:Static Services:LayoutService.HeightWidth100}" WidthRequest="{x:Static Services:LayoutService.HeightWidth100}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
                         <Label Style="{StaticResource LatoBoldDarkBlueLableStyle}" FontSize="{StaticResource FontSize22}" HorizontalTextAlignment="Center" Text="Uploaded Successfully"/>
                     </StackLayout>
                 </Grid>
             </Frame>
-            <Frame Grid.Row="0" Padding="0" IsClippedToBounds="True" BackgroundColor="White" HeightRequest="40" WidthRequest="40" CornerRadius="20" HorizontalOptions="Center" VerticalOptions="End" HasShadow="False" Margin="0,0,0,-18">
-                <StackLayout HeightRequest="15" WidthRequest="15" HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame Grid.Row="0" Padding="0" IsClippedToBounds="True" BackgroundColor="{StaticResource WhiteColor}" HeightRequest="{x:Static Services:LayoutService.HeightWidth40}" WidthRequest="{x:Static Services:LayoutService.HeightWidth40}" CornerRadius="{x:Static Services:LayoutService.CornerRadius20}" HorizontalOptions="Center" VerticalOptions="End" HasShadow="False" Margin="{x:Static Services:LayoutService.MarginPadding0_0_0_m18}">
+                <StackLayout HeightRequest="{x:Static Services:LayoutService.HeightWidth15}" WidthRequest="{x:Static Services:LayoutService.HeightWidth15}" HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="close_popup.png" Aspect="AspectFit"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Simon.Views.SubViews.SimonHeaderView" xmlns:Services="clr-namespace:Simon.ServiceHandler;assembly=Simon">
     <ContentView.Content>
-        <Grid x:Name="mainGrid" ColumnSpacing="{x:Static Services:LayoutService.Spacing05}" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="{x:Static Services:LayoutService.MarginPadding20_10_20_00}" Padding="{x:Static Services:LayoutService.MarginPadding10}" BackgroundColor="White">
+        <Grid x:Name="mainGrid" ColumnSpacing="{x:Static Services:LayoutService.Spacing05}" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Margin="{x:Static Services:LayoutService.MarginPadding20_10_20_00}" Padding="{x:Static Services:LayoutService.MarginPadding10}" BackgroundColor="{StaticResource WhiteColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -10,7 +10,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <StackLayout Grid.Column="0" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" BackgroundColor="White">
+            <StackLayout Grid.Column="0" HeightRequest="{x:Static Services:LayoutService.HeightWidth30}" BackgroundColor="{StaticResource WhiteColor}">
                 <Image x:Name="LeftImage"
                        Source="{TemplateBinding BindingContext.HeaderLeftImage}"
                        HeightRequest="{x:Static Services:LayoutService.HeightWidth25}"

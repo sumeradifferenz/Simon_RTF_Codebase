@@ -241,9 +241,9 @@ namespace Simon.ViewModel
         private void GetApprovalSortByData()
         {
             DealsSortByItems.Clear();
-            DealsSortByItems.Add(new DealsSortByModel { name = Constants.BorrowerlblText, Radiobtnimg = (App.ApprovalSelectedTitle == Constants.BorrowerlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
-            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ApprovalDatelblText, Radiobtnimg = (App.ApprovalSelectedTitle == Constants.ApprovalDatelblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
-            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClearlblText, Radiobtnimg = (App.ApprovalSelectedTitle == Constants.ClearlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg });
+            DealsSortByItems.Add(new DealsSortByModel { name = Constants.BorrowerlblText, Radiobtnimg = (App.ApprovalSelectedTitle == Constants.BorrowerlblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg, SortByAscDescbtnimg = (App.AsceDsceNameApproval == true) ? Constants.NameDescendingImg : Constants.NameAcendingImg });
+            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ApprovalDatelblText, Radiobtnimg = (App.ApprovalSelectedTitle == Constants.ApprovalDatelblText) ? Constants.RadiobtnSelectImg : Constants.RadiobtnUnselectImg, SortByAscDescbtnimg = (App.AsceDsceApproval == true) ? Constants.NumberDescendingImg : Constants.NumberAcendingImg });
+            DealsSortByItems.Add(new DealsSortByModel { name = Constants.ClearlblText});
         }
 
         public ICommand DealsSortByclicked { get { return new Command<DealsSortByModel>(DealsSortBy_click); } }
@@ -258,7 +258,6 @@ namespace Simon.ViewModel
                     {
                         item.Radiobtnimg = Constants.RadiobtnUnselectImg;
                         item.NamelblStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
-                        item.SortByAscDescbtnimg = "";
                     }
                 }
 
@@ -267,27 +266,11 @@ namespace Simon.ViewModel
                     if (data.Radiobtnimg == Constants.RadiobtnUnselectImg)
                     {
                         data.Radiobtnimg = Constants.RadiobtnSelectImg;
-                        if (data.name == Constants.BorrowerlblText)
-                        {
-                            data.SortByAscDescbtnimg = Constants.NameAcendingImg;
-                        }
-                        else if (data.name == Constants.ApprovalDatelblText)
-                        {
-                            data.SortByAscDescbtnimg = Constants.NumberAcendingImg;
-                        }
                         data.NamelblStyle = (Style)App.Current.Resources["LatoBoldDarkBlueLableStyle"];
                     }
                     else
                     {
                         data.Radiobtnimg = Constants.RadiobtnUnselectImg;
-                        if (data.name == Constants.BorrowerlblText)
-                        {
-                            data.SortByAscDescbtnimg = "";
-                        }
-                        else if (data.name == Constants.ApprovalDatelblText)
-                        {
-                            data.SortByAscDescbtnimg = "";
-                        }
                         data.NamelblStyle = (Style)App.Current.Resources["LatoRegularGrayLableStyle"];
                     }
                     App.ApprovalSelectedTitle = data.name;
@@ -310,10 +293,12 @@ namespace Simon.ViewModel
                     if (data.SortByAscDescbtnimg == Constants.NameDescendingImg)
                     {
                         data.SortByAscDescbtnimg = Constants.NameAcendingImg;
+                        App.AsceDsceNameApproval = false;
                     }
                     else
                     {
                         data.SortByAscDescbtnimg = Constants.NameDescendingImg;
+                        App.AsceDsceNameApproval = true;
                     }
                 }
                 else if (data.name == Constants.ApprovalDatelblText)
@@ -321,10 +306,12 @@ namespace Simon.ViewModel
                     if (data.SortByAscDescbtnimg == Constants.NumberDescendingImg)
                     {
                         data.SortByAscDescbtnimg = Constants.NumberAcendingImg;
+                        App.AsceDsceApproval = false;
                     }
                     else
                     {
                         data.SortByAscDescbtnimg = Constants.NumberDescendingImg;
+                        App.AsceDsceApproval = true;
                     }
                 }
             }
@@ -417,7 +404,7 @@ namespace Simon.ViewModel
         public async void SortDateUpCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = ApprovalItems.OrderBy(c => c.ApprovalDate).ToList();
+            var tempRecords = ApprovalItems.OrderBy(c => c.stageentrydatetime_10).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -430,7 +417,7 @@ namespace Simon.ViewModel
         public async void SortDateDownCommandExecute()
         {
             await ClosePopup();
-            var tempRecords = ApprovalItems.OrderByDescending(c => c.ApprovalDate).ToList();
+            var tempRecords = ApprovalItems.OrderByDescending(c => c.stageentrydatetime_10).ToList();
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {
@@ -443,7 +430,9 @@ namespace Simon.ViewModel
         private async void clearSortingAsync()
         {
             await ClosePopup();
-            var tempRecords = ApprovalItems;
+            var tempRecords = tempContainerList.ToList();
+            App.AsceDsceApproval = true;
+            App.AsceDsceNameApproval = true;
             ApprovalItems.Clear();
             foreach (var item in tempRecords)
             {

@@ -1201,9 +1201,10 @@ namespace Simon.ViewModel
             UploadSuccessVisible = false;
             await ShowPopup(DealUploadPopupview);
 
-            var tempOpenData = new ObservableCollection<UploadFileModel>(UploadDocumentList);
+            var tempOpenData = new ObservableCollection<UploadFileModel>(Settings.UploadDocumentList);
             tempOpenData.Add(new UploadFileModel { Filename = fileName.ToUpper() });
-            UploadDocumentList = new ObservableCollection<UploadFileModel>(tempOpenData);
+            Settings.UploadDocumentList = new ObservableCollection<UploadFileModel>(tempOpenData);
+            UploadDocumentList = Settings.UploadDocumentList;
         }
 
         public ICommand removeFileCommand { get { return new Command<UploadFileModel>(removeFile_click); } }

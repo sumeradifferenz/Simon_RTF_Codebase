@@ -13,7 +13,7 @@
                 <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="0" ColumnSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
-                        <RowDefinition Height="100" />
+                        <RowDefinition Height="{x:Static Services:LayoutService.GridHeightWidth100}" />
                     </Grid.RowDefinitions>
                     <ContentPresenter Grid.Row="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
                     <SubView:FooterView Grid.Row="1" VerticalOptions="EndAndExpand"/>
@@ -47,7 +47,7 @@
             </ControlTemplate>
 
             <ControlTemplate x:Key="Simon_HeaderView_Template">
-                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" RowSpacing="0" ColumnSpacing="0">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource WhiteColor}" RowSpacing="0" ColumnSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="*" />
@@ -66,12 +66,13 @@
             <!--Color code-->
             <Color x:Key="BlueColor">#2F56C6</Color>
             <Color x:Key="SilverColor">#cdcfd5</Color>
+            <Color x:Key="RedColor">#FF0000</Color>
             <Color x:Key="backgroundColor">#33302E</Color>
             <Color x:Key="backTitleColor">#0D4263</Color>
             <Color x:Key="navBarColor">#002343</Color>
             <Color x:Key="txtOrange">#FFBA51</Color>
             <Color x:Key="txtBlack">#4e4e4e</Color>
-            <Color x:Key="txtGray">#a9a9a9</Color>
+            <Color x:Key="txtGray">#A9A9A9</Color>
             <Color x:Key="backGrayColor">#f2f2f2</Color>
             <Color x:Key="btnPressedColor">#e6fff2</Color>
             <Color x:Key="GrayColor">#ACACAC</Color>
@@ -87,26 +88,29 @@
             <Color x:Key="LightGrayColor">#F7F8F9</Color>
             <Color x:Key="ShadedGrayColor">#56585A</Color>
             <Color x:Key="Opacity70DarkBlueColor">#B30F3A58</Color>
-            <Color x:Key="VeryLightGrayColor">#EFF1F3</Color>
+            <Color x:Key="PopupBackgroundColor">#66111111</Color>
+            <Color x:Key="TransparentGrayColor">#AFA9A9A9</Color>
+            <Color x:Key="VeryLightGrayColor">#F1F1F1</Color>
+            <Color x:Key="NavyBlueColor">#000080</Color>
 
             <!--Style-->
             <Style x:Key="ButtonStyle" TargetType="Button">
-                <Setter Property="TextColor" Value="White" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
                 <Setter Property="FontSize" Value="20" />
                 <Setter Property="BackgroundColor" Value="White"/>
                 <Setter Property="HeightRequest" Value="70"/>
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
             <Style x:Key="btnDashboardStyle" TargetType="Button">
-                <Setter Property="TextColor" Value="Gray" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BackgroundColor" Value="White"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
                 <Setter Property="BorderRadius" Value="10"/>
             </Style>
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="#0D4263"></Setter>
-                <Setter Property="BarTextColor" Value="#FFFFFF"></Setter>
+                <Setter Property="BarBackgroundColor" Value="{StaticResource backTitleColor}"></Setter>
+                <Setter Property="BarTextColor" Value="{StaticResource WhiteColor}"></Setter>
             </Style>
             <Style x:Key="Size12GrayLabelStyle" TargetType="Label">
                 <Setter Property="FontSize" Value="{x:Static Services:LayoutService.FontSize12}" />

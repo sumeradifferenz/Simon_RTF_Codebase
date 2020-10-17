@@ -327,7 +327,7 @@ namespace Simon.ViewModel
             HeaderTitle = LabelParty;
 
             HeaderLeftImage = "back_arrow.png";
-            
+
             var assembly = Assembly.GetAssembly(Application.Current.GetType());
 
             ReplayCommand = new Command(() => ReplayCommandExecute());
@@ -443,10 +443,12 @@ namespace Simon.ViewModel
                         {"author",userId },
                         {"threadId",threadId},
                         {"plainContent", message},
-                        {"createdDate", DateTime.Now.ToUniversalTime() },
+                        {"createdDate", DateTime.Now },
                         {"memoToFile",null},
                         {"sendToOfficer",false},
                     };
+
+                    string json = JsonConvert.SerializeObject(values, Formatting.Indented);
 
                     httpClient = new HttpClient();
                     var a = JsonConvert.SerializeObject(values);
