@@ -9,9 +9,9 @@ using Xamarin.Forms;
 
 namespace Simon.Views
 {
-    public partial class MessagesPage : GradientColorStack, NavigationHelper
+    public partial class MessagesPage : GradientColorStack
     {
-        private MessageViewModel ViewModel = null;
+        //private MessageViewModel ViewModel = null;
         string userId;
         IEnumerable<DealMessageList> result;
         bool isLoading;
@@ -48,8 +48,6 @@ namespace Simon.Views
             {
                 base.OnAppearing();
 
-                ViewModel = new MessageViewModel();
-                this.BindingContext = ViewModel;
                 Settings.TypedMessage = null;
                 App.FileName = null;
                 App.FrameImage = null;
@@ -61,8 +59,18 @@ namespace Simon.Views
 
                 if (NetworkCheck.IsInternet())
                 {
-                    await ViewModel.FetchData();
-                    ViewModel._helper = this;
+                    if (App.IsBackFromPagesDetailPage)
+                    {
+                        App.IsBackFromPagesDetailPage = false;
+                    }
+                    else
+                    {
+                        MessageViewModel ViewModel = new MessageViewModel();
+                        this.BindingContext = ViewModel;
+
+                        await ViewModel.FetchData();
+                        //ViewModel._helper = this;
+                    }
                 }
                 else
                 {
@@ -87,23 +95,18 @@ namespace Simon.Views
 
         void SwipeToLeft(System.Object sender, Xamarin.Forms.SwipedEventArgs e)
         {
+            MessageViewModel ViewModel = new MessageViewModel();
+            this.BindingContext = ViewModel;
+
             ViewModel.FooterNavigation(SessionService.BaseFooterItems[3]);
         }
 
         void SwipeToRight(System.Object sender, Xamarin.Forms.SwipedEventArgs e)
         {
+            MessageViewModel ViewModel = new MessageViewModel();
+            this.BindingContext = ViewModel;
+
             ViewModel.FooterNavigation(SessionService.BaseFooterItems[1]);
-        }
-
-        private async void btnCloseClicked(object sender, EventArgs e)
-        {
-            await Navigation.PopAsync();
-        }
-
-        public async void NavigateToItemDetail(ContentPage page)
-        {
-            ViewModel.ScreenTitle = Constants.MessageScreenTitle;
-            await Navigation.PushAsync(page);
         }
     }
 }

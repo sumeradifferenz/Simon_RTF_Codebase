@@ -19,7 +19,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="0" Padding="0">
-            <SubView:HeaderWithSingleImage VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeaderText="{x:Static Helper:Constants.ApprovalsNeededlblText}" RightImageSource="{Binding SortingIcon}" RightCommand="{Binding SortingCommand}" RightSecondImageSource="logout.png" RightSecondCommand="{Binding LogOutCommand}" Padding="0"/>
+            <SubView:HeaderWithSingleImage VerticalOptions="Start" HorizontalOptions="FillAndExpand" HeaderText="{x:Static Helper:Constants.ApprovalsNeededlblText}" RightImageSource="{Binding SortingIcon}" RightCommand="{Binding SortingCommand}" RightSecondImageSource="user_icon.png" RightSecondCommand="{Binding MenuCommand}" Padding="0"/>
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="{x:Static Services:LayoutService.MarginPadding20_10_20_10}" Spacing="0">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Padding="{x:Static Services:LayoutService.MarginPadding10_00_10_10}">
                     <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BorderColor="{StaticResource DarkGrayShadeColor}" BackgroundColor="{StaticResource WhiteColor}" HasShadow="False" CornerRadius="{x:Static Services:LayoutService.CornerRadius15}" Padding="0" HeightRequest="{StaticResource HeightWidth50}">

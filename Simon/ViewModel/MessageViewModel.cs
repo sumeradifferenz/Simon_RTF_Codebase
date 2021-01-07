@@ -145,10 +145,11 @@ namespace Simon.ViewModel
                         OpenData[index].hasBeenRead = true;
                     }
 
-                    await Application.Current.SavePropertiesAsync();
-                    //await Application.Current.MainPage.Navigation.PushAsync(new MessageThreadViewPage(), false);
-
-                    _helper.NavigateToItemDetail(new MessageThreadViewPage());
+                    //await Application.Current.SavePropertiesAsync();
+                    App.IsBackFromPagesDetailPage = true;
+                    await Application.Current.MainPage.Navigation.PushAsync(new MessageThreadViewPage(), false);
+                    
+                    //_helper.NavigateToItemDetail(new MessageThreadViewPage());
                     //Application.Current.MainPage = new NavigationPage(new MessageThreadViewPage());
                 }
             }

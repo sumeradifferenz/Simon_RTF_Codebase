@@ -32,6 +32,7 @@ namespace Simon.Helpers
         //Anjali
         //Lable title 
         public const string LoginText = "LOGIN";
+        public const string LogOutText = "SIGN OUT";
         public const string LogindetailText = "Enter your credentials to connect.";
         public const string SelectUsernameText = "Select Username";
         public const string SelectUsernamePlaceholdertxt = "Select";

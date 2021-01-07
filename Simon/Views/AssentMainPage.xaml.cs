@@ -14,7 +14,7 @@ namespace Simon.Views
     {
         IEnumerable<ApprovalMainModel> ObjAssignList;
         string userId;
-        private ApprovalViewModel ViewModel = null;
+        //private ApprovalViewModel ViewModel = null;
 
         public AssentMainPage()
         {
@@ -64,13 +64,19 @@ namespace Simon.Views
                 assignListView.IsRefreshing = false;
             });
 
-
-            ViewModel = new ApprovalViewModel();
-            this.BindingContext = ViewModel;
-
             if (NetworkCheck.IsInternet())
             {
-                await ViewModel.GetApprovalData();
+                if (App.IsBackFromPagesDetailPage)
+                {
+                    App.IsBackFromPagesDetailPage = false;
+                }
+                else
+                {
+                    ApprovalViewModel ViewModel = new ApprovalViewModel();
+                    this.BindingContext = ViewModel;
+
+                    await ViewModel.GetApprovalData();
+                }
             }
             else
             {
@@ -90,25 +96,15 @@ namespace Simon.Views
 
         void SwipeToRight(System.Object sender, Xamarin.Forms.SwipedEventArgs e)
         {
+            ApprovalViewModel ViewModel = new ApprovalViewModel();
+            this.BindingContext = ViewModel;
+
             ViewModel.FooterNavigation(SessionService.BaseFooterItems[2]);
         }
 
         private async void btnCloseClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
-        }
-
-        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(e.NewTextValue))
-            {
-                assignListView.ItemsSource = ViewModel.ApprovalItems;
-            }
-            else
-            {
-                var Keyword = e.NewTextValue.ToLower();
-                assignListView.ItemsSource = ViewModel.ApprovalItems.Where(x => x.reqname_10.ToLower().Contains(Keyword) || x.partyname_10.ToLower().Contains(Keyword) || x.productdesc_10.ToLower().Contains(Keyword));
-            }
         }
     }
 }

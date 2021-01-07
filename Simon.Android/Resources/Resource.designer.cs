@@ -18336,31 +18336,34 @@ namespace Simon.Droid
 			public const int user = 2131165662;
 			
 			// aapt resource value: 0x7F0701DF
-			public const int view_pass = 2131165663;
+			public const int user_icon = 2131165663;
 			
 			// aapt resource value: 0x7F0701E0
-			public const int xf_arrow_dropdown = 2131165664;
+			public const int view_pass = 2131165664;
 			
 			// aapt resource value: 0x7F0701E1
-			public const int xf_check = 2131165665;
+			public const int xf_arrow_dropdown = 2131165665;
 			
 			// aapt resource value: 0x7F0701E2
-			public const int xf_checkbox_selected = 2131165666;
+			public const int xf_check = 2131165666;
 			
 			// aapt resource value: 0x7F0701E3
-			public const int xf_checkbox_unselected = 2131165667;
+			public const int xf_checkbox_selected = 2131165667;
 			
 			// aapt resource value: 0x7F0701E4
-			public const int xf_clear = 2131165668;
+			public const int xf_checkbox_unselected = 2131165668;
 			
 			// aapt resource value: 0x7F0701E5
-			public const int xf_error = 2131165669;
+			public const int xf_clear = 2131165669;
 			
 			// aapt resource value: 0x7F0701E6
-			public const int xf_radio_button_selected = 2131165670;
+			public const int xf_error = 2131165670;
 			
 			// aapt resource value: 0x7F0701E7
-			public const int xf_radio_button_unselected = 2131165671;
+			public const int xf_radio_button_selected = 2131165671;
+			
+			// aapt resource value: 0x7F0701E8
+			public const int xf_radio_button_unselected = 2131165672;
 			
 			static Drawable()
 			{

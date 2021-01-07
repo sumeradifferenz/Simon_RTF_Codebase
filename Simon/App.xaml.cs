@@ -25,6 +25,7 @@ namespace Simon
 
         public static bool IsFromKeyboardDoneButton { get; set; } = false;
         public static bool IsFromAddParticipantPage { get; set; } = false;
+        public static bool IsBackFromPagesDetailPage { get; set; } = false;
         public static bool IsSelectRead { get; set; } = false;
         public static bool IsSelectUnRead { get; set; } = false;
         public static bool AsceDsce { get; set; } = true;

@@ -213,6 +213,7 @@ namespace Simon.ViewModel
         {
             try
             {
+                App.IsBackFromPagesDetailPage = true;
                 await Application.Current.MainPage.Navigation.PushAsync(new CommentsPage(item));
             }
             catch (Exception ex)

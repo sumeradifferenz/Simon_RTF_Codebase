@@ -67,9 +67,9 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Distribution: Brijesh Tekrawala (296G98S4G5)</CodesignKey>
     <PlatformTarget>anycpu</PlatformTarget>
-    <CodesignProvision>SimonInternal_Dev_27Aug2020</CodesignProvision>
+    <CodesignProvision>SimonInternal_Appstore_15Oct2020</CodesignProvision>
     <MtouchExtraArgs>--optimize=experimental-xforms-product-type</MtouchExtraArgs>
   </PropertyGroup>
   <ItemGroup>
@@ -462,6 +462,9 @@
     <BundleResource Include="Resources\logout%403x.png" />
     <BundleResource Include="Resources\logout%402x.png" />
     <BundleResource Include="GoogleService-Info.plist" />
+    <BundleResource Include="Resources\user_icon%403x.png" />
+    <BundleResource Include="Resources\user_icon%402x.png" />
+    <BundleResource Include="Resources\user_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />

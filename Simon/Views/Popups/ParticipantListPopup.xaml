@@ -18,14 +18,12 @@
     </pages:PopupPage.BindingContext>
     <StackLayout BackgroundColor="{StaticResource WhiteColor}" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="{x:Static Services:LayoutService.MarginPadding00_100_00_00}" Spacing="0" >
         <Label IsVisible="{Binding IsDataNotAvailable}" Text="{x:Static Helper:Constants.NoneText}" TextColor="{StaticResource BlackColor}" VerticalOptions="CenterAndExpand" FontSize="Large" HorizontalOptions="Center"/>
-        <ListView x:Name="list" SeparatorVisibility="None" Margin="{x:Static Services:LayoutService.MarginPadding10}" HasUnevenRows="False" ItemsSource="{Binding messageUserList}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" IsVisible="{Binding IsListDataAvailable}">
-            <ListView.ItemTemplate >
+        <StackLayout x:Name="list" Margin="{x:Static Services:LayoutService.MarginPadding10_10_10_15}" BindableLayout.ItemsSource="{Binding messageUserList}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="{Binding IsListDataAvailable}">
+            <BindableLayout.ItemTemplate >
                 <DataTemplate>
-                    <ViewCell>
-                        <Label Style="{Binding NamelblStyle}" TextColor="{StaticResource BlackColor}" VerticalTextAlignment="Center" VerticalOptions="Center" FontSize="{StaticResource FontSize18}" Text="{Binding name}"/>
-                    </ViewCell>
+                    <Label Margin="{x:Static Services:LayoutService.MarginPadding00_00_00_20}" Style="{Binding NamelblStyle}" TextColor="{StaticResource BlackColor}" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="{StaticResource FontSize20}" Text="{Binding name}"/>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
     </StackLayout>
 </pages:PopupPage>

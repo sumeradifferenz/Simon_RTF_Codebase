@@ -27,6 +27,7 @@ using Simon.Models;
 using Simon.ServiceHandler;
 using Simon.Views;
 using Simon.Views.Popups;
+using Simon.Views.SubViews;
 using Xamarin.Forms;
 
 namespace Simon.ViewModel
@@ -37,6 +38,17 @@ namespace Simon.ViewModel
         public BaseViewModel()
         {
             FooterItems = SessionService.BaseFooterItems;
+        }
+
+        private ObservableCollection<MenuModel> _ProfileOptionsList = new ObservableCollection<MenuModel>();
+        public ObservableCollection<MenuModel> ProfileOptionsList
+        {
+            get { return _ProfileOptionsList; }
+            set
+            {
+                _ProfileOptionsList = value;
+                OnPropertyChanged(nameof(ProfileOptionsList));
+            }
         }
 
         private string _ScreenTitle { get; set; }
@@ -94,7 +106,7 @@ namespace Simon.ViewModel
         }
 
         protected bool SetProperty<T>(ref T backfield, T value,
-            [CallerMemberName]string propertyName = null)
+            [CallerMemberName] string propertyName = null)
         {
             if (EqualityComparer<T>.Default.Equals(backfield, value))
             {
@@ -175,11 +187,37 @@ namespace Simon.ViewModel
             }
         }
 
-        public ICommand LogOutCommand { get { return new Command(Logout_Click); } }
-        private async void Logout_Click()
+        public void GetMenuOptionData()
+        {
+            ProfileOptionsList.Clear();
+            ProfileOptionsList.Add(new MenuModel { MenuImage = "logout.png", MenuName = Constants.LogOutText });
+        }
+
+        public ICommand MenuCommand { get { return new Command(Menu_Click); } }
+        private async void Menu_Click()
+        {
+            await ClosePopup();
+            MenuView menuView = new MenuView();
+            menuView.BindingContext = this;
+            GetMenuOptionData();
+            await ShowPopup(menuView);
+        }
+
+        public ICommand MenuOptionclicked { get { return new Command<MenuModel>(MenuOption_Click); } }
+        private async void MenuOption_Click(MenuModel menu)
+        {
+            if (menu.MenuName == Constants.LogOutText)
+            {
+                Logout_Click();
+            }
+        }
+
+
+        public async void Logout_Click()
         {
             if (string.IsNullOrEmpty(Settings.DeviceToken))
             {
+                await ClosePopup();
                 App.tempFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "LogFile.txt");
                 File.AppendAllText(App.tempFile, "\n\nLogout without Device token....");
                 Debug.WriteLine("File Name====" + App.tempFile);
@@ -207,6 +245,7 @@ namespace Simon.ViewModel
                 }
                 else
                 {
+                    await ClosePopup();
                     Settings.LoggedInUser = null;
                     App.SelectedUserData = null;
                     Application.Current.MainPage = new NavigationPage(new LoginPage()) { BarTextColor = Color.Black, BarBackgroundColor = Color.White };
@@ -227,6 +266,12 @@ namespace Simon.ViewModel
             {
                 Console.Write(ex.Message);
             }
+        }
+
+        public ICommand ClosePopup_Command { get { return new Command(ClosePopup_click); } }
+        private async void ClosePopup_click()
+        {
+            await ClosePopup();
         }
 
         public void ShowExceptionAlert(Exception ex)
@@ -428,8 +473,8 @@ namespace Simon.ViewModel
                                 PhotoSize = PhotoSize.Medium,
                                 SaveMetaData = false,
                             });
-                            //result.Invoke(mediaFile);
-                            await ClosePopup();
+                    //result.Invoke(mediaFile);
+                    await ClosePopup();
 
                             if (mediaFile != null && !string.IsNullOrEmpty(mediaFile.Path))
                             {
